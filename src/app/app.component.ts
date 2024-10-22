@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, NgbModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -473,4 +474,8 @@ export class AppComponent {
       url: 'acestream://e454681a152a86da504e63694f17f90d0586867d',
     },
   ];
+
+  copyLink(url: string) {
+    navigator.clipboard.writeText(url);
+  }
 }

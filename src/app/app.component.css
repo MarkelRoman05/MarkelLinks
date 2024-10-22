@@ -9,3 +9,16 @@
     display: flex;
     justify-content: center;
 }
+
+.copy-button {
+    margin-left: 5px;
+}
+
+.tooltip-copy {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    z-index: 1;
+}
