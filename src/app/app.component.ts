@@ -479,7 +479,7 @@ export class AppComponent {
     if (this.isAndroid()) {
       this.links = this.links.map(link => ({
         ...link,
-        url: `intent://${link.url.replace('acestream://', '')}#Intent;package=org.acestream.media;scheme=acestream;end`
+        url: `intent://${link.url.replace('acestream://', '')}#Intent;scheme=acestream;end`
       }));
     }
   }
