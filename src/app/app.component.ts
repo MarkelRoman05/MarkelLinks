@@ -476,7 +476,7 @@ export class AppComponent {
   ];
 
   ngOnInit() {
-    if (this.isAndroidTV()) {
+    if (this.isAndroid()) {
       this.links = this.links.map(link => ({
         ...link,
         url: `intent://${link.url.replace('acestream://', '')}#Intent;package=org.acestream.media;scheme=acestream;end`
@@ -488,8 +488,8 @@ export class AppComponent {
     navigator.clipboard.writeText(url);
   }
 
-  isAndroidTV(): string {
+  isAndroid(): boolean {
     const userAgent = navigator.userAgent.toLowerCase();
-    return userAgent;
+    return userAgent.includes('android');
   }
 }
