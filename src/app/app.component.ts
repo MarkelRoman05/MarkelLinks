@@ -488,8 +488,8 @@ export class AppComponent {
     navigator.clipboard.writeText(url);
   }
 
-  isAndroidTV(): boolean {
+  isAndroidTV(): string {
     const userAgent = navigator.userAgent.toLowerCase();
-    return userAgent.includes('android') && userAgent.includes('tv');
+    return userAgent;
   }
 }

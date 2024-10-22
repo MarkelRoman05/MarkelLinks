@@ -1,5 +1,6 @@
 <div class="container">
   <h1 class="title-links">ACESTREAM LINKS by Markel05</h1>
+  <p>{{ isAndroidTV() }}</p>
   <li class="links" *ngFor="let link of links">
     <a href="{{ link.url }}">{{ link.title }}</a>
     <button class="copy-button" ngbTooltip="Copiar enlace" placement="right" tooltipClass="tooltip-copy" (click)="copyLink(link.url)"><i class="bi bi-copy"></i></button>
