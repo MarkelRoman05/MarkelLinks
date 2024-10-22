@@ -475,21 +475,7 @@ export class AppComponent {
     },
   ];
 
-  ngOnInit() {
-    if (this.isAndroid()) {
-      this.links = this.links.map(link => ({
-        ...link,
-        url: `intent://${link.url.replace('acestream://', '')}#Intent;scheme=acestream;end`
-      }));
-    }
-  }
-
   copyLink(url: string) {
     navigator.clipboard.writeText(url);
-  }
-
-  isAndroid(): boolean {
-    const userAgent = navigator.userAgent.toLowerCase();
-    return userAgent.includes('android');
   }
 }
