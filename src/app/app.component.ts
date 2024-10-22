@@ -475,7 +475,21 @@ export class AppComponent {
     },
   ];
 
+  ngOnInit() {
+    if (this.isAndroidTV()) {
+      this.links = this.links.map(link => ({
+        ...link,
+        url: `intent://${link.url.replace('acestream://', '')}#Intent;package=org.acestream.media;scheme=acestream;end`
+      }));
+    }
+  }
+
   copyLink(url: string) {
     navigator.clipboard.writeText(url);
+  }
+
+  isAndroidTV(): boolean {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return userAgent.includes('android') && userAgent.includes('tv');
   }
 }
