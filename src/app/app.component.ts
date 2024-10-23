@@ -87,6 +87,7 @@ export class AppComponent {
     {
       title: 'M. LaLiga 1080 MultiAudio',
       url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZDhJ7oqU-bMIGmE6719lIr7vIcJF5gb_ZVA&s',
     },
     {
       title: 'M. LaLiga 1080 MultiAudio',

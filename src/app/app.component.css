@@ -1,24 +1,58 @@
 .links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
 }
 
 .title-links {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .copy-button {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .tooltip-copy {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    border-radius: 6px;
-    z-index: 1;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.futbol-tv-agendas {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.header-enlaces {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 9px;
+}
+
+.agenda-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.links-container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.column:last-child {
+  margin-right: 0;
 }
