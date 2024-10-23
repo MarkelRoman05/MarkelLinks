@@ -77,7 +77,7 @@ export class AppComponent {
       url: 'acestream://dd9c56ef2f09753c59d9c2e2d2af31aeea6451c0',
     },
     {
-      title: 'M. LaLiga UHD',
+      title: 'M. LaLiga UHD (No suele funcionar)',
       url: 'acestream://dce1579e3a2e5bd29071fca8eae364f1eb3205cf',
     },
     {
@@ -85,12 +85,12 @@ export class AppComponent {
       url: 'acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280',
     },
     {
-      title: 'M. LaLiga 1080 MultiAudio',
+      title: 'M. LaLiga 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZDhJ7oqU-bMIGmE6719lIr7vIcJF5gb_ZVA&s',
     },
     {
-      title: 'M. LaLiga 1080 MultiAudio',
+      title: 'M. LaLiga 1080 MultiAudio (OPCIÓN 2)',
       url: 'acestream://1969c27658d4c8333ab2c0670802546121a774a5',
     },
     {
@@ -126,11 +126,11 @@ export class AppComponent {
       url: 'acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280',
     },
     {
-      title: 'DAZN LaLiga 1080 MultiAudio',
+      title: 'DAZN LaLiga 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://1960a9be8ae9e8c755330218eac4c5805466290a',
     },
     {
-      title: 'DAZN LaLiga 1080 MultiAudio',
+      title: 'DAZN LaLiga 1080 MultiAudio (OPCIÓN 2)',
       url: 'acestream://75251ba975132ec9a202806ba5bf606e87280c96',
     },
     {
@@ -282,15 +282,15 @@ export class AppComponent {
       url: 'acestream://2448f1d084f440eed2fbe847e24f1c02f5659a78',
     },
     {
-      title: 'M.L. Campeones 1080 MultiAudio',
+      title: 'M.L. Campeones 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://931b1984badcb821df7b47a66ac0835ac871b51c',
     },
     {
-      title: 'M.L. Campeones 1080 MultiAudio',
+      title: 'M.L. Campeones 1080 MultiAudio (OPCIÓN 2)',
       url: 'acestream://f096a64dd756a6d549aa7b12ee9acf7eee27e833',
     },
     {
-      title: 'M.L. Campeones 1080P',
+      title: 'M.L. Campeones 1080P (OPCIÓN 3)',
       url: 'acestream://1d79a7543d691666135669f89f3541f54e2dd0a9',
     },
     {
@@ -314,7 +314,7 @@ export class AppComponent {
       url: 'acestream://d59fe9978eed49f256b312a60671b5bce43d3f24',
     },
     {
-      title: 'M.L. Campeones 4 1080',
+      title: 'M.L. Campeones 4 1080 (Multichampions)',
       url: 'acestream://f2df4f96b23388b45e75d848a48a510cf8af560f',
     },
     {
