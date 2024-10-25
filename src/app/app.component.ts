@@ -2,26 +2,34 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NgbModule],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    NgbModule,
+    MatProgressSpinnerModule,
+    MatIcon,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   links = [
     {
-      title: 'La1',
+      title: 'La 1',
       url: 'acestream://02b9307c5c97c86914cc5939d6bbeb5b4ec60b47',
     },
     {
-      title: 'La1 UHD',
+      title: 'La 1 UHD',
       url: 'acestream://61a38b6c3b6c3fdffcb2f61053f3437e569eb666',
     },
     {
-      title: 'La2',
+      title: 'La 2',
       url: 'acestream://60106275d34f995e26bb2cc4a21a42f586c6c555',
     },
     {
@@ -37,7 +45,7 @@ export class AppComponent {
       url: 'acestream://c373da9e901d414b7384e671112e64d5a2310c29',
     },
     {
-      title: 'Euro 4k',
+      title: 'Eurosport 4K',
       url: 'acestream://63135c171f056d1d6028f9ffb1637ed704b88a20',
     },
     {
@@ -87,7 +95,8 @@ export class AppComponent {
     {
       title: 'M. LaLiga 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZDhJ7oqU-bMIGmE6719lIr7vIcJF5gb_ZVA&s',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZDhJ7oqU-bMIGmE6719lIr7vIcJF5gb_ZVA&s',
     },
     {
       title: 'M. LaLiga 1080 MultiAudio (OPCIÓN 2)',
@@ -122,7 +131,7 @@ export class AppComponent {
       url: 'acestream://c896d37778f9e43549a788fc22206a655895b51b',
     },
     {
-      title: 'La Liga BAR 1080',
+      title: 'LaLiga TV BAR 1080',
       url: 'acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280',
     },
     {
@@ -158,63 +167,63 @@ export class AppComponent {
       url: 'acestream://99e544cddbee13798e854c1009ee7d1a93fdedf7',
     },
     {
-      title: 'LaLiga Smartbank 1080',
+      title: 'LaLiga Hypermotion 1080',
       url: 'acestream://4c46585214b23b1d802ef2168060c7649a3894cf',
     },
     {
-      title: 'LaLiga Smartbank 720',
+      title: 'LaLiga Hypermotion 720',
       url: 'acestream://06b367c22394a1358c9cefa0cb5d0b64b9b2b3f4',
     },
     {
-      title: 'LaLiga Smartbank 2 1080',
+      title: 'LaLiga Hypermotion 2 1080',
       url: 'acestream://d81b4f2f3fde433539c097b2edc9b587ca47b087',
     },
     {
-      title: 'LaLiga Smartbank 2 720',
+      title: 'LaLiga Hypermotion 2 720',
       url: 'acestream://2709d0ab86cb6ce7ba4d3ad188d7fa80668f2924',
     },
     {
-      title: 'LaLiga Smartbank 3',
+      title: 'LaLiga Hypermotion 3',
       url: 'acestream://bd2f7970c17f427ae92867e2eb86696dd7900a3e',
     },
     {
-      title: 'LaLiga Smartbank 4',
+      title: 'LaLiga Hypermotion 4',
       url: 'acestream://ef3a9359800bba51018fe00ac84afb8e79a7bbf2',
     },
     {
-      title: 'LaLiga Smartbank 5',
+      title: 'LaLiga Hypermotion 5',
       url: 'acestream://7a6f7c3acc3689c40f2300432723c55d41222af0',
     },
     {
-      title: 'LaLiga Smartbank 6',
+      title: 'LaLiga Hypermotion 6',
       url: 'acestream://5bd78125bd1e98c3f49e98910ed15e39d0b9f631',
     },
     {
-      title: 'LaLiga Smartbank 7',
+      title: 'LaLiga Hypermotion 7',
       url: 'acestream://b7e43c2c3887864193578eb57079955c50070f69',
     },
     {
-      title: 'LaLiga Smartbank 8',
+      title: 'LaLiga Hypermotion 8',
       url: 'acestream://11c89343be863cf2a69b3973747c629d9e79d7b8',
     },
     {
-      title: 'LaLiga Smartbank 9',
+      title: 'LaLiga Hypermotion 9',
       url: 'acestream://0fd11e74d20919c25d2c5d96ba6f7fc7532394c1',
     },
     {
-      title: 'LaLiga Smartbank 10',
+      title: 'LaLiga Hypermotion 10',
       url: 'acestream://629222201d6e36cc0f4ab6244362de32bed783b2',
     },
     {
-      title: 'LaLiga Smartbank 11',
+      title: 'LaLiga Hypermotion 11',
       url: 'acestream://d6ecda8ad7be7a9a4de3767eb40569b73b738cb4',
     },
     {
-      title: 'LaLiga Smartbank 12',
+      title: 'LaLiga Hypermotion 12',
       url: 'acestream://7b975804279b0aa421496538ad21397cc06ddfb8',
     },
     {
-      title: 'M.Plus 1080',
+      title: 'M+ (Movistar Plus) 1080',
       url: 'acestream://5a236fbbe6e5bbfec03db548c244a7c858d675c0',
     },
     {
@@ -222,7 +231,7 @@ export class AppComponent {
       url: 'acestream://8ba764f6a3bce6eae87ec71208fad1aa3a20528d',
     },
     {
-      title: 'Copa 1080 plus',
+      title: 'Copa 1080 Plus',
       url: 'acestream://d6cdd724a97fcf851e7ef641c28d6beb8663496e',
     },
     {
@@ -290,7 +299,7 @@ export class AppComponent {
       url: 'acestream://f096a64dd756a6d549aa7b12ee9acf7eee27e833',
     },
     {
-      title: 'M.L. Campeones 1080P (OPCIÓN 3)',
+      title: 'M.L. Campeones 1080 (OPCIÓN 3)',
       url: 'acestream://1d79a7543d691666135669f89f3541f54e2dd0a9',
     },
     {
@@ -362,7 +371,7 @@ export class AppComponent {
       url: 'acestream://688cc3af0f517c598e07d35f1ce79f8bcba17d81',
     },
     {
-      title: 'M. Golf2 1080',
+      title: 'M. Golf 2 1080',
       url: 'acestream://0742f7fabb74715b11c5a5dae24e93a4644697a5',
     },
     {
@@ -403,19 +412,11 @@ export class AppComponent {
       url: 'acestream://e1fcad9de0c782c157fde6377805c58297ab65c2',
     },
     {
-      title: 'Eurosport4k',
+      title: 'Eurosport 4K',
       url: 'acestream://c525471499b936decc037ea86e0f8125ebf78c28',
     },
     {
-      title: 'EuroSport 1 1080',
-      url: 'acestream://5e4cd48c79f991fcbee2de8b9d30c4b16de3b952',
-    },
-    {
-      title: 'EuroSport 2 1080',
-      url: 'acestream://c373da9e901d414b7384e671112e64d5a2310c29',
-    },
-    {
-      title: 'GOL TV 1080',
+      title: 'GOL PLAY 1080',
       url: 'acestream://d4627f7b6b237a8556819445b3283d866caceca2',
     },
     {
@@ -478,5 +479,11 @@ export class AppComponent {
 
   copyLink(url: string) {
     navigator.clipboard.writeText(url);
+  }
+
+  loading: boolean[] = [true, true, true, true];
+
+  onIframeLoad(index: number) {
+    this.loading[index] = false;
   }
 }

@@ -2,61 +2,78 @@
   <h1 class="title-links">ACESTREAM LINKS by Markel05</h1>
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <div class="futbol-tv-agendas">
-    <iframe
-      id="ftv_iframe"
-      name="ftv_iframe"
-      src="https://widgets.futbolenlatv.com/partidos/competition/la-liga?color=007eff&culture=es-ES"
-      width="400"
-      height="401"
-      frameborder="0"
-      scrolling="auto"
-      style="margin-bottom: 10px"
-    ></iframe>
-    <iframe
-      id="ftv_iframe"
-      name="ftv_iframe"
-      src="https://widgets.futbolenlatv.com/partidos/competition/liga-campeones?color=007eff&culture=es-ES"
-      width="400"
-      height="401"
-      frameborder="0"
-      scrolling="auto"
-      style="margin-bottom: 10px"
-    ></iframe>
-    <iframe
-      id="ftv_iframe"
-      name="ftv_iframe"
-      src="https://widgets.futbolenlatv.com/partidos/competition/europa-league?color=007eff&culture=es-ES"
-      width="400"
-      height="401"
-      frameborder="0"
-      scrolling="auto"
-      style="margin-bottom: 10px"
-    ></iframe>
-    <iframe
-      id="ftv_iframe"
-      name="ftv_iframe"
-      src="https://widgets.futbolenlatv.com/partidos/equipo/athletic-club-de-bilbao?color=007eff&culture=es-ES"
-      width="400"
-      height="401"
-      frameborder="0"
-      scrolling="auto"
-      style="margin-bottom: 10px"
-    ></iframe>
+    <div class="iframe-container">
+      <div class="spinner-container" *ngIf="loading[0]">
+        <mat-spinner></mat-spinner>
+      </div>
+      <iframe
+        id="ftv_iframe_0"
+        name="ftv_iframe_0"
+        src="https://widgets.futbolenlatv.com/partidos/competition/la-liga?color=007eff&culture=es-ES"
+        width="400"
+        height="401"
+        frameborder="0"
+        scrolling="auto"
+        style="margin-bottom: 10px"
+        (load)="onIframeLoad(0)"
+      ></iframe>
+    </div>
+    <div class="iframe-container">
+      <div class="spinner-container" *ngIf="loading[1]">
+        <mat-spinner></mat-spinner>
+      </div>
+      <iframe
+        id="ftv_iframe_1"
+        name="ftv_iframe_1"
+        src="https://widgets.futbolenlatv.com/partidos/competition/liga-campeones?color=007eff&culture=es-ES"
+        width="400"
+        height="401"
+        frameborder="0"
+        scrolling="auto"
+        style="margin-bottom: 10px"
+        (load)="onIframeLoad(1)"
+      ></iframe>
+    </div>
+    <div class="iframe-container">
+      <div class="spinner-container" *ngIf="loading[2]">
+        <mat-spinner></mat-spinner>
+      </div>
+      <iframe
+        id="ftv_iframe_2"
+        name="ftv_iframe_2"
+        src="https://widgets.futbolenlatv.com/partidos/competition/europa-league?color=007eff&culture=es-ES"
+        width="400"
+        height="401"
+        frameborder="0"
+        scrolling="auto"
+        style="margin-bottom: 10px"
+        (load)="onIframeLoad(2)"
+      ></iframe>
+    </div>
+    <div class="iframe-container">
+      <div class="spinner-container" *ngIf="loading[3]">
+        <mat-spinner></mat-spinner>
+      </div>
+      <iframe
+        id="ftv_iframe_3"
+        name="ftv_iframe_3"
+        src="https://widgets.futbolenlatv.com/partidos/equipo/athletic-club-de-bilbao?color=007eff&culture=es-ES"
+        width="400"
+        height="401"
+        frameborder="0"
+        scrolling="auto"
+        style="margin-bottom: 10px"
+        (load)="onIframeLoad(3)"
+      ></iframe>
+    </div>
   </div>
-
   <h3 class="header-enlaces">ENLACES</h3>
   <div class="links-container">
     <div class="column" *ngFor="let column of [0, 1]">
       <li class="links" *ngFor="let link of links | slice: (column * (links.length / 2)) : ((column + 1) * (links.length / 2))">
         <a href="{{ link.url }}">{{ link.title }}</a>
-        <button
-          class="copy-button"
-          ngbTooltip="Copiar enlace"
-          placement="right"
-          tooltipClass="tooltip-copy"
-          (click)="copyLink(link.url)"
-        >
-          <i class="bi bi-copy"></i>
+        <button ngbTooltip="Copiar enlace" placement="right" class="copy-button" (click)="copyLink(link.url)">
+            <mat-icon style="font-size: 20px; display: block;">content_copy</mat-icon>
         </button>
       </li>
     </div>
