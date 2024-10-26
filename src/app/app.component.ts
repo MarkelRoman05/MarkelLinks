@@ -7,7 +7,6 @@ import { MatIcon } from '@angular/material/icon';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -24,6 +23,7 @@ import { MessageService } from 'primeng/api';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  
   links = [
     {
       title: 'La 1',

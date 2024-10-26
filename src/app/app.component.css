@@ -35,6 +35,48 @@
   z-index: 1;
 }
 
+.github-logo {
+  color: #000;
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+.how-to-play-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección del flex a columna */
+  align-items: center; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.how-to-play-text {
+  background-color: #f9f9f9; /* Color de fondo claro */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  font-family: Arial, sans-serif; /* Fuente */
+  font-size: 17px; /* Tamaño de fuente */
+  line-height: 1.6; /* Altura de línea */
+  color: #333; /* Color de texto */
+  margin: 0 30px 30px 35px; /* Márgenes a los lados y abajo */
+}
+
+.how-to-play-text a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.how-to-play-text a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
 .futbol-tv-agendas {
   display: flex;
   justify-content: center;
