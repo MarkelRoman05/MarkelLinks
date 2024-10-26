@@ -77,7 +77,7 @@
   <div class="links-container">
     <div class="column" *ngFor="let column of [0, 1]">
       <li class="links" *ngFor="let link of links | slice: (column * (links.length / 2)) : ((column + 1) * (links.length / 2))">
-        <a href="{{ link.url }}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
         <button ngbTooltip="Copiar enlace" placement="right" class="copy-button" (click)="copyLink(link.url)">
             <mat-icon style="font-size: 20px; display: block;">content_copy</mat-icon>
         </button>
