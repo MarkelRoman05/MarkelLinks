@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIcon } from '@angular/material/icon';
+import { MessagesModule } from 'primeng/messages';
+import { MessageService } from 'primeng/api';
+
 
 @Component({
   selector: 'app-root',
@@ -14,7 +17,9 @@ import { MatIcon } from '@angular/material/icon';
     NgbModule,
     MatProgressSpinnerModule,
     MatIcon,
+    MessagesModule,
   ],
+  providers: [MessageService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -477,8 +482,15 @@ export class AppComponent {
     },
   ];
 
+  constructor(private messageService: MessageService) {}
+
   copyLink(url: string) {
-    navigator.clipboard.writeText(url);
+    navigator.clipboard.writeText(url).then(() => {
+      this.messageService.add({severity:'success', summary:'Enlace copiado'});
+      setTimeout(() => {
+        this.messageService.clear();
+      }, 2000);
+    });
   }
 
   loading: boolean[] = [true, true, true, true];

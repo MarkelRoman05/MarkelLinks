@@ -10,11 +10,20 @@
   justify-content: center;
 }
 
+.custom-message {
+  position: fixed;
+  bottom: 0;
+  margin: 18px;
+  z-index: 1000;
+  background-color: transparent;
+}
+
 .copy-button {
-  margin-left: 5px;
+  margin-left: 7px;
   cursor: pointer;
   padding: 1px 1px;
   font-size: 12px;
+  border: 1px solid #ccc;
 }
 
 .tooltip-copy {
