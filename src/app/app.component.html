@@ -5,9 +5,11 @@
   </div>
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <div class="futbol-tv-agendas">
-    <p-messages class="custom-message"
-    [enableService]="true" 
-    [closable]="false" />
+    <p-messages
+      class="custom-message"
+      [enableService]="true"
+      [closable]="false"
+    />
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[0]">
         <mat-spinner></mat-spinner>
@@ -72,32 +74,78 @@
         (load)="onIframeLoad(3)"
       ></iframe>
     </div>
+    <div class="iframe-container">
+      <div class="spinner-container" *ngIf="loading[4]">
+        <mat-spinner></mat-spinner>
+      </div>
+      <iframe
+        id="ftv_iframe"
+        name="ftv_iframe"
+        src="https://widgets.futbolenlatv.com/partidos/competition/premier-league?color=005df8&culture=es-ES"
+        width="400"
+        height="401"
+        frameborder="0"
+        scrolling="auto"
+        style="margin-bottom: 10px"
+        (load)="onIframeLoad(4)"
+      ></iframe>
+    </div>
   </div>
   <h3 class="header-enlaces">ENLACES</h3>
   <div class="links-container">
     <div class="column" *ngFor="let column of [0, 1]">
-      <li class="links" *ngFor="let link of links | slice: (column * (links.length / 2)) : ((column + 1) * (links.length / 2))">
+      <li
+        class="links"
+        *ngFor="
+          let link of links
+            | slice
+              : column * (links.length / 2)
+              : (column + 1) * (links.length / 2)
+        "
+      >
         <a href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
-        <button ngbTooltip="Copiar enlace" placement="right" class="copy-button" (click)="copyLink(link.url)">
-            <mat-icon style="font-size: 20px; display: block;">content_copy</mat-icon>
+        <button
+          ngbTooltip="Copiar enlace"
+          placement="right"
+          class="copy-button"
+          (click)="copyLink(link.url)"
+        >
+          <mat-icon style="font-size: 20px; display: block"
+            >content_copy</mat-icon
+          >
         </button>
       </li>
     </div>
   </div>
-    <div class="how-to-play-container">
-      <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACESTREAM</h3>
-      <p class="how-to-play-text">
-        Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener instalado Ace Stream Media. Si no lo tienes instalado, 
-        puedes descargarlo desde la página oficial de Ace Stream haciendo clic <a href="https://www.acestream.org/?page=products">aquí</a>. Una vez instalado,
-        tienes dos formas de reproducir los enlaces: la primera es copiar el enlace, abrir Ace Player manualmente y pegar el enlace en la opción "Medio" <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID".
-        La segunda es haciendo clic directamente en el enlace, lo que abrirá automáticamente Ace Player y reproducirá el contenido. Para reproducir estos enlaces, asegúrate de tener
-        abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta de instalación de Ace Stream.
-        Para reproducir los enlaces correctamente, es recomendable cambiar ciertos parámetros en la configuración de Ace Stream. 
-        Para ello, haz clic derecho sobre el icono de Ace Stream en la barra de tareas y selecciona "Options...". Allí, cambia los valores de "VOD buffer" a 10 y "Live buffer" a 60.
-      </p>
-    </div>
-    <div class="footer">
-      <p class="footer-text">© 2024 Markel05</p>
-      <a ngbTooltip="GitHub" placement="right" href="https://github.com/MarkelRoman05" class="github-button"><i class="bi bi-github github-logo"></i></a>
-    </div>
+  <div class="how-to-play-container">
+    <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACESTREAM</h3>
+    <p class="how-to-play-text">
+      Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener
+      instalado Ace Stream Media. Si no lo tienes instalado, puedes descargarlo
+      desde la página oficial de Ace Stream haciendo clic
+      <a href="https://www.acestream.org/?page=products">aquí</a>. Una vez
+      instalado, tienes dos formas de reproducir los enlaces: la primera es
+      copiar el enlace, abrir Ace Player manualmente y pegar el enlace en la
+      opción "Medio" <i class="bi bi-arrow-right"></i> "Open Ace Stream Content
+      ID". La segunda es haciendo clic directamente en el enlace, lo que abrirá
+      automáticamente Ace Player y reproducirá el contenido. Para reproducir
+      estos enlaces, asegúrate de tener abierto Ace Stream Engine (ace_engine /
+      Ace Stream HD), si no, ábrelo tú manualmente desde la ruta de instalación
+      de Ace Stream. Para reproducir los enlaces correctamente, es recomendable
+      cambiar ciertos parámetros en la configuración de Ace Stream. Para ello,
+      haz clic derecho sobre el icono de Ace Stream en la barra de tareas y
+      selecciona "Options...". Allí, cambia los valores de "VOD buffer" a 10 y
+      "Live buffer" a 60.
+    </p>
+  </div>
+  <div class="footer">
+    <p class="footer-text">© 2024 Markel05</p>
+    <a
+      ngbTooltip="GitHub"
+      placement="right"
+      href="https://github.com/MarkelRoman05"
+      class="github-button"
+      ><i class="bi bi-github github-logo"></i
+    ></a>
+  </div>
 </div>

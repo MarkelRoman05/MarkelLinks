@@ -493,7 +493,7 @@ export class AppComponent {
     });
   }
 
-  loading: boolean[] = [true, true, true, true];
+  loading: boolean[] = [true, true, true, true, true];
 
   onIframeLoad(index: number) {
     this.loading[index] = false;
