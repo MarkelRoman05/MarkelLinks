@@ -5,7 +5,7 @@
   margin-top: 5px;
 }
 
-.title-links {
+.header {
   display: flex;
   justify-content: center;
 }
@@ -36,9 +36,17 @@
 }
 
 .github-logo {
-  color: #000;
+  color: white;
   font-size: 35px;
   margin-top: 10px;
+}
+
+.github-logo:hover {
+  color: #ddd;
+}
+
+.github-button {
+  margin-bottom: 10px;
 }
 
 .how-to-play-header {
@@ -49,11 +57,17 @@
 }
 
 .footer {
+  background-color: #004d40; /* Fondo de color azul oscuro verdoso */
   display: flex;
   flex-direction: column; /* Cambia la dirección del flex a columna */
   align-items: center; 
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.footer-text {
+  color: white; /* Color de texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
 }
 
 .how-to-play-text {
