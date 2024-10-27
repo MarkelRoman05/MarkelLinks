@@ -156,3 +156,23 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+
+@media (max-width: 600px) {
+  .how-to-play-text {
+    margin: 0 10px 20px 10px; /* Reducir márgenes en pantallas pequeñas */
+    font-size: 15px; /* Reducir tamaño de fuente */
+  }
+
+  .footer-text {
+    font-size: 14px; /* Reducir tamaño de fuente */
+  }
+
+  .github-logo {
+    font-size: 30px; /* Reducir tamaño del logo */
+  }
+
+  .acestream-link {
+    font-size: 14px; /* Reducir tamaño de fuente */
+    padding: 5px; /* Reducir padding */
+  }
+}
