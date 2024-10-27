@@ -176,3 +176,9 @@
     padding: 5px; /* Reducir padding */
   }
 }
+
+@media (max-width: 1979px) {
+  .futbol-tv-agendas {
+    overflow-x: scroll;
+  }
+}
