@@ -177,6 +177,11 @@
   }
 }
 
+.balon-de-oro-text {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1979px) {
   .futbol-tv-agendas {
     overflow-x: scroll;
