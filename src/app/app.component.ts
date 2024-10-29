@@ -100,8 +100,6 @@ export class AppComponent {
     {
       title: 'M. LaLiga 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
-      image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZDhJ7oqU-bMIGmE6719lIr7vIcJF5gb_ZVA&s',
     },
     {
       title: 'M. LaLiga 1080 MultiAudio (OPCIÓN 2)',
@@ -401,15 +399,15 @@ export class AppComponent {
       url: 'acestream://2fcdf7a19c0858f686efdfabd3c8c2b92bf6bcfd',
     },
     {
-      title: 'DAZN F1 Multicamara (Fórmula 1)',
+      title: 'DAZN F1 Multicámara (Fórmula 1)',
       url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
     },
     {
-      title: 'DAZN F1 1080 (Fórmula 1)',
+      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 1]',
       url: 'acestream://5789ca155323664edd293b848606688edf803f4d',
     },
     {
-      title: 'DAZN F1 1080 (Fórmula 1)',
+      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 2]',
       url: 'acestream://9dad717d99b29a05672166258a77c25b57713dd5',
     },
     {

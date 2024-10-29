@@ -50,6 +50,12 @@
   margin-bottom: 10px;
 }
 
+.text-enlaces-agenda-completa {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
 .how-to-play-header {
   display: flex;
   justify-content: center;
