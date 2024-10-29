@@ -46,6 +46,7 @@
 }
 
 .github-button {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -175,11 +176,6 @@
     font-size: 14px; /* Reducir tamaño de fuente */
     padding: 5px; /* Reducir padding */
   }
-}
-
-.balon-de-oro-text {
-  display: flex;
-  justify-content: center;
 }
 
 @media (max-width: 1979px) {
