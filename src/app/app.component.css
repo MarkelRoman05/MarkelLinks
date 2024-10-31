@@ -35,6 +35,10 @@
   z-index: 1;
 }
 
+.tooltip {
+  color: white;
+}
+
 .github-logo {
   color: white;
   font-size: 35px;
@@ -47,7 +51,7 @@
 
 .github-button {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .text-enlaces-agenda-completa {
@@ -74,7 +78,7 @@
 
 .footer-text {
   color: white; /* Color de texto blanco */
-  font-size: 16px; /* Tamaño de fuente */
+  font-size: 13px; /* Tamaño de fuente */
 }
 
 .how-to-play-text {
@@ -187,5 +191,18 @@
 @media (max-width: 1979px) {
   .futbol-tv-agendas {
     overflow-x: scroll;
+  }
+}
+
+@media (max-width: 1190px) {
+  .futbol-tv-agendas {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-enlaces-agenda-completa {
+    flex-wrap: wrap;
   }
 }
