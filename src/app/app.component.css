@@ -44,6 +44,13 @@
   border: 1px solid #ccc;
 }
 
+.copy-button:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+  color: #333;
+  transition: all 0.3s;
+}
+
 .tooltip-copy {
   background-color: black;
   color: white;

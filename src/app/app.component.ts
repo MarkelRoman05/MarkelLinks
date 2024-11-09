@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -11,7 +10,6 @@ import { MessageService } from 'primeng/api';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     CommonModule,
     NgbModule,
     MatProgressSpinnerModule,
@@ -33,16 +31,16 @@ export class AppComponent {
       url: 'acestream://1969c27658d4c8333ab2c0670802546121a774a5',
     },
     {
-      title: 'M+ LALIGA TV 1080',
+      title: 'M+ LALIGA TV 1080 (OPCIÓN 3)',
       url: 'acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280',
-    },
-    {
-      title: 'M+ LALIGA TV UHD 4K (No suele funcionar)',
-      url: 'acestream://dce1579e3a2e5bd29071fca8eae364f1eb3205cf',
     },
     {
       title: 'M+ LALIGA TV 720',
       url: 'acestream://f031f5728b32f6089dda28edebe990cf198108d8',
+    },
+    {
+      title: 'M+ LALIGA TV UHD 4K (No suele funcionar)',
+      url: 'acestream://dce1579e3a2e5bd29071fca8eae364f1eb3205cf',
     },
     {
       title: 'M+ LALIGA TV 2 1080',
@@ -105,7 +103,7 @@ export class AppComponent {
       url: 'acestream://99e544cddbee13798e854c1009ee7d1a93fdedf7',
     },
     {
-      title: 'M+ (Movistar Plus) 1080',
+      title: 'Movistar Plus+ (M+) 1080',
       url: 'acestream://5a236fbbe6e5bbfec03db548c244a7c858d675c0',
     },
     {
@@ -153,48 +151,32 @@ export class AppComponent {
       url: 'acestream://c525471499b936decc037ea86e0f8125ebf78c28',
     },
     {
-      title: 'Euro3 1080',
+      title: 'Eurosport 3 1080',
       url: 'acestream://a62c010c71bfb76b18188f108c3cc4541c34f45e',
     },
     {
-      title: 'Euro4 1080',
+      title: 'Eurosport 4 1080',
       url: 'acestream://76a482a4cb53fc28518187c6b814f136b3db3c95',
     },
     {
-      title: 'Euro5 1080',
+      title: 'Eurosport 5 1080',
       url: 'acestream://914ce366baec9b0fb3523dd7ba762a44b597fc40',
     },
     {
-      title: 'Euro6 1080',
+      title: 'Eurosport 6 1080',
       url: 'acestream://1bc614c5aa2a94117c13c7f0be2b8ea31b535f38',
     },
     {
-      title: 'Euro7 1080',
+      title: 'Eurosport 7 1080',
       url: 'acestream://e899a4f1e20f7ce1b39cc529dc237fc29a21855f',
     },
     {
-      title: 'Euro8 1080',
+      title: 'Eurosport 8 1080',
       url: 'acestream://721a78f2076faa584c9c09059ffb4e10159f4665',
     },
     {
-      title: 'Euro9 1080',
+      title: 'Eurosport 9 1080',
       url: 'acestream://dd9c56ef2f09753c59d9c2e2d2af31aeea6451c0',
-    },
-    {
-      title: 'La 1',
-      url: 'acestream://02b9307c5c97c86914cc5939d6bbeb5b4ec60b47',
-    },
-    {
-      title: 'La 1 UHD',
-      url: 'acestream://61a38b6c3b6c3fdffcb2f61053f3437e569eb666',
-    },
-    {
-      title: 'La 2',
-      url: 'acestream://60106275d34f995e26bb2cc4a21a42f586c6c555',
-    },
-    {
-      title: 'tdp 1080',
-      url: 'acestream://e2395d28ad19423212fd3aa0e81f387db3e8bb9f',
     },
     {
       title: 'LALIGA Hypermotion 1080',
@@ -253,6 +235,22 @@ export class AppComponent {
       url: 'acestream://7b975804279b0aa421496538ad21397cc06ddfb8',
     },
     {
+      title: 'DAZN F1 Multicámara (Fórmula 1)',
+      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
+    },
+    {
+      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 1]',
+      url: 'acestream://5789ca155323664edd293b848606688edf803f4d',
+    },
+    {
+      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 2]',
+      url: 'acestream://9dad717d99b29a05672166258a77c25b57713dd5',
+    },
+    {
+      title: 'DAZN F1 720 (Fórmula 1)',
+      url: 'acestream://e1fcad9de0c782c157fde6377805c58297ab65c2',
+    },
+    {
       title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://931b1984badcb821df7b47a66ac0835ac871b51c',
     },
@@ -285,7 +283,7 @@ export class AppComponent {
       url: 'acestream://d59fe9978eed49f256b312a60671b5bce43d3f24',
     },
     {
-      title: 'M+ L. de Campeones 4 1080 (Multichampions)',
+      title: 'M+ L. de Campeones 4 1080 (Multi)',
       url: 'acestream://f2df4f96b23388b45e75d848a48a510cf8af560f',
     },
     {
@@ -402,28 +400,24 @@ export class AppComponent {
       url: 'acestream://0742f7fabb74715b11c5a5dae24e93a4644697a5',
     }, 
     {
-      title: 'DAZN F1 Multicámara (Fórmula 1)',
-      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
+      title: 'La 1',
+      url: 'acestream://02b9307c5c97c86914cc5939d6bbeb5b4ec60b47',
     },
     {
-      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 1]',
-      url: 'acestream://5789ca155323664edd293b848606688edf803f4d',
+      title: 'La 1 UHD',
+      url: 'acestream://61a38b6c3b6c3fdffcb2f61053f3437e569eb666',
     },
     {
-      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 2]',
-      url: 'acestream://9dad717d99b29a05672166258a77c25b57713dd5',
-    },
-    {
-      title: 'DAZN F1 720 (Fórmula 1)',
-      url: 'acestream://e1fcad9de0c782c157fde6377805c58297ab65c2',
-    },
-    {
-      title: 'GOL PLAY 1080',
-      url: 'acestream://d4627f7b6b237a8556819445b3283d866caceca2',
+      title: 'La 2',
+      url: 'acestream://60106275d34f995e26bb2cc4a21a42f586c6c555',
     },
     {
       title: 'tdp 1080',
       url: 'acestream://e2395d28ad19423212fd3aa0e81f387db3e8bb9f',
+    },
+    {
+      title: 'GOL PLAY 1080',
+      url: 'acestream://d4627f7b6b237a8556819445b3283d866caceca2',
     },
     {
       title: 'Tennis Channel',
@@ -456,10 +450,6 @@ export class AppComponent {
     {
       title: 'beIN SPORTS ñ',
       url: 'acestream://41af6926a6010b68ba2540975761436bb077748f',
-    },
-    {
-      title: 'Barça 720',
-      url: 'acestream://e3362507e7c732b9461bd7bdc74bd054c49b3ba7',
     },
     {
       title: 'PPVP 1',
