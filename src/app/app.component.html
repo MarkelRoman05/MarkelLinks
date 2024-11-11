@@ -3,15 +3,20 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <img src="balon.png" alt="Logo" class="logo" width="50" height="60">
+        <img src="balon.png" alt="Logo" class="logo" width="50" height="60" />
       </div>
       <div class="navbar-title">
-        <h1>ACESTREAM LINKS</h1>
+        <h1>ACE STREAM LINKS</h1>
       </div>
     </div>
   </nav>
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
-  <img referrerpolicy="no-referrer-when-downgrade" src="https://markel-links.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+  <img
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://markel-links.matomo.cloud/matomo.php?idsite=1&amp;rec=1"
+    style="border: 0"
+    alt=""
+  />
   <div class="futbol-tv-agendas">
     <p-messages
       class="custom-message"
@@ -100,9 +105,8 @@
     </div>
   </div>
   <h4 class="text-enlaces-agenda-completa">
-    Para ver la agenda completa, visita la web de&nbsp;<a
-      href="https://www.futbolenlatv.es/"
-      target="_blank"
+    Para ver la agenda completa, visita la web de&nbsp;
+    <a href="https://www.futbolenlatv.es/" class="link-futboltv" target="_blank"
       >Fútbol en la TV
       <span style="vertical-align: middle"
         ><sup><i class="bi bi-box-arrow-in-up-right"></i></sup></span
@@ -120,10 +124,10 @@
               : (column + 1) * (links.length / 2)
         "
       >
-        <a href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
+        <a matTooltip="Reproducir en Ace Player" matTooltipPosition="left" href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
         <button
-          ngbTooltip="Copiar enlace"
-          placement="right"
+          matTooltip="Copiar enlace"
+          matTooltipPosition="right"
           class="copy-button"
           (click)="copyLink(link.url)"
         >
@@ -140,30 +144,31 @@
       Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener
       instalado Ace Stream Media. Si no lo tienes instalado, puedes descargarlo
       desde la página oficial de Ace Stream haciendo clic
-      <a href="https://www.acestream.org/?page=products" target="_blank">aquí</a>. Una vez
-      instalado, tienes dos formas de reproducir los enlaces: la primera es
-      copiar el enlace, abrir Ace Player manualmente y pegar el enlace en la
-      opción "Medio" <i class="bi bi-arrow-right"></i> "Open Ace Stream Content
-      ID". La segunda es haciendo clic directamente en el enlace, lo que abrirá
-      automáticamente Ace Player y reproducirá el contenido. Para reproducir
-      estos enlaces, asegúrate de tener abierto Ace Stream Engine (ace_engine /
-      Ace Stream HD), si no, ábrelo tú manualmente desde la ruta de instalación
-      de Ace Stream. Para reproducir los enlaces correctamente, es recomendable
-      cambiar ciertos parámetros en la configuración de Ace Stream. Para ello,
-      haz clic derecho sobre el icono de Ace Stream en la barra de tareas y
-      selecciona "Options...". Allí, cambia los valores de "VOD buffer" a 10 y
-      "Live buffer" a 60.
+      <a href="https://www.acestream.org/?page=products" target="_blank">aquí</a
+      >. Una vez instalado, tienes dos formas de reproducir los enlaces: la
+      primera es copiar el enlace, abrir Ace Player manualmente y pegar el
+      enlace en la opción "Medio" <i class="bi bi-arrow-right"></i> "Open Ace
+      Stream Content ID". La segunda es haciendo clic directamente en el enlace,
+      lo que abrirá automáticamente Ace Player y reproducirá el contenido. Para
+      reproducir estos enlaces, asegúrate de tener abierto Ace Stream Engine
+      (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
+      de instalación de Ace Stream. Para reproducir los enlaces correctamente,
+      es recomendable cambiar ciertos parámetros en la configuración de Ace
+      Stream. Para ello, haz clic derecho sobre el icono de Ace Stream en la
+      barra de tareas y selecciona "Options...". Allí, cambia los valores de
+      "VOD buffer" a 10 y "Live buffer" a 60.
     </p>
   </div>
   <div class="footer">
     <a
-      ngbTooltip="GitHub"
-      placement="right"
+      matTooltip="GitHub"
+      matTooltipPosition="above"
       href="https://github.com/MarkelRoman05"
       class="github-button"
       target="_blank"
       ><i class="bi bi-github github-logo"></i
     ></a>
-    <p class="footer-text">Desarrollado por Markel05</p>
+    <span class="footer-text">Ace Stream Links</span>
+    <p class="footer-text">Todos los enlaces son obtenidos de fuentes externas.</p>
   </div>
 </div>

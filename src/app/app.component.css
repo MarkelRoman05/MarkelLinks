@@ -60,6 +60,22 @@
   z-index: 1;
 }
 
+.tooltip-class .tooltip-inner {
+  background-color: darkgreen;
+  font-size: 125%;
+}
+
+.link-futboltv:hover {
+  color: #ff0000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.link-futboltv {
+  color: #0000ff;
+  font-weight: bold;
+}
+
 .tooltip {
   color: white;
 }

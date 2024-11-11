@@ -5,6 +5,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIcon } from '@angular/material/icon';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { MessageService } from 'primeng/api';
     MatProgressSpinnerModule,
     MatIcon,
     MessagesModule,
+    MatTooltipModule,
   ],
   providers: [MessageService],
   templateUrl: './app.component.html',
@@ -398,7 +400,7 @@ export class AppComponent {
     {
       title: 'M+ Golf 2 1080',
       url: 'acestream://0742f7fabb74715b11c5a5dae24e93a4644697a5',
-    }, 
+    },
     {
       title: 'La 1',
       url: 'acestream://02b9307c5c97c86914cc5939d6bbeb5b4ec60b47',
@@ -424,47 +426,35 @@ export class AppComponent {
       url: 'acestream://9292d3b32432efb56db4014933cbdec0a7cf2e36',
     },
     {
-      title: 'CUATRO 1080',
-      url: 'acestream://e8eec35f4662be1af96963245bfa88fb7d0242c4',
+      title: 'NBA TV',
+      url: 'acestream://e72d03fb9694164317260f684470be9ab781ed95',
     },
     {
-      title: 'BeMad 1080',
-      url: 'acestream://5c267a00f264736c1d47c1cc3e754447ca8f770c',
+      title: 'Wimbledon UHD',
+      url: 'acestream://78aa81aedb1e2b6a9ba178398148940857155f6a',
     },
     {
-      title: 'Telecinco 1080',
-      url: 'acestream://bb1982ae8d2d409d4ccd7a9f498042684e3532b5',
-    },
-    {
-      title: 'Sport Tv 1 1080',
-      url: 'acestream://ce235921dac95e1da2dd5e54673c2fecb9e806de',
-    },
-    {
-      title: 'Sport Tv 2 1080',
-      url: 'acestream://396d82ca6f5445abcd32e6b609d67e332ee12ace',
-    },
-    {
-      title: 'Sport Tv 3 1080',
-      url: 'acestream://f8cb9d9e3077eb3ae417b2d95a69c5f590760eb9',
+      title: 'ONETORO TV HD',
+      url: 'acestream://f763ab71f6f646e6c993f37e237be97baf2143ef',
     },
     {
       title: 'beIN SPORTS ñ',
       url: 'acestream://41af6926a6010b68ba2540975761436bb077748f',
     },
     {
-      title: 'PPVP 1',
+      title: 'DAZN Liga F 1',
       url: 'acestream://600222a4f98df80a2c0df2d60cb5ff3df9620710',
     },
     {
-      title: 'PPVP 2',
+      title: 'DAZN Liga F 2',
       url: 'acestream://d6cdd724a97fcf851e7ef641c28d6beb8663496e',
     },
     {
-      title: 'PPVP 3',
+      title: 'DAZN Liga F 3',
       url: 'acestream://162942adc047d0f78eac056effbe5bbec54a5e51',
     },
     {
-      title: 'PPVP 4',
+      title: 'DAZN Liga F 4',
       url: 'acestream://e454681a152a86da504e63694f17f90d0586867d',
     },
   ];
