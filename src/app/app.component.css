@@ -31,9 +31,50 @@
 .custom-message {
   position: fixed;
   bottom: 0;
+  left: 0;
   margin: 18px;
   z-index: 1000;
-  background-color: transparent;
+  width: auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.search-field {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.search-field input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #b3adad;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-field input:focus {
+  border-color: #004d40;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.search-field input::placeholder {
+  color: #999;
+}
+
+.no-encontrado-text {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 .copy-button {
@@ -51,20 +92,6 @@
   transition: all 0.3s;
 }
 
-.tooltip-copy {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  border-radius: 6px;
-  z-index: 1;
-}
-
-.tooltip-class .tooltip-inner {
-  background-color: darkgreen;
-  font-size: 125%;
-}
-
 .link-futboltv:hover {
   color: #ff0000;
   font-weight: bold;
@@ -74,10 +101,6 @@
 .link-futboltv {
   color: #0000ff;
   font-weight: bold;
-}
-
-.tooltip {
-  color: white;
 }
 
 .github-logo {
@@ -109,6 +132,7 @@
 }
 
 .footer {
+  flex-shrink: 0;
   background-color: #004d40; /* Fondo de color azul oscuro verdoso */
   display: flex;
   flex-direction: column; /* Cambia la dirección del flex a columna */

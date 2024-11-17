@@ -18,11 +18,6 @@
     alt=""
   />
   <div class="futbol-tv-agendas">
-    <p-messages
-      class="custom-message"
-      [enableService]="true"
-      [closable]="false"
-    />
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[0]">
         <mat-spinner></mat-spinner>
@@ -113,21 +108,33 @@
     ></a>
   </h4>
   <h3 class="header-enlaces">ENLACES</h3>
+  <div class="search-container">
+    <mat-form-field appearance="outline" class="search-field">
+      <input
+        matInput
+        type="text"
+        placeholder="Escribe el canal a buscar..."
+        [(ngModel)]="searchTerm"
+        (keyup)="filterLinks()"
+      />
+    </mat-form-field>
+  </div>
+  @if (filteredLinks.length === 0) {
+  <p class="no-encontrado-text">No se encontraron canales.</p>
+  } @else {
   <div class="links-container">
     <div class="column" *ngFor="let column of [0, 1]">
       <li
         class="links"
         *ngFor="
-          let link of links
+          let link of filteredLinks
             | slice
-              : column * (links.length / 2)
-              : (column + 1) * (links.length / 2)
+              : column * (filteredLinks.length / 2)
+              : (column + 1) * (filteredLinks.length / 2)
         "
       >
         <a href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
         <button
-          matTooltip="Copiar enlace"
-          matTooltipPosition="right"
           class="copy-button"
           (click)="copyLink(link.url)"
         >
@@ -138,6 +145,7 @@
       </li>
     </div>
   </div>
+  }
   <div class="how-to-play-container">
     <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACESTREAM</h3>
     <p class="how-to-play-text">
@@ -169,6 +177,8 @@
       ><i class="bi bi-github github-logo"></i
     ></a>
     <span class="footer-text">Ace Stream Links</span>
-    <p class="footer-text">Todos los enlaces son obtenidos de fuentes externas.</p>
+    <p class="footer-text">
+      Todos los enlaces son obtenidos de fuentes externas.
+    </p>
   </div>
 </div>
