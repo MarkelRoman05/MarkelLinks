@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIcon } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     MessagesModule,
     MatTooltipModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    AgendaEventoTextComponent
   ],
   providers: [MessageService],
   templateUrl: './app.component.html',
