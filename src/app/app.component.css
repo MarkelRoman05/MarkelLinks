@@ -123,6 +123,13 @@
   justify-content: center;
 }
 
+.time-clock {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
 .text-enlaces-agenda-completa {
   display: flex;
   justify-content: center;

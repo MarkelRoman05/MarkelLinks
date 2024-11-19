@@ -9,7 +9,11 @@
         <h1>ACE STREAM LINKS</h1>
       </div>
     </div>
+    <div class="time-clock">
+      <iframe src="https://free.timeanddate.com/clock/i9n4hxch/n327/tles4/fn12/fs18/fcfff/tc000/pcccc/ftb/bls0/brs0/bts4/th1" frameborder="0" width="92" height="25"></iframe>
+    </div>
   </nav>
+  
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <img
     referrerpolicy="no-referrer-when-downgrade"
@@ -139,10 +143,7 @@
         "
       >
         <a href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
-        <button
-          class="copy-button"
-          (click)="copyLink(link.url)"
-        >
+        <button class="copy-button" (click)="copyLink(link.url)">
           <mat-icon style="font-size: 20px; display: block"
             >content_copy</mat-icon
           >
@@ -167,13 +168,13 @@
       (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
       de instalación de Ace Stream. Para reproducir los enlaces correctamente,
       es recomendable cambiar ciertos parámetros en la configuración de Ace
-      Stream y de Ace Player. Primero, haz clic derecho sobre el icono de Ace Stream en la
-      barra de tareas y selecciona "Options...". Allí, cambia los valores de
-      "VOD buffer" a 10 y "Live buffer" a 60. Después, en Ace Player, ve en la
-      parte de arriba a "Herramientas" <i class="bi bi-arrow-right"></i> "Preferencias"
-      <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona "Automático" y
-      Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
-
+      Stream y de Ace Player. Primero, haz clic derecho sobre el icono de Ace
+      Stream en la barra de tareas y selecciona "Options...". Allí, cambia los
+      valores de "VOD buffer" a 10 y "Live buffer" a 60. Después, en Ace Player,
+      ve en la parte de arriba a "Herramientas"
+      <i class="bi bi-arrow-right"></i> "Preferencias"
+      <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona
+      "Automático" y Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
     </p>
   </div>
   <div class="footer">
