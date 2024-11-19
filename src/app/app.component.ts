@@ -10,6 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -140,8 +141,13 @@ export class AppComponent {
       tags: 'dazn laliga 5 1080 multi audio'
     },
     {
-      title: 'Movistar Plus+ (M+) 1080',
-      url: 'acestream://5a236fbbe6e5bbfec03db548c244a7c858d675c0',
+      title: 'Movistar Plus+ (M+) 1080 [OPCION 1]',
+      url: 'acestream://56ac8e227d526e722624675ccdd91b0cc850582f',
+      tags: 'movistar plus 1080'
+    },
+    {
+      title: 'Movistar Plus+ (M+) 1080 [OPCION 2]',
+      url: 'acestream://8ba764f6a3bce6eae87ec71208fad1aa3a20528d',
       tags: 'movistar plus 1080'
     },
     {
