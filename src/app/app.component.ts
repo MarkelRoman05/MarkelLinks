@@ -111,6 +111,11 @@ export class AppComponent {
       tags: 'dazn laliga 1080 multi audio'
     },
     {
+      title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 3)',
+      url: 'acestream://95b2238dec35cf00dfdf8fba18e9920bc2c56256',
+      tags: 'dazn laliga 1080 multi audio'
+    },
+    {
       title: 'DAZN LALIGA 720',
       url: 'acestream://a3bca895c58d3fc7d5e4259d3d5e3cf0291d1914',
       tags: 'dazn laliga 720'
@@ -426,8 +431,13 @@ export class AppComponent {
       tags: 'movistar liga de campeones 17 sd'
     },
     {
-      title: 'DAZN 1 1080',
+      title: 'DAZN 1 1080 (OPCIÓN 1)',
       url: 'acestream://8ca07071b39185431f8e940ec98d1add9e561639',
+      tags: 'dazn 1 1080'
+    },
+    {
+      title: 'DAZN 1 1080 (OPCIÓN 2)',
+      url: 'acestream://7cf0086fa7d478f51dbba952865c79e66cb9add5',
       tags: 'dazn 1 1080'
     },
     {
@@ -436,8 +446,13 @@ export class AppComponent {
       tags: 'dazn 1 720'
     },
     {
-      title: 'DAZN 2 1080',
+      title: 'DAZN 2 1080 (OPCIÓN 1)',
       url: 'acestream://60dbeeb299ec04bf02bc7426d827547599d3d9fc',
+      tags: 'dazn 2 1080'
+    },
+    {
+      title: 'DAZN 2 1080 (OPCIÓN 2)',
+      url: 'acestream://ca923c9873fd206a41c1e83ff8fc40e3cf323c9a',
       tags: 'dazn 2 1080'
     },
     {
@@ -456,8 +471,13 @@ export class AppComponent {
       tags: 'dazn 4 1080'
     },
     {
-      title: '#Vamos 1080',
+      title: '#Vamos 1080 (OPCIÓN 1)',
       url: 'acestream://859bb6295b8d0f224224d3063d9db7cdeca03122',
+      tags: '#vamos 1080'
+    },
+    {
+      title: '#Vamos 1080 (OPCIÓN 2)',
+      url: 'acestream://d03c13b6723f66155d7a0df3692a3b073fe630f2',
       tags: '#vamos 1080'
     },
     {
@@ -482,7 +502,7 @@ export class AppComponent {
     },
     {
       title: 'M+ Deportes 2 1080',
-      url: 'acestream://e6f06d697f66a8fa606c4d61236c24b0d604d917',
+      url: 'acestream://639c561dd57fa3fc91fde715caeb696c5efb7ce7',
       tags: 'movistar deportes 2 1080'
     },
     {
