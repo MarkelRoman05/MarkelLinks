@@ -265,24 +265,29 @@ export class AppComponent {
       tags: 'laliga hypermotion 12'
     },
     {
-      title: 'DAZN F1 Multicámara (Fórmula 1)',
-      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
-      tags: 'dazn f1 formula 1 multicamara'
-    },
-    {
       title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 1]',
-      url: 'acestream://5789ca155323664edd293b848606688edf803f4d',
+      url: 'acestream://d6281d4e6310269b416180442a470d23a4a99dc9',
       tags: 'dazn f1 formula 1 1080'
     },
     {
       title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 2]',
-      url: 'acestream://9dad717d99b29a05672166258a77c25b57713dd5',
+      url: 'acestream://2c6e4c897661e6b0257bfe931b66d20b2ec763b6',
+      tags: 'dazn f1 formula 1 1080'
+    },
+    {
+      title: 'DAZN F1 1080 (Fórmula 1) [OPCIÓN 3]',
+      url: 'acestream://71eef80158aa8b37f3dc59f6793c6696df9a2dfa',
       tags: 'dazn f1 formula 1 1080'
     },
     {
       title: 'DAZN F1 720 (Fórmula 1)',
-      url: 'acestream://e1fcad9de0c782c157fde6377805c58297ab65c2',
+      url: 'acestream://268289e7a3c5209960b53b4d43c8c65fab294b85',
       tags: 'dazn f1 formula 1 720'
+    },
+    {
+      title: 'DAZN F1 Multicámara (Fórmula 1)',
+      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
+      tags: 'dazn f1 formula 1 multicamara'
     },
     {
       title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 1)',
@@ -316,22 +321,22 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 3 1080',
-      url: 'acestream://ad372cba73aa0ece207a79532b3e30b731136bb2',
+      url: 'acestream://3618edda333dad5374ac2c801f5f14483934b97d',
       tags: 'movistar liga de campeones 3 1080'
     },
     {
       title: 'M+ L. de Campeones 3 720',
-      url: 'acestream://d59fe9978eed49f256b312a60671b5bce43d3f24',
+      url: 'acestream://0b348cc1ae499e810729661878764a0fab88ab69',
       tags: 'movistar liga de campeones 3 720'
     },
     {
       title: 'M+ L. de Campeones 4 1080 (Multi)',
-      url: 'acestream://f2df4f96b23388b45e75d848a48a510cf8af560f',
+      url: 'acestream://65a18a6bd83918a9586b673fec12405aaf4e9f7d',
       tags: 'movistar liga de campeones 4 1080 multi'
     },
     {
       title: 'M+ L. de Campeones 5 1080',
-      url: 'acestream://67b353ab1c4c2f6396b3ca5c4b45023bd9927561',
+      url: 'acestream://11744c25a594e17d587ed0871fe40ff21b4bd1e0',
       tags: 'movistar liga de campeones 5 1080'
     },
     {
@@ -381,57 +386,57 @@ export class AppComponent {
     },
     {
       title: 'DAZN 1 1080 (OPCIÓN 1)',
-      url: 'acestream://8ca07071b39185431f8e940ec98d1add9e561639',
-      tags: 'dazn 1 1080'
-    },
-    {
-      title: 'DAZN 1 1080 (OPCIÓN 2)',
       url: 'acestream://7cf0086fa7d478f51dbba952865c79e66cb9add5',
       tags: 'dazn 1 1080'
     },
     {
+      title: 'DAZN 1 1080 (OPCIÓN 2)',
+      url: 'acestream://8ca07071b39185431f8e940ec98d1add9e561639',
+      tags: 'dazn 1 1080'
+    },
+    {
       title: 'DAZN 1 720',
-      url: 'acestream://eaff9293c76a324c750ef5094c2a4e2c96518d1f',
+      url: 'acestream://35c7f0c966ecde3390f4510bb4caded40018c07a',
       tags: 'dazn 1 720'
     },
     {
       title: 'DAZN 2 1080 (OPCIÓN 1)',
-      url: 'acestream://60dbeeb299ec04bf02bc7426d827547599d3d9fc',
-      tags: 'dazn 2 1080'
-    },
-    {
-      title: 'DAZN 2 1080 (OPCIÓN 2)',
       url: 'acestream://ca923c9873fd206a41c1e83ff8fc40e3cf323c9a',
       tags: 'dazn 2 1080'
     },
     {
+      title: 'DAZN 2 1080 (OPCIÓN 2)',
+      url: 'acestream://60dbeeb299ec04bf02bc7426d827547599d3d9fc',
+      tags: 'dazn 2 1080'
+    },
+    {
       title: 'DAZN 2 720',
-      url: 'acestream://7aa402bab9fff43258f',
+      url: 'acestream://a929eeec1268d69d1556a2e3ace793b2577d8810',
       tags: 'dazn 2 720'
     },
     {
       title: 'DAZN 3 1080',
-      url: 'acestream://a8ffddef56f082d4bb5c0be0d3d2fdd8c16dbd97',
+      url: 'acestream://19cd05c7ae26f22737ae5728b571ca36abd8a2e8',
       tags: 'dazn 3 1080'
     },
     {
       title: 'DAZN 4 1080',
-      url: 'acestream://2fcdf7a19c0858f686efdfabd3c8c2b92bf6bcfd',
+      url: 'acestream://4e83f23945ab3e43982045f88ec31daaa4683102',
       tags: 'dazn 4 1080'
     },
     {
       title: '#Vamos 1080 (OPCIÓN 1)',
-      url: 'acestream://859bb6295b8d0f224224d3063d9db7cdeca03122',
-      tags: '#vamos 1080'
-    },
-    {
-      title: '#Vamos 1080 (OPCIÓN 2)',
       url: 'acestream://d03c13b6723f66155d7a0df3692a3b073fe630f2',
       tags: '#vamos 1080'
     },
     {
+      title: '#Vamos 1080 (OPCIÓN 2)',
+      url: 'acestream://859bb6295b8d0f224224d3063d9db7cdeca03122',
+      tags: '#vamos 1080'
+    },
+    {
       title: '#Vamos 720',
-      url: 'acestream://3bba7c95857c2502c7e03ced1a6a9b00eb567fa0',
+      url: 'acestream://12ba546d229bc39f01c3c18988a034b215fe6adb',
       tags: '#ellas 720'
     },
     {
@@ -441,12 +446,12 @@ export class AppComponent {
     },
     {
       title: 'M+ Deportes 1080',
-      url: 'acestream://d00223931b1854163e24c5c22475015d7d45c112',
+      url: 'acestream://55d4602cb22b0d8a33c10c2c2f42dae64a9e8895',
       tags: 'movistar deportes 1080'
     },
     {
       title: 'M+ Deportes 720',
-      url: 'acestream://77d83a79afcf6c865289cd8cdb42223cd4b6501c',
+      url: 'acestream://3a74d9869b13e763476800740c6625e715a39879',
       tags: 'movistar deportes 720'
     },
     {
@@ -456,22 +461,22 @@ export class AppComponent {
     },
     {
       title: 'M+ Deportes 3 1080',
-      url: 'acestream://aee0a595220e0f1c2fee725fd1dbc602d7152a9a',
+      url: 'acestream://571bff4d12b1791eb99dbf20bec38e630693a6a3',
       tags: 'movistar deportes 3 1080'
     },
     {
       title: 'M+ Deportes 4 1080',
-      url: 'acestream://42e83c337ece0af9ca7808859f84c7960e9cb6f5',
+      url: 'acestream://b4d1308a61e4caf8c06ac3d6ce89d165c015c2fb',
       tags: 'movistar deportes 4 1080'
     },
     {
       title: 'M+ Deportes 5 1080',
-      url: 'acestream://b1e5abc48195b7ca9b2ee1b352e790eb9f7292e3',
+      url: 'acestream://fcc0fd75bf1dba40b108fcf0d3514e0e549bfbac',
       tags: 'movistar deportes 5 1080'
     },
     {
       title: 'M+ Deportes 6 1080',
-      url: 'acestream://8587ed8ac36ac477e1d4176d3159a38bd154d4ce',
+      url: 'acestream://cc5782d37ae6b6e0bab396dd64074982d0879046',
       tags: 'movistar deportes 6 1080'
     },
     {
@@ -481,12 +486,12 @@ export class AppComponent {
     },
     {
       title: 'M+ Golf 1080',
-      url: 'acestream://688cc3af0f517c598e07d35f1ce79f8bcba17d81',
+      url: 'acestream://f41f1096862767289620be5bd85727f946a434db',
       tags: 'movistar golf 1080'
     },
     {
       title: 'M+ Golf 2 1080',
-      url: 'acestream://0742f7fabb74715b11c5a5dae24e93a4644697a5',
+      url: 'acestream://e258e75e0e802afa5fcc53d46b47d8801a254ad5',
       tags: 'movistar golf 2 1080'
     },
     {
