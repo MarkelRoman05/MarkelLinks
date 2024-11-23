@@ -41,16 +41,26 @@ export class AppComponent {
   links = [
     {
       title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 1)',
-      url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
+      url: 'acestream://d3de78aebe544611a2347f54d5796bd87f16c92d',
       tags: 'movistar laliga tv 1080 multi audio'
     },
     {
       title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 2)',
+      url: 'acestream://6d05b31e5e8fdae312fbd57897363a7b10ddb163',
+      tags: 'movistar laliga tv 1080 multi audio'
+    },
+    {
+      title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 3)',
+      url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
+      tags: 'movistar laliga tv 1080 multi audio'
+    },
+    {
+      title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 4)',
       url: 'acestream://1969c27658d4c8333ab2c0670802546121a774a5',
       tags: 'movistar laliga tv 1080 multi audio'
     },
     {
-      title: 'M+ LALIGA TV 1080 (OPCIÓN 3)',
+      title: 'M+ LALIGA TV 1080 (OPCIÓN 5)',
       url: 'acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280',
       tags: 'movistar laliga tv 1080'
     },
@@ -96,7 +106,7 @@ export class AppComponent {
     },
     {
       title: 'LALIGA TV BAR 1080',
-      url: 'acestream://aa82e7d4f03061f2144a2f4be22f2e2210d42280',
+      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
       tags: 'laliga tv bar 1080'
     },
     {
