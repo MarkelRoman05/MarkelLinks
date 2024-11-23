@@ -66,93 +66,68 @@ export class AppComponent {
     },
     {
       title: 'M+ LALIGA TV 720',
-      url: 'acestream://f031f5728b32f6089dda28edebe990cf198108d8',
+      url: 'acestream://1bc437bce57b4b0450f6d1f8d818b7e97000745e',
       tags: 'movistar laliga tv 720'
     },
     {
-      title: 'M+ LALIGA TV UHD 4K (No suele funcionar)',
-      url: 'acestream://dce1579e3a2e5bd29071fca8eae364f1eb3205cf',
-      tags: 'movistar laliga tv uhd 4k'
-    },
-    {
       title: 'M+ LALIGA TV 2 1080',
-      url: 'acestream://26029f72a4ca831d09deefe89534818db1d105bc',
+      url: 'acestream://83c6c4942d69f4aa324aa746c5d7dbfd7d1572b3',
       tags: 'movistar laliga tv 2 1080'
       },
     {
       title: 'M+ LALIGA TV 2 720',
-      url: 'acestream://80126b240f3e4e004754fd8f8103e857ab2556a0',
+      url: 'acestream://f31a586422c9244196c810c84b6c85da350318a5',
       tags: 'movistar laliga tv 2 720'
     },
     {
       title: 'M+ LALIGA TV 3 1080',
-      url: 'acestream://4c4844564313e39a888f593511f299f5ba3cf929',
+      url: 'acestream://ebe14f1edeb49f2253e3b355a8beeadc9b4f0bc4',
       tags: 'movistar laliga tv 3 1080'
     },
     {
-      title: 'M+ LALIGA TV 4 1080',
-      url: 'acestream://aa8f826da70e27a26b29c7b32402f17e8a67a8b0',
-      tags: 'movistarlaliga tv 4 1080'
-    },
-    {
-      title: 'M+ LALIGA TV 5 1080',
-      url: 'acestream://535394f62a810bc5aeb25be75ea5ff7d03e070b2',
-      tags: 'movistar laliga tv 5 1080'
-    },
-    {
-      title: 'M+ LALIGA TV 6 1080',
-      url: 'acestream://c896d37778f9e43549a788fc22206a655895b51b',
-      tags: 'movistar laliga tv 6 1080'
-    },
-    {
-      title: 'LALIGA TV BAR 1080',
+      title: 'LALIGA TV BAR 1080 (OPCIÓN 1)',
       url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
       tags: 'laliga tv bar 1080'
     },
     {
+      title: 'LALIGA TV BAR 1080 (OPCIÓN 2)',
+      url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
+      tags: 'laliga tv bar 1080'
+    },
+    {
       title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 1)',
-      url: 'acestream://1960a9be8ae9e8c755330218eac4c5805466290a',
+      url: 'acestream://110d441ddc9713a7452588770d2bc85504672f47',
       tags: 'dazn laliga 1080 multi audio'
     },
     {
       title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 2)',
-      url: 'acestream://75251ba975132ec9a202806ba5bf606e87280c96',
+      url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
       tags: 'dazn laliga 1080 multi audio'
     },
     {
       title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 3)',
-      url: 'acestream://95b2238dec35cf00dfdf8fba18e9920bc2c56256',
+      url: 'acestream://6de4794cd02f88f14354b5996823413a59a1de0f',
       tags: 'dazn laliga 1080 multi audio'
     },
     {
       title: 'DAZN LALIGA 720',
-      url: 'acestream://a3bca895c58d3fc7d5e4259d3d5e3cf0291d1914',
+      url: 'acestream://8c8c1e047a1c5ed213ba74722a5345dc55c3c0eb',
       tags: 'dazn laliga 720'
       },
     {
       title: 'DAZN LALIGA 2 1080 MultiAudio',
-      url: 'acestream://e33e666c393ef04ebe99a9b92135d2e0b48c4d10',
+      url: 'acestream://97ba38d47680954be40e48bd8f43e17222fefecb',
       tags: 'dazn laliga 2 1080 multi audio'
     },
     {
       title: 'DAZN LALIGA 2 720 MultiAudio',
-      url: 'acestream://02b9307c5c97c86914cc5939d6bbeb5b4ec60b47',
+      url: 'acestream://51dbbfb42f8091e4ea7a2186b566a40e780953d9',
       tags: 'dazn laliga 2 720 multi audio'
     },
     {
       title: 'DAZN LALIGA 3 1080 MultiAudio',
       url: 'acestream://8c71f0e0a5476e10950fc827f9d2a507340aba74',
       tags: 'dazn laliga 3 1080 multi audio'
-    },
-    {
-      title: 'DAZN LALIGA 4 1080 MultiAudio',
-      url: 'acestream://2792a8a5f4a3f53cd72dec377a2639cd12a6973e',
-      tags: 'dazn laliga 4 1080 multi audio'
-    },
-    {
-      title: 'DAZN LALIGA 5 1080 MultiAudio',
-      url: 'acestream://99e544cddbee13798e854c1009ee7d1a93fdedf7',
-      tags: 'dazn laliga 5 1080 multi audio'
     },
     {
       title: 'Movistar Plus+ 1080 [OPCION 1]',
@@ -218,41 +193,6 @@ export class AppComponent {
       title: 'Eurosport 4K (OPCIÓN 2)',
       url: 'acestream://c525471499b936decc037ea86e0f8125ebf78c28',
       tags: 'eurosport 4k 2'
-    },
-    {
-      title: 'Eurosport 3 1080',
-      url: 'acestream://a62c010c71bfb76b18188f108c3cc4541c34f45e',
-      tags: 'eurosport 3 1080'
-    },
-    {
-      title: 'Eurosport 4 1080',
-      url: 'acestream://76a482a4cb53fc28518187c6b814f136b3db3c95',
-      tags: 'eurosport 4 1080'
-    },
-    {
-      title: 'Eurosport 5 1080',
-      url: 'acestream://914ce366baec9b0fb3523dd7ba762a44b597fc40',
-      tags: 'eurosport 5 1080'
-    },
-    {
-      title: 'Eurosport 6 1080',
-      url: 'acestream://1bc614c5aa2a94117c13c7f0be2b8ea31b535f38',
-      tags: 'eurosport 6 1080'
-    },
-    {
-      title: 'Eurosport 7 1080',
-      url: 'acestream://e899a4f1e20f7ce1b39cc529dc237fc29a21855f',
-      tags: 'eurosport 7 1080'
-    },
-    {
-      title: 'Eurosport 8 1080',
-      url: 'acestream://721a78f2076faa584c9c09059ffb4e10159f4665',
-      tags: 'eurosport 8 1080'
-    },
-    {
-      title: 'Eurosport 9 1080',
-      url: 'acestream://dd9c56ef2f09753c59d9c2e2d2af31aeea6451c0',
-      tags: 'eurosport 9 1080'
     },
     {
       title: 'LALIGA Hypermotion 1080',
@@ -346,12 +286,12 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 1)',
-      url: 'acestream://931b1984badcb821df7b47a66ac0835ac871b51c',
+      url: 'acestream://0a26e20f39845e928411e09a124374fccb6e1478',
       tags: 'movistar liga de campeones 1080 multi audio'
     },
     {
       title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 2)',
-      url: 'acestream://f096a64dd756a6d549aa7b12ee9acf7eee27e833',
+      url: 'acestream://775abd8697715c48a357906d40734ccd2a10513c',
       tags: 'movistar liga de campeones 1080 multi audio'
     },
     {
@@ -361,17 +301,17 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 720',
-      url: 'acestream://e2e2aca792aae5da19995ac516b1d620531bd49c',
+      url: 'acestream://8edb264520569b2280c5e86b2dc734e120032903',
       tags: 'movistar liga de campeones 720'
     },
     {
       title: 'M+ L. de Campeones 2 1080',
-      url: 'acestream://fc2fe31b0bce25e2dc7ab4d262bf645e2be5a393',
+      url: 'acestream://c070cdb701fc46bb79d17568d99fc64620443d63',
       tags: 'movistar liga de campeones 2 1080'
     },
     {
       title: 'M+ L. de Campeones 2 720',
-      url: 'acestream://6753492c1908274c268a1b28e2a054a0ff8f86f9',
+      url: 'acestream://abdf9058786a48623d0de51a3adb414ae10b6e72',
       tags: 'movistar liga de campeones 2 720'
     },
     {
