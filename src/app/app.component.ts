@@ -290,6 +290,16 @@ export class AppComponent {
       tags: 'dazn f1 formula 1 multicamara'
     },
     {
+      title: 'M+ Golf 1080',
+      url: 'acestream://f41f1096862767289620be5bd85727f946a434db',
+      tags: 'movistar golf 1080'
+    },
+    {
+      title: 'M+ Golf 2 1080',
+      url: 'acestream://e258e75e0e802afa5fcc53d46b47d8801a254ad5',
+      tags: 'movistar golf 2 1080'
+    },
+    {
       title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 1)',
       url: 'acestream://0a26e20f39845e928411e09a124374fccb6e1478',
       tags: 'movistar liga de campeones 1080 multi audio'
@@ -483,16 +493,6 @@ export class AppComponent {
       title: 'M+ Deportes 7 1080',
       url: 'acestream://2448f1d084f440eed2fbe847e24f1c02f5659a78',
       tags: 'movistar deportes 7 1080'
-    },
-    {
-      title: 'M+ Golf 1080',
-      url: 'acestream://f41f1096862767289620be5bd85727f946a434db',
-      tags: 'movistar golf 1080'
-    },
-    {
-      title: 'M+ Golf 2 1080',
-      url: 'acestream://e258e75e0e802afa5fcc53d46b47d8801a254ad5',
-      tags: 'movistar golf 2 1080'
     },
     {
       title: 'La 1',
