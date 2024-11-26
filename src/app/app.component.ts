@@ -10,6 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+import { provideClarity } from 'ngx-clarity';
 
 @Component({
   selector: 'app-root',
