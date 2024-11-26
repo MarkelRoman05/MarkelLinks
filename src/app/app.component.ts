@@ -581,6 +581,12 @@ export class AppComponent {
     });
   }
 
+  trackClick(linkTitle: string): void {
+    if ((window as any).clarity) {
+      (window as any).clarity('set', 'click_event', { link: linkTitle });
+    }
+  }
+
   loading: boolean[] = [true, true, true, true, true];
 
   onIframeLoad(index: number) {

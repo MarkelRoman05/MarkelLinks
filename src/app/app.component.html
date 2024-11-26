@@ -144,7 +144,7 @@
               : (column + 1) * (filteredLinks.length / 2)
         "
       >
-        <a href="{{ link.url }}" class="acestream-link">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="acestream-link" (click)="trackClick(link.title)">{{ link.title }}</a>
         <button class="copy-button" (click)="copyLink(link.url)">
           <mat-icon style="font-size: 20px; display: block"
             >content_copy</mat-icon
