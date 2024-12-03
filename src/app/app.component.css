@@ -298,3 +298,9 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 480px) {
+  .text-enlaces-agenda-completa {
+    flex-wrap: wrap;
+  }
+}
