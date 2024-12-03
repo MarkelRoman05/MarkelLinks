@@ -135,28 +135,13 @@ export class AppComponent {
       tags: 'movistar plus 1080',
     },
     {
-      title: 'M+ Copa 1080 (OPCIÓN 1)',
-      url: 'acestream://8ba764f6a3bce6eae87ec71208fad1aa3a20528d',
+      title: 'M+ Copa del Rey 1080',
+      url: 'acestream://f6beccbc4eea4bc0cda43b3e8ac14790a98b61b4',
       tags: 'movistar copa 1080',
     },
     {
-      title: 'M+ Copa 1080 (OPCIÓN 2)',
-      url: 'acestream://d6cdd724a97fcf851e7ef641c28d6beb8663496e',
-      tags: 'movistar copa 1080',
-    },
-    {
-      title: 'M+ Copa 1080 (OPCIÓN 3)',
-      url: 'acestream://7d70685696722c2b1b48a5ae1a7f92c445d9443d',
-      tags: 'movistar copa 1080',
-    },
-    {
-      title: 'M+ Copa 1080 MultiAudio',
-      url: 'acestream://3a4c8ac955d451bf3c29b45256e74aa0ea82d281',
-      tags: 'movistar copa 1080 multi audio',
-    },
-    {
-      title: 'M+ Copa 720',
-      url: 'acestream://dab7cab5d6d177df36c3b333ca363c2266d91a03',
+      title: 'M+ Copa del Rey 720',
+      url: 'acestream://b51f2d9a15b6956a44385b6be531bcabeb099d9d',
       tags: 'movistar copa 720',
     },
     {
