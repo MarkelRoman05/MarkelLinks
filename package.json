@@ -24,8 +24,6 @@
     "angular-material-icons": "^0.7.1",
     "bootstrap-icons": "^1.11.3",
     "ngx-clarity": "^2.2.0",
-    "ngx-matomo-client": "^6.3.1",
-    "primeng": "^17.18.11",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

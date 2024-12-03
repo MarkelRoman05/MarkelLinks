@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatIcon } from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -18,12 +18,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     CommonModule,
     NgbModule,
     MatProgressSpinnerModule,
-    MatIcon,
     MessagesModule,
     MatTooltipModule,
-    MatFormFieldModule,
     FormsModule,
     MatIconModule,
+    ReactiveFormsModule,
     //AgendaEventoTextComponent
   ],
   providers: [MessageService],
@@ -566,20 +565,16 @@ export class AppComponent {
     },
   ];
 
-  constructor(private messageService: MessageService) {}
+  constructor(private snackBar: MatSnackBar) {}
 
   copyLink(url: string) {
     navigator.clipboard.writeText(url).then(() => {
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Enlace copiado',
+      this.snackBar.open('Enlace copiado', 'Cerrar', {
+        duration: 2000,
       });
       if ((window as any).clarity) {
         (window as any).clarity('set', 'copy_event', { link: url });
       }
-      setTimeout(() => {
-        this.messageService.clear();
-      }, 2000);
     });
   }
 
@@ -605,5 +600,10 @@ export class AppComponent {
           link.tags.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
+  }
+
+  clearSearch() {
+    this.searchTerm = '';
+    this.filterLinks();
   }
 }

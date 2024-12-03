@@ -41,19 +41,21 @@
   width: auto;
 }
 
-.search-container {
+.search-form {
   display: flex;
+  position: relative;
   justify-content: center;
   margin: 5px 0;
+  width: 100%; 
 }
 
 .search-field {
-  width: 100%;
+  margin: 16px 0;
   max-width: 500px;
-  position: relative;
+  width: 100%;
 }
 
-.search-field input {
+.search-field {
   width: 100%;
   padding: 12px 20px;
   font-size: 16px;
@@ -64,7 +66,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.search-field input:focus {
+.search-field:focus {
   border-color: #004d40;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
@@ -272,40 +274,28 @@
 
 @media (max-width: 600px) {
   .how-to-play-text {
-    margin: 0 10px 20px 10px; /* Reducir márgenes en pantallas pequeñas */
-    font-size: 15px; /* Reducir tamaño de fuente */
+    margin: 0 10px 20px 10px;
+    font-size: 15px;
   }
 
   .footer-text {
-    font-size: 14px; /* Reducir tamaño de fuente */
+    font-size: 14px;
   }
 
   .github-logo {
-    font-size: 30px; /* Reducir tamaño del logo */
+    font-size: 30px;
   }
 
   .acestream-link {
-    font-size: 14px; /* Reducir tamaño de fuente */
-    padding: 5px; /* Reducir padding */
+    font-size: 14px;
+    padding: 5px;
   }
 }
 
 @media (max-width: 1979px) {
   .futbol-tv-agendas {
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
-  }
-}
-
-@media (max-width: 1190px) {
-  .futbol-tv-agendas {
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-enlaces-agenda-completa {
     flex-wrap: wrap;
   }
 }

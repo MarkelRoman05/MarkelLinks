@@ -120,15 +120,16 @@
 
   <h3 class="header-enlaces">ENLACES</h3>
   <div class="search-container">
-    <mat-form-field appearance="outline" class="search-field">
+    <form class="search-form">
       <input
-        matInput
         type="text"
-        placeholder="Escribe el canal a buscar..."
+        class="search-field"
+        placeholder="Introduce el canal a buscar..."
         [(ngModel)]="searchTerm"
         (keyup)="filterLinks()"
+        name="searchTerm"
       />
-    </mat-form-field>
+    </form>
   </div>
   @if (filteredLinks.length === 0) {
   <p class="no-encontrado-text">No se encontraron canales.</p>
@@ -150,10 +151,17 @@
           (click)="trackClick(link.title)"
           >{{ link.title }}</a
         >
-        <button class="copy-button" (click)="copyLink(link.url)">
-          <mat-icon style="font-size: 20px; display: block"
-            >content_copy</mat-icon
+        <button
+          matTooltip="Copiar enlace"
+          matTooltipPosition="right"
+          class="copy-button"
+          (click)="copyLink(link.url)"
+        >
+          <i
+            class="bi bi-copy"
+            style="font-size: 20px; display: block; margin: 3px"
           >
+          </i>
         </button>
       </li>
     </div>
@@ -187,6 +195,7 @@
   <div class="footer">
     <a
       matTooltip="GitHub"
+      matTooltipPosition="above"
       href="https://github.com/MarkelRoman05"
       class="github-button"
       target="_blank"
