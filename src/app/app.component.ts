@@ -150,6 +150,11 @@ export class AppComponent {
       tags: 'movistar copa 1080',
     },
     {
+      title: 'M+ Copa del Rey 1080 (OPCIÓN 4)',
+      url: 'acestream://7d70685696722c2b1b48a5ae1a7f92c445d9443d',
+      tags: 'movistar copa 1080',
+    },
+    {
       title: 'M+ Copa del Rey 720',
       url: 'acestream://b51f2d9a15b6956a44385b6be531bcabeb099d9d',
       tags: 'movistar copa 720',
