@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
-import { MessagesModule } from 'primeng/messages';
-import { MessageService } from 'primeng/api';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
@@ -18,14 +16,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     CommonModule,
     NgbModule,
     MatProgressSpinnerModule,
-    MessagesModule,
     MatTooltipModule,
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
     //AgendaEventoTextComponent
   ],
-  providers: [MessageService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
