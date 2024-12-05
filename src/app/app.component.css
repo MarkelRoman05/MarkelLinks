@@ -150,11 +150,13 @@
   align-items: center; 
   margin-top: 5px;
   margin-bottom: 5px;
+  padding: 12px;
 }
 
 .footer-text {
   color: white; /* Color de texto blanco */
   font-size: 13px; /* Tamaño de fuente */
+  margin-top: 8px;
 }
 
 .how-to-play-header {

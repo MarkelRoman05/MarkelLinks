@@ -565,8 +565,8 @@ export class AppComponent {
 
   copyLink(url: string) {
     navigator.clipboard.writeText(url).then(() => {
-      this.snackBar.open('Enlace copiado', 'Cerrar', {
-        duration: 2000,
+      this.snackBar.open('Enlace copiado', '', {
+        duration: 2500,
       });
       if ((window as any).clarity) {
         (window as any).clarity('set', 'copy_event', { link: url });
