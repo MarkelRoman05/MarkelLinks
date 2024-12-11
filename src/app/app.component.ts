@@ -35,14 +35,14 @@ export class AppComponent {
 
   links = [
     {
-      title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 1)',
+      title: 'M+ LALIGA TV 1080 (OPCIÓN 1)',
       url: 'acestream://d3de78aebe544611a2347f54d5796bd87f16c92d',
-      tags: 'movistar laliga tv 1080 multi audio',
+      tags: 'movistar laliga tv 1080',
     },
     {
-      title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 2)',
+      title: 'M+ LALIGA TV 1080 (OPCIÓN 2)',
       url: 'acestream://6d05b31e5e8fdae312fbd57897363a7b10ddb163',
-      tags: 'movistar laliga tv 1080 multi audio',
+      tags: 'movistar laliga tv 1080',
     },
     {
       title: 'M+ LALIGA TV 1080 (OPCIÓN 3)',
@@ -50,14 +50,14 @@ export class AppComponent {
       tags: 'movistar laliga tv 1080',
     },
     {
-      title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 4)',
+      title: 'M+ LALIGA TV 1080 (OPCIÓN 4)',
       url: 'acestream://7d8c87e057be98f00f22e23b23fbf08999e4b02f',
-      tags: 'movistar laliga tv 1080 multi audio',
+      tags: 'movistar laliga tv 1080',
     },
     {
-      title: 'M+ LALIGA TV 1080 MultiAudio (OPCIÓN 5)',
+      title: 'M+ LALIGA TV 1080 (OPCIÓN 5)',
       url: 'acestream://1969c27658d4c8333ab2c0670802546121a774a5',
-      tags: 'movistar laliga tv 1080 multi audio',
+      tags: 'movistar laliga tv 1080',
     },
     {
       title: 'M+ LALIGA TV 720',
@@ -90,19 +90,19 @@ export class AppComponent {
       tags: 'laliga tv bar 1080',
     },
     {
-      title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 1)',
+      title: 'DAZN LALIGA 1080 (OPCIÓN 1)',
       url: 'acestream://110d441ddc9713a7452588770d2bc85504672f47',
-      tags: 'dazn laliga 1080 multi audio',
+      tags: 'dazn laliga 1080',
     },
     {
-      title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 2)',
+      title: 'DAZN LALIGA 1080 (OPCIÓN 2)',
       url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
-      tags: 'dazn laliga 1080 multi audio',
+      tags: 'dazn laliga 1080',
     },
     {
-      title: 'DAZN LALIGA 1080 MultiAudio (OPCIÓN 3)',
+      title: 'DAZN LALIGA 1080 (OPCIÓN 3)',
       url: 'acestream://6de4794cd02f88f14354b5996823413a59a1de0f',
-      tags: 'dazn laliga 1080 multi audio',
+      tags: 'dazn laliga 1080',
     },
     {
       title: 'DAZN LALIGA 720',
@@ -110,54 +110,54 @@ export class AppComponent {
       tags: 'dazn laliga 720',
     },
     {
-      title: 'DAZN LALIGA 2 1080 MultiAudio',
+      title: 'DAZN LALIGA 2 1080',
       url: 'acestream://97ba38d47680954be40e48bd8f43e17222fefecb',
-      tags: 'dazn laliga 2 1080 multi audio',
+      tags: 'dazn laliga 2 1080',
     },
     {
-      title: 'DAZN LALIGA 2 720 MultiAudio',
+      title: 'DAZN LALIGA 2 720',
       url: 'acestream://51dbbfb42f8091e4ea7a2186b566a40e780953d9',
-      tags: 'dazn laliga 2 720 multi audio',
+      tags: 'dazn laliga 2 720',
     },
     {
-      title: 'DAZN LALIGA 3 1080 MultiAudio',
+      title: 'DAZN LALIGA 3 1080 ',
       url: 'acestream://8c71f0e0a5476e10950fc827f9d2a507340aba74',
-      tags: 'dazn laliga 3 1080 multi audio',
+      tags: 'dazn laliga 3 1080',
     },
     {
       title: 'Movistar Plus+ 1080 (OPCIÓN 1)',
       url: 'acestream://56ac8e227d526e722624675ccdd91b0cc850582f',
-      tags: 'movistar plus 1080',
+      tags: 'movistar plus + 1080',
     },
     {
       title: 'Movistar Plus+ 1080 (OPCIÓN 2)',
       url: 'acestream://8ba764f6a3bce6eae87ec71208fad1aa3a20528d',
-      tags: 'movistar plus 1080',
+      tags: 'movistar plus + 1080',
     },
     {
       title: 'M+ Copa del Rey 1080 (OPCIÓN 1)',
       url: 'acestream://f6beccbc4eea4bc0cda43b3e8ac14790a98b61b4',
-      tags: 'movistar copa 1080',
+      tags: 'movistar copa del rey 1080',
     },
     {
       title: 'M+ Copa del Rey 1080 (OPCIÓN 2)',
       url: 'acestream://3a4c8ac955d451bf3c29b45256e74aa0ea82d281',
-      tags: 'movistar copa 1080',
+      tags: 'movistar copa del rey 1080',
     },
     {
       title: 'M+ Copa del Rey 1080 (OPCIÓN 3)',
       url: 'acestream://d6cdd724a97fcf851e7ef641c28d6beb8663496e',
-      tags: 'movistar copa 1080',
+      tags: 'movistar copa del rey 1080',
     },
     {
       title: 'M+ Copa del Rey 1080 (OPCIÓN 4)',
       url: 'acestream://7d70685696722c2b1b48a5ae1a7f92c445d9443d',
-      tags: 'movistar copa 1080',
+      tags: 'movistar copa del rey 1080',
     },
     {
       title: 'M+ Copa del Rey 720',
       url: 'acestream://b51f2d9a15b6956a44385b6be531bcabeb099d9d',
-      tags: 'movistar copa 720',
+      tags: 'movistar copa del rey 720',
     },
     {
       title: 'Eurosport 1 1080 (OPCIÓN 1)',
@@ -182,12 +182,12 @@ export class AppComponent {
     {
       title: 'Eurosport 4K (OPCIÓN 1)',
       url: 'acestream://63135c171f056d1d6028f9ffb1637ed704b88a20',
-      tags: 'eurosport 4k 1',
+      tags: 'eurosport 4k',
     },
     {
       title: 'Eurosport 4K (OPCIÓN 2)',
       url: 'acestream://c525471499b936decc037ea86e0f8125ebf78c28',
-      tags: 'eurosport 4k 2',
+      tags: 'eurosport 4k',
     },
     {
       title: 'LALIGA TV Hypermotion 1080',
@@ -295,14 +295,14 @@ export class AppComponent {
       tags: 'movistar golf 2 1080',
     },
     {
-      title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 1)',
+      title: 'M+ L. de Campeones 1080 (OPCIÓN 1)',
       url: 'acestream://0a26e20f39845e928411e09a124374fccb6e1478',
-      tags: 'movistar liga de campeones 1080 multi audio',
+      tags: 'movistar liga de campeones 1080',
     },
     {
-      title: 'M+ L. de Campeones 1080 MultiAudio (OPCIÓN 2)',
+      title: 'M+ L. de Campeones 1080 (OPCIÓN 2)',
       url: 'acestream://775abd8697715c48a357906d40734ccd2a10513c',
-      tags: 'movistar liga de campeones 1080 multi audio',
+      tags: 'movistar liga de campeones 1080',
     },
     {
       title: 'M+ L. de Campeones 1080 (OPCIÓN 3)',
@@ -337,7 +337,7 @@ export class AppComponent {
     {
       title: 'M+ L. de Campeones 4 1080 (Multi)',
       url: 'acestream://65a18a6bd83918a9586b673fec12405aaf4e9f7d',
-      tags: 'movistar liga de campeones 4 1080 multi',
+      tags: 'movistar liga de campeones 4 1080',
     },
     {
       title: 'M+ L. de Campeones 5 1080',
@@ -417,37 +417,37 @@ export class AppComponent {
     {
       title: 'DAZN 2 720',
       url: 'acestream://a929eeec1268d69d1556a2e3ace793b2577d8810',
-      tags: 'dazn 2 720',
+      tags: 'dazn 2',
     },
     {
       title: 'DAZN 3 1080',
       url: 'acestream://19cd05c7ae26f22737ae5728b571ca36abd8a2e8',
-      tags: 'dazn 3 1080',
+      tags: 'dazn 3',
     },
     {
       title: 'DAZN 4 1080',
       url: 'acestream://4e83f23945ab3e43982045f88ec31daaa4683102',
-      tags: 'dazn 4 1080',
+      tags: 'dazn 4',
     },
     {
       title: 'M+ Vamos 1080 (OPCIÓN 1)',
       url: 'acestream://d03c13b6723f66155d7a0df3692a3b073fe630f2',
-      tags: '#vamos 1080',
+      tags: 'movistar vamos 1080',
     },
     {
       title: 'M+ Vamos 1080 (OPCIÓN 2)',
       url: 'acestream://859bb6295b8d0f224224d3063d9db7cdeca03122',
-      tags: '#vamos 1080',
+      tags: 'movistar vamos 1080',
     },
     {
       title: 'M+ Vamos 720',
       url: 'acestream://12ba546d229bc39f01c3c18988a034b215fe6adb',
-      tags: '#ellas 720',
+      tags: 'movistar vamos 720',
     },
     {
       title: 'M+ Ellas Vamos 1080',
       url: 'acestream://67654e63b5065cdaa6c8e8d41bb5428b42b32830',
-      tags: '#ellas 1080',
+      tags: 'movistar ellas vamos 1080',
     },
     {
       title: 'M+ Deportes 1080',
@@ -537,7 +537,7 @@ export class AppComponent {
     {
       title: 'beIN SPORTS ñ',
       url: 'acestream://41af6926a6010b68ba2540975761436bb077748f',
-      tags: 'bein sports',
+      tags: 'bein sports ñ',
     },
     {
       title: 'DAZN Liga F 1',
