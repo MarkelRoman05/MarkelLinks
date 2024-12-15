@@ -29,6 +29,8 @@ export class AppComponent {
   searchTerm: string = '';
   filteredLinks: any[] = [];
 
+  constructor(private snackBar: MatSnackBar) {}
+
   ngOnInit() {
     this.filteredLinks = [...this.links];
   }
@@ -561,8 +563,6 @@ export class AppComponent {
     },
   ];
 
-  constructor(private snackBar: MatSnackBar) {}
-
   copyLink(url: string) {
     navigator.clipboard.writeText(url).then(() => {
       this.snackBar.open('Enlace copiado', '', {
@@ -596,10 +596,5 @@ export class AppComponent {
           link.tags.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
-  }
-
-  clearSearch() {
-    this.searchTerm = '';
-    this.filterLinks();
   }
 }
