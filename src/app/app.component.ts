@@ -9,6 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+declare global {
+  interface Window {
+    clarity: (event: string, options?: any) => void;
+  }
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -29,7 +35,9 @@ export class AppComponent {
   searchTerm: string = '';
   filteredLinks: any[] = [];
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private snackBar: MatSnackBar) {
+    window.clarity('consent');
+  }
 
   ngOnInit() {
     this.filteredLinks = [...this.links];
