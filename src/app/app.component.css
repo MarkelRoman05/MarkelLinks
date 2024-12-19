@@ -2,6 +2,32 @@
   background-color: #121212; 
 }
 
+/* SCROLL TO TOP BUTTON */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  background-color: #ff1493; 
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.scroll-to-top:hover {
+  background-color: #ff69b4; 
+  transition: all 0.3s;
+}
+
+.scroll-to-top.show {
+  display: block;
+  opacity: 1;
+}
+
 .links {
   display: flex;
   flex-wrap: wrap;

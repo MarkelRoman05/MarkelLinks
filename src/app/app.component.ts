@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -41,6 +41,21 @@ export class AppComponent {
 
   ngOnInit() {
     this.filteredLinks = [...this.links];
+  }
+
+  // SCROLL TO TOP
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const button = document.querySelector('.scroll-to-top') as HTMLElement;
+    if (window.pageYOffset > 280) {
+      button.classList.add('show');
+    } else {
+      button.classList.remove('show');
+    }
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   links = [
