@@ -1,4 +1,3 @@
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
 <div class="container">
   <nav class="navbar">
     <div class="navbar-container">
@@ -178,15 +177,16 @@
       primera es copiar el enlace, abrir Ace Player manualmente y pegar el
       enlace en la opción "Medio" <i class="bi bi-arrow-right"></i> "Open Ace
       Stream Content ID". La segunda es haciendo clic directamente en el enlace,
-      seleccionar Ace Player y esperar al anuncio para ver el contenido. Para reproducir
-      estos enlaces, asegúrate de tener abierto Ace Stream Engine (ace_engine / Ace Stream HD), 
-      si no, ábrelo tú manualmente desde la ruta de instalación de Ace Stream. <br />
-      Para reproducir los enlaces correctamente,
-      es recomendable cambiar ciertos parámetros en la configuración de Ace
-      Stream y de Ace Player. Primero, haz clic derecho sobre el icono de Ace
-      Stream en la barra de tareas y selecciona "Options...". Allí, cambia los
-      valores de "VOD buffer" a 10 y "Live buffer" a 60. Después, en Ace Player,
-      ve en la parte de arriba a "Herramientas"
+      seleccionar Ace Player y esperar al anuncio para ver el contenido. Para
+      reproducir estos enlaces, asegúrate de tener abierto Ace Stream Engine
+      (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
+      de instalación de Ace Stream. <br />
+      Para reproducir los enlaces correctamente, es recomendable cambiar ciertos
+      parámetros en la configuración de Ace Stream y de Ace Player. Primero, haz
+      clic derecho sobre el icono de Ace Stream en la barra de tareas y
+      selecciona "Options...". Allí, cambia los valores de "VOD buffer" a 10 y
+      "Live buffer" a 60. Después, en Ace Player, ve en la parte de arriba a
+      "Herramientas"
       <i class="bi bi-arrow-right"></i> "Preferencias"
       <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona
       "Automático" y Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
@@ -198,7 +198,12 @@
       Todos los enlaces son obtenidos de fuentes externas.
     </p>
   </div>
-  <button matTooltip="Volver arriba" matTooltipPosition="left" class="scroll-to-top" (click)="scrollToTop()">
+  <button
+    matTooltip="Volver arriba"
+    matTooltipPosition="left"
+    class="scroll-to-top"
+    (click)="scrollToTop()"
+  >
     <i class="bi bi-arrow-up arrow-top"></i>
   </button>
 </div>
