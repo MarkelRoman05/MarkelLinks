@@ -128,8 +128,21 @@
         (keyup)="filterLinks()"
         name="searchTerm"
       />
+     @if (searchTerm) {
+        <div class="delete-search-container">
+          <button
+            matTooltip="Borrar texto de búsqueda"
+            matTooltipPosition="below"
+            class="delete-search-button"
+            (click)="deleteSearch()"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      } 
     </form>
   </div>
+  
   @if (filteredLinks.length === 0) {
   <p class="no-encontrado-text">No se encontraron canales.</p>
   } @else {
@@ -167,7 +180,7 @@
   </div>
   }
   <div class="how-to-play-container">
-    <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACESTREAM</h3>
+    <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>
     <p class="how-to-play-text">
       Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener
       instalado Ace Stream Media. Si no lo tienes instalado, puedes descargarlo
@@ -180,7 +193,7 @@
       seleccionar Ace Player y esperar al anuncio para ver el contenido. Para
       reproducir estos enlaces, asegúrate de tener abierto Ace Stream Engine
       (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
-      de instalación de Ace Stream. <br />
+      de instalación de Ace Stream. <br/>
       Para reproducir los enlaces correctamente, es recomendable cambiar ciertos
       parámetros en la configuración de Ace Stream y de Ace Player. Primero, haz
       clic derecho sobre el icono de Ace Stream en la barra de tareas y

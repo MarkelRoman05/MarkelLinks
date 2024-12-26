@@ -23,6 +23,22 @@
   transition: all 0.3s;
 }
 
+.delete-search-button {
+  cursor: pointer;
+  background-color: #002fff;
+  color: white;
+  border: none;
+  padding: 9px;
+  border-radius: 50%;
+  font-size: 16px;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-search-button:hover {
+  background-color: #2986f0;
+}
+
 .scroll-to-top.show {
   display: block;
   opacity: 1;
@@ -71,6 +87,7 @@
   display: flex;
   position: relative;
   justify-content: center;
+  align-items: center;
   margin: 5px 0;
   width: 100%; 
 }

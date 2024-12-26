@@ -58,6 +58,11 @@ export class AppComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  deleteSearch() {
+    this.searchTerm = '';
+    this.filterLinks();
+  }
+
   links = [
     {
       title: 'M+ LALIGA TV 1080 (OPCIÓN 1)',
