@@ -23,6 +23,11 @@
   transition: all 0.3s;
 }
 
+.scroll-to-top.show {
+  display: block;
+  opacity: 1;
+}
+
 .delete-search-button {
   cursor: pointer;
   background-color: #002fff;
@@ -37,11 +42,6 @@
 
 .delete-search-button:hover {
   background-color: #2986f0;
-}
-
-.scroll-to-top.show {
-  display: block;
-  opacity: 1;
 }
 
 .links {
@@ -114,10 +114,6 @@
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
-.search-field input::placeholder {
-  color: #999;
-}
-
 .no-encontrado-text {
   display: flex;
   justify-content: center;
@@ -149,21 +145,6 @@
   color: #007bff;
   font-weight: bold;
   text-decoration: none;
-}
-
-.github-logo {
-  color: white;
-  font-size: 35px;
-  margin-top: 10px;
-}
-
-.github-logo:hover {
-  color: #ddd;
-}
-
-.github-button {
-  margin-top: 10px;
-  margin-bottom: 5px;
 }
 
 .agenda-text-component {
