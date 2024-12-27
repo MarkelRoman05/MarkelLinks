@@ -9,9 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { Resend } from 'resend';
-
-
 declare global {
   interface Window {
     clarity: (event: string, options?: any) => void;
@@ -41,21 +38,6 @@ export class AppComponent {
   constructor(private snackBar: MatSnackBar) {
     window.clarity('consent');
   }
-
-  /* PRUEBAS EMAIL */
-
-  resend = new Resend('re_Fa59ad7D_ZnyrbmsexCNtWPoy3QAopVAL');
-
-  sendEmail() {
-    this.resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'markromagonz@gmail.com',
-      subject: 'Hello World',
-      html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
-    });
-  }
-
-  /* FIN PRUEBAS EMAIL */
 
   ngOnInit() {
     this.filteredLinks = [...this.links];
