@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
-import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 declare global {
@@ -26,7 +25,6 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    //AgendaEventoTextComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -116,7 +116,7 @@
     <app-agenda-evento-text></app-agenda-evento-text>
   </div>
   <-->
-  
+
   <h3 class="header-enlaces">ENLACES</h3>
   <div class="search-container">
     <form class="search-form">
@@ -128,21 +128,21 @@
         (keyup)="filterLinks()"
         name="searchTerm"
       />
-     @if (searchTerm) {
-        <div class="delete-search-container">
-          <button
-            matTooltip="Borrar texto de búsqueda"
-            matTooltipPosition="below"
-            class="delete-search-button"
-            (click)="deleteSearch()"
-          >
-            <i class="bi bi-x-lg"></i>
-          </button>
-        </div>
-      } 
+      @if (searchTerm) {
+      <div class="delete-search-container">
+        <button
+          matTooltip="Borrar texto de búsqueda"
+          matTooltipPosition="below"
+          class="delete-search-button"
+          (click)="deleteSearch()"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      }
     </form>
   </div>
-  
+
   @if (filteredLinks.length === 0) {
   <p class="no-encontrado-text">No se encontraron canales.</p>
   } @else {
@@ -179,6 +179,7 @@
     </div>
   </div>
   }
+
   <div class="how-to-play-container">
     <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>
     <p class="how-to-play-text">
@@ -186,20 +187,47 @@
       instalado Ace Stream Media. Si no lo tienes instalado, puedes descargarlo
       desde la página oficial de Ace Stream haciendo clic
       <a href="https://www.acestream.org/?page=products" target="_blank">aquí</a
-      >. Una vez instalado, tienes dos formas de reproducir los enlaces: la
-      primera es copiar el enlace, abrir Ace Player manualmente y pegar el
-      enlace en la opción "Medio" <i class="bi bi-arrow-right"></i> "Open Ace
-      Stream Content ID". La segunda es haciendo clic directamente en el enlace,
-      seleccionar Ace Player y esperar al anuncio para ver el contenido. Para
-      reproducir estos enlaces, asegúrate de tener abierto Ace Stream Engine
-      (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
-      de instalación de Ace Stream. <br/>
-      Para reproducir los enlaces correctamente, es recomendable cambiar ciertos
-      parámetros en la configuración de Ace Stream y de Ace Player. Primero, haz
-      clic derecho sobre el icono de Ace Stream en la barra de tareas y
-      selecciona "Options...". Allí, cambia los valores de "VOD buffer" a 10 y
-      "Live buffer" a 60. Después, en Ace Player, ve en la parte de arriba a
-      "Herramientas"
+      >, o desde
+      <a
+        href="https://play.google.com/store/apps/details?id=org.acestream.node"
+        target="_blank"
+        >Play Store</a
+      >
+      para Android.
+    </p>
+
+    <h3 style="color: white; margin: 0 20px 20px 29px">Android</h3>
+
+    <p class="how-to-play-text">
+      Para reproducir los enlaces en tu dispositivo móvil, una vez instalado Ace
+      Stream, puedes abrir el enlace haciendo clic en él directamente, lo que
+      abrirá Ace Stream y reproducirá el contenido. También puedes copiar el
+      enlace, abrir Ace Stream manualmente y pegar el enlace en la opción
+      "Medio"
+      <i class="bi bi-arrow-right"></i> "Abrir contenido Ace Stream ID".
+    </p>
+
+    <h3 style="color: white; margin: 0 20px 20px 29px">Windows</h3>
+
+    <p class="how-to-play-text">
+      Una vez instalado Ace Stream en Windows, tienes dos formas de reproducir
+      los enlaces: la primera es copiar el enlace, abrir Ace Player manualmente
+      y pegar el enlace en la opción "Medio"
+      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID". La segunda
+      es haciendo clic directamente en el enlace, seleccionar Ace Player y
+      esperar al anuncio para ver el contenido. <b>Nota:</b> Asegúrate de tener
+      abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no, ábrelo tú
+      manualmente desde la ruta de instalación de Ace Stream.
+    </p>
+
+    <p class="how-to-play-text">
+      Para reproducir los enlaces correctamente en tu dispositivo, es
+      recomendable cambiar ciertos parámetros en la configuración de Ace Stream
+      y de Ace Player (solo en Windows). Primero, haz clic derecho sobre el
+      icono de Ace Stream en la barra de tareas y selecciona "Options..." (En
+      Android ir a la configuración). Allí, cambia los valores de "VOD buffer" a
+      10 y "Live buffer" a 60. Después, en Ace Player, ve en la parte de arriba
+      a "Herramientas"
       <i class="bi bi-arrow-right"></i> "Preferencias"
       <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona
       "Automático" y Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
