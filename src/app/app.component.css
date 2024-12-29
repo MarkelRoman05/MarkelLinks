@@ -328,4 +328,9 @@
   .text-enlaces-agenda-completa {
     flex-wrap: wrap;
   }
+
+  .iframe-container {
+    width: auto;
+    height: auto;
+  }
 }
