@@ -114,6 +114,14 @@
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
+.canales-sd {
+  display: flex;
+  justify-content: center;
+  margin-top: 23px;
+  margin-bottom: 10px;
+  color: white;
+}
+
 .no-encontrado-text {
   display: flex;
   justify-content: center;
@@ -321,6 +329,12 @@
     overflow-x: hidden;
     overflow-y: hidden;
     flex-wrap: wrap;
+  }
+
+  .canales-sd {
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 

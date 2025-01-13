@@ -111,13 +111,18 @@
     ></a>
   </h4>
 
-  
-<!--   <div class="agenda-text-component">
+  <!--   <div class="agenda-text-component">
     <app-agenda-evento-text></app-agenda-evento-text>
   </div> -->
-  
 
   <h3 class="header-enlaces">ENLACES</h3>
+
+  <p class="canales-sd">
+    <strong>Nota:&nbsp;</strong>Los canales con la terminación "SD" tienen una
+    calidad máxima de 720p. El resto de los canales tienen una calidad 1080p,
+    excepto en los que pone "4K".
+  </p>
+
   <div class="search-container">
     <form class="search-form">
       <input
@@ -142,7 +147,6 @@
       }
     </form>
   </div>
-
   @if (filteredLinks.length === 0) {
   <p class="no-encontrado-text">No se encontraron canales.</p>
   } @else {
@@ -202,8 +206,8 @@
       Para reproducir los enlaces en tu dispositivo móvil, una vez instalado Ace
       Stream, puedes abrir el enlace haciendo clic en él directamente, lo que
       abrirá Ace Stream y reproducirá el contenido. También puedes copiar el
-      enlace, abrir Ace Stream manualmente y pegar el enlace en el cuadro de texto 
-      "Enter content link".
+      enlace, abrir Ace Stream manualmente y pegar el enlace en el cuadro de
+      texto "Enter content link".
     </p>
 
     <h3 style="color: white; margin: 0 20px 20px 29px">Windows</h3>
