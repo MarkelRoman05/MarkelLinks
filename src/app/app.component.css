@@ -93,16 +93,12 @@
 }
 
 .search-field {
+  width: 100%;
   margin: 16px 0;
   max-width: 500px;
-  width: 100%;
-}
-
-.search-field {
-  width: 100%;
   padding: 12px 20px;
   font-size: 16px;
-  border: 2px solid #b3adad;
+  border: 2px solid #666262;
   border-radius: 25px;
   transition: all 0.3s ease;
   outline: none;
@@ -110,7 +106,7 @@
 }
 
 .search-field:focus {
-  border-color: #004d40;
+  border-color: #be3a80;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
@@ -147,6 +143,7 @@
 
 .link-futboltv:hover {
   color: #ff0000;
+  transition: all 0.3s ease;
 }
 
 .link-futboltv {
@@ -227,6 +224,11 @@
   text-decoration: none;
 }
 
+.how-to-play-text a:hover {
+  color: #ff0000;
+  transition: all 0.3s ease;
+}
+
 .acestream-link {
   text-align: center;
   margin: 5px;
@@ -243,10 +245,6 @@
 .acestream-link:hover {
   transform: scale(1.03);
   transition: transform 0.2s;
-}
-
-.how-to-play-text a:hover {
-  text-decoration: underline;
 }
 
 .futbol-tv-agendas {
