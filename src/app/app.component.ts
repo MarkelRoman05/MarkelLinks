@@ -191,7 +191,7 @@ export class AppComponent {
   },
   {
    title: 'Eurosport 1 (OPCIÓN 1)',
-   url: 'acestream://5e4cd48c79f991fcbee2de8b9d30c4b16de3b952',
+   url: 'acestream://16ffa1713f42aa27317ee039a2bd0cdbc89a1580',
    tags: 'eurosport 1',
   },
   {
