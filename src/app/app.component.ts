@@ -200,7 +200,7 @@ export class AppComponent {
   },
   {
    title: 'Eurosport 2 (OPCIÓN 1)',
-   url: 'acestream://c373da9e901d414b7384e671112e64d5a2310c29',
+   url: 'acestream://98784fa0714190de289f42eb5b84e405df7e685a',
    tags: 'eurosport 2',
   },
   {
@@ -220,27 +220,27 @@ export class AppComponent {
   },
   {
    title: 'LALIGA TV Hypermotion',
-   url: 'acestream://4c46585214b23b1d802ef2168060c7649a3894cf',
+   url: 'acestream://b2706a7ffbea236a3b398139a3a606ada664c0eb',
    tags: 'laliga hypermotion',
   },
   {
    title: 'LALIGA TV Hypermotion SD',
-   url: 'acestream://06b367c22394a1358c9cefa0cb5d0b64b9b2b3f4',
+   url: 'acestream://121f719ebb94193c6086ef92865cf9b197750980',
    tags: 'laliga hypermotion SD',
   },
   {
    title: 'LALIGA TV Hypermotion 2',
-   url: 'acestream://d81b4f2f3fde433539c097b2edc9b587ca47b087',
+   url: 'acestream://0cfdfde1b70623b8c210b0f7301be2a87456481d',
    tags: 'laliga hypermotion 2',
   },
   {
    title: 'LALIGA TV Hypermotion 2 SD',
-   url: 'acestream://2709d0ab86cb6ce7ba4d3ad188d7fa80668f2924',
+   url: 'acestream://0a335406bad0b658aeddb2d38f8c0614b2e5623a',
    tags: 'laliga hypermotion 2 SD',
   },
   {
    title: 'LALIGA TV Hypermotion 3',
-   url: 'acestream://bd2f7970c17f427ae92867e2eb86696dd7900a3e',
+   url: 'acestream://fefd45ed6ff415e05f1341b7d9da2988eacd13ea',
    tags: 'laliga hypermotion 3',
   },
   {
@@ -520,12 +520,12 @@ export class AppComponent {
   },
   {
    title: 'La 1',
-   url: 'acestream://02b9307c5c97c86914cc5939d6bbeb5b4ec60b47',
+   url: 'acestream://b9a81ddb0cf98d9a5ae18ba2eef0ab094bd5d5b0',
    tags: 'la 1',
   },
   {
    title: 'La 1 UHD',
-   url: 'acestream://61a38b6c3b6c3fdffcb2f61053f3437e569eb666',
+   url: 'acestream://4a714c436cb67d53cf197f9038239fddab2d8b20',
    tags: 'la 1 uhd',
   },
   {
@@ -535,7 +535,7 @@ export class AppComponent {
   },
   {
    title: 'Teledeporte',
-   url: 'acestream://e2395d28ad19423212fd3aa0e81f387db3e8bb9f',
+   url: 'acestream://61b9b271c16f970aab43cb753c5f8be181dceece',
    tags: 'teledeporte',
   },
   {
