@@ -56,6 +56,11 @@
   color: white;
   padding: 10px 20px;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #444;
 }
 
 .navbar-container {
@@ -162,6 +167,11 @@
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 7px;
+  font-size: larger;
+}
+
+.time-clock iframe {
+  margin-left: 0.6rem;
 }
 
 .text-enlaces-agenda-completa {
@@ -268,7 +278,7 @@
   display: flex;
   justify-content: center;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 13px;
   font-size: 24px;
   font-weight: bold;
   color: white;
