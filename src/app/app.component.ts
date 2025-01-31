@@ -25,8 +25,7 @@ declare global {
   MatTooltipModule,
   FormsModule,
   MatIconModule,
-  ReactiveFormsModule,
-  AgendaEventoTextComponent
+  ReactiveFormsModule
  ],
  templateUrl: './app.component.html',
  styleUrl: './app.component.css',
