@@ -33,6 +33,7 @@ declare global {
 export class AppComponent {
   searchTerm: string = '';
   filteredLinks: any[] = [];
+  loading: boolean[] = [true, true, true, true, true];
 
   constructor(private snackBar: MatSnackBar) {
     window.clarity('consent');
@@ -62,6 +63,40 @@ export class AppComponent {
     this.filterLinks();
   }
 
+  copyLink(url: string) {
+    navigator.clipboard.writeText(url).then(() => {
+      this.snackBar.open('Enlace copiado', '', {
+        duration: 2500,
+      });
+      if ((window as any).clarity) {
+        (window as any).clarity('set', 'copy_event', { link: url });
+      }
+    });
+  }
+
+  trackClick(linkTitle: string): void {
+    if ((window as any).clarity) {
+      (window as any).clarity('set', 'click_event', { link: linkTitle });
+    }
+  }
+
+  onIframeLoad(index: number) {
+    this.loading[index] = false;
+  }
+
+  filterLinks() {
+    if (!this.searchTerm) {
+      this.filteredLinks = [...this.links];
+    } else {
+      this.filteredLinks = this.links.filter(
+        (link) =>
+          link.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          link.tags.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+  }
+
+  // LINKS ARRAY
   links = [
     {
       title: 'M+ LALIGA TV (OPCIÓN 1)',
@@ -694,39 +729,4 @@ export class AppComponent {
       img: 'https://www.thesportsdb.com/images/media/league/badge/xa4s481664007070.png',
     },
   ];
-
-  copyLink(url: string) {
-    navigator.clipboard.writeText(url).then(() => {
-      this.snackBar.open('Enlace copiado', '', {
-        duration: 2500,
-      });
-      if ((window as any).clarity) {
-        (window as any).clarity('set', 'copy_event', { link: url });
-      }
-    });
-  }
-
-  trackClick(linkTitle: string): void {
-    if ((window as any).clarity) {
-      (window as any).clarity('set', 'click_event', { link: linkTitle });
-    }
-  }
-
-  loading: boolean[] = [true, true, true, true, true];
-
-  onIframeLoad(index: number) {
-    this.loading[index] = false;
-  }
-
-  filterLinks() {
-    if (!this.searchTerm) {
-      this.filteredLinks = [...this.links];
-    } else {
-      this.filteredLinks = this.links.filter(
-        (link) =>
-          link.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-          link.tags.toLowerCase().includes(this.searchTerm.toLowerCase())
-      );
-    }
-  }
 }
