@@ -112,7 +112,7 @@
     ></a>
   </h4>
 
-<!--   <div class="agenda-text-component">
+  <!--   <div class="agenda-text-component">
     <app-agenda-evento-text></app-agenda-evento-text>
   </div> -->
 
@@ -166,8 +166,9 @@
           href="{{ link.url }}"
           class="acestream-link"
           (click)="trackClick(link.title)"
-          >{{ link.title }}</a
-        >
+          ><img [src]="link.img" class="logo-img" />&nbsp;
+          {{ link.title }}
+        </a>
         <button
           matTooltip="Copiar enlace"
           matTooltipPosition="right"

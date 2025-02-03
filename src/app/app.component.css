@@ -51,6 +51,12 @@
   margin-top: 5px;
 }
 
+.logo-img {
+  width: auto;
+  height: 22px;
+  vertical-align: middle;
+}
+
 .navbar {
   background-color: #333;
   color: white;
