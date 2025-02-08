@@ -121,22 +121,6 @@
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
-.canales-actualizados {
-  display: flex;
-  justify-content: center;
-  margin-top: 23px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.canales-text {
-  border: 1px solid #ccc;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  width: fit-content;
-  padding: 7px 15px;
-}
-
 .no-encontrado-text {
   display: flex;
   justify-content: center;
