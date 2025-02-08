@@ -285,15 +285,15 @@ export class AppComponent {
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgdqJODqwW6zAFu6rkzH-mNfUvkcdX52R2g&s',
     },
     {
-      title: 'UFC 1',
+      title: 'UFC TV',
       url: 'acestream://c73e3eefe1f4a90fd7495f8be2d5f772d758713b',
-      tags: 'ufc 1',
+      tags: 'ufc tv',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UFC_Logo.svg/2560px-UFC_Logo.svg.png',
     },
     {
       title: 'UFC Fight Pass',
       url: 'acestream://e3ad553098e0c1e70cba1ea2a906dc27aa3452a2',
-      tags: 'ufc 2',
+      tags: 'ufc figth pass',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UFC_Fight_Pass_Logo.svg/2560px-UFC_Fight_Pass_Logo.svg.png',
     },
     {
@@ -449,19 +449,19 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 6',
-      url: 'acestream://64a9353032efa2acb093d0bb86481f20f482d47e',
+      url: 'acestream://7aded197b3e03057d5b27a27db981ef5eefd95fd',
       tags: 'movistar liga de campeones 6',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP5.png',
     },
     {
       title: 'M+ L. de Campeones 7',
-      url: 'acestream://5932623d2fd7ed16b01787251b418e4f59a01cda',
+      url: 'acestream://2e2ef8a653d36192d881a438c0578381ff39b5ea',
       tags: 'movistar liga de campeones 7',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP6.png',
     },
     {
       title: 'M+ L. de Campeones 8',
-      url: 'acestream://6c445141445b06d7b4328d80e2dd936bd0ca52ca',
+      url: 'acestream://7ca2282e0b700429e991152a82427a37583c5f5f',
       tags: 'movistar liga de campeones 8',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP7.png',
     },
@@ -496,10 +496,16 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP12.png',
     },
     {
-      title: 'M+ L. de Campeones 17 SD',
-      url: 'acestream://60296c246e3596f334903fefd48cfaa724a5053b',
-      tags: 'movistar liga de campeones 17 sd',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP16.png',
+      title: 'M+ L. de Campeones 14 SD',
+      url: 'acestream://b149283faf12a9e574380c7ad1eb227261eaca85',
+      tags: 'movistar liga de campeones 14 sd',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP13.png',
+    },
+    {
+      title: 'M+ L. de Campeones 15 SD',
+      url: 'acestream://bb8506403e19f80ab66e431f2a4c74089a909d06',
+      tags: 'movistar liga de campeones 15 sd',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP14.png',
     },
     {
       title: 'DAZN 1 (OPCIÓN 1)',
@@ -632,12 +638,6 @@ export class AppComponent {
       url: 'acestream://d27e23deffb2314a9549b00d62fade1e2e38ed60',
       tags: 'la 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/LA2.png',
-    },
-    {
-      title: 'Antena 3',
-      url: 'acestream://a6cfb25becd96cbe9d1929e0e560016beac40887',
-      tags: 'teledeporte',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/TDEP.png',
     },
     {
       title: 'GOL PLAY',
