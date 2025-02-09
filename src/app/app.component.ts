@@ -101,31 +101,31 @@ export class AppComponent {
     {
       title: 'M+ LALIGA TV (OPCIÓN 1)',
       url: 'acestream://d3de78aebe544611a2347f54d5796bd87f16c92d',
-      tags: 'movistar laliga tv ',
+      tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA TV (OPCIÓN 2)',
       url: 'acestream://6d05b31e5e8fdae312fbd57897363a7b10ddb163',
-      tags: 'movistar laliga tv ',
+      tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA TV (OPCIÓN 3)',
-      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
-      tags: 'movistar laliga tv ',
+      url: 'acestream://cc9b7f5fe416069a2110da0909b0f915043c468b',
+      tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA TV (OPCIÓN 4)',
-      url: 'acestream://cc9b7f5fe416069a2110da0909b0f915043c468b',
-      tags: 'movistar laliga tv ',
+      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
+      tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA TV (OPCIÓN 5)',
       url: 'acestream://1969c27658d4c8333ab2c0670802546121a774a5',
-      tags: 'movistar laliga tv ',
+      tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
@@ -135,15 +135,15 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
-      title: 'M+ LALIGA TV 2',
+      title: 'M+ LALIGA TV 2 (OPCIÓN 1)',
       url: 'acestream://83c6c4942d69f4aa324aa746c5d7dbfd7d1572b3',
       tags: 'movistar laliga tv 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG1.png',
     },
     {
-      title: 'M+ LALIGA TV 2 SD',
-      url: 'acestream://f31a586422c9244196c810c84b6c85da350318a5',
-      tags: 'movistar laliga tv 2 SD',
+      title: 'M+ LALIGA TV 2 (OPCIÓN 2)',
+      url: 'acestream://83a2be1d789584c6040308d485ab1b29880af100',
+      tags: 'movistar laliga tv 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG1.png',
     },
     {
