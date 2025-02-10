@@ -195,6 +195,38 @@
   margin-top: 8px;
 }
 
+.otra-web {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 17px; 
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to top, #000000, #222020);
+  margin: 0 30px 30px 35px; 
+  margin-top: 3rem;
+}
+
+.otra-web p {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  color: white;
+}
+
+.otra-web a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.otra-web a:hover {
+  color: #ff0000;
+  transition: all 0.3s ease;
+}
+
 .how-to-play-header {
   display: flex;
   justify-content: center;
