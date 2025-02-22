@@ -4,28 +4,19 @@
 
 /* SCROLL TO TOP BUTTON */
 .scroll-to-top {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  display: none;
-  background-color: #ff1493; 
+  background-color: transparent; 
   color: white;
-  border: none;
+  border: 1px solid white;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 20px;
-  opacity: 0;
+  font-size: 15px;
 }
 
 .scroll-to-top:hover {
-  background-color: #ff69b4; 
+  background-color: white;
+  color: black;
   transition: all 0.3s;
-}
-
-.scroll-to-top.show {
-  display: block;
-  opacity: 1;
 }
 
 .delete-search-button {
@@ -212,6 +203,7 @@
 }
 
 .otra-web p {
+  text-align: center;
   font-family: Arial, sans-serif;
   font-size: 17px;
   color: white;

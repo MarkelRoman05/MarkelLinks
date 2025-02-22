@@ -43,17 +43,6 @@ export class AppComponent {
     this.filteredLinks = [...this.links];
   }
 
-  // SCROLL TO TOP
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const button = document.querySelector('.scroll-to-top') as HTMLElement;
-    if (window.pageYOffset > 280) {
-      button.classList.add('show');
-    } else {
-      button.classList.remove('show');
-    }
-  }
-
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
