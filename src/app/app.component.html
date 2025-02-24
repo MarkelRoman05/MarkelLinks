@@ -112,10 +112,6 @@
     ></a>
   </h4>
 
-  <!--   <div class="agenda-text-component">
-    <app-agenda-evento-text></app-agenda-evento-text>
-  </div> -->
-
   <h3 class="header-enlaces">ENLACES</h3>
 
   <div class="search-container">
@@ -128,8 +124,7 @@
         (keyup)="filterLinks()"
         name="searchTerm"
       />
-      @if (searchTerm) {
-      <div class="delete-search-container">
+      <div class="delete-search-container" *ngIf="searchTerm">
         <button
           matTooltip="Borrar texto de búsqueda"
           matTooltipPosition="below"
@@ -139,13 +134,12 @@
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
-      }
     </form>
   </div>
-  @if (filteredLinks.length === 0) {
-  <p class="no-encontrado-text">No se encontraron canales.</p>
-  } @else {
-  <div class="links-container">
+  <p class="no-encontrado-text" *ngIf="filteredLinks.length === 0">
+    No se encontraron canales.
+  </p>
+  <div class="links-container" *ngIf="filteredLinks.length > 0">
     <div class="column" *ngFor="let column of [0, 1]">
       <li
         class="links"
@@ -178,10 +172,9 @@
       </li>
     </div>
   </div>
-  }
 
   <div class="otra-web">
-    <h2 style="color: white; text-align: center;">OTRA WEB DE ENLACES</h2>
+    <h2 style="color: white; text-align: center">OTRA WEB DE ENLACES</h2>
     <p>
       En el caso de que el enlace que busques no funcione, puedes probar en esta
       web:
