@@ -149,7 +149,7 @@ export class AppComponent {
     },
     {
       title: 'LALIGA TV Bar (OPCIÓN 2)',
-      url: 'acestream://7fc274f1bccb3d755c8e0760459bd81056eb998f',
+      url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
       tags: 'laliga tv bar',
       img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
     },
@@ -161,22 +161,22 @@ export class AppComponent {
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 2)',
+      url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
+      tags: 'dazn laliga',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
+    }, 
+    {
+      title: 'DAZN LALIGA (OPCIÓN 3)',
       url: 'acestream://6de4794cd02f88f14354b5996823413a59a1de0f',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
     {
-      title: 'DAZN LALIGA (OPCIÓN 3)',
+      title: 'DAZN LALIGA (OPCIÓN 4)',
       url: 'acestream://8c8c1e047a1c5ed213ba74722a5345dc55c3c0eb',
       tags: 'dazn laliga SD',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
-    },
-    {
-      title: 'DAZN LALIGA (OPCIÓN 4)',
-      url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
-      tags: 'dazn laliga',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
-    },   
+    },  
     {
       title: 'DAZN LALIGA 2 (OPCIÓN 1)',
       url: 'acestream://97ba38d47680954be40e48bd8f43e17222fefecb',
