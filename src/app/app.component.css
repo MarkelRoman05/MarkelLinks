@@ -390,8 +390,7 @@
     flex-wrap: wrap;
   }
 
-  .iframe-container {
-    width: auto;
-    height: auto;
+  .navbar-title h1 {
+    font-size: 17px;
   }
 }
