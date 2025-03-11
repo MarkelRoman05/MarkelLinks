@@ -409,7 +409,7 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 2 (OPCIÓN 2)',
-      url: 'acestream://5c552dda22c9b00a3b7cf8a1a485034f8d90f978',
+      url: 'acestream://deb8972491e3817ba2335662d7855d2c2c05a900',
       tags: 'movistar liga de campeones 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP1.png',
     },
