@@ -26,8 +26,7 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    AgendaEventoTextComponent
-],
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -171,7 +170,7 @@ export class AppComponent {
       url: 'acestream://8c8c1e047a1c5ed213ba74722a5345dc55c3c0eb',
       tags: 'dazn laliga SD',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
-    },  
+    },
     {
       title: 'DAZN LALIGA (OPCIÓN 4)',
       url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
@@ -207,6 +206,36 @@ export class AppComponent {
       url: 'acestream://bf270b6486daf3a2aa54bc027fd7cb02401a447a',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
+    },
+    {
+      title: 'DAZN F1 (OPCIÓN 1)',
+      url: 'acestream://71eef80158aa8b37f3dc59f6793c6696df9a2dfa',
+      tags: 'dazn f1 formula 1',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
+    },
+    {
+      title: 'DAZN F1 (OPCIÓN 2)',
+      url: 'acestream://d6281d4e6310269b416180442a470d23a4a99dc9',
+      tags: 'dazn f1 formula 1',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
+    },
+    {
+      title: 'DAZN F1 (OPCIÓN 3)',
+      url: 'acestream://2c6e4c897661e6b0257bfe931b66d20b2ec763b6',
+      tags: 'dazn f1 formula 1',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
+    },
+    {
+      title: 'DAZN F1 (OPCIÓN 4)',
+      url: 'acestream://4f1d222c600e66ef4990b3d7ea13bfa53f7bfea1',
+      tags: 'dazn f1 formula 1 SD',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
+    },
+    {
+      title: 'DAZN F1 (Multicámara)',
+      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
+      tags: 'dazn f1 formula 1 multicamara',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
       title: 'M+ Copa del Rey (OPCIÓN 1)',
@@ -333,37 +362,6 @@ export class AppComponent {
       url: 'acestream://7a6f7c3acc3689c40f2300432723c55d41222af0',
       tags: 'laliga hypermotion 5',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS5.png',
-    },
-
-    {
-      title: 'DAZN F1 (Fórmula 1) [OPCIÓN 1]',
-      url: 'acestream://d6281d4e6310269b416180442a470d23a4a99dc9',
-      tags: 'dazn f1 formula 1',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
-    },
-    {
-      title: 'DAZN F1 (Fórmula 1) [OPCIÓN 2]',
-      url: 'acestream://2c6e4c897661e6b0257bfe931b66d20b2ec763b6',
-      tags: 'dazn f1 formula 1',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
-    },
-    {
-      title: 'DAZN F1 (Fórmula 1) [OPCIÓN 3]',
-      url: 'acestream://71eef80158aa8b37f3dc59f6793c6696df9a2dfa',
-      tags: 'dazn f1 formula 1',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
-    },
-    {
-      title: 'DAZN F1 SD (Fórmula 1)',
-      url: 'acestream://268289e7a3c5209960b53b4d43c8c65fab294b85',
-      tags: 'dazn f1 formula 1 SD',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
-    },
-    {
-      title: 'DAZN F1 Multicámara (Fórmula 1)',
-      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
-      tags: 'dazn f1 formula 1 multicamara',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
       title: 'M+ Golf',
