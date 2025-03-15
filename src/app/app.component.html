@@ -154,8 +154,10 @@
           href="{{ link.url }}"
           class="acestream-link"
           (click)="trackClick(link.title)"
-          ><img [src]="link.img" class="logo-img" />&nbsp;
-          {{ link.title }}
+          >
+          <img [src]="link.img" class="logo-img" />
+          &nbsp;
+          <span>{{ link.title }}</span>
         </a>
         <button
           matTooltip="Copiar enlace"

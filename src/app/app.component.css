@@ -368,6 +368,9 @@
   .acestream-link {
     font-size: 14px;
     padding: 5px;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenido a columna */
+    align-items: center; /* Centra el contenido horizontalmente */
   }
 }
 
