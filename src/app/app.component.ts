@@ -89,13 +89,13 @@ export class AppComponent {
   links = [
     {
       title: 'M+ LALIGA TV (OPCIÓN 1)',
-      url: 'acestream://d3de78aebe544611a2347f54d5796bd87f16c92d',
+      url: 'acestream://6d05b31e5e8fdae312fbd57897363a7b10ddb163',
       tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA TV (OPCIÓN 2)',
-      url: 'acestream://6d05b31e5e8fdae312fbd57897363a7b10ddb163',
+      url: 'acestream://d3de78aebe544611a2347f54d5796bd87f16c92d',
       tags: 'movistar laliga tv',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
