@@ -515,13 +515,13 @@ export class AppComponent {
     },
     {
       title: 'DAZN 2 (OPCIÓN 1)',
-      url: 'acestream://ca923c9873fd206a41c1e83ff8fc40e3cf323c9a',
+      url: 'acestream://ddb69a119ab5faf7eeec3cef77e3d591a8242816',
       tags: 'dazn 2 ',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M2SD.png',
     },
     {
       title: 'DAZN 2 (OPCIÓN 2)',
-      url: 'acestream://b056dfc53c18de02caeff4435ddb6b36bfb7b031',
+      url: 'acestream://ca923c9873fd206a41c1e83ff8fc40e3cf323c9a',
       tags: 'dazn 2 ',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M2SD.png',
     },
