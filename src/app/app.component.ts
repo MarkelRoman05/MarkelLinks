@@ -142,18 +142,6 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG2.png',
     },
     {
-      title: 'LALIGA TV Bar (OPCIÓN 1)',
-      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
-      tags: 'laliga tv bar',
-      img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
-    },
-    {
-      title: 'LALIGA TV Bar (OPCIÓN 2)',
-      url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
-      tags: 'laliga tv bar',
-      img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
-    },
-    {
       title: 'DAZN LALIGA (OPCIÓN 1)',
       url: 'acestream://110d441ddc9713a7452588770d2bc85504672f47',
       tags: 'dazn laliga',
@@ -206,6 +194,18 @@ export class AppComponent {
       url: 'acestream://bf270b6486daf3a2aa54bc027fd7cb02401a447a',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
+    },
+    {
+      title: 'LALIGA TV Bar (OPCIÓN 1)',
+      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
+      tags: 'laliga tv bar',
+      img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
+    },
+    {
+      title: 'LALIGA TV Bar (OPCIÓN 2)',
+      url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
+      tags: 'laliga tv bar',
+      img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
     },
     {
       title: 'DAZN F1 (OPCIÓN 1)',
