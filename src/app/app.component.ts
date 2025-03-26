@@ -52,10 +52,10 @@ export class AppComponent {
     this.filterLinks();
   }
 
-  copyLink(url: string) {
+  copyLink(url: string, title: string) {
     navigator.clipboard.writeText(url).then(() => {
-      this.snackBar.open('Enlace copiado', '', {
-        duration: 2500,
+      this.snackBar.open('Enlace de ' + title + ' copiado', '', {
+        duration: 3000,
       });
       if ((window as any).clarity) {
         (window as any).clarity('set', 'copy_event', { link: url });
