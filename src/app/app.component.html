@@ -18,7 +18,12 @@
       ></iframe>
     </div>
   </nav>
-
+  <div class="scroll-to-links" *ngIf="isMobile">
+    <button class="scroll-to-links-button" (click)="scrollToLinks()">
+      <span>Ir a los enlaces</span>
+      <i class="bi bi-arrow-down-short" style="display: block; font-size: x-large;"></i>
+    </button>
+  </div>
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <div class="futbol-tv-agendas">
     <div class="iframe-container">

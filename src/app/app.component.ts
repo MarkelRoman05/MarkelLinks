@@ -34,6 +34,7 @@ export class AppComponent {
   searchTerm: string = '';
   filteredLinks: any[] = [];
   loading: boolean[] = [true, true, true, true, true];
+  isMobile: boolean = false;
 
   constructor(private snackBar: MatSnackBar) {
     window.clarity('consent');
@@ -41,10 +42,23 @@ export class AppComponent {
 
   ngOnInit() {
     this.filteredLinks = [...this.links];
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', [])
+  checkScreenSize() {
+    this.isMobile = window.innerWidth < 854;
   }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  scrollToLinks() {
+    const linksSection = document.querySelector('.header-enlaces');
+    if (linksSection) {
+      linksSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   deleteSearch() {
