@@ -187,8 +187,8 @@ export class AppComponent {
     },
     {
       title: 'DAZN LALIGA 2 (OPCIÓN 2)',
-      url: 'acestream://c79b272e20f31d1be9103f582e87209a06a63927',
-      tags: 'dazn laliga 2 SD',
+      url: 'acestream://51dbbfb42f8091e4ea7a2186b566a40e780953d9',
+      tags: 'dazn laliga 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNL2.png',
     },
     {
