@@ -163,7 +163,7 @@ export class AppComponent {
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 2)',
-      url: 'acestream://6de4794cd02f88f14354b5996823413a59a1de0f',
+      url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
@@ -175,7 +175,7 @@ export class AppComponent {
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 4)',
-      url: 'acestream://ec29289b0b14756e686c03a501bae1efa05be70c',
+      url: 'acestream://6de4794cd02f88f14354b5996823413a59a1de0f',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
