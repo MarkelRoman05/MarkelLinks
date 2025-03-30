@@ -211,13 +211,13 @@ export class AppComponent {
     },
     {
       title: 'LALIGA TV Bar (OPCIÓN 1)',
-      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
+      url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
       tags: 'laliga tv bar',
       img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
     },
     {
       title: 'LALIGA TV Bar (OPCIÓN 2)',
-      url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
+      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
       tags: 'laliga tv bar',
       img: 'https://r2.thesportsdb.com/images/media/channel/logo/f9y6oe1692444384.png',
     },
@@ -242,7 +242,7 @@ export class AppComponent {
     {
       title: 'DAZN F1 (OPCIÓN 4)',
       url: 'acestream://4f1d222c600e66ef4990b3d7ea13bfa53f7bfea1',
-      tags: 'dazn f1 formula 1 SD',
+      tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
@@ -512,31 +512,31 @@ export class AppComponent {
     {
       title: 'DAZN 1 (OPCIÓN 1)',
       url: 'acestream://35c7f0c966ecde3390f4510bb4caded40018c07a',
-      tags: 'dazn 1 ',
+      tags: 'dazn 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M1SD.png',
     },
     {
       title: 'DAZN 1 (OPCIÓN 2)',
       url: 'acestream://7cf0086fa7d478f51dbba952865c79e66cb9add5',
-      tags: 'dazn 1 ',
+      tags: 'dazn 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M1SD.png',
     },
     {
       title: 'DAZN 1 (OPCIÓN 3)',
       url: 'acestream://0908f5dd264ded10b638636cb7479409cfee0813',
-      tags: 'dazn 1 ',
+      tags: 'dazn 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M1SD.png',
     },
     {
       title: 'DAZN 2 (OPCIÓN 1)',
       url: 'acestream://b0eabe0fdd02fdd165896236765a9b753a2ff516',
-      tags: 'dazn 2 ',
+      tags: 'dazn 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M2SD.png',
     },
     {
       title: 'DAZN 2 (OPCIÓN 2)',
       url: 'acestream://ddb69a119ab5faf7eeec3cef77e3d591a8242816',
-      tags: 'dazn 2 ',
+      tags: 'dazn 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/M2SD.png',
     },
     {
@@ -584,7 +584,7 @@ export class AppComponent {
     {
       title: 'M+ Deportes',
       url: 'acestream://55d4602cb22b0d8a33c10c2c2f42dae64a9e8895',
-      tags: 'movistar deportes ',
+      tags: 'movistar deportes',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CPDEP.png',
     },
     {
