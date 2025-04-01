@@ -20,8 +20,15 @@
   </nav>
   <div class="scroll-to-links" *ngIf="isMobile">
     <button class="scroll-to-links-button" (click)="scrollToLinks()">
+      <i
+        class="bi bi-arrow-down-short"
+        style="font-size: x-large"
+      ></i>
       <span>Ir a los enlaces</span>
-      <i class="bi bi-arrow-down-short" style="display: block; font-size: x-large;"></i>
+      <i
+        class="bi bi-arrow-down-short"
+        style="font-size: x-large"
+      ></i>
     </button>
   </div>
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
@@ -142,7 +149,8 @@
     </form>
   </div>
   <p class="no-encontrado-text" *ngIf="filteredLinks.length === 0">
-    No se encontraron canales.
+    <i class="bi bi-exclamation-triangle-fill"></i>&nbsp; No se encontraron
+    canales.
   </p>
   <div class="links-container" *ngIf="filteredLinks.length > 0">
     <div class="column" *ngFor="let column of [0, 1]">
@@ -159,7 +167,7 @@
           href="{{ link.url }}"
           class="acestream-link"
           (click)="trackClick(link.title)"
-          >
+        >
           <img [src]="link.img" class="logo-img" />
           &nbsp;
           <span>{{ link.title }}</span>
@@ -188,7 +196,7 @@
       <a
         href="https://www.socialcreator.com/xupimarc2/?s=289267&integ_ch=1"
         target="_blank"
-        >OTRA WEB DE ENLACES ACE STREAM</a
+        >HAZ CLIC PARA ACCEDER</a
       >
     </p>
   </div>
@@ -227,9 +235,11 @@
       y pegar el enlace en la opción "Medio"
       <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID". La segunda
       es haciendo clic directamente en el enlace, seleccionar Ace Player y
-      esperar al anuncio para ver el contenido. <b>Nota:</b> Asegúrate de tener
-      abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no, ábrelo tú
-      manualmente desde la ruta de instalación de Ace Stream.
+      esperar al anuncio para ver el contenido. <strong>Nota:</strong> Asegúrate
+      de tener abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no,
+      ábrelo tú manualmente desde la ruta de instalación de Ace Stream
+      (C:\Users\<i>tuusuario</i>\AppData\Roaming\ACEStream\engine y abre
+      ace_engine.exe).
     </p>
 
     <p class="how-to-play-text">

@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+//import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 
 declare global {
   interface Window {
@@ -49,6 +49,8 @@ export class AppComponent {
   checkScreenSize() {
     this.isMobile = window.innerWidth < 854;
   }
+
+  // MÉTODOS
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });

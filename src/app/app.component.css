@@ -41,7 +41,7 @@ html {
 }
 
 .delete-search-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -131,7 +131,7 @@ html {
   font-size: 18px;
   margin-top: 5px;
   margin-bottom: 30px;
-  color: #ff4d4d;
+  color: #ffffff;
 }
 
 .copy-button {
@@ -360,25 +360,23 @@ html {
 .scroll-to-links {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .scroll-to-links-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 17px;
   margin: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
-}
-
-.scroll-to-links-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 854px) {
