@@ -18,6 +18,11 @@
       ></iframe>
     </div>
   </nav>
+
+  <div class="navbar-nuevo">
+    <a href="#contacto">* NUEVO: FORMULARIO DE CONTACTO *</a>
+  </div>
+
   <div class="scroll-to-links" *ngIf="isMobile">
     <button class="scroll-to-links-button" (click)="scrollToLinks()">
       <i
@@ -200,6 +205,19 @@
       >
     </p>
   </div>
+
+  <div id="contacto" class="contact-form">
+    <h3>CONTACTO</h3>
+    <p>
+      Si tienes alguna duda, sugerencia o lo que quieras, no dudes en contactarme.
+    </p>
+    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
+      <input type="text" name="name" placeholder="Nombre" required [(ngModel)]="contact.name" />
+      <input type="email" name="email" placeholder="Email" required [(ngModel)]="contact.email" />
+      <textarea name="message" placeholder="Mensaje" required [(ngModel)]="contact.message" rows="4" style="resize: vertical;"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>  
 
   <div class="how-to-play-container">
     <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>

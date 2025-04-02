@@ -89,6 +89,24 @@ html {
   font-weight: bold;
 }
 
+.navbar-nuevo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  margin-bottom: 1rem;
+}
+
+.navbar-nuevo a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navbar-nuevo a:hover {
+  color: #ff0000;
+  transition: all 0.3s ease;
+}
+
 .custom-message {
   position: fixed;
   bottom: 0;
@@ -377,6 +395,77 @@ html {
   margin: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
+}
+
+.contact-form {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #f5f5f5;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 10px 10px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #2e2e2e;
+  color: #f5f5f5;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #00bfff, #007acc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #009acd, #005f99);
+  transform: translateY(-3px);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 854px) {

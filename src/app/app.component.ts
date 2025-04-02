@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 //import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+import emailjs from '@emailjs/browser';
 
 declare global {
   interface Window {
@@ -35,6 +36,7 @@ export class AppComponent {
   filteredLinks: any[] = [];
   loading: boolean[] = [true, true, true, true, true];
   isMobile: boolean = false;
+  contact = { name: '', email: '', message: '' };
 
   constructor(private snackBar: MatSnackBar) {
     window.clarity('consent');
@@ -51,6 +53,31 @@ export class AppComponent {
   }
 
   // MÉTODOS
+
+  sendEmail(form: any) {
+    if (form.valid) {
+      const serviceID = 'service_fs7p4w4';
+      const adminTemplateID = 'template_gk496dt'; // Template para Markel
+      const userTemplateID = 'template_1lutrs5'; // Template para el usuario
+      const publicKey = 'zHLloJ3A1BD4ZTRZM';
+
+      const emailParams = {
+        name: this.contact.name,
+        email: this.contact.email,
+        message: this.contact.message
+      };
+
+      // 1️⃣ Enviar email a Markel
+      emailjs.send(serviceID, adminTemplateID, emailParams, publicKey)
+        .then(() => console.log('Correo enviado a Markel'))
+        .catch(err => console.error('Error al enviar al admin:', err));
+
+      // 2️⃣ Enviar email de confirmación al usuario
+      emailjs.send(serviceID, userTemplateID, emailParams, publicKey)
+        .then(() => alert('Correo enviado correctamente'))
+        .catch(err => console.error('Error al enviar al usuario:', err));
+    }
+  }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
