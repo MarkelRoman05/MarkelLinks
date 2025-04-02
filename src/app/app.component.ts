@@ -64,18 +64,36 @@ export class AppComponent {
       const emailParams = {
         name: this.contact.name,
         email: this.contact.email,
-        message: this.contact.message
+        message: this.contact.message,
       };
 
       // 1️⃣ Enviar email a Markel
-      emailjs.send(serviceID, adminTemplateID, emailParams, publicKey)
-        .then(() => console.log('Correo enviado a Markel'))
-        .catch(err => console.error('Error al enviar al admin:', err));
+      emailjs
+        .send(serviceID, adminTemplateID, emailParams, publicKey)
+        .then(() => {
+          // No hacer nada
+        })
+        .catch((err) => console.error('Error al enviar a Markel:', err));
 
       // 2️⃣ Enviar email de confirmación al usuario
-      emailjs.send(serviceID, userTemplateID, emailParams, publicKey)
-        .then(() => alert('Correo enviado correctamente'))
-        .catch(err => console.error('Error al enviar al usuario:', err));
+      emailjs
+        .send(serviceID, userTemplateID, emailParams, publicKey)
+        .then(() => {
+          this.snackBar.open('¡Email enviado correctamente!', '', {
+            duration: 4500,
+          });
+          this.contact = { name: '', email: '', message: '' };
+        })
+        .catch((err) => {
+          console.error('Error al enviar al usuario: ', err);
+          this.snackBar.open(
+            'Error al enviar el email. Por favor, inténtalo de nuevo.',
+            '',
+            {
+              duration: 4500,
+            }
+          );
+        });
     }
   }
 
