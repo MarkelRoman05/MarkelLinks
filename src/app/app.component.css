@@ -89,22 +89,10 @@ html {
   font-weight: bold;
 }
 
-.navbar-nuevo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: large;
-  margin-bottom: 1rem;
-}
-
-.navbar-nuevo a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.navbar-nuevo a:hover {
-  color: #ff0000;
-  transition: all 0.3s ease;
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
 
 .custom-message {
@@ -456,6 +444,7 @@ html {
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 12px;
 }
 
 .contact-form button:hover {

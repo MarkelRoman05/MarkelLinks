@@ -19,21 +19,11 @@
     </div>
   </nav>
 
-  <div class="navbar-nuevo">
-    <a href="#contacto">* NUEVO: FORMULARIO DE CONTACTO *</a>
-  </div>
-
   <div class="scroll-to-links" *ngIf="isMobile">
     <button class="scroll-to-links-button" (click)="scrollToLinks()">
-      <i
-        class="bi bi-arrow-down-short"
-        style="font-size: x-large"
-      ></i>
+      <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
       <span>Ir a los enlaces</span>
-      <i
-        class="bi bi-arrow-down-short"
-        style="font-size: x-large"
-      ></i>
+      <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
     </button>
   </div>
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
@@ -209,15 +199,70 @@
   <div id="contacto" class="contact-form">
     <h3>CONTACTO</h3>
     <p>
-      Si tienes alguna duda, sugerencia o lo que quieras, no dudes en contactarme.
+      Si tienes alguna duda, sugerencia o lo que quieras, no dudes en
+      contactarme.
     </p>
-    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
-      <input type="text" name="name" placeholder="Nombre" required [(ngModel)]="contact.name" />
-      <input type="email" name="email" placeholder="Email" required [(ngModel)]="contact.email" />
-      <textarea name="message" placeholder="Mensaje" required [(ngModel)]="contact.message" rows="4" style="resize: vertical;"></textarea>
-      <button type="submit">Enviar</button>
+    <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" novalidate>
+      <div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Nombre"
+          required
+          pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+          [(ngModel)]="contact.name"
+          #name="ngModel"
+        />
+        <div *ngIf="name.invalid && name.touched" class="error">
+          <span *ngIf="name.errors?.['required']"
+            >El nombre es obligatorio.</span
+          >
+          <span *ngIf="name.errors?.['pattern']">
+            El nombre solo puede contener letras.
+          </span>
+        </div>
+      </div>
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          email
+          [(ngModel)]="contact.email"
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && email.touched" class="error">
+          <span *ngIf="email.errors?.['required']"
+            >El email es obligatorio.</span
+          >
+          <span *ngIf="email.errors?.['email']">El email no es válido.</span>
+        </div>
+      </div>
+      <div>
+        <textarea
+          name="message"
+          placeholder="Mensaje"
+          required
+          minlength="5"
+          [(ngModel)]="contact.message"
+          #message="ngModel"
+          rows="4"
+          style="resize: vertical"
+        ></textarea>
+        <div *ngIf="message.invalid && message.touched" class="error">
+          <span *ngIf="message.errors?.['required']"
+            >El mensaje es obligatorio.</span
+          >
+          <span *ngIf="message.errors?.['minlength']">
+            El mensaje debe tener al menos 5 caracteres.
+          </span>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
     </form>
-  </div>  
+  </div>
 
   <div class="how-to-play-container">
     <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>
