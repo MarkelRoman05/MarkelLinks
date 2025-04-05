@@ -1,27 +1,47 @@
-# AcestreamLinks
+# Ace Stream Links
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+Markel Links es una web que ofrece enlaces de streaming para ver partidos de fútbol y otros eventos deportivos en vivo. La web se basa en el protocolo Ace Stream, que permite la transmisión de video a través de redes P2P. Los enlaces proporcionados son gratuitos. La web no es responsable de la legalidad de los enlaces y su uso es bajo el propio riesgo del usuario. Se recomienda utilizar una VPN para proteger la privacidad y seguridad al acceder a estos enlaces.
 
-## Development server
+## Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Enlaces Actualizados**: Los enlaces se actualizan regularmente para garantizar la disponibilidad.
+- **Fácil de Usar**: Interfaz sencilla para encontrar y copiar enlaces rápidamente.
+- **Compatibilidad**: Funciona con reproductores compatibles con Ace Stream.
 
-## Code scaffolding
+## Requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Ace Stream Media instalado en tu dispositivo.
+- Conexión a Internet estable.
+- Opcional: VPN para mayor privacidad.
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clona este repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/acestream-links.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd acestream-links
+    ```
 
-## Running unit tests
+## Uso
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Abre la web en https://markel-links.netlify.app/.
+2. Busca el evento deportivo que deseas ver.
+3. Copia el enlace Ace Stream y pégalo en el reproductor de Ace Player o haz clic directamente en el enlace.
 
-## Running end-to-end tests
+## Contribuciones
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+¡Las contribuciones son bienvenidas! Si deseas colaborar, sigue estos pasos:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Haz un fork del repositorio.
+2. Crea una rama para tu funcionalidad:
+    ```bash
+    git checkout -b nueva-funcionalidad
+    ```
+3. Realiza tus cambios y haz un commit:
+    ```bash
+    git commit -m "Añadir nueva funcionalidad"
+    ```
+4. Envía un pull request.
