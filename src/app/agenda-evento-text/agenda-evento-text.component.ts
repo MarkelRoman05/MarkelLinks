@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-agenda-evento-text',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './agenda-evento-text.component.css'
 })
 export class AgendaEventoTextComponent {
-
+  
 }

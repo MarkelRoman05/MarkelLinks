@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 //import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import emailjs from '@emailjs/browser';
+import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 
 declare global {
   interface Window {
@@ -27,6 +28,7 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
+    AgendaEventoTextComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -54,6 +56,10 @@ export class AppComponent {
 
   // MÉTODOS
 
+  /**
+   * Envía un correo electrónico utilizando el servicio EmailJS.
+   * @param form - El formulario reactivo que contiene los datos del contacto.
+   */
   sendEmail(form: any) {
     if (form.valid) {
       const serviceID = 'service_fs7p4w4';
@@ -97,10 +103,16 @@ export class AppComponent {
     }
   }
 
+  /**
+   * Desplaza la ventana hacia la parte superior de la página con un efecto suave.
+   */
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  /**
+   * Desplaza la ventana hacia la sección de enlaces con un efecto suave.
+   */
   scrollToLinks() {
     const linksSection = document.querySelector('.header-enlaces');
     if (linksSection) {
@@ -108,11 +120,19 @@ export class AppComponent {
     }
   }
 
+  /**
+   * Limpia el término de búsqueda y actualiza la lista de enlaces filtrados.
+   */
   deleteSearch() {
     this.searchTerm = '';
     this.filterLinks();
   }
 
+  /**
+   * Copia un enlace al portapapeles y muestra una notificación.
+   * @param url - La URL del enlace a copiar.
+   * @param title - El título del enlace.
+   */
   copyLink(url: string, title: string) {
     navigator.clipboard.writeText(url).then(() => {
       this.snackBar.open('Enlace de ' + title + ' copiado', '', {
@@ -124,16 +144,27 @@ export class AppComponent {
     });
   }
 
+  /**
+   * Rastrea un evento de clic en un enlace utilizando la herramienta Clarity.
+   * @param linkTitle - El título del enlace clicado.
+   */
   trackClick(linkTitle: string): void {
     if ((window as any).clarity) {
       (window as any).clarity('set', 'click_event', { link: linkTitle });
     }
   }
 
+  /**
+   * Marca un iframe como cargado al actualizar el estado de carga.
+   * @param index - El índice del iframe en el array de estados de carga.
+   */
   onIframeLoad(index: number) {
     this.loading[index] = false;
   }
 
+  /**
+   * Filtra los enlaces según el término de búsqueda ingresado.
+   */
   filterLinks() {
     if (!this.searchTerm) {
       this.filteredLinks = [...this.links];
