@@ -11,6 +11,10 @@
   margin-bottom: 1.5rem;
 }
 
+.agenda-text {
+  padding: 0.5rem;
+}
+
 .agenda-text a {
   color: #2087f5;
   text-decoration: none;
