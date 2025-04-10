@@ -7,9 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
-//import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import emailjs from '@emailjs/browser';
-import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+//import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 
 declare global {
   interface Window {
@@ -28,7 +27,6 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    AgendaEventoTextComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
