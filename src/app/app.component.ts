@@ -38,6 +38,9 @@ export class AppComponent {
   isMobile: boolean = false;
   contact = { name: '', email: '', message: '' };
 
+  isImagePopupOpen: boolean = false;
+  popupImageUrl: string = '';
+
   constructor(private snackBar: MatSnackBar) {
     window.clarity('consent');
   }
@@ -53,6 +56,23 @@ export class AppComponent {
   }
 
   // MÉTODOS
+
+  /**
+   * Abre el popup de la imagen con la URL proporcionada.
+   * @param imageUrl - La URL de la imagen a mostrar.
+   */
+  openImagePopup(imageUrl: string) {
+    this.popupImageUrl = imageUrl;
+    this.isImagePopupOpen = true;
+  }
+
+  /**
+   * Cierra el popup de la imagen.
+   */
+  closeImagePopup() {
+    this.isImagePopupOpen = false;
+    this.popupImageUrl = '';
+  }
 
   /**
    * Envía un correo electrónico utilizando el servicio EmailJS.
