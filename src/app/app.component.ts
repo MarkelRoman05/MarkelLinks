@@ -8,7 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import emailjs from '@emailjs/browser';
-//import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 
 declare global {
   interface Window {
@@ -27,6 +27,7 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
+    AgendaEventoTextComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -523,13 +524,13 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 3 (OPCIÓN 1)',
-      url: 'acestream://3618edda333dad5374ac2c801f5f14483934b97d',
+      url: 'acestream://17b8bc4bf8e29547b0071c742e3d7da3bcbc484d',
       tags: 'movistar liga de campeones 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
     {
       title: 'M+ L. de Campeones 3 (OPCIÓN 2)',
-      url: 'acestream://e42984ac6529407462f92201af95c01db8988368',
+      url: 'acestream://3618edda333dad5374ac2c801f5f14483934b97d',
       tags: 'movistar liga de campeones 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
