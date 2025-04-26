@@ -208,6 +208,139 @@
     </p>
   </div>
 
+  <div class="how-to-play-container">
+    <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>
+    <div class="mini-separator"></div>
+    <p class="how-to-play-text">
+      Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener
+      instalado Ace Stream Media. Si no lo tienes instalado, puedes descargarlo
+      desde la página oficial de Ace Stream haciendo clic
+      <a href="https://www.acestream.org/?page=products" target="_blank">aquí</a
+      >, o desde
+      <a
+        href="https://play.google.com/store/apps/details?id=org.acestream.node"
+        target="_blank"
+        >Play Store</a
+      >
+      para Android.
+    </p>
+
+    <h4 style="color: white; margin: 0 20px 20px 29px">Android</h4>
+    <p class="how-to-play-text">
+      Para reproducir los enlaces en tu dispositivo móvil, una vez instalado Ace
+      Stream, puedes abrir el enlace haciendo clic en él directamente, lo que
+      abrirá Ace Stream y reproducirá el contenido. También puedes copiar el
+      enlace, abrir Ace Stream manualmente y pegar el enlace en el cuadro de
+      texto "Enter content link".
+    </p>
+
+    <h4 style="color: white; margin: 0 20px 20px 29px">Windows</h4>
+    <p class="how-to-play-text">
+      Una vez instalado Ace Stream en Windows, tienes dos formas de reproducir
+      los enlaces: la primera es copiar el enlace, abrir Ace Player manualmente
+      y pegar el enlace en la opción "Medio"
+      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID". La segunda
+      es haciendo clic directamente en el enlace, seleccionar Ace Player y
+      esperar al anuncio para ver el contenido. <strong>Nota:</strong> Asegúrate
+      de tener abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no,
+      ábrelo tú manualmente desde la ruta de instalación de Ace Stream
+      (C:\Users\<i>tuusuario</i>\AppData\Roaming \ACEStream\engine y abre
+      ace_engine.exe).
+    </p>
+
+    <p class="how-to-play-text">
+      Para reproducir los enlaces correctamente en tu dispositivo, es
+      recomendable cambiar ciertos parámetros en la configuración de Ace Stream
+      y de Ace Player (solo en Windows). Primero, haz clic derecho sobre el
+      icono de Ace Stream en la barra de tareas y selecciona "Options..." (En
+      Android ir a la configuración). Allí, cambia los valores de "VOD buffer" a
+      10 y "Live buffer" a 60. Después, en Ace Player, ve en la parte de arriba
+      a "Herramientas"
+      <i class="bi bi-arrow-right"></i> "Preferencias"
+      <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona
+      "Automático" y Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
+    </p>
+
+    <h3 class="how-to-play-header">ELIMINAR RETARDO DE EMISIÓN</h3>
+    <div class="mini-separator"></div>
+
+    <p class="how-to-play-text">
+      Para evitar ver el contenido con retraso, es recomendable hacer esto en
+      Ace Player cada vez que reproduces un enlace (haz clic en la imagen para
+      ampliarla):
+    </p>
+
+    <div class="popup-image-container">
+      <img
+        src="images/retardo_ace_stream.jpg"
+        alt="Example Image"
+        class="popup-image"
+        (click)="openImagePopup('images/retardo_ace_stream.jpg')"
+        title="Haz clic para ampliar"
+        style="
+          cursor: pointer;
+          width: 100%;
+          max-width: 500px;
+          display: block;
+          margin: 0 auto;
+        "
+      />
+    </div>
+
+    <div
+      class="image-popup"
+      *ngIf="isImagePopupOpen"
+      (click)="closeImagePopup()"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      "
+    >
+      <img
+        [src]="popupImageUrl"
+        alt="Popup Image"
+        style="max-width: 90%; max-height: 90%"
+      />
+      <button
+        (click)="closeImagePopup()"
+        title="Cerrar imagen"
+        style="
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          background-color: #ff4d4d;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 1001;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        "
+      >
+        &times;
+      </button>
+    </div>
+    <p class="how-to-play-text" style="margin-top: 1.1rem;">
+      Para eliminar el retraso en dispositivos móviles, haz clic en el botón "Live" de Ace Player.
+    </p>
+  </div>
+
   <div id="contacto" class="contact-form">
     <h3>CONTACTO</h3>
     <div class="mini-separator"></div>
@@ -277,132 +410,8 @@
     </form>
   </div>
 
-  <div class="how-to-play-container">
-    <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>
-    <div class="mini-separator"></div>
-    <p class="how-to-play-text">
-      Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener
-      instalado Ace Stream Media. Si no lo tienes instalado, puedes descargarlo
-      desde la página oficial de Ace Stream haciendo clic
-      <a href="https://www.acestream.org/?page=products" target="_blank">aquí</a
-      >, o desde
-      <a
-        href="https://play.google.com/store/apps/details?id=org.acestream.node"
-        target="_blank"
-        >Play Store</a
-      >
-      para Android.
-    </p>
-
-    <h4 style="color: white; margin: 0 20px 20px 29px">Android</h4>
-    <p class="how-to-play-text">
-      Para reproducir los enlaces en tu dispositivo móvil, una vez instalado Ace
-      Stream, puedes abrir el enlace haciendo clic en él directamente, lo que
-      abrirá Ace Stream y reproducirá el contenido. También puedes copiar el
-      enlace, abrir Ace Stream manualmente y pegar el enlace en el cuadro de
-      texto "Enter content link".
-    </p>
-
-    <h4 style="color: white; margin: 0 20px 20px 29px">Windows</h4>
-    <p class="how-to-play-text">
-      Una vez instalado Ace Stream en Windows, tienes dos formas de reproducir
-      los enlaces: la primera es copiar el enlace, abrir Ace Player manualmente
-      y pegar el enlace en la opción "Medio"
-      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID". La segunda
-      es haciendo clic directamente en el enlace, seleccionar Ace Player y
-      esperar al anuncio para ver el contenido. <strong>Nota:</strong> Asegúrate
-      de tener abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no,
-      ábrelo tú manualmente desde la ruta de instalación de Ace Stream
-      (C:\Users\<i>tuusuario</i>\AppData\Roaming \ACEStream\engine y abre
-      ace_engine.exe).
-    </p>
-
-    <p class="how-to-play-text">
-      Para reproducir los enlaces correctamente en tu dispositivo, es
-      recomendable cambiar ciertos parámetros en la configuración de Ace Stream
-      y de Ace Player (solo en Windows). Primero, haz clic derecho sobre el
-      icono de Ace Stream en la barra de tareas y selecciona "Options..." (En
-      Android ir a la configuración). Allí, cambia los valores de "VOD buffer" a
-      10 y "Live buffer" a 60. Después, en Ace Player, ve en la parte de arriba
-      a "Herramientas"
-      <i class="bi bi-arrow-right"></i> "Preferencias"
-      <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona
-      "Automático" y Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
-    </p>
-
-    <h3 class="how-to-play-header">
-      ELIMINAR RETARDO DE EMISIÓN
-    </h3>
-    <div class="mini-separator"></div>
-
-    <p class="how-to-play-text">
-      Para evitar ver el contenido con retardo, es recomendable hacer esto en Ace Player:
-    </p>
-
-    <div class="popup-image-container">
-      <img
-        src="images/retardo_ace_stream.jpg"
-        alt="Example Image"
-        class="popup-image"
-        (click)="openImagePopup('images/retardo_ace_stream.jpg')"
-        title="Haz clic para ampliar"
-        style="cursor: pointer; width: 100%; max-width: 500px; display: block; margin: 0 auto;"
-      />
-    </div>
-
-    <div
-      class="image-popup"
-      *ngIf="isImagePopupOpen"
-      (click)="closeImagePopup()"
-      style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      "
-    >
-      <img
-      [src]="popupImageUrl"
-      alt="Popup Image"
-      style="max-width: 90%; max-height: 90%;"
-      />
-      <button
-      (click)="closeImagePopup()"
-      title="Cerrar imagen"
-      style="
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background-color: #ff4d4d;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1001;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-      "
-      >
-      &times;
-      </button>
-    </div>
-  </div>
-
   <div class="footer">
-    <span class="footer-text">Ace Stream Links</span>
+    <span class="footer-text">Markel Links</span>
     <p class="footer-text">
       Todos los enlaces son obtenidos de fuentes externas.
     </p>
