@@ -349,9 +349,9 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
-      title: 'DAZN F1 (Multicámara)',
-      url: 'acestream://968627d24eec1c16b51d88e4a4a6c02211e3346e',
-      tags: 'dazn f1 formula 1 multicamara',
+      title: 'DAZN F1 (OPCIÓN 5)',
+      url: 'acestream://6422e8bc34282871634c81947be093c04ad1bb29',
+      tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
@@ -644,7 +644,7 @@ export class AppComponent {
     },
     {
       title: 'DAZN 3',
-      url: 'acestream://b11dd020fc6e89b39b69c1f3bef032be72286e72',
+      url: 'acestream://d1d9ec2361a6ac8edc0b2841866383768cc28df9',
       tags: 'dazn 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZN3.png',
     },
