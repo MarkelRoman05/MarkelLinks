@@ -159,14 +159,14 @@
     canales.
   </p>
   <div class="links-container" *ngIf="filteredLinks.length > 0">
-    <div class="column" *ngFor="let column of [0, 1]">
+    <div class="column" *ngFor="let column of [0, 1, 2]">
       <li
         class="links"
         *ngFor="
           let link of filteredLinks
             | slice
-              : column * (filteredLinks.length / 2)
-              : (column + 1) * (filteredLinks.length / 2)
+              : column * (filteredLinks.length / 3)
+              : (column + 1) * (filteredLinks.length / 3)
         "
       >
         <a
