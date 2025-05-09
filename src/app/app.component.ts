@@ -631,7 +631,7 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
     {
-      title: 'M+ L. de Campeones 4 (Multi)',
+      title: 'M+ L. de Campeones 4',
       url: 'acestream://65a18a6bd83918a9586b673fec12405aaf4e9f7d',
       tags: 'movistar liga de campeones 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP3.png',
