@@ -27,7 +27,6 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -236,13 +235,13 @@ export class AppComponent {
     },
     {
       title: 'M+ LALIGA TV 2 (OPCIÓN 1)',
-      url: 'acestream://83c6c4942d69f4aa324aa746c5d7dbfd7d1572b3',
+      url: 'acestream://f31a586422c9244196c810c84b6c85da350318a5',
       tags: 'movistar laliga tv 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG1.png',
     },
     {
       title: 'M+ LALIGA TV 2 (OPCIÓN 2)',
-      url: 'acestream://83a2be1d789584c6040308d485ab1b29880af100',
+      url: 'acestream://83c6c4942d69f4aa324aa746c5d7dbfd7d1572b3',
       tags: 'movistar laliga tv 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG1.png',
     },
