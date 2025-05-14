@@ -42,6 +42,8 @@ export class AppComponent {
   isImagePopupOpen: boolean = false;
   popupImageUrl: string = '';
 
+  location = window.location;
+
   constructor(private snackBar: MatSnackBar) {
     window.clarity('consent');
   }
