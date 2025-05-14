@@ -25,6 +25,25 @@
     </div>
   </nav>
 
+  <div class="info-message-responsive">
+    <div class="info-message-row">
+      <i class="bi bi-info-circle-fill" style="margin-top: 2px; margin-right: 6px;"></i>
+      <span class="info-message-text">
+        Debido a los bloqueos de LALIGA a ciertas IPs de Cloudflare, es posible
+        que no puedas acceder a esta web en ciertos momentos. Para evitarlos,
+        puedes usar una VPN. Como alternativa puedes
+        acceder a través de este otro enlace:
+      </span>
+      <a
+        class="link-futboltv"
+        href="https://markel-links.vercel.app/"
+        target="_blank"
+        style="margin-left: 8px; white-space: nowrap;"
+        >HAZ CLIC PARA ACCEDER</a
+      >
+    </div>
+  </div>
+
   <div class="scroll-to-links" *ngIf="isMobile">
     <button class="scroll-to-links-button" (click)="scrollToLinks()">
       <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
@@ -117,7 +136,7 @@
     </div>
   </div>
 
- <!--  <div>
+  <!--  <div>
     <app-agenda-evento-text></app-agenda-evento-text>
   </div> -->
 
@@ -336,8 +355,9 @@
         &times;
       </button>
     </div>
-    <p class="how-to-play-text" style="margin-top: 1.1rem;">
-      Para eliminar el retraso en dispositivos móviles, haz clic en el botón "Live" de Ace Player.
+    <p class="how-to-play-text" style="margin-top: 1.1rem">
+      Para eliminar el retraso en dispositivos móviles, haz clic en el botón
+      "Live" de Ace Player.
     </p>
   </div>
 
