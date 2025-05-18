@@ -255,6 +255,12 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG2.png',
     },
     {
+      title: 'M+ LALIGA TV 4',
+      url: 'acestream://68697ea4f261289d97bbc3418ad3cbc4180aa32f',
+      tags: 'movistar laliga tv 3',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG3.png',
+    },
+    {
       title: 'Movistar Plus+ (OPCIÓN 1)',
       url: 'acestream://b2a4d1eba9b46df5f52a87105df779f9d39abeb4',
       tags: 'movistar plus +',
@@ -273,14 +279,8 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS2.png',
     },
     {
-      title: 'LALIGA TV Bar (OPCIÓN 1)',
+      title: 'LALIGA TV Bar',
       url: 'acestream://608b0faf7d3d25f6fe5dba13d5e4b4142949990e',
-      tags: 'laliga tv bar',
-      img: 'https://laligabares.com/wp-content/uploads/white-bar-tv.svg',
-    },
-    {
-      title: 'LALIGA TV Bar (OPCIÓN 2)',
-      url: 'acestream://94d34491106e00394835c8cb68aa94481339b53f',
       tags: 'laliga tv bar',
       img: 'https://laligabares.com/wp-content/uploads/white-bar-tv.svg',
     },
@@ -584,7 +584,7 @@ export class AppComponent {
       tags: 'bein sports ñ',
       img: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png',
     },
-        {
+    {
       title: 'M+ L. de Campeones (OPCIÓN 1)',
       url: 'acestream://0a26e20f39845e928411e09a124374fccb6e1478',
       tags: 'movistar liga de campeones',
