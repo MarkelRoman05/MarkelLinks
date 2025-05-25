@@ -478,7 +478,7 @@ export class AppComponent {
     },
     {
       title: 'DAZN 4',
-      url: 'acestream://4e83f23945ab3e43982045f88ec31daaa4683102',
+      url: 'acestream://7e90956539f4e1318a63f3960e4f75c7c7c5a3b8',
       tags: 'dazn 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZN4.png',
     },
