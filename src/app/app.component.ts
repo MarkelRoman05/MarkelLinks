@@ -338,27 +338,27 @@ export class AppComponent {
       tags: 'movistar copa del rey',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MCOPA.png',
     },
-    {
+        {
       title: 'Eurosport 1 (OPCIÓN 1)',
-      url: 'acestream://16ffa1713f42aa27317ee039a2bd0cdbc89a1580',
+      url: 'acestream://714e14e6d6e27660fd25a75b57b0ac5580fe705d',
       tags: 'eurosport 1',
       img: 'https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png',
     },
     {
       title: 'Eurosport 1 (OPCIÓN 2)',
-      url: 'acestream://f233f3a8e9ddfae2e43d919789073fc17d9bbd7c',
+      url: 'acestream://bae98f69fbf867550b4f73b4eb176dae84d7f909',
       tags: 'eurosport 1',
       img: 'https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png',
     },
     {
       title: 'Eurosport 2 (OPCIÓN 1)',
-      url: 'acestream://98784fa0714190de289f42eb5b84e405df7e685a',
+      url: 'acestream://dc4ccb9e72550bc72be9360aa7d77e337ad11ecc',
       tags: 'eurosport 2',
       img: 'https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png',
     },
     {
       title: 'Eurosport 2 (OPCIÓN 2)',
-      url: 'acestream://3e0df5e0e93cc867022e320afef0aaecda9509fe',
+      url: 'acestream://4b87a5b67f39dfc151a163ec8c08039520f0a372',
       tags: 'eurosport 2',
       img: 'https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png',
     },
