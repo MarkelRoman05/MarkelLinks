@@ -482,15 +482,15 @@ export class AppComponent {
       tags: 'dazn 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZN4.png',
     },
-    {
-      title: 'LALIGA TV HYPERMOTION',
-      url: 'acestream://b2706a7ffbea236a3b398139a3a606ada664c0eb',
+        {
+      title: 'LALIGA TV HYPERMOTION (OPCIÓN 1)',
+      url: 'acestream://87bb542f974b6b9e89d0f2e20ed6dc93426f4be0',
       tags: 'laliga hypermotion',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS.png',
     },
     {
-      title: 'LALIGA TV HYPERMOTION',
-      url: 'acestream://121f719ebb94193c6086ef92865cf9b197750980',
+      title: 'LALIGA TV HYPERMOTION (OPCIÓN 2)',
+      url: 'acestream://b2706a7ffbea236a3b398139a3a606ada664c0eb',
       tags: 'laliga hypermotion',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS.png',
     },
