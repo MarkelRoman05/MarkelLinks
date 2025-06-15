@@ -286,31 +286,31 @@ export class AppComponent {
     },
     {
       title: 'DAZN F1 (OPCIÓN 1)',
-      url: 'acestream://71eef80158aa8b37f3dc59f6793c6696df9a2dfa',
+      url: 'acestream://c9c18ae7a9dafba1caae5beb22060f9c92bba553',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
       title: 'DAZN F1 (OPCIÓN 2)',
-      url: 'acestream://d6281d4e6310269b416180442a470d23a4a99dc9',
+      url: 'acestream://515efd8115482bda8d92aa6df9a882a5e5797494',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
-    {
+        {
       title: 'DAZN F1 (OPCIÓN 3)',
-      url: 'acestream://2c6e4c897661e6b0257bfe931b66d20b2ec763b6',
+      url: 'acestream://6422e8bc34282871634c81947be093c04ad1bb29',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
       title: 'DAZN F1 (OPCIÓN 4)',
-      url: 'acestream://4f1d222c600e66ef4990b3d7ea13bfa53f7bfea1',
+      url: 'acestream://2c6e4c897661e6b0257bfe931b66d20b2ec763b6',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
       title: 'DAZN F1 (OPCIÓN 5)',
-      url: 'acestream://6422e8bc34282871634c81947be093c04ad1bb29',
+      url: 'acestream://4f1d222c600e66ef4990b3d7ea13bfa53f7bfea1',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
