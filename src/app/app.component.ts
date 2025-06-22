@@ -718,7 +718,7 @@ export class AppComponent {
     },
     {
       title: 'M+ Deportes 2',
-      url: 'acestream://911b6c35f4802fd358b78b328528af4650eca020',
+      url: 'acestream://edd06f11e1cef292a1d795e15207ef2f580e298c',
       tags: 'movistar deportes 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/ARTHUR.png',
     },
