@@ -1,27 +1,146 @@
 <div class="container">
   <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-logo">
-        <img
-          src="images/balon.png"
-          alt="Logo"
-          class="logo"
-          width="50"
-          height="60"
-        />
+    <div
+      class="navbar-container"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      "
+    >
+      <div style="display: flex; align-items: center">
+        <!-- Botón hamburguesa a la izquierda -->
+        <button
+          class="menu-toggle"
+          type="button"
+          (click)="isMenuOpen = !isMenuOpen"
+          style="
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            margin-right: 1rem;
+            display: none;
+          "
+          [ngStyle]="{ display: isMobile ? 'block' : 'none' }"
+          aria-label="Abrir menú"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="navbar-logo">
+          <img
+            src="images/balon.png"
+            alt="Logo"
+            class="logo"
+            width="50"
+            height="60"
+          />
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-left: 2rem;
+          "
+        >
+          <div class="navbar-title" *ngIf="!isMobile">
+            <h1 style="margin: 0">ACE STREAM LINKS</h1>
+          </div>
+        </div>
       </div>
-      <div class="navbar-title">
-        <h1>ACE STREAM LINKS</h1>
+      <!-- Menú lateral móvil -->
+      <div
+        class="navbar-menu"
+        [ngClass]="{ 'mobile-menu': isMobile, open: isMenuOpen }"
+        [ngStyle]="{
+          display: !isMobile ? 'block' : isMenuOpen ? 'block' : 'none',
+          position: isMobile ? 'fixed' : 'static',
+          top: isMobile ? '0' : 'auto',
+          left: isMobile ? '0' : 'auto',
+          height: isMobile ? '100vh' : 'auto',
+          width: isMobile ? '70vw' : 'auto',
+          background: isMobile ? '#222' : 'none',
+          zIndex: isMobile ? 2000 : 'auto',
+          boxShadow:
+            isMobile && isMenuOpen ? '2px 0 12px rgba(0,0,0,0.4)' : 'none',
+          padding: isMobile ? '2rem 1.5rem' : '0',
+          transition: isMobile ? 'transform 0.3s ease' : 'none',
+          transform:
+            isMobile && !isMenuOpen ? 'translateX(-100%)' : 'translateX(0)'
+        }"
+      >
+        <!-- Botón cerrar solo en móvil -->
+        <button
+          *ngIf="isMobile"
+          (click)="isMenuOpen = false"
+          style="
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+          "
+          aria-label="Cerrar menú"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <ul
+          style="
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-direction: inherit;
+          "
+          [ngStyle]="{
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: isMobile ? 'flex-start' : 'center',
+            marginTop: isMobile ? '3rem' : '0'
+          }"
+        >
+          <li>
+            <a
+              href="#enlaces"
+              style="color: white; text-decoration: none; font-weight: bold"
+              >Enlaces</a
+            >
+          </li>
+          <li>
+            <a
+              href="#como-reproducir"
+              style="color: white; text-decoration: none; font-weight: bold"
+              >Cómo reproducir</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              style="color: white; text-decoration: none; font-weight: bold"
+              >Contacto</a
+            >
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="time-clock">
-      <i class="bi bi-clock"></i>
-      <iframe
-        src="https://free.timeanddate.com/clock/i9n4hxch/n327/tles4/fn12/fs18/fcfff/tc000/pcccc/ftb/bls0/brs0/bts4/th1"
-        frameborder="0"
-        width="92"
-        height="25"
-      ></iframe>
+      <!-- Reloj SIEMPRE dentro del navbar-container, a la derecha -->
+      <div class="time-clock" style="margin-left: 1.5rem">
+        <i class="bi bi-clock"></i>
+        <iframe
+          src="https://free.timeanddate.com/clock/i9n4hxch/n327/tles4/fn12/fs18/fcfff/tc000/pcccc/ftb/bls0/brs0/bts4/th1"
+          frameborder="0"
+          width="92"
+          height="25"
+          style="vertical-align: middle"
+        ></iframe>
+      </div>
     </div>
   </nav>
 
@@ -141,18 +260,18 @@
       ></iframe>
     </div>
   </div> -->
-<div class="iframe">
-  <iframe
-    id="ftv_iframe"
-    name="ftv_iframe"
-    src="https://widgets.futbolenlatv.com/partidos/competition/mundial-de-clubes?color=005df8&culture=es-ES"
-    width="400"
-    height="401"
-    frameborder="0"
-    scrolling="auto"
-    style="margin-bottom: 10px"
-  ></iframe>
-</div>
+  <div class="iframe">
+    <iframe
+      id="ftv_iframe"
+      name="ftv_iframe"
+      src="https://widgets.futbolenlatv.com/partidos/competition/mundial-de-clubes?color=005df8&culture=es-ES"
+      width="400"
+      height="401"
+      frameborder="0"
+      scrolling="auto"
+      style="margin-bottom: 10px"
+    ></iframe>
+  </div>
 
   <div>
     <app-agenda-evento-text></app-agenda-evento-text>
@@ -167,7 +286,7 @@
     ></a>
   </h4>
 
-  <h3 class="header-enlaces">ENLACES</h3>
+  <h3 class="header-enlaces" id="enlaces">ENLACES</h3>
   <div class="mini-separator"></div>
   <div class="search-container">
     <form class="search-form">
@@ -245,7 +364,7 @@
     </p>
   </div>
 
-  <div class="how-to-play-container">
+  <div class="how-to-play-container" id="como-reproducir">
     <h3 class="how-to-play-header">CÓMO REPRODUCIR ENLACES ACE STREAM</h3>
     <div class="mini-separator"></div>
     <p class="how-to-play-text">

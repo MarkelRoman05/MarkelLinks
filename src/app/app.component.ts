@@ -37,6 +37,7 @@ export class AppComponent {
   filteredLinks: any[] = [];
   loading: boolean[] = [true, true, true, true, true];
   isMobile: boolean = false;
+  isMenuOpen: boolean = false; // Añadido para el menú móvil
   contact = { name: '', email: '', message: '' };
 
   isImagePopupOpen: boolean = false;
@@ -56,6 +57,9 @@ export class AppComponent {
   @HostListener('window:resize', [])
   checkScreenSize() {
     this.isMobile = window.innerWidth < 854;
+    if (!this.isMobile) {
+      this.isMenuOpen = false; // Cierra el menú si se pasa a escritorio
+    }
   }
 
   // MÉTODOS
