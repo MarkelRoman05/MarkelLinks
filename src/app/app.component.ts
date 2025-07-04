@@ -577,9 +577,9 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/LA2.png',
     },
     {
-      title: 'GOL PLAY',
+      title: 'GOL',
       url: 'acestream://d4627f7b6b237a8556819445b3283d866caceca2',
-      tags: 'gol play',
+      tags: 'gol',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOL.png',
     },
     {
