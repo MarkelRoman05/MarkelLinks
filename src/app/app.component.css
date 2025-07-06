@@ -501,6 +501,17 @@ h3 {
   border-radius: 2px;
 }
 
+.navbar-menu ul li > a {
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+}
+
+.navbar-menu ul li > a:hover,
+.navbar-menu ul li > a:focus {
+  color: #ff0000 !important;
+  text-decoration: none;
+}
+
 @media (min-width: 854px) {
   .scroll-to-links {
     display: none;
