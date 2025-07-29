@@ -512,9 +512,106 @@ h3 {
   text-decoration: none;
 }
 
-@media (min-width: 854px) {
-  .scroll-to-links {
-    display: none;
+.navbar-menu {
+  z-index: 2147483646 !important; /* Muy alto para asegurar que está por encima */
+}
+
+/* Solo para móvil: menú lateral ocupa toda la altura y tapa el fondo */
+@media (max-width: 900px) {
+  .navbar-menu.mobile-menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 80vw !important;
+    max-width: 350px;
+    height: 100vh !important;
+    background: #222 !important;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.4);
+    overflow-y: auto;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2rem !important;
+    display: block !important;
+    transition: transform 0.3s ease;
+    z-index: 2147483647 !important; /* Máximo valor posible */
+  }
+  /* Fondo semitransparente detrás del menú */
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 2147483646 !important;
+    pointer-events: auto;
+  }
+  .navbar-menu ul {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2.2rem !important;
+    width: 100%;
+    margin-top: 2.5rem !important;
+    padding-left: 0 !important;
+  }
+  .navbar-menu ul li {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .navbar-menu ul li > a {
+    font-size: 1.25rem !important;
+    font-weight: bold;
+    color: #fff !important;
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+    text-align: left;
+    transition: color 0.2s;
+  }
+  .navbar-menu ul li > a:hover {
+    color: #ff0000 !important;
+  }
+}
+
+/* Asegura que los títulos y elementos principales NO tengan z-index ni position en móvil */
+@media (max-width: 900px) {
+  .container > h3,
+  .container > h4,
+  .container > .mini-separator,
+  .container > .search-container,
+  .container > .links-container,
+  .container > .otra-web,
+  .container > .how-to-play-container,
+  .container > .contact-form,
+  .container > .footer {
+    position: static !important;
+    z-index: auto !important;
+  }
+  h3, h4 {
+    position: static !important;
+    z-index: auto !important;
+  }
+  /* Añade esto para el buscador */
+  .search-form,
+  .search-field,
+  .delete-search-container,
+  .delete-search-button {
+    position: static !important;
+    z-index: auto !important;
+  }
+}
+
+/* Evita que los títulos de la página sobresalgan por encima del menú */
+@media (max-width: 900px) {
+  .container > h3,
+  .container > h4,
+  .container > .mini-separator,
+  .container > .search-container,
+  .container > .links-container,
+  .container > .otra-web,
+  .container > .how-to-play-container,
+  .container > .contact-form,
+  .container > .footer {
+    /* z-index: 1; */
+    /* position: relative; */
+    /* Elimina z-index y position para que el menú esté por encima */
   }
 }
 

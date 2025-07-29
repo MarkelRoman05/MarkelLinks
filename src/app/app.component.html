@@ -63,7 +63,7 @@
           height: isMobile ? '100vh' : 'auto',
           width: isMobile ? '70vw' : 'auto',
           background: isMobile ? '#222' : 'none',
-          zIndex: isMobile ? 2000 : 'auto',
+          zIndex: isMobile ? 9999 : 'auto',
           boxShadow:
             isMobile && isMenuOpen ? '2px 0 12px rgba(0,0,0,0.4)' : 'none',
           padding: isMobile ? '2rem 1.5rem' : '0',
@@ -99,7 +99,6 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            flex-direction: inherit;
           "
           [ngStyle]="{
             flexDirection: isMobile ? 'column' : 'row',
@@ -185,9 +184,9 @@
   </div> -->
 
   <div class="scroll-to-links" *ngIf="isMobile">
-    <button class="scroll-to-links-button" (click)="scrollToLinks()">
-      <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
-      <span>Pulsa aquí para ir a los enlaces</span>
+    <button class="scroll-to-links-button" (click)="scrollToHowToPlay()">
+      <i class="bi bi-question-circle-fill" style="font-size: x-large"></i>
+      <span>Cómo reproducir enlaces Ace Stream</span>
       <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
     </button>
   </div>
@@ -393,7 +392,7 @@
 
     <h4 style="color: white; margin: 0 20px 20px 29px">Android</h4>
     <p class="how-to-play-text">
-      Para reproducir los enlaces en tu dispositivo móvil, una vez instalado Ace
+      Para reproducir los enlaces en tu Android, una vez instalado Ace
       Stream, puedes abrir el enlace haciendo clic en él directamente, lo que
       abrirá Ace Stream y reproducirá el contenido. También puedes copiar el
       enlace, abrir Ace Stream manualmente y pegar el enlace en el cuadro de
@@ -403,21 +402,22 @@
     <h4 style="color: white; margin: 0 20px 20px 29px">Windows</h4>
     <p class="how-to-play-text">
       Una vez instalado Ace Stream en Windows, tienes dos formas de reproducir
-      los enlaces: la primera es copiar el enlace, abrir Ace Player manualmente
+      los enlaces: la primera es haciendo clic directamente en el enlace, seleccionar Ace Player en la ventana que aparece y
+      esperar al anuncio para ver el contenido. La segunda opción es copiar el enlace, abrir Ace Player manualmente
       y pegar el enlace en la opción "Medio"
-      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID". La segunda
-      es haciendo clic directamente en el enlace, seleccionar Ace Player y
-      esperar al anuncio para ver el contenido. <strong>Nota:</strong> Asegúrate
+      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID". <strong>Nota:</strong> Asegúrate
       de tener abierto Ace Stream Engine (ace_engine / Ace Stream HD), si no,
       ábrelo tú manualmente desde la ruta de instalación de Ace Stream
       (C:\Users\<i>tuusuario</i>\AppData\Roaming \ACEStream\engine y abre
       ace_engine.exe).
     </p>
 
+    <hr style="border: 0; border-top: 1px solid #444; margin: 2rem 0" />
+
     <p class="how-to-play-text">
       Para reproducir los enlaces correctamente en tu dispositivo, es
       recomendable cambiar ciertos parámetros en la configuración de Ace Stream
-      y de Ace Player (solo en Windows). Primero, haz clic derecho sobre el
+      y de Ace Player (de Ace Player, solo en Windows). Primero, haz clic derecho sobre el
       icono de Ace Stream en la barra de tareas y selecciona "Options..." (En
       Android ir a la configuración). Allí, cambia los valores de "VOD buffer" a
       10 y "Live buffer" a 60. Después, en Ace Player, ve en la parte de arriba
@@ -587,3 +587,4 @@
     </button>
   </div>
 </div>
+

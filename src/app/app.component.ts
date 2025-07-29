@@ -146,6 +146,16 @@ export class AppComponent {
   }
 
   /**
+   * Desplaza la ventana hacia la sección "Cómo reproducir" con un efecto suave.
+   */
+  scrollToHowToPlay() {
+    const howToPlaySection = document.getElementById('como-reproducir');
+    if (howToPlaySection) {
+      howToPlaySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  /**
    * Limpia el término de búsqueda y actualiza la lista de enlaces filtrados.
    */
   deleteSearch() {
