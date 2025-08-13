@@ -300,19 +300,19 @@ export class AppComponent {
     },
     {
       title: 'DAZN F1 (OPCIÓN 1)',
-      url: 'acestream://c9c18ae7a9dafba1caae5beb22060f9c92bba553',
+      url: 'acestream://515efd8115482bda8d92aa6df9a882a5e5797494',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
     {
       title: 'DAZN F1 (OPCIÓN 2)',
-      url: 'acestream://515efd8115482bda8d92aa6df9a882a5e5797494',
+      url: 'acestream://6422e8bc34282871634c81947be093c04ad1bb29',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
         {
       title: 'DAZN F1 (OPCIÓN 3)',
-      url: 'acestream://6422e8bc34282871634c81947be093c04ad1bb29',
+      url: 'acestream://c9c18ae7a9dafba1caae5beb22060f9c92bba553',
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
@@ -600,7 +600,7 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones (OPCIÓN 1)',
-      url: 'acestream://0a26e20f39845e928411e09a124374fccb6e1478',
+      url: 'acestream://2b51710cee513e8939785fa3e7980f32d4e0415f',
       tags: 'movistar liga de campeones',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAPIO.png',
     },
