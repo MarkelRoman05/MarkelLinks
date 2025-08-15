@@ -530,13 +530,13 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS.png',
     },
     {
-      title: 'LALIGA TV HYPERMOTION 2',
+      title: 'LALIGA TV HYPERMOTION 2 (OPCIÓN 1)',
       url: 'acestream://0cfdfde1b70623b8c210b0f7301be2a87456481d',
       tags: 'laliga hypermotion 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS2.png',
     },
     {
-      title: 'LALIGA TV HYPERMOTION 2',
+      title: 'LALIGA TV HYPERMOTION 2 (OPCIÓN 2)',
       url: 'acestream://0cfdfde1b70623b8c210b0f7301be2a87456481d',
       tags: 'laliga hypermotion 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS2.png',

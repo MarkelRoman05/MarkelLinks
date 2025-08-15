@@ -496,9 +496,9 @@ html {
   align-items: center;
   gap: 16px;
   font-size: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
 }
 
 @media screen and (max-width: 480px) {
