@@ -485,24 +485,18 @@
     <p class="how-to-play-text">
       Para evitar ver el contenido con retraso, es recomendable hacer esto en
       Ace Player cada vez que reproduces un enlace (haz clic en la imagen para
-      ampliarla):
+      verla en pestaña nueva):
     </p>
 
     <div class="popup-image-container">
-      <img
-        src="images/retardo_ace_stream.jpg"
-        alt="Example Image"
-        class="popup-image"
-        (click)="openImagePopup('images/retardo_ace_stream.jpg')"
-        title="Haz clic para ampliar"
-        style="
-          cursor: pointer;
-          width: 100%;
-          max-width: 500px;
-          display: block;
-          margin: 0 auto;
-        "
-      />
+      <a href="images/retardo_ace_stream.jpg" target="_blank">
+        <img
+          src="images/retardo_ace_stream.jpg"
+          alt="Instrucciones para eliminar retardo"
+          class="popup-image"
+          title="Haz clic para ver en pestaña nueva"
+          style="width: 100%; cursor: pointer;" />
+      </a>
     </div>
 
     <div
