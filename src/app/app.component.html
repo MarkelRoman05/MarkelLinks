@@ -180,31 +180,6 @@
     </div>
   </nav>
 
-  <!-- <div
-    class="info-message-responsive"
-    *ngIf="!location.href.includes('vercel.app')"
-  >
-    <div class="info-message-row">
-      <i
-        class="bi bi-info-circle-fill"
-        style="margin-top: 2px; margin-right: 6px"
-      ></i>
-      <span class="info-message-text">
-        Debido a los bloqueos de LALIGA a ciertas IPs de Cloudflare, es posible
-        que no puedas acceder a esta web en ciertos momentos. Para evitarlos,
-        puedes usar una VPN. Como alternativa puedes acceder a través de este
-        otro enlace:
-      </span>
-      <a
-        class="link-futboltv"
-        href="https://markel-links.vercel.app/"
-        target="_blank"
-        style="margin-left: 8px; white-space: nowrap"
-        >HAZ CLIC PARA ACCEDER</a
-      >
-    </div>
-  </div> -->
-
   <div class="scroll-to-links" *ngIf="isMobile">
     <button class="scroll-to-links-button" (click)="scrollToHowToPlay()">
       <i class="bi bi-question-circle-fill" style="font-size: x-large"></i>
@@ -355,7 +330,7 @@
         <a
           href="{{ link.url }}"
           class="acestream-link"
-          (click)="trackClick(link.title); isMenuOpen = false"
+          (click)="trackClick(link.title, link.url, $event); isMenuOpen = false"
         >
           <img [src]="link.img" class="logo-img" />
           <span>{{ link.title }}</span>

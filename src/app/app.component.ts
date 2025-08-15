@@ -193,9 +193,20 @@ export class AppComponent {
    * Rastrea un evento de clic en un enlace utilizando la herramienta Clarity.
    * @param linkTitle - El título del enlace clicado.
    */
-  trackClick(linkTitle: string): void {
+  trackClick(linkTitle: string, url: string, event: Event): void {
+    event.preventDefault();
     if ((window as any).clarity) {
       (window as any).clarity('set', 'click_event', { link: linkTitle });
+    }
+    
+    // Si el enlace es un enlace de Acestream
+    if (url.includes('acestream://')) {
+      window.location.href = url;
+    } else if (url.startsWith('acestream:')) {
+      window.location.href = url;
+    } else if (!url.includes('://')) {
+      // Si el enlace no tiene protocolo, asumimos que es un ID de Acestream
+      window.location.href = 'acestream://' + url;
     }
   }
 
