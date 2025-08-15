@@ -1,20 +1,22 @@
 <div class="container">
 <!-- Cartel de aviso de actualización de enlaces -->
-<!-- <div
+<div
     style="
-      background: #ffc107;
-      color: #222222;
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      color: white;
       text-align: center;
-      padding: 0.7rem 1rem;
+      padding: 0.5rem 1rem;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       border-radius: 0 0 8px 8px;
       margin-bottom: 1.2rem;
+      box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     "
   >
-    <i class="bi bi-info-circle-fill" style="margin-right: 8px"></i>
-    Enlaces de canales en proceso de actualización
-  </div>  -->
+    <i class="bi bi-stars" style="margin-right: 8px"></i>
+    Nueva temporada, nuevo diseño. Pruébalo.
+  </div>
 
   <nav class="navbar">
     <div
@@ -71,7 +73,7 @@
       <!-- Menú lateral móvil -->
       <div
         class="navbar-menu"
-        [ngClass]="{ 'mobile-menu': isMobile, open: isMenuOpen }"
+        [ngClass]="{ 'mobile-menu': isMobile, 'open': isMenuOpen }"
         [ngStyle]="{
           display: !isMobile ? 'block' : isMenuOpen ? 'block' : 'none',
           position: isMobile ? 'fixed' : 'static',
@@ -125,7 +127,8 @@
         >
           <li>
             <a
-              href="#enlaces"
+              href="javascript:void(0)"
+              (click)="scrollToLinks(); isMenuOpen = false"
               style="
                 color: white;
                 text-decoration: none;
@@ -137,7 +140,8 @@
           </li>
           <li>
             <a
-              href="#como-reproducir"
+              href="javascript:void(0)"
+              (click)="scrollToHowToPlay(); isMenuOpen = false"
               style="
                 color: white;
                 text-decoration: none;
@@ -149,7 +153,8 @@
           </li>
           <li>
             <a
-              href="#contacto"
+              href="javascript:void(0)"
+              (click)="scrollToContact(); isMenuOpen = false"
               style="
                 color: white;
                 text-decoration: none;
@@ -309,16 +314,19 @@
   <div class="mini-separator"></div>
   <div class="search-container">
     <form class="search-form">
-      <input
-        type="text"
-        class="search-field"
-        placeholder="Introduce el canal a buscar..."
-        [(ngModel)]="searchTerm"
-        (keyup)="filterLinks()"
-        name="searchTerm"
-      />
-      <div class="delete-search-container" *ngIf="searchTerm">
+      <div class="search-field-container">
+        <i class="bi bi-search search-icon"></i>
+        <input
+          type="text"
+          class="search-field"
+          placeholder="Introduce el canal a buscar..."
+          [(ngModel)]="searchTerm"
+          (keyup)="filterLinks()"
+          name="searchTerm"
+        >
         <button
+          *ngIf="searchTerm"
+          class="delete-search-button"
           matTooltip="Borrar texto de búsqueda"
           matTooltipPosition="below"
           class="delete-search-button"
@@ -347,10 +355,9 @@
         <a
           href="{{ link.url }}"
           class="acestream-link"
-          (click)="trackClick(link.title)"
+          (click)="trackClick(link.title); isMenuOpen = false"
         >
           <img [src]="link.img" class="logo-img" />
-          &nbsp;
           <span>{{ link.title }}</span>
         </a>
         <button
@@ -370,18 +377,16 @@
   </div>
 
   <div class="otra-web">
-    <h2 style="color: white; text-align: center">OTRAS WEBS DE ENLACES</h2>
-    <div class="mini-separator"></div>
-    <p>
+    <h3 class="otra-web-titulo">OTRAS WEBS DE ENLACES</h3>
+    <p class="otra-web-descripcion">
       En el caso de que el enlace que busques no funcione, puedes probar en
       estas otras webs:
     </p>
-    <div
-      style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center"
-    >
+    <div class="otra-web-links">
       <a
         href="https://www.socialcreator.com/xupimarc2/?s=289267&integ_ch=1"
         target="_blank"
+        class="otra-web-link"
       >
         <img
           src="https://www.socialcreator.com/srv/imgs/gen/74109_icohome.png"

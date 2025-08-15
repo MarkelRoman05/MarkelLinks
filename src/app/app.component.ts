@@ -156,6 +156,16 @@ export class AppComponent {
   }
 
   /**
+   * Desplaza la ventana hacia la sección de contacto con un efecto suave.
+   */
+  scrollToContact() {
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  /**
    * Limpia el término de búsqueda y actualiza la lista de enlaces filtrados.
    */
   deleteSearch() {
