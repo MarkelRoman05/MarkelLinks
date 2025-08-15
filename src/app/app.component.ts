@@ -237,7 +237,7 @@ export class AppComponent {
   links = [
     {
       title: 'M+ LALIGA (OPCIÓN 1)',
-      url: 'acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947',
+      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
@@ -249,7 +249,7 @@ export class AppComponent {
     },
     {
       title: 'M+ LALIGA (OPCIÓN 3)',
-      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
+      url: 'acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
