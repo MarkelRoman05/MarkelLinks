@@ -5,15 +5,13 @@ html {
 .container {
   background-color: #111827;
   color: #f3f4f6;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   padding: 24px;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-  min-height: 100vh;
-  position: relative;
-  background-image: 
-    radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
-  background-attachment: fixed;
+}
+
+.light-blue-spinner::ng-deep circle {
+  stroke: #3b82f6 !important;
 }
 
 /* SCROLL TO TOP BUTTON */
@@ -33,7 +31,7 @@ html {
   align-items: center;
   gap: 6px;
   margin-top: 12px;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .scroll-to-top:hover {
@@ -253,7 +251,7 @@ html {
 }
 
 .link-futboltv:hover {
-  color: #ff0000;
+  color: #77abff;
   transition: all 0.3s ease;
 }
 
@@ -305,15 +303,16 @@ html {
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(59, 130, 246, 0.3), 
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
     transparent
   );
 }
@@ -323,7 +322,7 @@ html {
   font-size: 14px;
   margin: 8px 0;
   opacity: 0.9;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .otra-web {
@@ -335,13 +334,14 @@ html {
   padding: 32px 16px;
   margin: 3rem auto;
   max-width: 900px;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.7;
   color: #f3f4f6;
   background: rgba(17, 24, 39, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   width: 100%;
 }
@@ -349,7 +349,7 @@ html {
 .otra-web-titulo {
   color: #f3f4f6;
   text-align: center;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -360,7 +360,7 @@ html {
 
 .otra-web-descripcion {
   text-align: center;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 17px;
   color: #f3f4f6;
   margin: 1.5rem 20px;
@@ -404,7 +404,7 @@ html {
     gap: 1rem;
     padding: 0 10px;
   }
-  
+
   .otra-web-link {
     width: calc(50% - 0.5rem);
     min-width: 100px;
@@ -436,7 +436,7 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 32px;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 17px;
   line-height: 1.7;
   color: #f3f4f6;
@@ -445,7 +445,8 @@ html {
   max-width: 900px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .how-to-play-text {
@@ -481,7 +482,7 @@ html {
   text-decoration: none;
   color: #f8fafc;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -509,13 +510,17 @@ html {
 }
 
 .acestream-link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(120deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.08));
+  background: linear-gradient(
+    120deg,
+    rgba(59, 130, 246, 0.08),
+    rgba(99, 102, 241, 0.08)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -645,7 +650,8 @@ html {
   background: rgba(17, 24, 39, 0.6);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   color: #f3f4f6;
   text-align: center;
   box-sizing: border-box;
@@ -700,7 +706,7 @@ html {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
   margin-top: 12px;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -719,7 +725,7 @@ html {
 }
 
 h3 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 28px;
   font-weight: 600;
   background: linear-gradient(135deg, #3b82f6, #6366f1);
@@ -743,13 +749,16 @@ h3 {
 }
 
 .navbar-menu ul li > a {
-  transition: background 0.18s, color 0.18s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
+  color: #f3f4f6;
+  padding: 8px 16px;
+  border-radius: 6px;
 }
 
 .navbar-menu ul li > a:hover,
 .navbar-menu ul li > a:focus {
-  color: #ff0000 !important;
+  color: #3b82f6 !important;
   text-decoration: none;
 }
 
@@ -773,7 +782,7 @@ h3 {
     background: rgba(17, 24, 39, 0.95) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 2px 0 12px rgba(0,0,0,0.4);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.4);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
@@ -788,8 +797,11 @@ h3 {
   body.menu-open::before {
     content: "";
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.55);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
     z-index: 2147483646 !important;
     pointer-events: auto;
   }
@@ -834,7 +846,8 @@ h3 {
     position: static !important;
     z-index: auto !important;
   }
-  h3, h4 {
+  h3,
+  h4 {
     position: static !important;
     z-index: auto !important;
   }
@@ -845,23 +858,6 @@ h3 {
   .delete-search-button {
     position: static !important;
     z-index: auto !important;
-  }
-}
-
-/* Evita que los títulos de la página sobresalgan por encima del menú */
-@media (max-width: 900px) {
-  .container > h3,
-  .container > h4,
-  .container > .mini-separator,
-  .container > .search-container,
-  .container > .links-container,
-  .container > .otra-web,
-  .container > .how-to-play-container,
-  .container > .contact-form,
-  .container > .footer {
-    /* z-index: 1; */
-    /* position: relative; */
-    /* Elimina z-index y position para que el menú esté por encima */
   }
 }
 
@@ -1033,12 +1029,16 @@ h3 {
   box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
 }
 
+.light-blue-spinner::ng-deep circle {
+  stroke: #3b82f6 !important;
+}
+
 @media screen and (max-width: 480px) {
   .scroll-to-links-button {
     font-size: 14px;
     padding: 10px 20px;
   }
-  
+
   .scroll-to-links-button i {
     font-size: 18px !important;
   }

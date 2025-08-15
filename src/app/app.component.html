@@ -54,7 +54,7 @@
       <!-- Menú lateral móvil -->
       <div
         class="navbar-menu"
-        [ngClass]="{ 'mobile-menu': isMobile, 'open': isMenuOpen }"
+        [ngClass]="{ 'mobile-menu': isMobile, open: isMenuOpen }"
         [ngStyle]="{
           display: !isMobile ? 'block' : isMenuOpen ? 'block' : 'none',
           position: isMobile ? 'fixed' : 'static',
@@ -173,7 +173,7 @@
   <div class="futbol-tv-agendas">
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[0]">
-        <mat-spinner diameter="78"></mat-spinner>
+        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
       </div>
       <iframe
         id="ftv_iframe_0"
@@ -189,7 +189,7 @@
     </div>
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[1]">
-        <mat-spinner diameter="78"></mat-spinner>
+        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
       </div>
       <iframe
         id="ftv_iframe_1"
@@ -205,7 +205,7 @@
     </div>
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[2]">
-        <mat-spinner diameter="78"></mat-spinner>
+        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
       </div>
       <iframe
         id="ftv_iframe_2"
@@ -221,7 +221,7 @@
     </div>
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[3]">
-        <mat-spinner diameter="78"></mat-spinner>
+        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
       </div>
       <iframe
         id="ftv_iframe_3"
@@ -237,7 +237,7 @@
     </div>
     <div class="iframe-container">
       <div class="spinner-container" *ngIf="loading[4]">
-        <mat-spinner diameter="78"></mat-spinner>
+        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
       </div>
       <iframe
         id="ftv_iframe"
@@ -279,7 +279,7 @@
           [(ngModel)]="searchTerm"
           (keyup)="filterLinks()"
           name="searchTerm"
-        >
+        />
         <button
           *ngIf="searchTerm"
           class="delete-search-button"
@@ -339,38 +339,58 @@
       estas otras webs:
     </p>
     <div class="otra-web-links">
-      <a href="https://www.socialcreator.com/xupimarc2/?s=289267&integ_ch=1" 
-         target="_blank" 
-         class="otra-web-link">
-        <img src="https://www.socialcreator.com/srv/imgs/gen/74109_icohome.png"
-             alt="Xupimarc2"
-             title="Xupimarc2"
-             width="180"
-             height="auto"
-             style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;"
+      <a
+        href="https://www.socialcreator.com/xupimarc2/?s=289267&integ_ch=1"
+        target="_blank"
+        class="otra-web-link"
+      >
+        <img
+          src="https://www.socialcreator.com/srv/imgs/gen/74109_icohome.png"
+          alt="Xupimarc2"
+          title="Xupimarc2"
+          width="180"
+          height="auto"
+          style="
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+          "
           height="90"
           alt="Xupimarc2"
         />
       </a>
-      <a href="https://ipfs.io/ipns/elcano.top" 
-         target="_blank" 
-         class="otra-web-link">
-        <img src="https://www.solodev.com/file/97299e37-e2ac-11ec-b9ad-0eaef3759f5f/ipfs-logo-icon-b.png"
-             alt="Elcano.top"
-             title="Elcano.top"
-             width="180"
-             height="auto"
-             style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;" />
+      <a
+        href="https://ipfs.io/ipns/elcano.top"
+        target="_blank"
+        class="otra-web-link"
+      >
+        <img
+          src="https://www.solodev.com/file/97299e37-e2ac-11ec-b9ad-0eaef3759f5f/ipfs-logo-icon-b.png"
+          alt="Elcano.top"
+          title="Elcano.top"
+          width="180"
+          height="auto"
+          style="
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+          "
+        />
       </a>
-      <a href="https://www.rbtvplus01.com/es" 
-         target="_blank" 
-         class="otra-web-link">
-        <img src="https://statics2.mfctai51.xyz/img/rb/web-logo-rbplus.png"
-             alt="RBTV+"
-             title="RBTV+"
-             width="180"
-             height="auto"
-             style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;" />
+      <a
+        href="https://www.rbtvplus01.com/es"
+        target="_blank"
+        class="otra-web-link"
+      >
+        <img
+          src="https://statics2.mfctai51.xyz/img/rb/web-logo-rbplus.png"
+          alt="RBTV+"
+          title="RBTV+"
+          width="180"
+          height="auto"
+          style="
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+          "
+        />
       </a>
     </div>
   </div>
@@ -451,7 +471,8 @@
           alt="Instrucciones para eliminar retardo"
           class="popup-image"
           title="Haz clic para ver en pestaña nueva"
-          style="width: 100%; cursor: pointer;" />
+          style="width: 100%; cursor: pointer"
+        />
       </a>
     </div>
 
