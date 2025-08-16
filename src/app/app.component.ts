@@ -198,7 +198,7 @@ export class AppComponent {
     if ((window as any).clarity) {
       (window as any).clarity('set', 'click_event', { link: linkTitle });
     }
-    
+
     // Si el enlace es un enlace de Acestream
     if (url.includes('acestream://')) {
       window.location.href = url;
@@ -237,13 +237,13 @@ export class AppComponent {
   links = [
     {
       title: 'M+ LALIGA (OPCIÓN 1)',
-      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
+      url: 'acestream://07f2b92762cfff99bba785c2f5260c7934ca6034',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 2)',
-      url: 'acestream://c9321006921967d6258df6945f1d598a5c0cbf1e',
+      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
@@ -261,13 +261,19 @@ export class AppComponent {
     },
     {
       title: 'M+ LALIGA (OPCIÓN 5)',
-      url: 'acestream://9ea64600ac7f188a57d14e08f6e3c1055bbb7f1a',
+      url: 'acestream://cc9b7f5fe416069a2110da0909b0f915043c468b',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 6)',
-      url: 'acestream://cc9b7f5fe416069a2110da0909b0f915043c468b',
+      url: 'acestream://c32a2cf4631bad4bc40a15ee0f245ed30ad4d85c',
+      tags: 'movistar laliga',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
+    },
+    {
+      title: 'M+ LALIGA (OPCIÓN 7)',
+      url: 'acestream://c9321006921967d6258df6945f1d598a5c0cbf1e',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
@@ -331,7 +337,7 @@ export class AppComponent {
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
-        {
+    {
       title: 'DAZN F1 (OPCIÓN 3)',
       url: 'acestream://c9c18ae7a9dafba1caae5beb22060f9c92bba553',
       tags: 'dazn f1 formula 1',
@@ -373,7 +379,7 @@ export class AppComponent {
       tags: 'movistar copa del rey',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MCOPA.png',
     },
-        {
+    {
       title: 'Eurosport 1 (OPCIÓN 1)',
       url: 'acestream://bae98f69fbf867550b4f73b4eb176dae84d7f909',
       tags: 'eurosport 1',
@@ -398,14 +404,8 @@ export class AppComponent {
       img: 'https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png',
     },
     {
-      title: 'Eurosport 4K (OPCIÓN 1)',
+      title: 'Eurosport 4K',
       url: 'acestream://63135c171f056d1d6028f9ffb1637ed704b88a20',
-      tags: 'eurosport 4k',
-      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgdqJODqwW6zAFu6rkzH-mNfUvkcdX52R2g&s',
-    },
-    {
-      title: 'Eurosport 4K (OPCIÓN 2)',
-      url: 'acestream://c525471499b936decc037ea86e0f8125ebf78c28',
       tags: 'eurosport 4k',
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgdqJODqwW6zAFu6rkzH-mNfUvkcdX52R2g&s',
     },
@@ -429,25 +429,25 @@ export class AppComponent {
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 1)',
-      url: 'acestream://e2b8a4aba2f4ea3dd68992fcdb65c9e62d910b05',
+      url: 'acestream://74defb8f4ed3a917fd07c21b34f43c17107ec618',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 2)',
-      url: 'acestream://4e6d9cf7d177366045d33cd8311d8b1d7f4bed1f',
+      url: 'acestream://e2b8a4aba2f4ea3dd68992fcdb65c9e62d910b05',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 3)',
-      url: 'acestream://d10a14db9cdba08c05b475071de68b86a400e35b',
+      url: 'acestream://4e6d9cf7d177366045d33cd8311d8b1d7f4bed1f',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 4)',
-      url: 'acestream://8c8c1e047a1c5ed213ba74722a5345dc55c3c0eb',
+      url: 'acestream://d10a14db9cdba08c05b475071de68b86a400e35b',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
@@ -517,7 +517,7 @@ export class AppComponent {
       tags: 'dazn 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZN4.png',
     },
-        {
+    {
       title: 'LALIGA TV HYPERMOTION (OPCIÓN 1)',
       url: 'acestream://f15f997f457e49ad9697e65cf2d78db26ee875b9',
       tags: 'laliga hypermotion',
