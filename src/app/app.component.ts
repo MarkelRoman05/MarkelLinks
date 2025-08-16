@@ -297,13 +297,13 @@ export class AppComponent {
     },
     {
       title: 'Movistar Plus+ (OPCIÓN 1)',
-      url: 'acestream://b2a4d1eba9b46df5f52a87105df779f9d39abeb4',
+      url: 'acestream://1ab443f5b4beb6d586f19e8b25b9f9646cf2ab78',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
     {
       title: 'Movistar Plus+ (OPCIÓN 2)',
-      url: 'acestream://56ac8e227d526e722624675ccdd91b0cc850582f',
+      url: 'acestream://8c67cdb5ba81976662c3a67984a9545d9cfb0f70',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
@@ -519,7 +519,7 @@ export class AppComponent {
     },
         {
       title: 'LALIGA TV HYPERMOTION (OPCIÓN 1)',
-      url: 'acestream://b2706a7ffbea236a3b398139a3a606ada664c0eb',
+      url: 'acestream://f15f997f457e49ad9697e65cf2d78db26ee875b9',
       tags: 'laliga hypermotion',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS.png',
     },
