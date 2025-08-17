@@ -2,41 +2,60 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  color: white;
-  font-size: 24px;
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  color: #f3f4f6;
+  font-size: 18px;
   text-align: center;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .agenda-text {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.agenda-text strong {
+  color: #60a5fa;
 }
 
 .agenda-text a {
-  color: #2087f5;
+  color: #3b82f6;
   text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.15);
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .agenda-text a:hover {
-  color: #ff0000;
-  transition: all 0.3s ease;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.25);
+  transform: translateY(-1px);
 }
 
 .evento-text {
   display: flex;
   justify-content: center;
-  color: white;
-  font-size: 24px;
+  color: #f3f4f6;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 .mini-separator {
   width: 50px;
   height: 4px;
-  background: linear-gradient(90deg, #00bfff, #007acc);
-  margin: 0 auto 20px auto;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  margin: 0 auto 1.25rem auto;
   border-radius: 2px;
 }
