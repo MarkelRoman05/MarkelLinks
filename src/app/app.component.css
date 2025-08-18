@@ -127,16 +127,22 @@ html {
   box-sizing: border-box;
 }
 
-/* Clase que se añadirá con JavaScript cuando se haga scroll */
+/* Estilos para el navbar cuando se hace scroll */
 .navbar.scrolled {
-  padding: 12px 32px;
+  padding: 10px 20px;
   background: rgba(17, 24, 39, 0.95);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.navbar.scrolled .logo {
+  height: 40px; /* Logo más pequeño cuando se hace scroll */
+  transition: height 0.3s ease;
+}
+
 .navbar-logo .logo {
-  height: 50px;
+  height: 45px;
   margin-right: 20px;
+  transition: height 0.3s ease;
 }
 
 .navbar-title h1 {

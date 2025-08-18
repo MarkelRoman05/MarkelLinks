@@ -1,5 +1,5 @@
 <div class="container">
-  <nav class="navbar">
+  <nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
     <div
       class="navbar-container"
       style="
@@ -46,7 +46,7 @@
           "
         >
           <div class="navbar-title" *ngIf="!isMobile">
-            <h1 style="margin: 0">ACE STREAM LINKS</h1>
+            <h1 style="margin: 0"></h1>
           </div>
         </div>
       </div>

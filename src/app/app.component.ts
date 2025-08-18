@@ -38,6 +38,7 @@ export class AppComponent {
   loading: boolean[] = [true, true, true, true, true];
   isMobile: boolean = false;
   isMenuOpen: boolean = false; // Añadido para el menú móvil
+  isScrolled: boolean = false; // Para detectar el scroll
   contact = { name: '', email: '', message: '' };
 
   isImagePopupOpen: boolean = false;
@@ -60,6 +61,11 @@ export class AppComponent {
     if (!this.isMobile) {
       this.isMenuOpen = false; // Cierra el menú si se pasa a escritorio
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
   }
 
   // MÉTODOS
