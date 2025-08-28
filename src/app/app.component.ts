@@ -313,21 +313,21 @@ export class AppComponent {
       tags: 'movistar laliga 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG3.png',
     },
-        {
+    {
       title: 'Movistar Plus+ (OPCIÓN 1)',
-      url: 'acestream://8c67cdb5ba81976662c3a67984a9545d9cfb0f70',
-      tags: 'movistar plus +',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
-    },
-        {
-      title: 'Movistar Plus+ (OPCIÓN 2)',
       url: 'acestream://5d9a26e0a5f3e5f2ae027bd05635ab9a4fd4b51a',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
     {
-      title: 'Movistar Plus+ (OPCIÓN 3)',
+      title: 'Movistar Plus+ (OPCIÓN 2)',
       url: 'acestream://1ab443f5b4beb6d586f19e8b25b9f9646cf2ab78',
+      tags: 'movistar plus +',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
+    },
+    {
+      title: 'Movistar Plus+ (OPCIÓN 3)',
+      url: 'acestream://8c67cdb5ba81976662c3a67984a9545d9cfb0f70',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
@@ -392,7 +392,7 @@ export class AppComponent {
       tags: 'eurosport 1',
       img: 'https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png',
     },
-        {
+    {
       title: 'Eurosport 2 (OPCIÓN 1)',
       url: 'acestream://2773b39926d15dd3d9495d94c4050604792d7031',
       tags: 'eurosport 2',
