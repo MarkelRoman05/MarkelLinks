@@ -249,39 +249,39 @@ export class AppComponent {
     },
     {
       title: 'M+ LALIGA (OPCIÓN 2)',
-      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
-      tags: 'movistar laliga',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
-    },
-    {
-      title: 'M+ LALIGA (OPCIÓN 3)',
       url: 'acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
+      title: 'M+ LALIGA (OPCIÓN 3)',
+      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
+      tags: 'movistar laliga',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
+    },
+    {
       title: 'M+ LALIGA (OPCIÓN 4)',
-      url: 'acestream://14b6cd8769cd485f2cffdca64be9698d9bfeac58',
-      tags: 'movistar laliga',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
-    },
-    {
-      title: 'M+ LALIGA (OPCIÓN 5)',
-      url: 'acestream://cc9b7f5fe416069a2110da0909b0f915043c468b',
-      tags: 'movistar laliga',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
-    },
-    {
-      title: 'M+ LALIGA (OPCIÓN 6)',
       url: 'acestream://07f2b92762cfff99bba785c2f5260c7934ca6034',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
-      title: 'M+ LALIGA (OPCIÓN 7)',
+      title: 'M+ LALIGA (OPCIÓN 5)',
+      url: 'acestream://14b6cd8769cd485f2cffdca64be9698d9bfeac58',
+      tags: 'movistar laliga',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
+    },
+        {
+      title: 'M+ LALIGA (OPCIÓN 6)',
       url: 'acestream://c9321006921967d6258df6945f1d598a5c0cbf1e',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
+    },
+    {
+      title: 'M+ LALIGA HDR',
+      url: 'acestream://cc9b7f5fe416069a2110da0909b0f915043c468b',
+      tags: 'movistar laliga',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/canal/MLIGUH.png',
     },
     {
       title: 'M+ LALIGA 2 (OPCIÓN 1)',
