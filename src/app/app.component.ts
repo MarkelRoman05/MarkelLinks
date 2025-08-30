@@ -418,13 +418,13 @@ export class AppComponent {
     },
     {
       title: 'UFC Fight Pass',
-      url: 'acestream://e3ad553098e0c1e70cba1ea2a906dc27aa3452a2',
+      url: 'acestream://108aebe20efc826e56f3a1cb01117a124a6b89ad',
       tags: 'ufc figth pass',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UFC_Fight_Pass_Logo.svg/2560px-UFC_Fight_Pass_Logo.svg.png',
     },
     {
       title: 'NBA TV',
-      url: 'acestream://7146e467aee3cb0bcdc286b39a3022c992428f01',
+      url: 'acestream://b0f64a40f333ef5cc02c2b6d4a8c3f4b73dd8073',
       tags: 'nba tv',
       img: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/NBA_TV.svg/800px-NBA_TV.svg.png',
     },
@@ -526,13 +526,13 @@ export class AppComponent {
     },
     {
       title: 'LALIGA TV HYPERMOTION (OPCIÓN 2)',
-      url: 'acestream://121f719ebb94193c6086ef92865cf9b197750980',
+      url: 'acestream://87bb542f974b6b9e89d0f2e20ed6dc93426f4be0',
       tags: 'laliga hypermotion',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS.png',
     },
     {
       title: 'LALIGA TV HYPERMOTION 2 (OPCIÓN 1)',
-      url: 'acestream://0cfdfde1b70623b8c210b0f7301be2a87456481d',
+      url: 'acestream://709075831bf5c41ed0a20dfbd640aab6c28971f8',
       tags: 'laliga hypermotion 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS2.png',
     },
@@ -544,7 +544,7 @@ export class AppComponent {
     },
     {
       title: 'LALIGA TV HYPERMOTION 3',
-      url: 'acestream://fefd45ed6ff415e05f1341b7d9da2988eacd13ea',
+      url: 'acestream://778d2f60bb7207addedcca0b9aed98f41529724e',
       tags: 'laliga hypermotion 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGS3.png',
     },
@@ -598,13 +598,13 @@ export class AppComponent {
     },
     {
       title: 'La 1',
-      url: 'acestream://8bdd29882fa2c2f9fe49e67b102934c9e293f5a5',
+      url: 'acestream://dad5e0e0825cb3e410008f1c4252387b868e740c',
       tags: 'la 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png',
     },
     {
       title: 'La 2',
-      url: 'acestream://fc36c7249aef74e3ea579500efdfd7a98d8e9ac5',
+      url: 'acestream://9934906503661142f97a044ae1509a294057c2ed',
       tags: 'la 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/LA2.png',
     },
