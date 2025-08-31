@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import emailjs from '@emailjs/browser';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 
 declare global {
@@ -27,6 +28,7 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AgendaEventoTextComponent,
   ],
   templateUrl: './app.component.html',
@@ -45,9 +47,50 @@ export class AppComponent {
   popupImageUrl: string = '';
 
   location = window.location;
+  lastUpdate: string = '';
 
-  constructor(private snackBar: MatSnackBar) {
+  constructor(
+    private snackBar: MatSnackBar,
+    private http: HttpClient
+  ) {
     window.clarity('consent');
+    this.getLastCommitDate();
+  }
+
+  private getLastCommitDate() {
+    const owner = 'MarkelRoman05';
+    const repo = 'AcestreamLinks';
+    const branch = 'master';
+    
+    // Token de acceso personal de GitHub (esto debería estar en un archivo de entorno)
+    // Este token es un ejemplo y deberá ser reemplazado por tu propio token
+    const token = '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';
+    
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
+    
+    console.log('Fetching from URL:', apiUrl);
+    
+    // Configurar los headers para la autenticación
+    const headers = {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/vnd.github.v3+json'
+    };
+    
+    this.http.get(apiUrl, { headers }).subscribe(
+      (response: any) => {
+        console.log('Response:', response);
+        if (response && response.commit && response.commit.author) {
+          this.lastUpdate = response.commit.author.date;
+        } else {
+          this.lastUpdate = 'Formato de respuesta inesperado';
+          console.error('Unexpected response format:', response);
+        }
+      },
+      (error) => {
+        console.error('Error fetching last commit:', error);
+        this.lastUpdate = 'No disponible';
+      }
+    );
   }
 
   ngOnInit() {

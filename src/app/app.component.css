@@ -1052,3 +1052,10 @@ h3 {
     font-size: 18px !important;
   }
 }
+
+.last-update {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
