@@ -156,6 +156,16 @@
     </div>
   </nav>
 
+  <p class="last-update">
+    Última actualización web:
+    <span *ngIf="lastUpdate; else loadingUpdate">
+      {{ lastUpdate | date:'dd/MM/yyyy HH:mm' }}h
+    </span>
+    <ng-template #loadingUpdate>
+      <span>Cargando...</span>
+    </ng-template>
+  </p>
+
   <div class="scroll-to-links" *ngIf="isMobile">
     <button class="scroll-to-links-button" (click)="scrollToHowToPlay()">
       <i class="bi bi-question-circle-fill" style="font-size: x-large"></i>
@@ -163,7 +173,7 @@
       <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
     </button>
   </div>
-  <p class="last-update">Última actualización web: {{lastUpdate | date:'dd/MM/yyyy HH:mm'}}h</p>
+  
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <div class="mini-separator"></div>
   <div class="futbol-tv-agendas">
