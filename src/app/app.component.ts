@@ -49,10 +49,7 @@ export class AppComponent {
   location = window.location;
   lastUpdate: string = '';
 
-  constructor(
-    private snackBar: MatSnackBar,
-    private http: HttpClient
-  ) {
+  constructor(private snackBar: MatSnackBar, private http: HttpClient) {
     window.clarity('consent');
     this.getLastCommitDate();
   }
@@ -61,21 +58,21 @@ export class AppComponent {
     const owner = 'MarkelRoman05';
     const repo = 'AcestreamLinks';
     const branch = 'master';
-    
+
     // Token de acceso personal de GitHub (esto debería estar en un archivo de entorno)
     // Este token es un ejemplo y deberá ser reemplazado por tu propio token
     const token = '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';
-    
+
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
-    
+
     console.log('Fetching from URL:', apiUrl);
-    
+
     // Configurar los headers para la autenticación
     const headers = {
-      'Authorization': `Bearer ${token}`,
-      'Accept': 'application/vnd.github.v3+json'
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github.v3+json',
     };
-    
+
     this.http.get(apiUrl, { headers }).subscribe(
       (response: any) => {
         console.log('Response:', response);
@@ -314,7 +311,7 @@ export class AppComponent {
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
-        {
+    {
       title: 'M+ LALIGA (OPCIÓN 6)',
       url: 'acestream://c9321006921967d6258df6945f1d598a5c0cbf1e',
       tags: 'movistar laliga',
@@ -652,16 +649,16 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/LA2.png',
     },
     {
-      title: 'GOL',
-      url: 'acestream://b2d560741c006fc5e4a42412bb52dbd25a6a4a3a',
-      tags: 'gol',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOL.png',
+      title: 'Rally TV',
+      url: 'acestream://651dd1e689a9a7d3b0695191dcf44b4d6e7541eb',
+      tags: 'rally tv',
+      img: 'https://play-lh.googleusercontent.com/yGC9brvzJBdkj8D2iyr1FmtE2FOM4myhn83rWR1DsJR4jXBwpQSHa7OkS9Q1_XVqQGl-',
     },
     {
-      title: 'beIN SPORTS ñ',
-      url: 'acestream://41af6926a6010b68ba2540975761436bb077748f',
-      tags: 'bein sports ñ',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png',
+      title: 'Tennis Channel',
+      url: 'acestream://71698ee415b6ba3f123aac1c8c37cc97376f20d0',
+      tags: 'tennis channel',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png',
     },
     {
       title: 'M+ L. de Campeones (OPCIÓN 1)',
@@ -784,6 +781,18 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP14.png',
     },
     {
+      title: 'Primera Federación (OPCIÓN 1)',
+      url: 'acestream://a2e6be93b26141343c31cf6b6e46f57f14547f07',
+      tags: 'primera federacion rfef',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png',
+    },
+    {
+      title: 'Primera Federación (OPCIÓN 2)',
+      url: 'acestream://a2ed6f2ca3f804481131c41ce64d4286a5820476',
+      tags: 'primera federacion rfef',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png',
+    },
+    {
       title: 'M+ Deportes (OPCIÓN 1)',
       url: 'acestream://ef9dcc4eaac36a0f608b52a31f8ab237859e071a',
       tags: 'movistar deportes',
@@ -832,28 +841,16 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/canal/MULTI6.png',
     },
     {
-      title: 'DAZN Liga F 1',
-      url: 'acestream://600222a4f98df80a2c0df2d60cb5ff3df9620710',
-      tags: 'dazn liga f 1',
-      img: 'https://ligaf.es/media/images/img_web/logos/logo-ligaf-completo-color1.svg?v=4',
+      title: 'GOL',
+      url: 'acestream://b2d560741c006fc5e4a42412bb52dbd25a6a4a3a',
+      tags: 'gol',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOL.png',
     },
     {
-      title: 'DAZN Liga F 2',
-      url: 'acestream://d6cdd724a97fcf851e7ef641c28d6beb8663496e',
-      tags: 'dazn liga f 2',
-      img: 'https://ligaf.es/media/images/img_web/logos/logo-ligaf-completo-color1.svg?v=4',
-    },
-    {
-      title: 'DAZN Liga F 3',
-      url: 'acestream://162942adc047d0f78eac056effbe5bbec54a5e51',
-      tags: 'dazn liga f 3',
-      img: 'https://ligaf.es/media/images/img_web/logos/logo-ligaf-completo-color1.svg?v=4',
-    },
-    {
-      title: 'DAZN Liga F 4',
-      url: 'acestream://e454681a152a86da504e63694f17f90d0586867d',
-      tags: 'dazn liga f 4',
-      img: 'https://ligaf.es/media/images/img_web/logos/logo-ligaf-completo-color1.svg?v=4',
+      title: 'beIN SPORTS 1',
+      url: 'acestream://f0951d40eb84162014752c054ea7a1370d2169eb',
+      tags: 'bein sports 1',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png',
     },
   ];
 }
