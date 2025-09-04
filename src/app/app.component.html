@@ -1,5 +1,5 @@
 <div class="container">
-  <nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
+  <nav class="navbar" [ngClass]="{ scrolled: isScrolled }">
     <div
       class="navbar-container"
       style="
@@ -33,7 +33,13 @@
             src="/images/logo.svg"
             alt="Logo"
             class="logo"
-            style="max-width: 100%; height: auto; width: auto; max-height: 70px; object-fit: contain;"
+            style="
+              max-width: 100%;
+              height: auto;
+              width: auto;
+              max-height: 70px;
+              object-fit: contain;
+            "
           />
         </div>
         <div
@@ -149,9 +155,13 @@
       <!-- Reloj SIEMPRE dentro del navbar-container, a la derecha -->
       <div class="time-clock" style="margin-left: 1.5rem">
         <i class="bi bi-clock"></i>
-        <iframe src="https://free.timeanddate.com/clock/ia11xfrm/n327/tles4/fn2/fs20/fcfff/tct/pct/ftb/th1" frameborder="0" width="95" height="30" allowtransparency="true"></iframe>
-
-
+        <iframe
+          src="https://free.timeanddate.com/clock/ia11xfrm/n327/tles4/fn2/fs20/fcfff/tct/pct/ftb/th1"
+          frameborder="0"
+          width="95"
+          height="30"
+          allowtransparency="true"
+        ></iframe>
       </div>
     </div>
   </nav>
@@ -159,7 +169,7 @@
   <p class="last-update">
     Última actualización web:
     <span *ngIf="lastUpdate; else loadingUpdate">
-      {{ lastUpdate | date:'dd/MM/yyyy HH:mm' }}h
+      {{ lastUpdate | date : "dd/MM/yyyy HH:mm" }}h
     </span>
     <ng-template #loadingUpdate>
       <span>Cargando...</span>
@@ -173,7 +183,7 @@
       <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
     </button>
   </div>
-  
+
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <div class="mini-separator"></div>
   <div class="futbol-tv-agendas">
@@ -346,28 +356,10 @@
     </p>
     <div class="otra-web-links">
       <a
-        href="https://www.socialcreator.com/xupimarc2/?s=289267&integ_ch=1"
-        target="_blank"
-        class="otra-web-link"
-      >
-        <img
-          src="https://www.socialcreator.com/srv/imgs/gen/74109_icohome.png"
-          alt="Xupimarc2"
-          title="Xupimarc2"
-          width="180"
-          height="auto"
-          style="
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-          "
-          height="90"
-          alt="Xupimarc2"
-        />
-      </a>
-      <a
         href="https://ipfs.io/ipns/elcano.top"
         target="_blank"
         class="otra-web-link"
+        style="text-decoration: none"
       >
         <img
           src="https://www.solodev.com/file/97299e37-e2ac-11ec-b9ad-0eaef3759f5f/ipfs-logo-icon-b.png"
@@ -380,8 +372,23 @@
             border-radius: 12px;
           "
         />
+        <span
+          style="
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: white;
+            text-align: center;
+          "
+          >elcano.top (Ace Stream)</span
+        >
       </a>
-       <a href="https://www.rbtvplus01.com/es" target="_blank" class="otra-web-link" style="text-decoration: none;">
+      <a
+        href="https://www.rbtvplus04.com/es/"
+        target="_blank"
+        class="otra-web-link"
+        style="text-decoration: none"
+      >
         <img
           src="https://statics2.mfctai51.xyz/img/rb/web-logo-rbplus.png"
           alt="RBTV+"
@@ -393,7 +400,16 @@
             border-radius: 12px;
           "
         />
-        <span style="display: block; margin-top: 8px; font-size: 0.9rem; color: white; text-align: center;">No requiere Ace Stream</span>
+        <span
+          style="
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: white;
+            text-align: center;
+          "
+          >No requiere Ace Stream</span
+        >
       </a>
     </div>
   </div>
@@ -403,8 +419,8 @@
     <div class="mini-separator"></div>
     <p class="how-to-play-text">
       Para reproducir los enlaces Ace Stream en tu dispositivo necesitas tener
-      instalado Ace Stream Media. Para Windows, puedes descargarlo 
-      desde la página oficial de Ace Stream, haciendo clic
+      instalado Ace Stream Media. Para Windows, puedes descargarlo desde la
+      página oficial de Ace Stream, haciendo clic
       <a href="https://www.acestream.org/?page=products" target="_blank">aquí</a
       >. Para Android, puedes descargarlo desde la
       <a
@@ -416,29 +432,53 @@
         class="bi bi-exclamation-triangle-fill"
         style="color: #ffc107; margin-right: 5px; vertical-align: middle"
       ></i>
-      <strong>No se puede instalar y reproducir enlaces Ace Stream en dispositivos de Apple</strong>.
+      <strong
+        >No se puede instalar y reproducir enlaces Ace Stream en dispositivos de
+        Apple</strong
+      >.
     </p>
 
     <h4 style="color: white; margin: 0 20px 20px 29px">Móvil Android</h4>
     <p class="how-to-play-text">
-      Para reproducir los enlaces en tu móvil Android, una vez instalado Ace Stream,
-      puedes abrir el enlace haciendo clic en él directamente, y dándole a reproducir en Ace Player. También puedes copiar el enlace, abrir
-      Ace Stream manualmente y pegar el enlace en el cuadro de texto de "Introduzca aquí el enlace al contenido".
+      Para reproducir los enlaces en tu móvil Android, una vez instalado Ace
+      Stream, puedes abrir el enlace haciendo clic en él directamente, y dándole
+      a reproducir en Ace Player. También puedes copiar el enlace, abrir Ace
+      Stream manualmente y pegar el enlace en el cuadro de texto de "Introduzca
+      aquí el enlace al contenido".
     </p>
 
     <h4 style="color: white; margin: 0 20px 20px 29px">Android TV</h4>
     <p class="how-to-play-text">
-      Si tienes una TV o un dispositivo con Android TV, puedes instalar Ace Stream Engine haciendo clic 
-      <a href="https://mega.nz/file/gBkWiZQZ#wkxCu7wI02_adD6qBLYKDsMdtJQg_JobMCJkEv3J2_M" target="_blank">aquí</a> en tu móvil
-      (iOS o Android).
-      Para instalarlo en tu TV, usa la app "Send Files to TV" (<a href="https://play.google.com/store/apps/details?id=com.yablio.sendfilestotv" target="_blank">enlace</a>) para 
-      enviar el archivo APK a tu TV e instalarlo desde allí utilizando un gestor de archivos como ES File Explorer (disponible en Play Store en tu Android TV).
-      Una vez instalado, abre Ace Stream Engine y en la parte superior derecha, haz clic en los tres puntitos y selecciona "Ajustes". Allí, vete a ajustes del servidor,
-      y en Jugador seleccionado pon Ace Player.<br><br>
-      Para reproducir los enlaces, desde tu dispositivo móvil, accede a la web de Markel Links, copia el enlace que quieras reproducir y, utilizando la app "Control remoto para Android TV", 
-      pega el enlace en tu TV. Este enlace lo debes pegar en el cuadro que te sale al hacer clic en los tres puntitos de la parte superior derecha de Ace Stream en tu TV
-      y seleccionando "Introducir la ID de contenido". <br>
-      <a href="https://mega.nz/folder/AddSwK6J#E5L5EeZqvazk2eJLbtFzZg" target="_blank" style="font-size: x-large; ">Guía con fotos para reproducir en Android TV</a>
+      Si tienes una TV o un dispositivo con Android TV, puedes instalar Ace
+      Stream Engine haciendo clic
+      <a
+        href="https://mega.nz/file/gBkWiZQZ#wkxCu7wI02_adD6qBLYKDsMdtJQg_JobMCJkEv3J2_M"
+        target="_blank"
+        >aquí</a
+      >
+      en tu móvil (iOS o Android). Para instalarlo en tu TV, usa la app "Send
+      Files to TV" (<a
+        href="https://play.google.com/store/apps/details?id=com.yablio.sendfilestotv"
+        target="_blank"
+        >enlace</a
+      >) para enviar el archivo APK a tu TV e instalarlo desde allí utilizando
+      un gestor de archivos como ES File Explorer (disponible en Play Store en
+      tu Android TV). Una vez instalado, abre Ace Stream Engine y en la parte
+      superior derecha, haz clic en los tres puntitos y selecciona "Ajustes".
+      Allí, vete a ajustes del servidor, y en Jugador seleccionado pon Ace
+      Player.<br /><br />
+      Para reproducir los enlaces, desde tu dispositivo móvil, accede a la web
+      de Markel Links, copia el enlace que quieras reproducir y, utilizando la
+      app "Control remoto para Android TV", pega el enlace en tu TV. Este enlace
+      lo debes pegar en el cuadro que te sale al hacer clic en los tres puntitos
+      de la parte superior derecha de Ace Stream en tu TV y seleccionando
+      "Introducir la ID de contenido". <br />
+      <a
+        href="https://mega.nz/folder/AddSwK6J#E5L5EeZqvazk2eJLbtFzZg"
+        target="_blank"
+        style="font-size: x-large"
+        >Guía con fotos para reproducir en Android TV</a
+      >
     </p>
 
     <h4 style="color: white; margin: 0 20px 20px 29px">Windows (PC)</h4>
@@ -459,7 +499,8 @@
 
     <p class="how-to-play-text">
       Para reproducir los enlaces correctamente en tu dispositivo, es
-      recomendable cambiar este parámetro en la configuración de Ace Player. En la barra de arriba ve a "Herramientas"
+      recomendable cambiar este parámetro en la configuración de Ace Player. En
+      la barra de arriba ve a "Herramientas"
       <i class="bi bi-arrow-right"></i> "Preferencias"
       <i class="bi bi-arrow-right"></i> "Vídeo" y en Desentrelazado selecciona
       "Automático" y Modo <i class="bi bi-arrow-right"></i> "Yadif (2x)".
