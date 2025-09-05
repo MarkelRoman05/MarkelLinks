@@ -354,13 +354,13 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG3.png',
     },
     {
-      title: 'Movistar Plus+ (OPCIÓN 2)',
+      title: 'Movistar Plus+ (OPCIÓN 1)',
       url: 'acestream://1ab443f5b4beb6d586f19e8b25b9f9646cf2ab78',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
     {
-      title: 'Movistar Plus+ (OPCIÓN 1)',
+      title: 'Movistar Plus+ (OPCIÓN 2)',
       url: 'acestream://5d9a26e0a5f3e5f2ae027bd05635ab9a4fd4b51a',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
