@@ -354,20 +354,20 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIG3.png',
     },
     {
-      title: 'Movistar Plus+ (OPCIÓN 1)',
-      url: 'acestream://5d9a26e0a5f3e5f2ae027bd05635ab9a4fd4b51a',
-      tags: 'movistar plus +',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
-    },
-    {
       title: 'Movistar Plus+ (OPCIÓN 2)',
       url: 'acestream://1ab443f5b4beb6d586f19e8b25b9f9646cf2ab78',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
     {
+      title: 'Movistar Plus+ (OPCIÓN 1)',
+      url: 'acestream://5d9a26e0a5f3e5f2ae027bd05635ab9a4fd4b51a',
+      tags: 'movistar plus +',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
+    },
+    {
       title: 'Movistar Plus+ (OPCIÓN 3)',
-      url: 'acestream://8c67cdb5ba81976662c3a67984a9545d9cfb0f70',
+      url: 'acestream://199190e3f28c1de0be34bccf0d3568dc65209b99',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
@@ -413,7 +413,6 @@ export class AppComponent {
       tags: 'dazn f1 formula 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png',
     },
-
     {
       title: 'Eurosport 1 (OPCIÓN 1)',
       url: 'acestream://704e51760a644bc90aa22269bf84139947a0414a',
