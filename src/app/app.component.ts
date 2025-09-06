@@ -361,7 +361,7 @@ export class AppComponent {
     },
     {
       title: 'Movistar Plus+ (OPCIÓN 2)',
-      url: 'acestream://5d9a26e0a5f3e5f2ae027bd05635ab9a4fd4b51a',
+      url: 'acestream://b6ffbbc72a5b6b579faf79ebac229af7a25b933b',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
