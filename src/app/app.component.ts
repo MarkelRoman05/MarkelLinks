@@ -112,13 +112,13 @@ export class AppComponent {
       'Movistar+ Champions',
       'Canales lineales DAZN',
       'DAZN F1',
-      'LaLiga Hypermotion',
-      'Eurosport',
       'Movistar+ Otros',
+      'Eurosport',
+      'LaLiga Hypermotion',
       'Movistar+ Vamos',
       'Movistar+ Golf',
-      'Televisión Pública',
       'Otros deportes',
+      'TDT',
     ];
 
     // Ordenar los proveedores según el orden personalizado
@@ -314,11 +314,9 @@ export class AppComponent {
       { name: 'LaLiga Hypermotion', pattern: /laliga hypermotion/i },
       { name: 'Movistar+ Champions', pattern: /movistar liga de campeones/i },
       { name: 'DAZN F1', pattern: /dazn f1/i },
-      { name: 'Movistar+ Vamos', pattern: /movistar vamos/i },
       { name: 'Canales lineales DAZN', pattern: /dazn [0-9]/i },
       { name: 'Eurosport', pattern: /eurosport/i },
-      { name: 'Movistar+ Golf', pattern: /movistar golf/i },
-      { name: 'Televisión Pública', pattern: /la [0-9]/i },
+      { name: 'TDT', pattern: /la [0-9]/i },
       { name: 'Otros deportes', pattern: /tennis|rally|nba|ufc|bein|gol/i },
     ];
   }
