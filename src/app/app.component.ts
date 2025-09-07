@@ -114,7 +114,7 @@ export class AppComponent {
       'DAZN F1',
       'LaLiga Hypermotion',
       'Eurosport',
-      'Otros',
+      'Movistar+ Otros',
       'Movistar+ Vamos',
       'Movistar+ Golf',
       'Televisión Pública',
@@ -319,7 +319,7 @@ export class AppComponent {
       { name: 'Eurosport', pattern: /eurosport/i },
       { name: 'Movistar+ Golf', pattern: /movistar golf/i },
       { name: 'Televisión Pública', pattern: /la [0-9]/i },
-      { name: 'Otros deportes', pattern: /tennis|rally|nba|ufc/i },
+      { name: 'Otros deportes', pattern: /tennis|rally|nba|ufc|bein|gol/i },
     ];
   }
 
@@ -349,10 +349,10 @@ export class AppComponent {
 
       // Si no coincide con ningún patrón, lo ponemos en "Otros"
       if (!assigned) {
-        if (!groupedLinks['Otros']) {
-          groupedLinks['Otros'] = [];
+        if (!groupedLinks['Movistar+ Otros']) {
+          groupedLinks['Movistar+ Otros'] = [];
         }
-        groupedLinks['Otros'].push(link);
+        groupedLinks['Movistar+ Otros'].push(link);
       }
     });
 
