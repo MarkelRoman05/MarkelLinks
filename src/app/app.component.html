@@ -301,7 +301,6 @@
           class="delete-search-button"
           matTooltip="Borrar texto de búsqueda"
           matTooltipPosition="below"
-          class="delete-search-button"
           (click)="deleteSearch()"
         >
           <i class="bi bi-x-lg"></i>
@@ -314,39 +313,35 @@
     canal.
   </p>
   <div class="links-container" *ngIf="filteredLinks.length > 0">
-    <div class="column" *ngFor="let column of [0, 1, 2]">
-      <li
-        class="links"
-        *ngFor="
-          let link of filteredLinks
-            | slice
-              : column * (filteredLinks.length / 3)
-              : (column + 1) * (filteredLinks.length / 3)
-        "
-      >
-        <a
-          href="{{ link.url }}"
-          class="acestream-link"
-          (click)="trackClick(link.title, link.url, $event); isMenuOpen = false"
+    <div *ngFor="let provider of providers" class="provider-section">
+      <h4 class="provider-header">{{ provider }}</h4>
+      <div class="mini-separator" style="margin-bottom: 6px; margin-top: 0px;"></div>
+      <ul class="provider-links">
+        <li
+          class="links"
+          *ngFor="let link of groupedLinks[provider]"
         >
-          <img [src]="link.img" class="logo-img" />
-          <span>{{ link.title }}</span>
-        </a>
-        <button
-          matTooltip="Copiar enlace"
-          matTooltipPosition="right"
-          class="copy-button"
-          (click)="copyLink(link.url, link.title)"
-        >
-          <i
-            class="bi bi-copy"
-            style="font-size: 20px; display: block; margin: 3px"
+          <a
+            href="{{ link.url }}"
+            class="acestream-link"
+            (click)="trackClick(link.title, link.url, $event); isMenuOpen = false"
           >
-          </i>
-        </button>
-      </li>
+            <img [src]="link.img" class="logo-img" alt="{{ link.title }}" />
+            <span>{{ link.title }}</span>
+          </a>
+          <button
+            matTooltip="Copiar enlace"
+            class="copy-button"
+            (click)="copyLink(link.url, link.title)"
+          >
+            <i class="bi bi-copy" style="font-size: 14px; display: block; margin: 0"></i>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
+
+  <hr style="border: 0; border-top: 1px solid #444; margin: 2rem 0" />
 
   <div class="otra-web">
     <h3 class="otra-web-titulo">OTRAS WEBS DE ENLACES</h3>

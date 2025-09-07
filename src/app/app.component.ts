@@ -37,6 +37,8 @@ declare global {
 export class AppComponent {
   searchTerm: string = '';
   filteredLinks: any[] = [];
+  groupedLinks: { [provider: string]: any[] } = {};
+  providers: string[] = [];
   loading: boolean[] = [true, true, true, true, true];
   isMobile: boolean = false;
   isMenuOpen: boolean = false; // Añadido para el menú móvil
@@ -92,7 +94,45 @@ export class AppComponent {
 
   ngOnInit() {
     this.filteredLinks = [...this.links];
+    this.groupLinksByProvider();
     this.checkScreenSize();
+  }
+
+  /**
+   * Agrupa los enlaces por proveedor
+   */
+  groupLinksByProvider() {
+    // Reiniciar los grupos
+    this.groupedLinks = this.classifyLinksByProvider(this.links);
+
+    // Definir el orden personalizado de proveedores
+    const providerOrder = [
+      'Movistar+ LaLiga',
+      'DAZN LaLiga',
+      'Movistar+ Champions',
+      'Canales lineales DAZN',
+      'DAZN F1',
+      'LaLiga Hypermotion',
+      'Eurosport',
+      'Otros',
+      'Movistar+ Vamos',
+      'Movistar+ Golf',
+      'Televisión Pública',
+      'Otros deportes',
+    ];
+
+    // Ordenar los proveedores según el orden personalizado
+    this.providers = Object.keys(this.groupedLinks).sort((a, b) => {
+      const indexA = providerOrder.indexOf(a);
+      const indexB = providerOrder.indexOf(b);
+
+      // Si alguno no está en la lista, se coloca al final
+      if (indexA === -1) return 1;
+      if (indexB === -1) return -1;
+
+      // Ordenar según la posición en el array de orden
+      return indexA - indexB;
+    });
   }
 
   @HostListener('window:resize', [])
@@ -265,17 +305,91 @@ export class AppComponent {
   }
 
   /**
+   * Obtiene los patrones de proveedores para clasificar los enlaces
+   */
+  getProviderPatterns() {
+    return [
+      { name: 'Movistar+ LaLiga', pattern: /movistar laliga/i },
+      { name: 'DAZN LaLiga', pattern: /dazn laliga/i },
+      { name: 'LaLiga Hypermotion', pattern: /laliga hypermotion/i },
+      { name: 'Movistar+ Champions', pattern: /movistar liga de campeones/i },
+      { name: 'DAZN F1', pattern: /dazn f1/i },
+      { name: 'Movistar+ Vamos', pattern: /movistar vamos/i },
+      { name: 'Canales lineales DAZN', pattern: /dazn [0-9]/i },
+      { name: 'Eurosport', pattern: /eurosport/i },
+      { name: 'Movistar+ Golf', pattern: /movistar golf/i },
+      { name: 'Televisión Pública', pattern: /la [0-9]/i },
+      { name: 'Otros deportes', pattern: /tennis|rally|nba|ufc/i },
+    ];
+  }
+
+  /**
+   * Clasifica los enlaces en grupos según sus tags
+   * @param links - Los enlaces a clasificar
+   * @returns - Un objeto con los enlaces agrupados por proveedor
+   */
+  classifyLinksByProvider(links: any[]) {
+    const groupedLinks: { [provider: string]: any[] } = {};
+    const providerPatterns = this.getProviderPatterns();
+
+    // Clasificar cada enlace
+    links.forEach((link) => {
+      let assigned = false;
+
+      for (const provider of providerPatterns) {
+        if (provider.pattern.test(link.tags)) {
+          if (!groupedLinks[provider.name]) {
+            groupedLinks[provider.name] = [];
+          }
+          groupedLinks[provider.name].push(link);
+          assigned = true;
+          break;
+        }
+      }
+
+      // Si no coincide con ningún patrón, lo ponemos en "Otros"
+      if (!assigned) {
+        if (!groupedLinks['Otros']) {
+          groupedLinks['Otros'] = [];
+        }
+        groupedLinks['Otros'].push(link);
+      }
+    });
+
+    return groupedLinks;
+  }
+
+  /**
    * Filtra los enlaces según el término de búsqueda ingresado.
    */
   filterLinks() {
     if (!this.searchTerm) {
       this.filteredLinks = [...this.links];
+      this.groupLinksByProvider();
     } else {
       this.filteredLinks = this.links.filter(
         (link) =>
           link.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
           link.tags.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
+
+      // Si no hay resultados, no hacemos nada más
+      if (this.filteredLinks.length === 0) {
+        this.groupedLinks = {};
+        this.providers = [];
+        return;
+      }
+
+      // Reagrupamos los enlaces filtrados
+      this.groupedLinks = this.classifyLinksByProvider(this.filteredLinks);
+
+      // Ordenar alfabéticamente los nombres de los proveedores y guardarlos
+      this.providers = Object.keys(this.groupedLinks).sort((a, b) => {
+        // Asegurarse que 'Otros' siempre va al final
+        if (a === 'Otros') return 1;
+        if (b === 'Otros') return -1;
+        return a.localeCompare(b);
+      });
     }
   }
 
