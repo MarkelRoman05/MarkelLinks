@@ -269,7 +269,7 @@
     </div>
   </div>
 
-<!-- <div>
+  <!-- <div>
     <app-agenda-evento-text></app-agenda-evento-text>
   </div> -->
 
@@ -315,16 +315,18 @@
   <div class="links-container" *ngIf="filteredLinks.length > 0">
     <div *ngFor="let provider of providers" class="provider-section">
       <h4 class="provider-header">{{ provider }}</h4>
-      <div class="mini-separator" style="margin-bottom: 6px; margin-top: 0px;"></div>
+      <div
+        class="mini-separator"
+        style="margin-bottom: 6px; margin-top: 0px"
+      ></div>
       <ul class="provider-links">
-        <li
-          class="links"
-          *ngFor="let link of groupedLinks[provider]"
-        >
+        <li class="links" *ngFor="let link of groupedLinks[provider]">
           <a
             href="{{ link.url }}"
             class="acestream-link"
-            (click)="trackClick(link.title, link.url, $event); isMenuOpen = false"
+            (click)="
+              trackClick(link.title, link.url, $event); isMenuOpen = false
+            "
           >
             <img [src]="link.img" class="logo-img" alt="{{ link.title }}" />
             <span>{{ link.title }}</span>
@@ -334,7 +336,10 @@
             class="copy-button"
             (click)="copyLink(link.url, link.title)"
           >
-            <i class="bi bi-copy" style="font-size: 17px; display: block; margin: 0"></i>
+            <i
+              class="bi bi-copy"
+              style="font-size: 17px; display: block; margin: 0"
+            ></i>
           </button>
         </li>
       </ul>
@@ -442,6 +447,20 @@
       aquí el enlace al contenido".
     </p>
 
+    <h4 style="color: white; margin: 0 20px 20px 29px">Windows (PC)</h4>
+    <p class="how-to-play-text">
+      Una vez instalado Ace Stream en Windows, tienes dos formas de reproducir
+      los enlaces: la primera es haciendo clic directamente en el enlace,
+      seleccionar Ace Player en la ventana que aparece y esperar al anuncio para
+      ver el contenido. La segunda opción es copiar el enlace, abrir Ace Player
+      manualmente y pegar el enlace en la opción "Medio"
+      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID".
+      <strong>Nota:</strong> Asegúrate de tener abierto Ace Stream Engine
+      (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
+      de instalación de Ace Stream (C:\Users\<i>tuusuario</i>\AppData\Roaming
+      \ACEStream\engine y abre ace_engine.exe).
+    </p>
+
     <h4 style="color: white; margin: 0 20px 20px 29px">Android TV</h4>
     <p class="how-to-play-text">
       Si tienes una TV o un dispositivo con Android TV, puedes instalar Ace
@@ -474,20 +493,6 @@
         style="font-size: x-large"
         >Guía con fotos para reproducir en Android TV</a
       >
-    </p>
-
-    <h4 style="color: white; margin: 0 20px 20px 29px">Windows (PC)</h4>
-    <p class="how-to-play-text">
-      Una vez instalado Ace Stream en Windows, tienes dos formas de reproducir
-      los enlaces: la primera es haciendo clic directamente en el enlace,
-      seleccionar Ace Player en la ventana que aparece y esperar al anuncio para
-      ver el contenido. La segunda opción es copiar el enlace, abrir Ace Player
-      manualmente y pegar el enlace en la opción "Medio"
-      <i class="bi bi-arrow-right"></i> "Open Ace Stream Content ID".
-      <strong>Nota:</strong> Asegúrate de tener abierto Ace Stream Engine
-      (ace_engine / Ace Stream HD), si no, ábrelo tú manualmente desde la ruta
-      de instalación de Ace Stream (C:\Users\<i>tuusuario</i>\AppData\Roaming
-      \ACEStream\engine y abre ace_engine.exe).
     </p>
 
     <hr style="border: 0; border-top: 1px solid #444; margin: 2rem 0" />
