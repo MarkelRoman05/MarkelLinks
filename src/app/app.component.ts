@@ -821,7 +821,7 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 2 (OPCIÓN 1)',
-      url: 'acestream://c6a3673f6a37b1bd3cf31fdd6404dd33d48cfccb',
+      url: 'acestream://74ab4e4ec7e2da001f473ca40893b7307b8029c5',
       tags: 'movistar liga de campeones 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP1.png',
     },
@@ -833,7 +833,7 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 3 (OPCIÓN 1)',
-      url: 'acestream://17b8bc4bf8e29547b0071c742e3d7da3bcbc484d',
+      url: 'acestream://4416843c96b7f7a1bc55c476091a60fff0922bc7',
       tags: 'movistar liga de campeones 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
@@ -844,14 +844,26 @@ export class AppComponent {
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
     {
-      title: 'M+ L. de Campeones 4',
+      title: 'M+ L. de Campeones 4 (OPCIÓN 1)',
       url: 'acestream://77998f8161373611ff6b348e7eda5b4e97d3ec29',
       tags: 'movistar liga de campeones 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP3.png',
     },
     {
-      title: 'M+ L. de Campeones 5',
+      title: 'M+ L. de Campeones 4 (OPCIÓN 2)',
+      url: 'acestream://f1219582a3059e7fff2db22e69475c45cbc84356',
+      tags: 'movistar liga de campeones 4',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP3.png',
+    },
+    {
+      title: 'M+ L. de Campeones 5 (OPCIÓN 1)',
       url: 'acestream://cb6410a6355a645cfc6f6f5a7c7d71298fcbc2c5',
+      tags: 'movistar liga de campeones 5',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP4.png',
+    },
+    {
+      title: 'M+ L. de Campeones 5 (OPCIÓN 2)',
+      url: 'acestream://d2cf12b65c8a540a50bd74c3db1ce59ae8d05623',
       tags: 'movistar liga de campeones 5',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP4.png',
     },
@@ -893,13 +905,19 @@ export class AppComponent {
     },
     {
       title: 'Primera Federación (OPCIÓN 1)',
-      url: 'acestream://a2e6be93b26141343c31cf6b6e46f57f14547f07',
+      url: 'acestream://599a2fda91aa55703e2c5a51562d9dbf5d3d31d9',
       tags: 'primera federacion rfef',
       img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png',
     },
     {
       title: 'Primera Federación (OPCIÓN 2)',
       url: 'acestream://a2ed6f2ca3f804481131c41ce64d4286a5820476',
+      tags: 'primera federacion rfef',
+      img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png',
+    },
+    {
+      title: 'Primera Federación (OPCIÓN 3)',
+      url: 'acestream://b40212c43e96e97542ea00f2129212a054853a57',
       tags: 'primera federacion rfef',
       img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png',
     },
@@ -911,7 +929,13 @@ export class AppComponent {
     },
     {
       title: 'M+ Deportes (OPCIÓN 2)',
-      url: 'acestream://b5842718859345a596107ab8e6b24d7bfa2d617e',
+      url: 'acestream://f828a32d8ea03a3cabd3ce3ebecb249ec111c7e5',
+      tags: 'movistar deportes',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CPDEP.png',
+    },
+    {
+      title: 'M+ Deportes (OPCIÓN 3)',
+      url: 'acestream://5d3f582738467aaf213e408601aca5cc13fa9359',
       tags: 'movistar deportes',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CPDEP.png',
     },
@@ -929,27 +953,15 @@ export class AppComponent {
     },
     {
       title: 'M+ Deportes 4',
-      url: 'acestream://58a4c880ab18486d914751db32a12760e74b75a4',
+      url: 'acestream://3f97bafa133b10cfe5c62311e11501326d886a53',
       tags: 'movistar deportes 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/canal/USOP3.png',
     },
     {
       title: 'M+ Deportes 5',
-      url: 'acestream://fcc0fd75bf1dba40b108fcf0d3514e0e549bfbac',
+      url: 'acestream://5913205fb6d6d162a50222709aab6129eb7cf916',
       tags: 'movistar deportes 5',
       img: 'https://www.movistarplus.es/recorte/m-NEO/canal/USOP11.png',
-    },
-    {
-      title: 'M+ Deportes 6',
-      url: 'acestream://cc5782d37ae6b6e0bab396dd64074982d0879046',
-      tags: 'movistar deportes 6',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/canal/MULTI8.png',
-    },
-    {
-      title: 'M+ Deportes 7',
-      url: 'acestream://070f82d6443a52962d6a2ed9954c979b29404932',
-      tags: 'movistar deportes 7',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/canal/MULTI6.png',
     },
     {
       title: 'GOL',
