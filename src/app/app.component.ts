@@ -845,13 +845,13 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 2 (OPCIÓN 1)',
-      url: 'acestream://4fc6d0331830ad8743abab2fe2473b63bdfbc49f',
+      url: 'acestream://e7d8cae7f693fe46e89bbf74820caac9ffb32a30',
       tags: 'movistar liga de campeones 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP1.png',
     },
     {
       title: 'M+ L. de Campeones 2 (OPCIÓN 2)',
-      url: 'acestream://e7d8cae7f693fe46e89bbf74820caac9ffb32a30',
+      url: 'acestream://4fc6d0331830ad8743abab2fe2473b63bdfbc49f',
       tags: 'movistar liga de campeones 2',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP1.png',
     },
