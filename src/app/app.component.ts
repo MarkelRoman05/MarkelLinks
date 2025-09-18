@@ -943,19 +943,19 @@ export class AppComponent {
       title: 'M+ L. de Campeones 10',
       url: 'acestream://0103373118989085dd0d02667c629ee36d462cb1',
       tags: 'movistar liga de campeones 10',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP8.png',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP9.png',
     },
     {
       title: 'M+ L. de Campeones 11',
       url: 'acestream://6e12a5849a4edea248ed9c8689e58bd66fc9f8fa',
       tags: 'movistar liga de campeones 11',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP8.png',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP10.png',
     },
     {
       title: 'M+ L. de Campeones 12',
       url: 'acestream://130d37f9a68bd8f29f0d636dcde522a1e91d1cb7',
       tags: 'movistar liga de campeones 12',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP8.png',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP11.png',
     },
     {
       title: 'Primera Federación (OPCIÓN 1)',
