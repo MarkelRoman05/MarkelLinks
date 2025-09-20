@@ -467,25 +467,25 @@ export class AppComponent {
     },
     {
       title: 'Movistar Plus+ (OPCIÓN 1)',
-      url: 'acestream://8c67cdb5ba81976662c3a67984a9545d9cfb0f70',
-      tags: 'movistar plus +',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
-    },
-    {
-      title: 'Movistar Plus+ (OPCIÓN 2)',
-      url: 'acestream://b6ffbbc72a5b6b579faf79ebac229af7a25b933b',
-      tags: 'movistar plus +',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
-    },
-    {
-      title: 'Movistar Plus+ (OPCIÓN 3)',
       url: 'acestream://199190e3f28c1de0be34bccf0d3568dc65209b99',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
     {
-      title: 'Movistar Plus+ (OPCIÓN 4)',
+      title: 'Movistar Plus+ (OPCIÓN 2)',
       url: 'acestream://5866e83279307bf919068ae7a0d250e4e424e464',
+      tags: 'movistar plus +',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
+    },
+    {
+      title: 'Movistar Plus+ (OPCIÓN 3)',
+      url: 'acestream://1ab443f5b4beb6d586f19e8b25b9f9646cf2ab78',
+      tags: 'movistar plus +',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
+    },
+    {
+      title: 'Movistar Plus+ (OPCIÓN 4)',
+      url: 'acestream://e19c1fc5e3ada56c60d45257f7f4ed0d14bf7003',
       tags: 'movistar plus +',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png',
     },
