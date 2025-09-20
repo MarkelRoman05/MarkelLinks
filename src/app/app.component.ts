@@ -395,13 +395,13 @@ export class AppComponent {
   links = [
     {
       title: 'M+ LALIGA (OPCIÓN 1)',
-      url: 'acestream://107c3ce5a5d2527c9f06e4eab87477201791f231',
+      url: 'acestream://d4ff041287a43e3114d411d671c4b4e92e21f31e',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 2)',
-      url: 'acestream://d4ff041287a43e3114d411d671c4b4e92e21f31e',
+      url: 'acestream://107c3ce5a5d2527c9f06e4eab87477201791f231',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
@@ -569,7 +569,7 @@ export class AppComponent {
     },
     {
       title: 'Eurosport 2 (OPCIÓN 3)',
-      url: 'acestream://0585e09bb8ac9720e4c11934f1b184e309291551',
+      url: 'acestream://2773b39926d15dd3d9495d94c4050604792d7031',
       tags: 'eurosport 4k',
       img: 'https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png',
     },
@@ -617,7 +617,7 @@ export class AppComponent {
     },
     {
       title: 'DAZN LALIGA (OPCIÓN 5)',
-      url: 'acestream://d1596a3988b84a4d2711fd380eb8a53256ad74ae',
+      url: 'acestream://4e6d9cf7d177366045d33cd8311d8b1d7f4bed1f',
       tags: 'dazn laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZNLI.png',
     },
