@@ -395,37 +395,37 @@ export class AppComponent {
   links = [
     {
       title: 'M+ LALIGA (OPCIÓN 1)',
-      url: 'acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947',
+      url: 'acestream://107c3ce5a5d2527c9f06e4eab87477201791f231',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 2)',
-      url: 'acestream://c9321006921967d6258df6945f1d598a5c0cbf1e',
+      url: 'acestream://d2ddf9802ccfdc456f872eea4d24596880a638a0',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 3)',
-      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
+      url: 'acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 4)',
-      url: 'acestream://14b6cd8769cd485f2cffdca64be9698d9bfeac58',
+      url: 'acestream://d4ff041287a43e3114d411d671c4b4e92e21f31e',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 5)',
-      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
+      url: 'acestream://c9321006921967d6258df6945f1d598a5c0cbf1e',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA (OPCIÓN 6)',
-      url: 'acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947',
+      url: 'acestream://4b528d10eaad747ddf52251206177573ee3e9f74',
       tags: 'movistar laliga',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
