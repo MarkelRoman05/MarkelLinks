@@ -433,7 +433,7 @@ export class AppComponent {
       title: 'M+ LALIGA (OPCIÓN 7)',
       url: 'acestream://14b6cd8769cd485f2cffdca64be9698d9bfeac58',
       tags: 'movistar laliga',
-      img: 'https://www.movistarplus.es/recorte/m-NEO/canal/MLIGUH.png',
+      img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png',
     },
     {
       title: 'M+ LALIGA 2 (OPCIÓN 1)',
