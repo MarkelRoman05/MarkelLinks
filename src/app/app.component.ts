@@ -995,7 +995,7 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 3 (OPCIÓN 1)',
-      url: 'acestream://1dece791d28be6a5af78537ac4864ec01fa0a6d8-',
+      url: 'acestream://1dece791d28be6a5af78537ac4864ec01fa0a6d8',
       tags: 'movistar liga de campeones 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
@@ -1007,7 +1007,7 @@ export class AppComponent {
     },
     {
       title: 'M+ L. de Campeones 3 (OPCIÓN 3)',
-      url: 'acestream://4416843c96b7f7a1bc55c476091a60fff0922bc7-',
+      url: 'acestream://4416843c96b7f7a1bc55c476091a60fff0922bc7',
       tags: 'movistar liga de campeones 3',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/CHAP2.png',
     },
