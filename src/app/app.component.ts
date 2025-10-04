@@ -695,13 +695,13 @@ export class AppComponent {
     },
     {
       title: 'DAZN 1 (OPCIÓN 4)',
-      url: 'acestream://b03f9310155cf3b4eafc1dfba763781abc3ff025',
+      url: 'acestream://5b776533534b767a84dfda263825ad10f30a8ec7',
       tags: 'dazn 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/canal/M1SD.png',
     },
     {
       title: 'DAZN 1 (OPCIÓN 5)',
-      url: 'acestream://36394be1db2e20b5997d987c32fd38c7f0f194b7',
+      url: 'acestream://b03f9310155cf3b4eafc1dfba763781abc3ff025',
       tags: 'dazn 1',
       img: 'https://www.movistarplus.es/recorte/m-NEO/canal/M1SD.png',
     },
@@ -755,7 +755,7 @@ export class AppComponent {
     },
     {
       title: 'DAZN 4 (OPCIÓN 1)',
-      url: 'acestream://d1d9ec2361a6ac8edc0b2841866383768cc28df9',
+      url: 'acestream://7e27e46c25d4308d16098d9dc67fcd8736e8c1f0',
       tags: 'dazn 4',
       img: 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/DAZN4.png',
     },
