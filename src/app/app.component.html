@@ -289,6 +289,28 @@
 
   <h3 class="header-enlaces" id="enlaces">ENLACES</h3>
   <div class="mini-separator"></div>
+
+  <p
+    class="how-to-play-text"
+    style="
+      text-align: center;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 16px;
+      background: rgba(17, 24, 39, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    "
+  >
+    <i
+      class="bi bi-info-circle-fill"
+      style="margin-right: 8px; vertical-align: middle"
+    ></i>
+    <strong>Importante:</strong> Si una transimisión no funciona correctamente,
+    prueba con todas las opciones disponibles del mismo canal, ya que la
+    estabilidad puede variar según el evento de ese momento y la fuente.
+  </p>
+
   <div class="search-container">
     <form class="search-form">
       <div class="search-field-container">
@@ -317,6 +339,7 @@
     <i class="bi bi-exclamation-triangle-fill"></i>&nbsp; No se encontro ningún
     canal.
   </p>
+
   <div class="links-container" *ngIf="filteredLinks.length > 0">
     <div *ngFor="let provider of providers" class="provider-section">
       <h4 class="provider-header">{{ provider }}</h4>
