@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build:prod",
+  "outputDirectory": "dist/acestream-links",
+  "installCommand": "npm install",
+  "framework": "angular",
+  "env": {
+    "GITHUB_API_TOKEN": "@github_api_token"
+  }
+}

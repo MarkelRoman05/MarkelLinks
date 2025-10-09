@@ -24,12 +24,52 @@ Markel Links es una web que ofrece enlaces de streaming para ver partidos de fú
     ```bash
     cd acestream-links
     ```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+4. Configura las variables de entorno:
+    ```bash
+    cp .env.example .env
+    ```
+    Edita el archivo `.env` y añade tu token de GitHub API.
+
+## Variables de Entorno
+
+Este proyecto requiere las siguientes variables de entorno:
+
+- `GITHUB_API_TOKEN`: Token de acceso personal de GitHub para acceder a la API
+
+### Configuración para desarrollo local
+
+1. Copia el archivo `.env.example` a `.env`
+2. Edita `.env` y añade tu token de GitHub
+3. El archivo `src/assets/env.js` se generará automáticamente
+
+### Configuración para Vercel
+
+1. Ve a tu dashboard de Vercel
+2. Selecciona tu proyecto
+3. Ve a "Settings" > "Environment Variables"
+4. Añade: `GITHUB_API_TOKEN` con tu token de GitHub
+
+### Configuración para Netlify
+
+1. Ve a tu dashboard de Netlify
+2. Selecciona tu sitio
+3. Ve a "Site settings" > "Environment variables"
+4. Añade: `GITHUB_API_TOKEN` con tu token de GitHub
 
 ## Uso
 
-1. Abre la web en https://markel-links.netlify.app/.
-2. Busca el evento deportivo que deseas ver.
-3. Copia el enlace Ace Stream y pégalo en el reproductor de Ace Player o haz clic directamente en el enlace.
+1. Para desarrollo local:
+    ```bash
+    npm start
+    ```
+2. Para construcción de producción:
+    ```bash
+    npm run build:prod
+    ```
 
 ## Contribuciones
 
