@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "chmod +x ./build-env.sh && ./build-env.sh && ng build",
-    "build:prod": "chmod +x ./build-env.sh && ./build-env.sh && ng build --configuration production",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

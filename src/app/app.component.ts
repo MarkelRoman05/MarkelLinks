@@ -10,7 +10,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import emailjs from '@emailjs/browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
-import { environment } from '../environments/environment';
 
 declare global {
   interface Window {
@@ -62,8 +61,9 @@ export class AppComponent {
     const repo = 'AcestreamLinks';
     const branch = 'master';
 
-    // Token de acceso personal de GitHub desde variable de entorno
-    const token = environment.githubApiToken;
+    // Token de acceso personal de GitHub (esto debería estar en un archivo de entorno)
+    // Este token es un ejemplo y deberá ser reemplazado por tu propio token
+    const token = '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';
 
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
 
