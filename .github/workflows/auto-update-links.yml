@@ -2,7 +2,7 @@ name: Auto update links and push
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # 14:00h
+    - cron: "0 12 * * *"   # 14:00 España
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: master       # o main si procede
           fetch-depth: 0
 
       - name: Set up Node
@@ -30,6 +30,12 @@ jobs:
       - name: Genera links.json actualizado
         run: node scripts/actualizar_links.js
 
+      - name: Ver cambios detectados por git
+        run: |
+          git status
+          git --no-pager diff -- src/assets/links.json || true
+          echo "Estado porclean: $(git status --porcelain src/assets/links.json | wc -l) líneas"
+
       - name: Commit y push con rebase (si hay cambios)
         run: |
           git config user.name "GitHub Actions"
@@ -37,7 +43,7 @@ jobs:
           if [[ -n "$(git status --porcelain src/assets/links.json)" ]]; then
             git add src/assets/links.json
             git commit -m "chore: auto-update links.json [skip ci]"
-            git pull --rebase origin master    # cambia a main si procede
+            git pull --rebase origin master   # cambia a main si procede
             git push
           else
             echo "No hay cambios en links.json, salto commit."
