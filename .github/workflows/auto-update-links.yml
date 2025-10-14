@@ -2,7 +2,7 @@ name: Auto update links and push
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # 14:00 España (12:00 UTC)
+    - cron: "55 11 * * *"  # 13:55h
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: master          # cambia a 'main' si tu rama es main
+          ref: master
           fetch-depth: 0
 
       - name: Set up Node
