@@ -376,6 +376,20 @@ export class AppComponent {
   }
 
   /**
+   * Obtiene el número total de canales disponibles
+   */
+  getTotalChannels(): number {
+    return this.links.length;
+  }
+
+  /**
+   * Obtiene el número de canales mostrados actualmente
+   */
+  getDisplayedChannels(): number {
+    return this.filteredLinks.length;
+  }
+
+  /**
    * Filtra los enlaces según el término de búsqueda ingresado.
    */
   filterLinks() {
