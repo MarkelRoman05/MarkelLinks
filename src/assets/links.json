@@ -157,61 +157,61 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 6)",
-    "url": "acestream://82b4f249788f93b8f9ce968803662d7cd4f1b8cc",
-    "tags": "dazn f1 formula 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
-  },
-  {
-    "title": "DAZN F1 (OPCIÓN 7)",
     "url": "acestream://d5cf2dfa4fb4165ce58bf9db815088c28fec7711",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 8)",
+    "title": "DAZN F1 (OPCIÓN 7)",
     "url": "acestream://4bc6f4cb6697c1defc981c0afe1a4c3a62284aee",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 9)",
+    "title": "DAZN F1 (OPCIÓN 8)",
     "url": "acestream://b5f3cc5cd66c98bae9d65df43ecee6c02d18aebd",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 10)",
+    "title": "DAZN F1 (OPCIÓN 9)",
     "url": "acestream://38e9ae1ee0c96d7c6187c9c4cc60ffccb565bdf7",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 11)",
+    "title": "DAZN F1 (OPCIÓN 10)",
     "url": "acestream://3f5b7e2f883fe4b4b973e198d147a513d5c7c32a",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 12)",
+    "title": "DAZN F1 (OPCIÓN 11)",
     "url": "acestream://b08e158ea3f5c72084f5ff8e3c30ca2e4d1ff6d1",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 13)",
+    "title": "DAZN F1 (OPCIÓN 12)",
     "url": "acestream://bcf9dc38f92e90a71b87bd54b3bac91b76d09a69",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 14)",
+    "title": "DAZN F1 (OPCIÓN 13)",
     "url": "acestream://fd53cfa7055fe458d4f5c0ff59a06cd43723be55",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 15)",
+    "title": "DAZN F1 (OPCIÓN 14)",
     "url": "acestream://ed6188dcbb491efeb2092c1a6199226c27f61727",
+    "tags": "dazn f1 formula 1",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
+  },
+  {
+    "title": "DAZN F1 (OPCIÓN 15)",
+    "url": "acestream://8272d1ed95cdd8945c248ce488fa26bd435fb71f",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
@@ -223,13 +223,13 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 17)",
-    "url": "acestream://8272d1ed95cdd8945c248ce488fa26bd435fb71f",
+    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
     "title": "DAZN F1 (OPCIÓN 18)",
-    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
@@ -883,7 +883,7 @@
   },
   {
     "title": "GOL",
-    "url": "acestream://9fb99c40a2c45d5c5342b30626eb56140f980612",
+    "url": "acestream://8546cff89e4ee8bf3ad31cf6457c3bc2c4341031",
     "tags": "gol",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOL.png"
   },
