@@ -63,13 +63,9 @@ export class AppComponent {
     const repo = 'AcestreamLinks';
     const branch = 'master';
 
-    // Token de acceso personal de GitHub (esto debería estar en un archivo de entorno)
-    // Este token es un ejemplo y deberá ser reemplazado por tu propio token
     const token = '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';
 
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
-
-    console.log('Fetching from URL:', apiUrl);
 
     // Configurar los headers para la autenticación
     const headers = {
@@ -79,7 +75,6 @@ export class AppComponent {
 
     this.http.get(apiUrl, { headers }).subscribe(
       (response: any) => {
-        console.log('Response:', response);
         if (response && response.commit && response.commit.author) {
           this.lastUpdate = response.commit.author.date;
         } else {
