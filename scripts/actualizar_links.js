@@ -1,9 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-// Ruta log
-const LOG_DIR = 'logs';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const PROJECT_ROOT = path.join(__dirname, '..');
+
+const LOG_DIR = path.join(PROJECT_ROOT, 'logs');
 const LOG_FILE = 'actualizar_links.log';
 const LOG_PATH = path.join(LOG_DIR, LOG_FILE);
 if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
@@ -13,67 +18,18 @@ function log(msg) {
   fs.appendFileSync(LOG_PATH, `[${now}] ${msg}\n`, 'utf8');
 }
 
-// Cambia aquí para trabajar solo con links.json
-const LINKS_PATH = 'src/assets/links.json';
+const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
 const REMOTE_URL = 'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/listaplana.txt';
 
-// Matchers iguales que antes
-const canalMatchers = [
-  { remote: 'M+ LALIGA', match: l => l.title.includes('M+ LALIGA') && !l.title.includes('M+ LALIGA 2') && !l.title.includes('M+ LALIGA 3') && !l.title.includes('M+ LALIGA 4') },
-  { remote: 'M+ LALIGA 2', match: l => l.title.includes('M+ LALIGA 2') },
-  { remote: 'M+ LALIGA 3', match: l => l.title.includes('M+ LALIGA 3') },
-  { remote: 'M+ LALIGA 4', match: l => l.title.includes('M+ LALIGA 4') },
-  { remote: 'MOVISTAR+', match: l => l.title.includes('Movistar Plus+ (OPCIÓN') },
-  { remote: 'MOVISTAR+ 2', match: l => l.title.includes('Movistar Plus+ 2') },
-  { remote: 'DAZN F1', match: l => l.title.includes('DAZN F1') },
-  { remote: 'EUROSPORT 1', match: l => l.title.includes('Eurosport 1') },
-  { remote: 'EUROSPORT 2', match: l => l.title.includes('Eurosport 2') },
-  { remote: 'FOX PREMIUM UFC', match: l => l.title === 'FOX PREMIUM UFC' },
-  { remote: 'UFC FIGHT PASS', match: l => l.title === 'UFC Fight Pass' },
-  { remote: 'NBA TV', match: l => l.title === 'NBA TV' },
-  { remote: 'GOL', match: l => l.title === 'GOL' },
-  { remote: 'BEIN SPORTS', match: l => l.title === 'beIN SPORTS 1' },
-  { remote: 'DAZN LALIGA', match: l => l.title.includes('DAZN LALIGA') && !l.title.includes('DAZN LALIGA 2') && !l.title.includes('DAZN LALIGA 3') },
-  { remote: 'DAZN LALIGA 2', match: l => l.title.includes('DAZN LALIGA 2') },
-  { remote: 'DAZN LALIGA 3', match: l => l.title.includes('DAZN LALIGA 3') },
-  { remote: 'DAZN 1', match: l => l.title.includes('DAZN 1') },
-  { remote: 'DAZN 2', match: l => l.title.includes('DAZN 2') },
-  { remote: 'DAZN 3', match: l => l.title.includes('DAZN 3') },
-  { remote: 'DAZN 4', match: l => l.title.includes('DAZN 4') },
-  { remote: 'LA LIGA HYPERMOTION', match: l => l.title.includes('LALIGA TV HYPERMOTION (') },
-  { remote: 'LA LIGA HYPERMOTION 2', match: l => l.title.includes('LALIGA TV HYPERMOTION 2') },
-  { remote: 'LA LIGA HYPERMOTION 3', match: l => l.title.includes('LALIGA TV HYPERMOTION 3') },
-  { remote: 'LA LIGA HYPERMOTION 4', match: l => l.title.includes('LALIGA TV HYPERMOTION 4') },
-  { remote: 'LA LIGA HYPERMOTION 5', match: l => l.title.includes('LALIGA TV HYPERMOTION 5') },
-  { remote: 'M+ GOLF', match: l => l.title === 'M+ Golf' },
-  { remote: 'M+ GOLF 2', match: l => l.title === 'M+ Golf 2' },
-  { remote: 'M+ VAMOS', match: l => l.title.includes('M+ Vamos') },
-  { remote: 'M+ ELLAS', match: l => l.title === 'M+ Ellas Vamos' },
-  { remote: 'LA 1', match: l => l.title === 'La 1' },
-  { remote: 'LA 2', match: l => l.title === 'La 2' },
-  { remote: 'RALLY TV', match: l => l.title === 'Rally TV' },
-  { remote: 'TENNIS CHANNEL', match: l => l.title === 'Tennis Channel' },
-  { remote: 'LIGA DE CAMPEONES', match: l => l.title.includes('M+ L. de Campeones (') },
-  { remote: 'LIGA DE CAMPEONES 2', match: l => l.title.includes('M+ L. de Campeones 2 (') },
-  { remote: 'LIGA DE CAMPEONES 3', match: l => l.title.includes('M+ L. de Campeones 3 (') },
-  { remote: 'LIGA DE CAMPEONES 4', match: l => l.title.includes('M+ L. de Campeones 4 (') },
-  { remote: 'LIGA DE CAMPEONES 5', match: l => l.title.includes('M+ L. de Campeones 5') },
-  { remote: 'LIGA DE CAMPEONES 6', match: l => l.title.includes('M+ L. de Campeones 6') },
-  { remote: 'LIGA DE CAMPEONES 7', match: l => l.title.includes('M+ L. de Campeones 7') },
-  { remote: 'LIGA DE CAMPEONES 8', match: l => l.title.includes('M+ L. de Campeones 8') },
-  { remote: 'LIGA DE CAMPEONES 9', match: l => l.title.includes('M+ L. de Campeones 9') },
-  { remote: 'LIGA DE CAMPEONES 10', match: l => l.title.includes('M+ L. de Campeones 10') },
-  { remote: 'LIGA DE CAMPEONES 11', match: l => l.title.includes('M+ L. de Campeones 11') },
-  { remote: 'LIGA DE CAMPEONES 12', match: l => l.title.includes('M+ L. de Campeones 12') },
-  { remote: 'PRIMERA FEDERACION', match: l => l.title.includes('Primera Federación') },
-  { remote: 'M+ DEPORTES', match: l => l.title.includes('M+ Deportes (OPCIÓN') },
-  { remote: 'M+ DEPORTES 2', match: l => l.title.includes('M+ Deportes 2') },
-  { remote: 'M+ DEPORTES 3', match: l => l.title.includes('M+ Deportes 3') },
-  { remote: 'M+ DEPORTES 4', match: l => l.title.includes('M+ Deportes 4') },
-  { remote: 'M+ DEPORTES 5', match: l => l.title.includes('M+ Deportes 5') },
-  { remote: 'M+ DEPORTES 6', match: l => l.title.includes('M+ Deportes 6') },
-  { remote: 'M+ DEPORTES 7', match: l => l.title.includes('M+ Deportes 7') }
-];
+// Limpieza de variantes y normalización
+function cleanVariant(name) {
+  return name
+    .replace(/\b(FHD|HD|4K|SD|NEW\s*ERA|ELCANO|SPORT\s*TV)\b/gi, '')
+    .replace(/\s*-->\s*.*$/i, '')
+    .trim()
+    .replace(/\s{2,}/g, ' ')
+    .toUpperCase();
+}
 
 function parseRemoteList(text) {
   const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
@@ -81,66 +37,94 @@ function parseRemoteList(text) {
   for (let i = 0; i < lines.length - 1; i++) {
     const name = lines[i];
     const hash = lines[i + 1];
-    if (/^[0-9a-f]{40}$/i.test(hash)) {
+    // Acepta cualquier string de 40 caracteres (para debug de fuentes IPFS) y loguea los inválidos
+    if (typeof hash === 'string' && hash.length === 40) {
+      if (!/^[0-9a-f]{40}$/i.test(hash)) {
+        log(`[WARN] Hash no-hex detectado para ${name}: ${hash}`);
+      }
       entries.push({ name, hash: hash.toLowerCase() });
       i++;
+    } else if (hash && hash.length > 0) {
+      log(`[WARN] Hash descartado (longitud!=40): ${hash} para ${name}`);
     }
   }
   return entries;
 }
 
-function normalizeRemoteName(name) {
-  let base = name.replace(/\s*-->\s*.*$/i, '').trim();
-  base = base.replace(/\b(FHD|HD|4K|SD)\b/g, '').replace(/\s{2,}/g, ' ').trim().toUpperCase();
-  return base;
-}
 function idFromUrl(url) {
   const m = String(url).match(/acestream:\/\/([0-9a-f]{40})/i);
   return m ? m[1].toLowerCase() : null;
 }
-function buildRemoteIndex(entries) {
-  const idx = new Map();
+
+function buildRemoteBuckets(entries) {
+  const buckets = new Map();
   for (const e of entries) {
-    const key = normalizeRemoteName(e.name);
-    if (!idx.has(key)) idx.set(key, []);
-    idx.get(key).push(e.hash);
+    const key = cleanVariant(e.name);
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(e.hash);
   }
-  return idx;
+  return buckets;
 }
-function findHashForOption(remoteIndex, remoteBaseName, opcionNum) {
-  const matchingEntries = [];
-  for (const [key, hashes] of remoteIndex.entries()) {
-    if (key.includes(remoteBaseName)) {
-      matchingEntries.push(...hashes);
-    }
-  }
-  if (matchingEntries.length === 0) return null;
-  const idx = Math.max(0, opcionNum - 1);
-  return matchingEntries[idx] || matchingEntries[0];
-}
+
 function extractOpcionNumber(title) {
   const match = title.match(/OPCIÓN\s+(\d+)/i);
-  return match ? parseInt(match[1], 10) : 1;
+  return match ? parseInt(match[1], 10) : null;
 }
-function updateLinks(remoteIndex, links) {
-  const updated = [...links];
-  const cambios = [];
-  for (const matcher of canalMatchers) {
-    const canales = links.filter(matcher.match);
-    for (const canal of canales) {
-      const opcionNum = extractOpcionNumber(canal.title);
-      const hashRemoto = findHashForOption(remoteIndex, matcher.remote, opcionNum);
-      const actualId = idFromUrl(canal.url);
-      if (hashRemoto && actualId !== hashRemoto) {
-        const canalIndex = updated.findIndex(u => u.title === canal.title);
-        if (canalIndex !== -1) {
-          updated[canalIndex].url = `acestream://${hashRemoto}`;
-          cambios.push({ title: canal.title, from: actualId, to: hashRemoto });
-        }
+
+function getTitleBase(str) {
+  return str.replace(/\s*\(OPCIÓN\s+\d+\)$/, '').trim();
+}
+
+function reconcileGroup(remoteHashes, groupItems, baseTemplate) {
+  const updatedItems = [];
+  const changes = [];
+
+  const itemsWithIdx = groupItems
+    .map(item => ({
+      item,
+      idx: extractOpcionNumber(item.title) ?? 1,
+    }))
+    .sort((a, b) => a.idx - b.idx);
+
+  const targetCount = remoteHashes.length;
+
+  for (let i = 0; i < targetCount; i++) {
+    const idx = i + 1;
+    const hash = remoteHashes[i];
+    let existing = itemsWithIdx.find(x => x.idx === idx)?.item;
+
+    if (!existing) {
+      const titleBase = getTitleBase(baseTemplate.title);
+      existing = {
+        ...baseTemplate,
+        title: `${titleBase} (OPCIÓN ${idx})`,
+        url: `acestream://${hash}`,
+      };
+      updatedItems.push(existing);
+      changes.push({ title: existing.title, from: '(nuevo)', to: hash });
+    } else {
+      const prev = idFromUrl(existing.url);
+      if (prev !== hash) {
+        existing = { ...existing, url: `acestream://${hash}` };
+        changes.push({ title: existing.title, from: prev, to: hash });
       }
+      updatedItems.push(existing);
     }
   }
-  return { updated, cambios };
+
+  if (itemsWithIdx.length > targetCount) {
+    const toRemove = itemsWithIdx.slice(targetCount).map(x => x.item.title);
+    for (const name of toRemove) {
+      changes.push({
+        title: name,
+        from:
+          idFromUrl(groupItems.find(i => i.title === name)?.url) || '(vacío)',
+        to: '(eliminado)',
+      });
+    }
+  }
+
+  return { updated: updatedItems, changes };
 }
 
 async function main() {
@@ -148,22 +132,76 @@ async function main() {
     const links = JSON.parse(fs.readFileSync(LINKS_PATH, 'utf8'));
     const resp = await fetch(REMOTE_URL);
     const txt = await resp.text();
-    const entradas = parseRemoteList(txt);
-    const idx = buildRemoteIndex(entradas);
-    const { updated, cambios } = updateLinks(idx, links);
+    const entries = parseRemoteList(txt);
+    const remoteBuckets = buildRemoteBuckets(entries);
 
-    fs.writeFileSync(LINKS_PATH, JSON.stringify(updated, null, 2), 'utf8');
+    const nextLinks = [];
+    const allChanges = [];
 
-    let logMsg = `OK. Cambios: ${cambios.length}`;
-    if (cambios.length) {
-      logMsg += '\n' + cambios.map(c => `- ${c.title}: ${c.from || '(vacío)'} -> ${c.to}`).join('\n');
+    const groupNames = [
+      ...new Set(
+        links.map(l => cleanVariant(getTitleBase(l.title)))
+      ),
+    ];
+
+    for (const groupName of groupNames) {
+      const groupItems = links.filter(
+        l => cleanVariant(getTitleBase(l.title)) === groupName
+      );
+      if (groupItems.length === 0) continue;
+
+      const baseTemplate = {
+        ...groupItems[0],
+        title: getTitleBase(groupItems[0].title),
+      };
+
+      const remoteHashes = remoteBuckets.get(groupName) || [];
+      if (remoteHashes.length === 0) {
+        nextLinks.push(...groupItems);
+        continue;
+      }
+
+      const { updated, changes } = reconcileGroup(
+        remoteHashes,
+        groupItems,
+        baseTemplate
+      );
+      nextLinks.push(...updated);
+      allChanges.push(...changes);
     }
-    log(logMsg);
-    console.log(logMsg);
+
+    // Evita duplicados al final: compara por título base limpio
+    const addedBaseTitles = new Set(
+      nextLinks.map(x => cleanVariant(getTitleBase(x.title)))
+    );
+
+    const remaining = links.filter(
+      l => !addedBaseTitles.has(cleanVariant(getTitleBase(l.title)))
+    );
+
+    nextLinks.push(...remaining);
+
+    const oldContent = fs.existsSync(LINKS_PATH)
+      ? fs.readFileSync(LINKS_PATH, 'utf8')
+      : '';
+    const newContent = JSON.stringify(nextLinks, null, 2);
+
+    if (oldContent.trim() !== newContent.trim()) {
+      fs.writeFileSync(LINKS_PATH, newContent, 'utf8');
+    }
+
+    const resumen =
+      `OK. Cambios: ${allChanges.length}` +
+      (allChanges.length
+        ? '\n' + allChanges.map(c => `- ${c.title}: ${c.from} -> ${c.to}`).join('\n')
+        : '');
+    log(resumen);
+    console.log(resumen);
   } catch (e) {
     log('ERROR: ' + e.message);
     console.error(e);
     process.exit(1);
   }
 }
+
 main();
