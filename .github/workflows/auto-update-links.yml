@@ -29,45 +29,35 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Genera links.json actualizado
+      - name: Ejecuta actualización y log
         run: node scripts/actualizar_links.js
 
-      - name: Verifica ruta y hash del archivo
+      - name: ¿Hubo cambios en links.json?
+        id: changes
         run: |
-          echo "Listado de src/assets:"
-          ls -la src/assets || true
-          echo "Hash de links.json:"
-          sha1sum src/assets/links.json || true
-
-      - name: Muestra diff detectado por git
-        run: |
-          git status
-          echo "Diff de links.json:"
-          git --no-pager diff -- src/assets/links.json || true
-          echo "Porcelain count:"
-          git status --porcelain src/assets/links.json | wc -l
-
-      - name: Asegura tracking de links.json (si está untracked)
-        run: |
-          if [[ -n "$(git ls-files --others --exclude-standard src/assets/links.json)" ]]; then
-            echo "links.json está untracked; forzando add inicial"
-            git add -f src/assets/links.json
-            git commit -m "chore: start tracking links.json"
+          if git diff --name-only src/assets/links.json | grep -q 'links.json'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
           else
-            echo "links.json ya está trackeado"
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit y push con rebase (si hay cambios reales)
+      - name: Publica resumen GitHub Job Summary
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          echo "## Cambios en links.json" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f logs/summary.txt ]; then
+            sed 's/^/- /' logs/summary.txt >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- Sin resumen disponible." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Commit y push con rebase (si hay cambios)
+        if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          CHANGED=$(git diff --name-only src/assets/links.json)
-          if [[ "$CHANGED" == "src/assets/links.json" ]]; then
-            echo "Hay cambios en links.json; procediendo a commit"
-            git add src/assets/links.json
-            git commit -m "chore: auto-update links.json [skip ci]"
-            git pull --rebase origin master   # cambia a main si procede
-            git push
-          else
-            echo "No hay cambios en links.json según git diff; salto commit."
-          fi
+          git add src/assets/links.json
+          git commit -m "chore: auto-update links.json [skip ci]"
+          git pull --rebase origin master
+          git push

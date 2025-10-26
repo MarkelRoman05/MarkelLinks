@@ -37,7 +37,7 @@ function parseRemoteList(text) {
   for (let i = 0; i < lines.length - 1; i++) {
     const name = lines[i];
     const hash = lines[i + 1];
-    // Acepta cualquier string de 40 caracteres (para debug de fuentes IPFS) y loguea los inválidos
+    // Acepta cualquier string de 40 caracteres (para debug de fuentes IPFS) y loguea los inválidos.
     if (typeof hash === 'string' && hash.length === 40) {
       if (!/^[0-9a-f]{40}$/i.test(hash)) {
         log(`[WARN] Hash no-hex detectado para ${name}: ${hash}`);
@@ -186,10 +186,6 @@ async function main() {
       : '';
     const newContent = JSON.stringify(nextLinks, null, 2);
 
-    if (oldContent.trim() !== newContent.trim()) {
-      fs.writeFileSync(LINKS_PATH, newContent, 'utf8');
-    }
-
     const resumen =
       `OK. Cambios: ${allChanges.length}` +
       (allChanges.length
@@ -197,6 +193,14 @@ async function main() {
         : '');
     log(resumen);
     console.log(resumen);
+
+    // NUEVO: Escribe el resumen simple del run para notificación o email
+    try { fs.writeFileSync('logs/summary.txt', resumen, 'utf8'); } catch { }
+
+    // Sólo escribe si hay cambios reales
+    if (oldContent.trim() !== newContent.trim()) {
+      fs.writeFileSync(LINKS_PATH, newContent, 'utf8');
+    }
   } catch (e) {
     log('ERROR: ' + e.message);
     console.error(e);
