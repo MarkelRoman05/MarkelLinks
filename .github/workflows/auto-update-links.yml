@@ -58,6 +58,6 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add src/assets/links.json
-          git commit -m "chore: auto-update links.json [skip ci]"
+          git commit -m "Auto update links.json [GitHub Actions]"
           git pull --rebase origin master
           git push
