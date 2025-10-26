@@ -43,12 +43,6 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 8)",
-    "url": "acestream://cc9b7f5fe416069a2110da0909b0f915043c468b",
-    "tags": "movistar laliga",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
-  },
-  {
-    "title": "M+ LALIGA (OPCIÓN 9)",
     "url": "acestream://31c19ffb3472c289c5bbbbc174449c8ed0d19e38",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
@@ -266,6 +260,12 @@
   {
     "title": "Eurosport 1 (OPCIÓN 5)",
     "url": "acestream://d830c1dc3b74e74f79cbb823804cf2037857e78a",
+    "tags": "eurosport 1",
+    "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
+  },
+  {
+    "title": "Eurosport 1 (OPCIÓN 6)",
+    "url": "acestream://547ab7146a86d6119c9332c011669544720124e3",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
