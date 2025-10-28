@@ -23,12 +23,54 @@ const REMOTE_URL = 'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113
 
 // Limpieza de variantes y normalización
 function cleanVariant(name) {
-  return name
-    .replace(/\b(FHD|HD|4K|SD|NEW\s*ERA|ELCANO|SPORT\s*TV)\b/gi, '')
-    .replace(/\s*-->\s*.*$/i, '')
+  let cleaned = name
+    .replace(/\s*-->\s*.*$/i, '') // Elimina todo después de -->
+    .replace(/\b(FHD|HD|4K|SD|NEW\s*ERA|ELCANO|SPORT\s*TV|NEW\s*LOOP)\b/gi, '') // Elimina variantes de calidad y fuente
+    .replace(/\b(I{1,3}|VI|IV|V|II)\b/gi, '') // Elimina números romanos
+    .replace(/\([^)]*\)/g, '') // Elimina contenido entre paréntesis como (DE), (TR), (RU), etc.
+    .replace(/\[[^\]]*\]/g, '') // Elimina contenido entre corchetes como [UK], [US], etc.
     .trim()
     .replace(/\s{2,}/g, ' ')
     .toUpperCase();
+  
+  // Normaliza nombres específicos para que coincidan entre fuente remota y JSON local
+  cleaned = cleaned
+    // Liga de Campeones
+    .replace(/^M\+\s*L\.\s*DE\s*CAMPEONES/i, 'LIGA DE CAMPEONES')
+    .replace(/^LIGA\s+DE\s+CAMPEONES/i, 'LIGA DE CAMPEONES')
+    // LaLiga
+    .replace(/^M\+\s*LALIGA/i, 'M+ LALIGA')
+    // DAZN LaLiga (con o sin espacio)
+    .replace(/^DAZN\s*LA\s*LIGA/i, 'DAZN LALIGA')
+    // Movistar Plus
+    .replace(/^MOVISTAR\s*PLUS\+?/i, 'MOVISTAR PLUS+')
+    // Hypermotion
+    .replace(/^HYPERMOTION/i, 'LALIGA TV HYPERMOTION')
+    // Movistar Vamos
+    .replace(/^M\+\s*VAMOS/i, 'M+ VAMOS')
+    .replace(/^MOVISTAR\s*VAMOS/i, 'M+ VAMOS')
+    // Movistar Deportes
+    .replace(/^M\+\s*DEPORTES/i, 'M+ DEPORTES')
+    .replace(/^MOVISTAR\s*DEPORTES/i, 'M+ DEPORTES')
+    // Movistar Ellas
+    .replace(/^M\+\s*ELLAS\s*VAMOS/i, 'M+ ELLAS VAMOS')
+    .replace(/^MOVISTAR\s*ELLAS/i, 'M+ ELLAS VAMOS')
+    // Movistar Golf
+    .replace(/^M\+\s*GOLF/i, 'M+ GOLF')
+    .replace(/^MOVISTAR\s*GOLF/i, 'M+ GOLF')
+    // DAZN F1
+    .replace(/^DAZN\s*F1/i, 'DAZN F1')
+    // Eurosport
+    .replace(/^EUROSPORT\s+(\d+)/i, 'EUROSPORT $1')
+    // Tennis Channel
+    .replace(/^TENNIS\s+CHANNEL/i, 'TENNIS CHANNEL')
+    // GOL
+    .replace(/^GOL\s+PLAY/i, 'GOL')
+    // Rally TV
+    .replace(/^RALLY\s+TV/i, 'RALLY TV')
+    .trim();
+  
+  return cleaned;
 }
 
 function parseRemoteList(text) {
@@ -103,10 +145,20 @@ function reconcileGroup(remoteHashes, groupItems, baseTemplate) {
       updatedItems.push(existing);
       changes.push({ title: existing.title, from: '(nuevo)', to: hash });
     } else {
+      const titleBase = getTitleBase(existing.title);
       const prev = idFromUrl(existing.url);
+      
+      // Si hay múltiples opciones (targetCount > 1), asegurar que todas tengan el sufijo "(OPCIÓN X)"
+      const newTitle = targetCount > 1 ? `${titleBase} (OPCIÓN ${idx})` : titleBase;
+      
       if (prev !== hash) {
-        existing = { ...existing, url: `acestream://${hash}` };
-        changes.push({ title: existing.title, from: prev, to: hash });
+        existing = { ...existing, url: `acestream://${hash}`, title: newTitle };
+        changes.push({ title: newTitle, from: prev, to: hash });
+      } else if (existing.title !== newTitle) {
+        // Si no cambió el hash pero sí el título (se añadió "(OPCIÓN X)")
+        existing = { ...existing, title: newTitle };
+      } else {
+        existing = { ...existing };
       }
       updatedItems.push(existing);
     }
