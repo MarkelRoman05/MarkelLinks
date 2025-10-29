@@ -10,6 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import emailjs from '@emailjs/browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
+import { environment } from '../environments/enviroment';
 
 declare global {
   interface Window {
@@ -63,13 +64,13 @@ export class AppComponent {
     const repo = 'AcestreamLinks';
     const branch = 'master';
 
-    const token = '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';
+    const gitHubToken = environment.gitHubToken;
 
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
 
     // Configurar los headers para la autenticación
     const headers = {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${gitHubToken}`,
       Accept: 'application/vnd.github.v3+json',
     };
 
