@@ -643,13 +643,12 @@ html {
   background: rgba(17, 24, 39, 0.5);
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #3b82f6;
 }
 
 .provider-header {
   color: #fff;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 600;
   margin-bottom: 7px;
   text-align: center;

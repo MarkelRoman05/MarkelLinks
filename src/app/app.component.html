@@ -338,6 +338,12 @@
   <div class="links-container" *ngIf="filteredLinks.length > 0">
     <div *ngFor="let provider of providers" class="provider-section">
       <h4 class="provider-header">
+        <img 
+          [src]="getProviderImage(provider)" 
+          [alt]="provider"
+          class="provider-logo"
+          style="height: 35px; width: auto; margin-right: 12px; vertical-align: middle; object-fit: contain;"
+        />
         {{ provider }}
         <span
           style="
@@ -349,10 +355,7 @@
           >({{ groupedLinks[provider].length }})</span
         >
       </h4>
-      <div
-        class="mini-separator"
-        style="margin-bottom: 6px; margin-top: 0px"
-      ></div>
+     
       <ul class="provider-links">
         <li class="links" *ngFor="let link of groupedLinks[provider]">
           <a

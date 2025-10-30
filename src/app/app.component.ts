@@ -53,6 +53,22 @@ export class AppComponent {
   lastUpdate: string = '';
   links: any[] = [];
 
+  // Mapeo de imágenes para cada provider
+  providerImages: { [key: string]: string } = {
+    'Movistar+ LaLiga': '/images/M++LALIGA.png',
+    'DAZN LaLiga': '/images/DAZN+LALIGA.png',
+    'Movistar+ Champions': 'https://mir-s3-cdn-cf.behance.net/project_modules/max_632/d6297891682131.5e3864b00f466.png',
+    'Canales lineales DAZN': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/DAZN_Logo_Chalk.svg/480px-DAZN_Logo_Chalk.svg.png',
+    'DAZN FÓRMULA 1': 'https://logos-world.net/wp-content/uploads/2023/12/F1-Logo.png',
+    'Movistar+ Otros': 'https://comunicacion.movistarplus.es/wp-content/uploads/2020/10/MOVISTAR-logo-footer-ndp.png',
+    'Eurosport': 'https://cdn-1.webcatalog.io/catalog/eurosport/eurosport-icon-filled-256.png?v=1714774288533',
+    'LaLiga Hypermotion': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LaLiga_Hypermotion_2023_Vertical_Logo.svg/2335px-LaLiga_Hypermotion_2023_Vertical_Logo.svg.png',
+    'Movistar+ Vamos': 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/VAMOSD.png',
+    'Movistar+ Golf': 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOLF.png',
+    'Otros deportes': '/images/balon.png',
+    'TDT': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/TDT_wordmark.svg/1344px-TDT_wordmark.svg.png'
+  };
+
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {
     window.clarity('consent');
     this.getLastCommitDate();
@@ -383,6 +399,13 @@ export class AppComponent {
    */
   getDisplayedChannels(): number {
     return this.filteredLinks.length;
+  }
+
+  /**
+   * Obtiene la imagen del provider
+   */
+  getProviderImage(provider: string): string {
+    return this.providerImages[provider] || '/images/balon.png';
   }
 
   /**
