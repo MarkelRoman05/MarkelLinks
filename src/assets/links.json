@@ -655,18 +655,12 @@
   },
   {
     "title": "La 1 (OPCIÓN 1)",
-    "url": "acestream://6a54f8fb00406c88f68ac3f3aabc7d084f9573d0",
-    "tags": "la 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"
-  },
-  {
-    "title": "La 1 (OPCIÓN 2)",
     "url": "acestream://dad5e0e0825cb3e410008f1c4252387b868e740c",
     "tags": "la 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"
   },
   {
-    "title": "La 1 (OPCIÓN 3)",
+    "title": "La 1 (OPCIÓN 2)",
     "url": "acestream://7597d4feb3195079ffa606cf23a183d626ee40ba",
     "tags": "la 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"
@@ -704,6 +698,12 @@
   {
     "title": "Tennis Channel (OPCIÓN 3)",
     "url": "acestream://aa31953b8af44b461102852d5b1247eea95b8050",
+    "tags": "tennis channel",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
+  },
+  {
+    "title": "Tennis Channel (OPCIÓN 4)",
+    "url": "acestream://8091334c82e8720fc6aa05ff0bd6d343c5bfecbf",
     "tags": "tennis channel",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
   },
