@@ -967,60 +967,78 @@
   },
   {
     "title": "M+ Deportes 3 (OPCIÓN 1)",
-    "url": "acestream://29d786d72d4b53dbc333af3a50f8fb021aa0296f",
+    "url": "acestream://753d4b1f7c4ef43238b5cf23b05572b550a44eee",
     "tags": "movistar deportes 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/USOP2.png"
   },
   {
     "title": "M+ Deportes 3 (OPCIÓN 2)",
-    "url": "acestream://799c6b5ee1cf41af077d14e3f9c45a32697eb903",
+    "url": "acestream://29d786d72d4b53dbc333af3a50f8fb021aa0296f",
     "tags": "movistar deportes 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/USOP2.png"
   },
   {
     "title": "M+ Deportes 3 (OPCIÓN 3)",
-    "url": "acestream://2fd410c5d89e7a627cd3785685b7915b8e4bd534",
+    "url": "acestream://799c6b5ee1cf41af077d14e3f9c45a32697eb903",
     "tags": "movistar deportes 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/USOP2.png"
   },
   {
     "title": "M+ Deportes 3 (OPCIÓN 4)",
+    "url": "acestream://2fd410c5d89e7a627cd3785685b7915b8e4bd534",
+    "tags": "movistar deportes 3",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/USOP2.png"
+  },
+  {
+    "title": "M+ Deportes 3 (OPCIÓN 5)",
     "url": "acestream://39fefdecfc953dcf6e7c589739bf486c2e605ed0",
     "tags": "movistar deportes 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/USOP2.png"
   },
   {
     "title": "M+ Deportes 4 (OPCIÓN 1)",
-    "url": "acestream://37825883ed185365e3194a79207347f6c7bd5ba5",
+    "url": "acestream://58a4c880ab18486d914751db32a12760e74b75a4",
     "tags": "movistar deportes 4",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP3.png"
   },
   {
     "title": "M+ Deportes 4 (OPCIÓN 2)",
-    "url": "acestream://b40e1de2dcbd7c665f54877b14c830ed67b32a96",
+    "url": "acestream://37825883ed185365e3194a79207347f6c7bd5ba5",
     "tags": "movistar deportes 4",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP3.png"
   },
   {
     "title": "M+ Deportes 4 (OPCIÓN 3)",
+    "url": "acestream://b40e1de2dcbd7c665f54877b14c830ed67b32a96",
+    "tags": "movistar deportes 4",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP3.png"
+  },
+  {
+    "title": "M+ Deportes 4 (OPCIÓN 4)",
     "url": "acestream://8b5f9d967384afab226dd759e6e9dfaee9993869",
     "tags": "movistar deportes 4",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP3.png"
   },
   {
     "title": "M+ Deportes 5 (OPCIÓN 1)",
-    "url": "acestream://6dc4ac4eeae18e9daec433b01db82435cf84c57c",
+    "url": "acestream://5913205fb6d6d162a50222709aab6129eb7cf916",
     "tags": "movistar deportes 5",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP11.png"
   },
   {
     "title": "M+ Deportes 5 (OPCIÓN 2)",
-    "url": "acestream://7b361369a40046ad3011086f9d4ae2982fb4d5aa",
+    "url": "acestream://6dc4ac4eeae18e9daec433b01db82435cf84c57c",
     "tags": "movistar deportes 5",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP11.png"
   },
   {
     "title": "M+ Deportes 5 (OPCIÓN 3)",
+    "url": "acestream://7b361369a40046ad3011086f9d4ae2982fb4d5aa",
+    "tags": "movistar deportes 5",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP11.png"
+  },
+  {
+    "title": "M+ Deportes 5 (OPCIÓN 4)",
     "url": "acestream://3230cdca852a10325222e3c546e499e31d547a90",
     "tags": "movistar deportes 5",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/USOP11.png"
