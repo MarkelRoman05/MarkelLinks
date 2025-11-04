@@ -79,15 +79,15 @@ function parseRemoteList(text) {
   for (let i = 0; i < lines.length - 1; i++) {
     const name = lines[i];
     const hash = lines[i + 1];
-    // Acepta cualquier string de 40 caracteres (para debug de fuentes IPFS) y loguea los inválidos.
-    if (typeof hash === 'string' && hash.length === 40) {
-      if (!/^[0-9a-f]{40}$/i.test(hash)) {
-        log(`[WARN] Hash no-hex detectado para ${name}: ${hash}`);
-      }
+    // Solo acepta hashes hexadecimales válidos de 40 caracteres
+    if (typeof hash === 'string' && hash.length === 40 && /^[0-9a-f]{40}$/i.test(hash)) {
       entries.push({ name, hash: hash.toLowerCase() });
       i++;
+    } else if (hash && hash.length === 40) {
+      log(`[WARN] Hash no-hexadecimal rechazado para ${name}: ${hash}`);
+      i++; // Saltar el hash inválido
     } else if (hash && hash.length > 0) {
-      log(`[WARN] Hash descartado (longitud!=40): ${hash} para ${name}`);
+      log(`[WARN] Hash descartado (longitud!=40) para ${name}: ${hash}`);
     }
   }
   return entries;
@@ -188,6 +188,10 @@ async function main() {
     log(`Links locales cargados: ${links.length} items`);
     console.log(`Links locales cargados: ${links.length} items`);
     
+    // Añadir timestamp a la URL para evitar caché HTTP
+    const cacheBuster = `?t=${Date.now()}`;
+    const urlWithCacheBuster = REMOTE_URL + cacheBuster;
+    
     log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
@@ -195,7 +199,14 @@ async function main() {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
     
-    const resp = await fetch(REMOTE_URL, { signal: controller.signal });
+    const resp = await fetch(urlWithCacheBuster, { 
+      signal: controller.signal,
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
+    });
     clearTimeout(timeoutId);
     
     log(`Fetch status: ${resp.status} ${resp.statusText}`);
@@ -209,15 +220,25 @@ async function main() {
     log(`Texto remoto descargado: ${txt.length} caracteres`);
     console.log(`Texto remoto descargado: ${txt.length} caracteres`);
     
+    // Advertencia si el texto parece demasiado pequeño
+    if (txt.length < 25000) {
+      log(`[WARN] El texto descargado parece incompleto (${txt.length} caracteres). Puede ser una versión en caché desactualizada.`);
+      console.warn(`[WARN] El texto descargado parece incompleto (${txt.length} caracteres). Puede ser una versión en caché desactualizada.`);
+    }
+    
     const entries = parseRemoteList(txt);
-    log(`Entries parseadas: ${entries.length}`);
-    console.log(`Entries parseadas: ${entries.length}`);
+    log(`Entries parseadas: ${entries.length} (válidas), warnings en el log para las inválidas`);
+    console.log(`Entries parseadas: ${entries.length} (válidas), warnings en el log para las inválidas`);
     
     const remoteBuckets = buildRemoteBuckets(entries);
     log(`Buckets remotos creados: ${remoteBuckets.size}`);
     console.log(`Buckets remotos creados: ${remoteBuckets.size}`);
-
-    const nextLinks = [];
+    
+    // Advertencia si hay muy pocos buckets
+    if (remoteBuckets.size < 200) {
+      log(`[WARN] Se esperaban al menos 200 buckets, pero solo se encontraron ${remoteBuckets.size}. Los datos pueden estar incompletos.`);
+      console.warn(`[WARN] Se esperaban al menos 200 buckets, pero solo se encontraron ${remoteBuckets.size}. Los datos pueden estar incompletos.`);
+    }
     const allChanges = [];
 
     const groupNames = [
