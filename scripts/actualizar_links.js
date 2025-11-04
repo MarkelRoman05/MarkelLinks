@@ -207,7 +207,7 @@ async function main() {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
-        resp = await fetch(url, { 
+        resp = await fetch(`${url}?t=${Date.now()}`, { 
           signal: controller.signal
         });
         clearTimeout(timeoutId);
