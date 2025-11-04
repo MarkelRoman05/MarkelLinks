@@ -188,8 +188,8 @@ async function main() {
     log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
-    const TIMEOUT_MS = 120000; // 120 segundos (2 minutos)
-    const MAX_RETRIES = 2;
+    const TIMEOUT_MS = 300000; // 300 segundos (5 minutos)
+    const MAX_RETRIES = 5;
     let resp = null;
     let lastError = null;
     
