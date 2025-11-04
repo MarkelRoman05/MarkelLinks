@@ -191,9 +191,9 @@ async function main() {
     log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
-    // Añadir timeout de 30 segundos al fetch
+    const TIMEOUT_MS = 60000; // 60 segundos
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 30000);
+    const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
     
     const resp = await fetch(REMOTE_URL, { signal: controller.signal });
     clearTimeout(timeoutId);
