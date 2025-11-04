@@ -188,32 +188,68 @@ async function main() {
     log(`Links locales cargados: ${links.length} items`);
     console.log(`Links locales cargados: ${links.length} items`);
     
-    // Añadir timestamp a la URL para evitar caché HTTP
-    const cacheBuster = `?t=${Date.now()}`;
-    const urlWithCacheBuster = REMOTE_URL + cacheBuster;
-    
     log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
     const TIMEOUT_MS = 60000; // 60 segundos
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    const MAX_RETRIES = 2;
+    let resp = null;
+    let lastError = null;
     
-    const resp = await fetch(urlWithCacheBuster, { 
-      signal: controller.signal,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache',
-        'Expires': '0'
+    // Reintentar hasta 2 veces
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const cacheBuster = `?t=${Date.now()}`;
+        const url = REMOTE_URL + cacheBuster;
+        
+        if (attempt > 1) {
+          log(`Reintento ${attempt}/${MAX_RETRIES}...`);
+          console.log(`Reintento ${attempt}/${MAX_RETRIES}...`);
+        }
+        
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
+        
+        resp = await fetch(url, { 
+          signal: controller.signal,
+          headers: {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0'
+          }
+        });
+        clearTimeout(timeoutId);
+        
+        log(`Fetch status: ${resp.status} ${resp.statusText}`);
+        console.log(`Fetch status: ${resp.status} ${resp.statusText}`);
+        
+        if (resp.ok) {
+          break; // Éxito, salir del bucle
+        } else {
+          lastError = new Error(`HTTP error! status: ${resp.status}`);
+          log(`✗ Error: ${lastError.message}`);
+          console.log(`✗ Error: ${lastError.message}`);
+        }
+      } catch (err) {
+        lastError = err;
+        const errorMsg = err.name === 'AbortError' ? 'Timeout' : err.message;
+        log(`✗ Error: ${errorMsg}`);
+        console.log(`✗ Error: ${errorMsg}`);
       }
-    });
-    clearTimeout(timeoutId);
+      
+      // Esperar 3 segundos antes del siguiente intento (excepto en el último)
+      if (attempt < MAX_RETRIES && (!resp || !resp.ok)) {
+        log('Esperando 3 segundos antes del siguiente intento...');
+        console.log('Esperando 3 segundos antes del siguiente intento...');
+        await new Promise(resolve => setTimeout(resolve, 3000));
+      }
+    }
     
-    log(`Fetch status: ${resp.status} ${resp.statusText}`);
-    console.log(`Fetch status: ${resp.status} ${resp.statusText}`);
-    
-    if (!resp.ok) {
-      throw new Error(`HTTP error! status: ${resp.status}`);
+    if (!resp || !resp.ok) {
+      const errorMsg = lastError 
+        ? `Falló después de ${MAX_RETRIES} intentos. Último error: ${lastError.message}` 
+        : 'No se pudo conectar al servidor IPFS';
+      throw new Error(errorMsg);
     }
     
     const txt = await resp.text();
@@ -239,6 +275,8 @@ async function main() {
       log(`[WARN] Se esperaban al menos 200 buckets, pero solo se encontraron ${remoteBuckets.size}. Los datos pueden estar incompletos.`);
       console.warn(`[WARN] Se esperaban al menos 200 buckets, pero solo se encontraron ${remoteBuckets.size}. Los datos pueden estar incompletos.`);
     }
+    
+    const nextLinks = [];
     const allChanges = [];
 
     const groupNames = [
