@@ -208,12 +208,7 @@ async function main() {
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
         resp = await fetch(url, { 
-          signal: controller.signal,
-          headers: {
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache',
-            'Expires': '0'
-          }
+          signal: controller.signal
         });
         clearTimeout(timeoutId);
         
