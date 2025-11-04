@@ -181,11 +181,41 @@ function reconcileGroup(remoteHashes, groupItems, baseTemplate) {
 
 async function main() {
   try {
+    log('Iniciando actualización de links...');
+    console.log('Iniciando actualización de links...');
+    
     const links = JSON.parse(fs.readFileSync(LINKS_PATH, 'utf8'));
-    const resp = await fetch(REMOTE_URL);
+    log(`Links locales cargados: ${links.length} items`);
+    console.log(`Links locales cargados: ${links.length} items`);
+    
+    log(`Fetching remote URL: ${REMOTE_URL}`);
+    console.log(`Fetching remote URL: ${REMOTE_URL}`);
+    
+    // Añadir timeout de 30 segundos al fetch
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 30000);
+    
+    const resp = await fetch(REMOTE_URL, { signal: controller.signal });
+    clearTimeout(timeoutId);
+    
+    log(`Fetch status: ${resp.status} ${resp.statusText}`);
+    console.log(`Fetch status: ${resp.status} ${resp.statusText}`);
+    
+    if (!resp.ok) {
+      throw new Error(`HTTP error! status: ${resp.status}`);
+    }
+    
     const txt = await resp.text();
+    log(`Texto remoto descargado: ${txt.length} caracteres`);
+    console.log(`Texto remoto descargado: ${txt.length} caracteres`);
+    
     const entries = parseRemoteList(txt);
+    log(`Entries parseadas: ${entries.length}`);
+    console.log(`Entries parseadas: ${entries.length}`);
+    
     const remoteBuckets = buildRemoteBuckets(entries);
+    log(`Buckets remotos creados: ${remoteBuckets.size}`);
+    console.log(`Buckets remotos creados: ${remoteBuckets.size}`);
 
     const nextLinks = [];
     const allChanges = [];
@@ -252,10 +282,21 @@ async function main() {
     // Sólo escribe si hay cambios reales
     if (oldContent.trim() !== newContent.trim()) {
       fs.writeFileSync(LINKS_PATH, newContent, 'utf8');
+      log('Archivo links.json actualizado correctamente');
+      console.log('Archivo links.json actualizado correctamente');
+    } else {
+      log('Sin cambios en el contenido del archivo');
+      console.log('Sin cambios en el contenido del archivo');
     }
   } catch (e) {
-    log('ERROR: ' + e.message);
-    console.error(e);
+    if (e.name === 'AbortError') {
+      log('ERROR: Timeout al intentar descargar los links remotos (30s)');
+      console.error('ERROR: Timeout al intentar descargar los links remotos (30s)');
+    } else {
+      log('ERROR: ' + e.message);
+      console.error('ERROR:', e.message);
+      console.error(e.stack);
+    }
     process.exit(1);
   }
 }
