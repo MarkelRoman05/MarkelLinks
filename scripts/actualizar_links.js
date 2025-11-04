@@ -83,11 +83,8 @@ function parseRemoteList(text) {
     if (typeof hash === 'string' && hash.length === 40 && /^[0-9a-f]{40}$/i.test(hash)) {
       entries.push({ name, hash: hash.toLowerCase() });
       i++;
-    } else if (hash && hash.length === 40) {
-      log(`[WARN] Hash no-hexadecimal rechazado para ${name}: ${hash}`);
-      i++; // Saltar el hash inválido
     } else if (hash && hash.length > 0) {
-      log(`[WARN] Hash descartado (longitud!=40) para ${name}: ${hash}`);
+      log(`[WARN] Hash descartado para ${name}: ${hash} (longitud: ${hash.length})`);
     }
   }
   return entries;
@@ -191,7 +188,7 @@ async function main() {
     log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
-    const TIMEOUT_MS = 60000; // 60 segundos
+    const TIMEOUT_MS = 120000; // 120 segundos (2 minutos)
     const MAX_RETRIES = 2;
     let resp = null;
     let lastError = null;
