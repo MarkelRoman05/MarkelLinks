@@ -207,19 +207,14 @@ async function main() {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
-        const options = {
+        resp = await fetch(url, { 
           signal: controller.signal,
-        };
-
-        if (attempt > 1) {
-          options.headers = {
+          headers: {
             'Cache-Control': 'no-cache, no-store, must-revalidate',
             'Pragma': 'no-cache',
-            'Expires': '0',
-          };
-        }
-
-        resp = await fetch(url, options);
+            'Expires': '0'
+          }
+        });
         clearTimeout(timeoutId);
         
         log(`Fetch status: ${resp.status} ${resp.statusText}`);
