@@ -58,6 +58,30 @@ function cleanVariant(name) {
     // Movistar Golf
     .replace(/^M\+\s*GOLF/i, 'M+ GOLF')
     .replace(/^MOVISTAR\s*GOLF/i, 'M+ GOLF')
+    // Movistar Acción
+    .replace(/^M\+\s*ACCI[ÓO]N/i, 'M+ ACCIÓN')
+    .replace(/^MOVISTAR\s*ACCI[ÓO]N/i, 'M+ ACCIÓN')
+    // Movistar Cine Español
+    .replace(/^M\+\s*CINE\s*ESPA[ÑN]OL/i, 'M+ CINE ESPAÑOL')
+    .replace(/^MOVISTAR\s*CINE\s*ESPA[ÑN]OL/i, 'M+ CINE ESPAÑOL')
+    // Movistar Clásicos
+    .replace(/^M\+\s*CL[ÁA]SICOS/i, 'M+ CLÁSICOS')
+    .replace(/^MOVISTAR\s*CL[ÁA]SICOS/i, 'M+ CLÁSICOS')
+    // Movistar Comedia
+    .replace(/^M\+\s*COMEDIA/i, 'M+ COMEDIA')
+    .replace(/^MOVISTAR\s*COMEDIA/i, 'M+ COMEDIA')
+    // Movistar Documentales
+    .replace(/^M\+\s*DOCUMENTALES/i, 'M+ DOCUMENTALES')
+    .replace(/^MOVISTAR\s*DOCUMENTALES/i, 'M+ DOCUMENTALES')
+    // Movistar Drama
+    .replace(/^M\+\s*DRAMA/i, 'M+ DRAMA')
+    .replace(/^MOVISTAR\s*DRAMA/i, 'M+ DRAMA')
+    // Movistar Estrenos
+    .replace(/^M\+\s*ESTRENOS/i, 'M+ ESTRENOS')
+    .replace(/^MOVISTAR\s*ESTRENOS/i, 'M+ ESTRENOS')
+    // Movistar Originales
+    .replace(/^M\+\s*ORIGINALES/i, 'M+ ORIGINALES')
+    .replace(/^MOVISTAR\s*ORIGINALES/i, 'M+ ORIGINALES')
     // DAZN F1
     .replace(/^DAZN\s*F1/i, 'DAZN F1')
     // Eurosport

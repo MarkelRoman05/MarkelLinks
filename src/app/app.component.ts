@@ -63,8 +63,7 @@ export class AppComponent {
     'Movistar+ Otros': 'https://comunicacion.movistarplus.es/wp-content/uploads/2020/10/MOVISTAR-logo-footer-ndp.png',
     'Eurosport': 'https://cdn-1.webcatalog.io/catalog/eurosport/eurosport-icon-filled-256.png?v=1714774288533',
     'LaLiga Hypermotion': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LaLiga_Hypermotion_2023_Vertical_Logo.svg/2335px-LaLiga_Hypermotion_2023_Vertical_Logo.svg.png',
-    'Movistar+ Vamos': 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/VAMOSD.png',
-    'Movistar+ Golf': 'https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOLF.png',
+    'Movistar+ Cine, Documentales y Series': 'https://comunicacion.movistarplus.es/wp-content/uploads/2020/10/MOVISTAR-logo-footer-ndp.png',
     'Otros deportes': '/images/balon.png',
     'TDT': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/TDT_wordmark.svg/1344px-TDT_wordmark.svg.png'
   };
@@ -145,9 +144,8 @@ export class AppComponent {
       'Movistar+ Otros',
       'Eurosport',
       'LaLiga Hypermotion',
-      'Movistar+ Vamos',
-      'Movistar+ Golf',
       'Otros deportes',
+      'Movistar+ Cine, Documentales y Series',
       'TDT',
     ];
 
@@ -346,6 +344,7 @@ export class AppComponent {
       { name: 'DAZN FÓRMULA 1', pattern: /dazn f1/i },
       { name: 'Canales lineales DAZN', pattern: /dazn [0-9]/i },
       { name: 'Eurosport', pattern: /eurosport/i },
+      { name: 'Movistar+ Cine, Documentales y Series', pattern: /movistar (cine|acción|clásicos|clasicos|comedia|documentales|drama|estrenos|originales|cine español|español)/i },
       { name: 'TDT', pattern: /la [0-9]/i },
       { name: 'Otros deportes', pattern: /tennis|rally|nba|ufc|bein|gol/i },
     ];
