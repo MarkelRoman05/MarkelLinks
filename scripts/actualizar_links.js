@@ -188,12 +188,12 @@ async function main() {
     log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
-    const TIMEOUT_MS = 300000; // 300 segundos (5 minutos)
-    const MAX_RETRIES = 6;
+    const TIMEOUT_MS = 30000;
+    const MAX_RETRIES = 7;
     let resp = null;
     let lastError = null;
-    
-    // Reintentar hasta 10 veces
+    let wait_time_ms = 3000;
+
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
         const cacheBuster = `?t=${Date.now()}`;
@@ -232,11 +232,12 @@ async function main() {
         console.log(`✗ Error: ${errorMsg}`);
       }
       
-      // Esperar 3 segundos antes del siguiente intento (excepto en el último)
+      // Esperar antes del siguiente intento (excepto en el último)
       if (attempt < MAX_RETRIES && (!resp || !resp.ok)) {
-        log('Esperando 3 segundos antes del siguiente intento...');
-        console.log('Esperando 3 segundos antes del siguiente intento...');
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        log(`Esperando ${wait_time_ms / 1000} segundos antes del siguiente intento...`);
+        console.log(`Esperando ${wait_time_ms / 1000} segundos antes del siguiente intento...`);
+        await new Promise(resolve => setTimeout(resolve, wait_time_ms));
+        wait_time_ms *= 2; // Duplicar el tiempo de espera para el próximo reintento
       }
     }
     
