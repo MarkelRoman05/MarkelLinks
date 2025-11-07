@@ -189,11 +189,11 @@ async function main() {
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
     const TIMEOUT_MS = 300000; // 300 segundos (5 minutos)
-    const MAX_RETRIES = 5;
+    const MAX_RETRIES = 6;
     let resp = null;
     let lastError = null;
     
-    // Reintentar hasta 2 veces
+    // Reintentar hasta 10 veces
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
         const cacheBuster = `?t=${Date.now()}`;
@@ -208,7 +208,10 @@ async function main() {
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
         resp = await fetch(`${url}?t=${Date.now()}`, { 
-          signal: controller.signal
+          signal: controller.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36'
+          }
         });
         clearTimeout(timeoutId);
         
