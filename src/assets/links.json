@@ -37,6 +37,12 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 7)",
+    "url": "acestream://cc9b7f5fe416069a2110da0909b0f915043c468b",
+    "tags": "movistar laliga",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
+  },
+  {
+    "title": "M+ LALIGA (OPCIÓN 8)",
     "url": "acestream://31c19ffb3472c289c5bbbbc174449c8ed0d19e38",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
@@ -223,24 +229,12 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 15)",
-    "url": "acestream://8272d1ed95cdd8945c248ce488fa26bd435fb71f",
-    "tags": "dazn f1 formula 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
-  },
-  {
-    "title": "DAZN F1 (OPCIÓN 16)",
-    "url": "acestream://8272d1ed95cdd8945c248ce488fa26bd435fb71f",
-    "tags": "dazn f1 formula 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
-  },
-  {
-    "title": "DAZN F1 (OPCIÓN 17)",
     "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 18)",
+    "title": "DAZN F1 (OPCIÓN 16)",
     "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
