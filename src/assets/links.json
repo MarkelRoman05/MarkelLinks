@@ -223,12 +223,24 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 15)",
-    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "url": "acestream://8272d1ed95cdd8945c248ce488fa26bd435fb71f",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
     "title": "DAZN F1 (OPCIÓN 16)",
+    "url": "acestream://8272d1ed95cdd8945c248ce488fa26bd435fb71f",
+    "tags": "dazn f1 formula 1",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
+  },
+  {
+    "title": "DAZN F1 (OPCIÓN 17)",
+    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "tags": "dazn f1 formula 1",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
+  },
+  {
+    "title": "DAZN F1 (OPCIÓN 18)",
     "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
@@ -265,12 +277,18 @@
   },
   {
     "title": "Eurosport 1 (OPCIÓN 6)",
-    "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
+    "url": "acestream://547ab7146a86d6119c9332c011669544720124e3",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
     "title": "Eurosport 1 (OPCIÓN 7)",
+    "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
+    "tags": "eurosport 1",
+    "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
+  },
+  {
+    "title": "Eurosport 1 (OPCIÓN 8)",
     "url": "acestream://1b0bc4d4dcd609d3c092712e721392b199f50a62",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
