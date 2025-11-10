@@ -19,7 +19,7 @@ function log(msg) {
 }
 
 const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
-const REMOTE_URL = 'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/listaplana.txt';
+const REMOTE_URL = 'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u';
 
 // Limpieza de variantes y normalización
 function cleanVariant(name) {
@@ -98,19 +98,42 @@ function cleanVariant(name) {
 }
 
 function parseRemoteList(text) {
-  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  const lines = text.split(/\r?\n/).map(l => l.trim());
   const entries = [];
-  for (let i = 0; i < lines.length - 1; i++) {
-    const name = lines[i];
-    const hash = lines[i + 1];
-    // Solo acepta hashes hexadecimales válidos de 40 caracteres
-    if (typeof hash === 'string' && hash.length === 40 && /^[0-9a-f]{40}$/i.test(hash)) {
-      entries.push({ name, hash: hash.toLowerCase() });
-      i++;
-    } else if (hash && hash.length > 0) {
-      log(`[WARN] Hash descartado para ${name}: ${hash} (longitud: ${hash.length})`);
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Buscar líneas que comiencen con #EXTINF
+    if (line.startsWith('#EXTINF')) {
+      // Extraer el nombre del canal (después de la última coma)
+      const lastCommaIndex = line.lastIndexOf(',');
+      if (lastCommaIndex === -1) continue;
+      
+      const name = line.substring(lastCommaIndex + 1).trim();
+      if (!name) continue;
+      
+      // La siguiente línea no vacía debe contener el hash de acestream
+      let hashLine = '';
+      for (let j = i + 1; j < lines.length; j++) {
+        if (lines[j].trim() !== '') {
+          hashLine = lines[j].trim();
+          i = j; // Avanzar el índice principal
+          break;
+        }
+      }
+      
+      // Extraer el hash del formato acestream://HASH
+      const aceMatch = hashLine.match(/acestream:\/\/([0-9a-f]{40})/i);
+      if (aceMatch) {
+        const hash = aceMatch[1].toLowerCase();
+        entries.push({ name, hash });
+      } else if (hashLine && hashLine.length > 0) {
+        log(`[WARN] Hash descartado para ${name}: ${hashLine}`);
+      }
     }
   }
+  
   return entries;
 }
 
