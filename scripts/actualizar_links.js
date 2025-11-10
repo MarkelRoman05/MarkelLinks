@@ -9,17 +9,11 @@ const __dirname = dirname(__filename);
 const PROJECT_ROOT = path.join(__dirname, '..');
 
 const LOG_DIR = path.join(PROJECT_ROOT, 'logs');
-const LOG_FILE = 'actualizar_links.log';
-const LOG_PATH = path.join(LOG_DIR, LOG_FILE);
-if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
-
-function log(msg) {
-  const now = new Date().toISOString().replace('T',' ').slice(0,19);
-  fs.appendFileSync(LOG_PATH, `[${now}] ${msg}\n`, 'utf8');
-}
-
 const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
 const REMOTE_URL = 'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u';
+
+// Asegurar que existe el directorio logs para el resumen
+if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
 
 // Limpieza de variantes y normalización
 function cleanVariant(name) {
@@ -128,8 +122,6 @@ function parseRemoteList(text) {
       if (aceMatch) {
         const hash = aceMatch[1].toLowerCase();
         entries.push({ name, hash });
-      } else if (hashLine && hashLine.length > 0) {
-        log(`[WARN] Hash descartado para ${name}: ${hashLine}`);
       }
     }
   }
@@ -225,14 +217,11 @@ function reconcileGroup(remoteHashes, groupItems, baseTemplate) {
 
 async function main() {
   try {
-    log('Iniciando actualización de links...');
     console.log('Iniciando actualización de links...');
     
     const links = JSON.parse(fs.readFileSync(LINKS_PATH, 'utf8'));
-    log(`Links locales cargados: ${links.length} items`);
     console.log(`Links locales cargados: ${links.length} items`);
     
-    log(`Fetching remote URL: ${REMOTE_URL}`);
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
     const TIMEOUT_MS = 30000;
@@ -247,7 +236,6 @@ async function main() {
         const url = REMOTE_URL + cacheBuster;
         
         if (attempt > 1) {
-          log(`Reintento ${attempt}/${MAX_RETRIES}...`);
           console.log(`Reintento ${attempt}/${MAX_RETRIES}...`);
         }
         
@@ -262,26 +250,22 @@ async function main() {
         });
         clearTimeout(timeoutId);
         
-        log(`Fetch status: ${resp.status} ${resp.statusText}`);
         console.log(`Fetch status: ${resp.status} ${resp.statusText}`);
         
         if (resp.ok) {
           break; // Éxito, salir del bucle
         } else {
           lastError = new Error(`HTTP error! status: ${resp.status}`);
-          log(`✗ Error: ${lastError.message}`);
           console.log(`✗ Error: ${lastError.message}`);
         }
       } catch (err) {
         lastError = err;
         const errorMsg = err.name === 'AbortError' ? 'Timeout' : err.message;
-        log(`✗ Error: ${errorMsg}`);
         console.log(`✗ Error: ${errorMsg}`);
       }
       
       // Esperar antes del siguiente intento (excepto en el último)
       if (attempt < MAX_RETRIES && (!resp || !resp.ok)) {
-        log(`Esperando ${wait_time_ms / 1000} segundos antes del siguiente intento...`);
         console.log(`Esperando ${wait_time_ms / 1000} segundos antes del siguiente intento...`);
         await new Promise(resolve => setTimeout(resolve, wait_time_ms));
         wait_time_ms *= 2; // Duplicar el tiempo de espera para el próximo reintento
@@ -296,26 +280,21 @@ async function main() {
     }
     
     const txt = await resp.text();
-    log(`Texto remoto descargado: ${txt.length} caracteres`);
     console.log(`Texto remoto descargado: ${txt.length} caracteres`);
     
     // Advertencia si el texto parece demasiado pequeño
     if (txt.length < 25000) {
-      log(`[WARN] El texto descargado parece incompleto (${txt.length} caracteres). Puede ser una versión en caché desactualizada.`);
       console.warn(`[WARN] El texto descargado parece incompleto (${txt.length} caracteres). Puede ser una versión en caché desactualizada.`);
     }
     
     const entries = parseRemoteList(txt);
-    log(`Entries parseadas: ${entries.length} (válidas), warnings en el log para las inválidas`);
-    console.log(`Entries parseadas: ${entries.length} (válidas), warnings en el log para las inválidas`);
+    console.log(`Entries parseadas: ${entries.length} (válidas)`);
     
     const remoteBuckets = buildRemoteBuckets(entries);
-    log(`Buckets remotos creados: ${remoteBuckets.size}`);
     console.log(`Buckets remotos creados: ${remoteBuckets.size}`);
     
     // Advertencia si hay muy pocos buckets
     if (remoteBuckets.size < 200) {
-      log(`[WARN] Se esperaban al menos 200 buckets, pero solo se encontraron ${remoteBuckets.size}. Los datos pueden estar incompletos.`);
       console.warn(`[WARN] Se esperaban al menos 200 buckets, pero solo se encontraron ${remoteBuckets.size}. Los datos pueden estar incompletos.`);
     }
     
@@ -375,27 +354,22 @@ async function main() {
       (allChanges.length
         ? '\n' + allChanges.map(c => `- ${c.title}: ${c.from} -> ${c.to}`).join('\n')
         : '');
-    log(resumen);
     console.log(resumen);
 
-    // NUEVO: Escribe el resumen simple del run para notificación o email
+    // Escribe el resumen simple del run para GitHub Actions
     try { fs.writeFileSync('logs/summary.txt', resumen, 'utf8'); } catch { }
 
     // Sólo escribe si hay cambios reales
     if (oldContent.trim() !== newContent.trim()) {
       fs.writeFileSync(LINKS_PATH, newContent, 'utf8');
-      log('Archivo links.json actualizado correctamente');
       console.log('Archivo links.json actualizado correctamente');
     } else {
-      log('Sin cambios en el contenido del archivo');
       console.log('Sin cambios en el contenido del archivo');
     }
   } catch (e) {
     if (e.name === 'AbortError') {
-      log('ERROR: Timeout al intentar descargar los links remotos (30s)');
       console.error('ERROR: Timeout al intentar descargar los links remotos (30s)');
     } else {
-      log('ERROR: ' + e.message);
       console.error('ERROR:', e.message);
       console.error(e.stack);
     }
