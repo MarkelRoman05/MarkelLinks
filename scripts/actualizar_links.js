@@ -224,17 +224,14 @@ async function main() {
     
     console.log(`Fetching remote URL: ${REMOTE_URL}`);
     
-    const TIMEOUT_MS = 30000;
+    const TIMEOUT_MS = 60000; // Aumentado a 60 segundos para IPFS
     const MAX_RETRIES = 7;
     let resp = null;
     let lastError = null;
-    let wait_time_ms = 3000;
+    let wait_time_ms = 2000;
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
-        const cacheBuster = `?t=${Date.now()}`;
-        const url = REMOTE_URL + cacheBuster;
-        
         if (attempt > 1) {
           console.log(`Reintento ${attempt}/${MAX_RETRIES}...`);
         }
@@ -242,14 +239,26 @@ async function main() {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
-        resp = await fetch(`${url}?t=${Date.now()}`, { 
+        // FIX: No duplicar el cache buster
+        const cacheBuster = `?t=${Date.now()}`;
+        const url = REMOTE_URL + cacheBuster;
+        
+        resp = await fetch(url, { 
           signal: controller.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; MarkelLinks/1.0)',
+          },
         });
         clearTimeout(timeoutId);
         
         console.log(`Fetch status: ${resp.status} ${resp.statusText}`);
         
-        if (resp.ok) {
+        // Reintentar en casos específicos
+        if (resp.status === 504 || resp.status === 502 || resp.status === 503 || resp.status === 429) {
+          lastError = new Error(`HTTP ${resp.status} - ${resp.statusText} (respuesta temporal de gateway)`);
+          console.log(`✗ Error temporal: ${lastError.message}`);
+          // Continuar al siguiente reintento
+        } else if (resp.ok) {
           break; // Éxito, salir del bucle
         } else {
           lastError = new Error(`HTTP error! status: ${resp.status}`);
@@ -257,15 +266,16 @@ async function main() {
         }
       } catch (err) {
         lastError = err;
-        const errorMsg = err.name === 'AbortError' ? 'Timeout' : err.message;
+        const errorMsg = err.name === 'AbortError' ? 'Timeout (60s)' : err.message;
         console.log(`✗ Error: ${errorMsg}`);
       }
       
       // Esperar antes del siguiente intento (excepto en el último)
       if (attempt < MAX_RETRIES && (!resp || !resp.ok)) {
-        console.log(`Esperando ${wait_time_ms / 1000} segundos antes del siguiente intento...`);
+        const waitSeconds = wait_time_ms / 1000;
+        console.log(`Esperando ${waitSeconds}s antes del siguiente intento...`);
         await new Promise(resolve => setTimeout(resolve, wait_time_ms));
-        wait_time_ms *= 2; // Duplicar el tiempo de espera para el próximo reintento
+        wait_time_ms = Math.min(wait_time_ms * 2, 15000); // Máximo 15 segundos de espera
       }
     }
     
@@ -365,7 +375,7 @@ async function main() {
     }
   } catch (e) {
     if (e.name === 'AbortError') {
-      console.error('ERROR: Timeout al intentar descargar los links remotos (30s)');
+      console.error('ERROR: Timeout al intentar descargar los links remotos (60s)');
     } else {
       console.error('ERROR:', e.message);
       console.error(e.stack);
