@@ -68,3 +68,134 @@ body {
     padding: 6px 12px !important;
   }
 }
+
+/* ===== ESTILOS PERSONALIZADOS PARA SNACKBAR DE ANGULAR MATERIAL ===== */
+
+/* Contenedor del SnackBar */
+.mat-mdc-snack-bar-container {
+  --mdc-snackbar-container-color: transparent !important;
+  --mat-snack-bar-button-color: #3b82f6 !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background: linear-gradient(135deg, #1f2937, #374151) !important;
+  color: #f3f4f6 !important;
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 0 !important;
+  min-width: 320px !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label {
+  color: #f3f4f6 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.3px !important;
+  padding: 14px 16px !important;
+}
+
+/* Botón de acción del SnackBar */
+.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action {
+  color: #60a5fa !important;
+  font-weight: 600 !important;
+  font-family: "Inter", system-ui, -apple-system, sans-serif !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+}
+
+.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action:hover {
+  color: #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Efecto de brillo sutil */
+.mat-mdc-snack-bar-container .mdc-snackbar__surface::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.04));
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* SnackBar de éxito */
+.snackbar-success .mdc-snackbar__surface {
+  background: linear-gradient(135deg, #065f46, #047857) !important;
+  box-shadow: 0 10px 25px rgba(5, 150, 105, 0.4), 0 0 0 1px rgba(16, 185, 129, 0.3) !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+.snackbar-success .mdc-snackbar__surface::before {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05)) !important;
+}
+
+.snackbar-success .mat-mdc-button.mat-mdc-snack-bar-action {
+  color: #6ee7b7 !important;
+}
+
+.snackbar-success .mat-mdc-button.mat-mdc-snack-bar-action:hover {
+  color: #34d399 !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+}
+
+/* SnackBar de error */
+.snackbar-error .mdc-snackbar__surface {
+  background: linear-gradient(135deg, #991b1b, #b91c1c) !important;
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4), 0 0 0 1px rgba(239, 68, 68, 0.3) !important;
+  border-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+.snackbar-error .mdc-snackbar__surface::before {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05)) !important;
+}
+
+.snackbar-error .mat-mdc-button.mat-mdc-snack-bar-action {
+  color: #fca5a5 !important;
+}
+
+.snackbar-error .mat-mdc-button.mat-mdc-snack-bar-action:hover {
+  color: #f87171 !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+}
+
+/* SnackBar de advertencia */
+.snackbar-warning .mdc-snackbar__surface {
+  background: linear-gradient(135deg, #92400e, #b45309) !important;
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.4), 0 0 0 1px rgba(251, 146, 60, 0.3) !important;
+  border-color: rgba(251, 146, 60, 0.2) !important;
+}
+
+.snackbar-warning .mdc-snackbar__surface::before {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(217, 119, 6, 0.05)) !important;
+}
+
+.snackbar-warning .mat-mdc-button.mat-mdc-snack-bar-action {
+  color: #fdba74 !important;
+}
+
+.snackbar-warning .mat-mdc-button.mat-mdc-snack-bar-action:hover {
+  color: #fb923c !important;
+  background: rgba(251, 146, 60, 0.15) !important;
+}
+
+/* Responsive para SnackBar */
+@media (max-width: 768px) {
+  .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    min-width: 280px !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+  
+  .mat-mdc-snack-bar-container .mdc-snackbar__label {
+    font-size: 13px !important;
+    padding: 12px 14px !important;
+  }
+}
