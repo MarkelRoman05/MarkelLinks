@@ -10,7 +10,7 @@ const PROJECT_ROOT = path.join(__dirname, '..');
 
 const LOG_DIR = path.join(PROJECT_ROOT, 'logs');
 const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
-const REMOTE_URL = 'https://bit.ly/lista-ipfs-iptv';
+const REMOTE_URL = 'https://itsssl.com/zWurW';
 
 // Asegurar que existe el directorio logs para el resumen
 if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
