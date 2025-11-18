@@ -10,7 +10,11 @@ const PROJECT_ROOT = path.join(__dirname, '..');
 
 const LOG_DIR = path.join(PROJECT_ROOT, 'logs');
 const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
-const REMOTE_URL = 'https://itsssl.com/zWurW';
+const REMOTE_URLS = [
+  'https://itsssl.com/zWurW',
+  'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u',
+  'https://bit.ly/lista-ipfs-iptv'
+];
 
 // Asegurar que existe el directorio logs para el resumen
 if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
@@ -222,26 +226,28 @@ async function main() {
     const links = JSON.parse(fs.readFileSync(LINKS_PATH, 'utf8'));
     console.log(`Links locales cargados: ${links.length} items`);
     
-    console.log(`Fetching remote URL: ${REMOTE_URL}`);
-    
     const TIMEOUT_MS = 60000; // Aumentado a 60 segundos para IPFS
     const MAX_RETRIES = 7;
     let resp = null;
     let lastError = null;
     let wait_time_ms = 2000;
+    let currentUrlIndex = 0;
 
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
       try {
+        const currentUrl = REMOTE_URLS[currentUrlIndex];
+        
         if (attempt > 1) {
           console.log(`Reintento ${attempt}/${MAX_RETRIES}...`);
         }
+        console.log(`Fetching remote URL [${currentUrlIndex + 1}/${REMOTE_URLS.length}]: ${currentUrl}`);
         
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
         // FIX: No duplicar el cache buster
         const cacheBuster = `?t=${Date.now()}`;
-        const url = REMOTE_URL + cacheBuster;
+        const url = currentUrl + cacheBuster;
         
         resp = await fetch(url, { 
           signal: controller.signal,
@@ -257,6 +263,13 @@ async function main() {
         if (resp.status === 504 || resp.status === 502 || resp.status === 503 || resp.status === 429) {
           lastError = new Error(`HTTP ${resp.status} - ${resp.statusText} (respuesta temporal de gateway)`);
           console.log(`✗ Error temporal: ${lastError.message}`);
+          
+          // Cambiar a la siguiente URL alternativa si hay error 504
+          if (resp.status === 504 && currentUrlIndex < REMOTE_URLS.length - 1) {
+            currentUrlIndex++;
+            console.log(`Cambiando a URL alternativa [${currentUrlIndex + 1}/${REMOTE_URLS.length}]...`);
+            wait_time_ms = 2000; // Resetear el tiempo de espera al cambiar de URL
+          }
           // Continuar al siguiente reintento
         } else if (resp.ok) {
           break; // Éxito, salir del bucle
@@ -268,6 +281,13 @@ async function main() {
         lastError = err;
         const errorMsg = err.name === 'AbortError' ? 'Timeout (60s)' : err.message;
         console.log(`✗ Error: ${errorMsg}`);
+        
+        // Cambiar a la siguiente URL alternativa en caso de timeout u otro error
+        if (currentUrlIndex < REMOTE_URLS.length - 1) {
+          currentUrlIndex++;
+          console.log(`Cambiando a URL alternativa [${currentUrlIndex + 1}/${REMOTE_URLS.length}]...`);
+          wait_time_ms = 2000; // Resetear el tiempo de espera al cambiar de URL
+        }
       }
       
       // Esperar antes del siguiente intento (excepto en el último)
@@ -281,8 +301,8 @@ async function main() {
     
     if (!resp || !resp.ok) {
       const errorMsg = lastError 
-        ? `Falló después de ${MAX_RETRIES} intentos. Último error: ${lastError.message}` 
-        : 'No se pudo conectar al servidor IPFS';
+        ? `Falló después de ${MAX_RETRIES} intentos con todas las URLs. Último error: ${lastError.message}` 
+        : 'No se pudo conectar a ningún servidor';
       throw new Error(errorMsg);
     }
     
