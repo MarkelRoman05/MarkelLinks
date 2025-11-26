@@ -245,14 +245,18 @@ async function main() {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
-        // FIX: No duplicar el cache buster
-        const cacheBuster = `?t=${Date.now()}`;
+        // Cache buster más robusto: timestamp + random para evitar caché de proxies/gateways
+        const separator = currentUrl.includes('?') ? '&' : '?';
+        const cacheBuster = `${separator}t=${Date.now()}&r=${Math.random().toString(36).substring(7)}`;
         const url = currentUrl + cacheBuster;
         
         resp = await fetch(url, { 
           signal: controller.signal,
           headers: {
-            'User-Agent': 'Mozilla/5.0 (compatible; MarkelLinks/1.0)',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
           },
         });
         clearTimeout(timeoutId);
@@ -309,13 +313,23 @@ async function main() {
     const txt = await resp.text();
     console.log(`Texto remoto descargado: ${txt.length} caracteres`);
     
-    // Advertencia si el texto parece demasiado pequeño
+    // Validación más estricta del contenido
     if (txt.length < 25000) {
       console.warn(`[WARN] El texto descargado parece incompleto (${txt.length} caracteres). Puede ser una versión en caché desactualizada.`);
     }
     
+    // Verificar que contiene contenido M3U válido
+    if (!txt.includes('#EXTINF') || !txt.includes('acestream://')) {
+      throw new Error(`El contenido descargado no parece ser una lista M3U válida. Tamaño: ${txt.length} caracteres`);
+    }
+    
     const entries = parseRemoteList(txt);
     console.log(`Entries parseadas: ${entries.length} (válidas)`);
+    
+    // Validación mínima de entradas
+    if (entries.length < 100) {
+      console.warn(`[WARN] Se esperaban al menos 100 entradas válidas, pero solo se encontraron ${entries.length}. Los datos pueden estar incompletos.`);
+    }
     
     const remoteBuckets = buildRemoteBuckets(entries);
     console.log(`Buckets remotos creados: ${remoteBuckets.size}`);
