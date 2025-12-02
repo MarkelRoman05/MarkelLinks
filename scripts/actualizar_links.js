@@ -11,8 +11,9 @@ const PROJECT_ROOT = path.join(__dirname, '..');
 const LOG_DIR = path.join(PROJECT_ROOT, 'logs');
 const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
 const REMOTE_URLS = [
-  'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u',
   'https://bit.ly/lista-ipfs-iptv',
+  'https://bit.ly/4pcej3D',
+  'https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/lista_fuera_iptv.m3u',
   'https://itsssl.com/zWurW'
 ];
 
