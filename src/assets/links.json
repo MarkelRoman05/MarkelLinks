@@ -37,6 +37,12 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 7)",
+    "url": "acestream://cc9b7f5fe416069a2110da0909b0f915043c468b",
+    "tags": "movistar laliga",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
+  },
+  {
+    "title": "M+ LALIGA (OPCIÓN 8)",
     "url": "acestream://31c19ffb3472c289c5bbbbc174449c8ed0d19e38",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
@@ -722,12 +728,6 @@
   {
     "title": "Tennis Channel (OPCIÓN 3)",
     "url": "acestream://aa31953b8af44b461102852d5b1247eea95b8050",
-    "tags": "tennis channel",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
-  },
-  {
-    "title": "Tennis Channel (OPCIÓN 4)",
-    "url": "acestream://8091334c82e8720fc6aa05ff0bd6d343c5bfecbf",
     "tags": "tennis channel",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
   },
