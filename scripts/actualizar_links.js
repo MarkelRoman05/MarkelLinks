@@ -246,18 +246,26 @@ async function main() {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
         
-        // Cache buster más robusto: timestamp + random para evitar caché de proxies/gateways
+        // Cache buster ULTRA agresivo para GitHub Actions
+        // Genera un valor único por ejecución que incluye PID y timestamp de alta precisión
+        const uniqueId = `${Date.now()}-${process.pid}-${Math.random().toString(36).substring(2, 15)}`;
         const separator = currentUrl.includes('?') ? '&' : '?';
-        const cacheBuster = `${separator}t=${Date.now()}&r=${Math.random().toString(36).substring(7)}`;
+        const cacheBuster = `${separator}_nocache=${uniqueId}&v=${attempt}`;
         const url = currentUrl + cacheBuster;
+        
+        console.log(`Cache buster aplicado: ${cacheBuster.substring(0, 50)}...`);
         
         resp = await fetch(url, { 
           signal: controller.signal,
           headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Accept': 'text/plain, application/x-mpegurl, */*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
             'Pragma': 'no-cache',
             'Expires': '0',
+            'If-Modified-Since': '0',
+            'If-None-Match': '',
           },
         });
         clearTimeout(timeoutId);
@@ -313,6 +321,19 @@ async function main() {
     
     const txt = await resp.text();
     console.log(`Texto remoto descargado: ${txt.length} caracteres`);
+    
+    // Log de headers para debugging (especialmente útil en GitHub Actions)
+    console.log('Response headers:');
+    console.log(`  - Content-Type: ${resp.headers.get('content-type')}`);
+    console.log(`  - Content-Length: ${resp.headers.get('content-length')}`);
+    console.log(`  - Cache-Control: ${resp.headers.get('cache-control')}`);
+    console.log(`  - Last-Modified: ${resp.headers.get('last-modified')}`);
+    console.log(`  - ETag: ${resp.headers.get('etag')}`);
+    console.log(`  - Age: ${resp.headers.get('age')}`);
+    
+    // Hash simple del contenido para detectar cambios
+    const contentHash = txt.substring(0, 100) + txt.substring(txt.length - 100);
+    console.log(`Content fingerprint (primeros/últimos 100 chars): ${contentHash.substring(0, 50)}...`);
     
     // Validación más estricta del contenido
     if (txt.length < 25000) {
