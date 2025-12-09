@@ -52,6 +52,7 @@ export class AppComponent {
   location = window.location;
   lastUpdate: string = '';
   links: any[] = [];
+  currentYear: number = new Date().getFullYear();
 
   // Mapeo de imágenes para cada provider
   providerImages: { [key: string]: string } = {
