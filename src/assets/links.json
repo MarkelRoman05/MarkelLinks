@@ -1,48 +1,42 @@
 [
   {
     "title": "M+ LALIGA (OPCIÓN 1)",
-    "url": "acestream://af458073c3096293a4dea9f369d4f308e7125bd6",
-    "tags": "movistar laliga",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
-  },
-  {
-    "title": "M+ LALIGA (OPCIÓN 2)",
     "url": "acestream://107c3ce5a5d2527c9f06e4eab87477201791f231",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 3)",
+    "title": "M+ LALIGA (OPCIÓN 2)",
     "url": "acestream://8c30b600cc48899991b452805df48b68d998e61c",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 4)",
+    "title": "M+ LALIGA (OPCIÓN 3)",
     "url": "acestream://00c9bc9c5d7d87680a5a6bed349edfa775a89947",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 5)",
+    "title": "M+ LALIGA (OPCIÓN 4)",
     "url": "acestream://c9321006921967d6258df6945f1d598a5c0cbf1e",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 6)",
+    "title": "M+ LALIGA (OPCIÓN 5)",
     "url": "acestream://4b528d10eaad747ddf52251206177573ee3e9f74",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 7)",
+    "title": "M+ LALIGA (OPCIÓN 6)",
     "url": "acestream://14b6cd8769cd485f2cffdca64be9698d9bfeac58",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 8)",
+    "title": "M+ LALIGA (OPCIÓN 7)",
     "url": "acestream://31c19ffb3472c289c5bbbbc174449c8ed0d19e38",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MLIGA.png"
@@ -259,12 +253,18 @@
   },
   {
     "title": "Eurosport 1 (OPCIÓN 6)",
-    "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
+    "url": "acestream://547ab7146a86d6119c9332c011669544720124e3",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
     "title": "Eurosport 1 (OPCIÓN 7)",
+    "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
+    "tags": "eurosport 1",
+    "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
+  },
+  {
+    "title": "Eurosport 1 (OPCIÓN 8)",
     "url": "acestream://1b0bc4d4dcd609d3c092712e721392b199f50a62",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
