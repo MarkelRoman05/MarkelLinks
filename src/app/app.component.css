@@ -2,6 +2,24 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Optimización de rendimiento para móviles */
+@media (max-width: 768px) {
+  /* Reducir la calidad de los efectos en móviles */
+  *,
+  *::before,
+  *::after {
+    /* Desactivar backdrop-filter en móviles (muy costoso) */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Optimizar animaciones en móviles */
+  * {
+    animation-duration: 0.2s !important;
+    transition-duration: 0.15s !important;
+  }
+}
+
 .container {
   background-color: #111827;
   color: #f3f4f6;
@@ -25,28 +43,44 @@ html {
   font-size: 14px;
   font-weight: 500;
   box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s ease, background 0.15s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   gap: 6px;
   margin-top: 12px;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
+  will-change: transform;
 }
 
-.scroll-to-top:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+/* Hover solo en desktop */
+@media (hover: hover) and (pointer: fine) {
+  .scroll-to-top:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+  }
+
+  .scroll-to-top .arrow-top {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .scroll-to-top:hover .arrow-top {
+    transform: translateY(-2px);
+  }
 }
 
-.scroll-to-top .arrow-top {
-  font-size: 16px;
-  transition: transform 0.3s ease;
-}
-
-.scroll-to-top:hover .arrow-top {
-  transform: translateY(-2px);
+/* Feedback táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+  .scroll-to-top:active {
+    transform: scale(0.98);
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+  }
+  
+  .scroll-to-top .arrow-top {
+    font-size: 16px;
+  }
 }
 
 .delete-search-button {
@@ -106,7 +140,7 @@ html {
 }
 
 .navbar {
-  background: rgba(17, 24, 39, 0.85);
+  background: rgba(17, 24, 39, 0.95);
   color: white;
   padding: 16px 24px;
   margin: 0 auto 1.5rem auto;
@@ -116,18 +150,25 @@ html {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0 0 16px 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, padding 0.3s ease;
   width: 100%;
   box-sizing: border-box;
   transform: translateX(-24px);
   width: calc(100% + 48px);
+  will-change: background, padding;
+}
+
+/* Optimización móvil: sin blur costoso */
+@media (min-width: 769px) {
+  .navbar {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 .navbar-container {
@@ -248,9 +289,9 @@ html {
   padding: 0;
   border: none;
   border-radius: 10px;
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(59, 130, 246, 0.2);
   color: #3b82f6;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s ease, background 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,11 +300,18 @@ html {
   height: 42px;
   margin: 0 0 0 12px;
   align-self: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   flex-shrink: 0;
   min-width: 42px;
   margin-left: 8px;
+  will-change: transform;
+}
+
+/* Backdrop filter solo en desktop */
+@media (min-width: 769px) {
+  .copy-button {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -272,7 +320,7 @@ html {
     height: 34px;
     min-width: 34px;
     margin-left: 6px;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(59, 130, 246, 0.2);
     align-self: center;
   }
   
@@ -281,10 +329,21 @@ html {
   }
 }
 
-.copy-button:hover {
-  background: rgba(59, 130, 246, 0.25);
-  transform: translateY(-1px);
-  color: #60a5fa;
+/* Hover solo en dispositivos con cursor */
+@media (hover: hover) and (pointer: fine) {
+  .copy-button:hover {
+    background: rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+    color: #60a5fa;
+  }
+}
+
+/* Feedback táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+  .copy-button:active {
+    background: rgba(59, 130, 246, 0.4);
+    transform: scale(0.95);
+  }
 }
 
 .link-futboltv:hover {
@@ -327,19 +386,25 @@ html {
 
 .footer {
   flex-shrink: 0;
-  background: rgba(17, 24, 39, 0.8);
+  background: rgba(17, 24, 39, 0.95);
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
   padding: 24px;
   border-radius: 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+/* Backdrop filter solo en desktop */
+@media (min-width: 769px) {
+  .footer {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 .footer::before {
@@ -377,13 +442,19 @@ html {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.7;
   color: #f3f4f6;
-  background: rgba(17, 24, 39, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(17, 24, 39, 0.9);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   width: 100%;
+}
+
+/* Backdrop filter solo en desktop */
+@media (min-width: 769px) {
+  .otra-web {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 .otra-web-titulo {
@@ -419,19 +490,20 @@ html {
 }
 
 .otra-web-link {
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
   transform: scale(1);
   display: block;
   flex: 1;
   min-width: 120px;
   max-width: 180px;
   margin: 0 auto;
+  will-change: transform;
 }
 
 .otra-web-link img {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
@@ -451,13 +523,23 @@ html {
   }
 }
 
-.otra-web-link:hover {
-  transform: translateY(-2px);
+/* Hover solo en desktop */
+@media (hover: hover) and (pointer: fine) {
+  .otra-web-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .otra-web-link:hover img {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
 }
 
-.otra-web-link:hover img {
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+/* Feedback táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+  .otra-web-link:active {
+    transform: scale(0.97);
+  }
 }
 
 .how-to-play-header {
@@ -480,13 +562,19 @@ html {
   font-size: 17px;
   line-height: 1.7;
   color: #f3f4f6;
-  background: rgba(17, 24, 39, 0.6);
+  background: rgba(17, 24, 39, 0.9);
   margin: 3rem auto;
   max-width: 900px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Backdrop filter solo en desktop */
+@media (min-width: 769px) {
+  .how-to-play-container {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 .how-to-play-text {
@@ -515,23 +603,30 @@ html {
   padding: 10px 16px;
   border: 1px solid rgba(59, 130, 246, 0.25);
   border-radius: 12px;
-  background: rgba(30, 41, 59, 0.7);
+  background: rgba(30, 41, 59, 0.9);
   font-size: 16.5px;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   color: #f8fafc;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s ease, background 0.2s ease;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
   min-height: 52px;
   height: auto;
   width: 100%;
   flex: 1;
+  will-change: transform;
+}
+
+/* Backdrop filter solo en desktop */
+@media (min-width: 769px) {
+  .acestream-link {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 
 .acestream-link > span {
@@ -575,31 +670,42 @@ html {
   }
 }
 
-.acestream-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(59, 130, 246, 0.08),
-    rgba(99, 102, 241, 0.08)
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* Efecto hover solo en desktop (no en touch) */
+@media (hover: hover) and (pointer: fine) {
+  .acestream-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      120deg,
+      rgba(59, 130, 246, 0.08),
+      rgba(99, 102, 241, 0.08)
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .acestream-link:hover {
+    transform: translateY(-2px);
+    background: rgba(30, 41, 59, 0.85);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  }
+
+  .acestream-link:hover::before {
+    opacity: 1;
+  }
 }
 
-.acestream-link:hover {
-  transform: translateY(-2px);
-  background: rgba(30, 41, 59, 0.85);
-  border-color: rgba(59, 130, 246, 0.5);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-}
-
-.acestream-link:hover::before {
-  opacity: 1;
+/* En móviles: feedback visual más simple al tocar */
+@media (hover: none) and (pointer: coarse) {
+  .acestream-link:active {
+    background: rgba(30, 41, 59, 1);
+    transform: scale(0.98);
+  }
 }
 
 .futbol-tv-agendas {
@@ -697,22 +803,24 @@ html {
   }
   
   .provider-section {
-    padding: 14px 12px 12px;
-    margin-bottom: 12px;
-  }
-
-  .provider-section {
     padding: 8px 6px 8px 6px;
     border-radius: 10px;
     margin-bottom: 8px;
     border: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* Reducir complejidad visual en móviles */
+    background: rgba(17, 24, 39, 0.8);
   }
   
   .provider-header {
     font-size: 15px;
     margin-bottom: 4px;
     margin-top: 0;
+    /* Simplificar gradiente en móviles */
+    background: none;
+    color: #3b82f6;
+    -webkit-background-clip: initial;
+    background-clip: initial;
   }
   
   .links-container {
@@ -791,7 +899,7 @@ html {
   max-width: 500px;
   margin: 40px auto;
   padding: 32px;
-  background: rgba(17, 24, 39, 0.6);
+  background: rgba(17, 24, 39, 0.9);
   border-radius: 20px;
   border: 1px solid #3b82f6;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
@@ -799,8 +907,14 @@ html {
   color: #f3f4f6;
   text-align: center;
   box-sizing: border-box;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Backdrop filter solo en desktop */
+@media (min-width: 769px) {
+  .contact-form {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 .contact-form h3 {
@@ -856,7 +970,7 @@ html {
   font-weight: 500;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s ease, background 0.15s ease;
   box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
   margin-top: 12px;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
@@ -864,32 +978,50 @@ html {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  will-change: transform;
 }
 
-.contact-form button:hover {
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+/* Hover solo en desktop */
+@media (hover: hover) and (pointer: fine) {
+  .contact-form button:hover {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+  }
 }
 
+/* Feedback táctil mejorado */
 .contact-form button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px -1px rgba(59, 130, 246, 0.2);
 }
 
 h3 {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: 28px;
   font-weight: 600;
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
   position: relative;
+}
+
+/* Gradiente solo en desktop (más eficiente en móviles) */
+@media (min-width: 769px) {
+  h3 {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    color: #3b82f6;
+    background: none;
+  }
 }
 
 .mini-separator {
@@ -916,7 +1048,7 @@ h3 {
 }
 
 .navbar-menu {
-  z-index: 2147483646 !important; /* Muy alto para asegurar que está por encima */
+  z-index: 999 !important;
 }
 
 .navbar-menu.mobile-menu.open {
@@ -932,19 +1064,17 @@ h3 {
     width: 80vw !important;
     max-width: 350px;
     height: 100vh !important;
-    background: rgba(17, 24, 39, 0.95) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(17, 24, 39, 0.98) !important;
     box-shadow: 2px 0 12px rgba(0, 0, 0, 0.4);
     transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.25s ease-out;
     overflow-y: auto;
     padding: 20px;
     padding-top: 2.5rem !important;
     padding-bottom: 2rem !important;
     display: block !important;
-    transition: transform 0.3s ease;
-    z-index: 2147483647 !important; /* Máximo valor posible */
+    z-index: 1000 !important;
+    will-change: transform;
   }
   /* Fondo semitransparente detrás del menú */
   body.menu-open::before {
@@ -955,7 +1085,7 @@ h3 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.55);
-    z-index: 2147483646 !important;
+    z-index: 999 !important;
     pointer-events: auto;
   }
   .navbar-menu ul {
@@ -1178,16 +1308,26 @@ h3 {
   gap: 12px;
   width: 100%;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s ease, background 0.15s ease;
   box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  will-change: transform;
 }
 
-.scroll-to-links-button:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+/* Hover solo en desktop */
+@media (hover: hover) and (pointer: fine) {
+  .scroll-to-links-button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+  }
+}
+
+/* Feedback táctil en móviles */
+@media (hover: none) and (pointer: coarse) {
+  .scroll-to-links-button:active {
+    transform: scale(0.98);
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+  }
 }
 
 .light-blue-spinner::ng-deep circle {
