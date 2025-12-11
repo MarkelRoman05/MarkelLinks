@@ -211,12 +211,18 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 13)",
-    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "url": "acestream://b169d0d3a2b4301f2d766197ab994f0e1ae0bf95",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
     "title": "DAZN F1 (OPCIÓN 14)",
+    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "tags": "dazn f1 formula 1",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
+  },
+  {
+    "title": "DAZN F1 (OPCIÓN 15)",
     "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
@@ -696,14 +702,8 @@
     "img": "https://play-lh.googleusercontent.com/yGC9brvzJBdkj8D2iyr1FmtE2FOM4myhn83rWR1DsJR4jXBwpQSHa7OkS9Q1_XVqQGl-"
   },
   {
-    "title": "Tennis Channel (OPCIÓN 1)",
+    "title": "Tennis Channel",
     "url": "acestream://aa31953b8af44b461102852d5b1247eea95b8050",
-    "tags": "tennis channel",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
-  },
-  {
-    "title": "Tennis Channel (OPCIÓN 2)",
-    "url": "acestream://8091334c82e8720fc6aa05ff0bd6d343c5bfecbf",
     "tags": "tennis channel",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
   },
