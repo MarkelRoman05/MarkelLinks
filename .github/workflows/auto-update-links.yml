@@ -2,7 +2,7 @@ name: Auto update links and push
 
 on:
   schedule:
-    - cron: "50 12 * * *" # 13:50h todos los días (UTC+1)
+    - cron: "30 12 * * *" # 13:30h todos los días (UTC+1)
     - cron: "15 15 * * 0,6" # 16:15h sábados y domingos (UTC+1)
     - cron: "0 19 * * 0,6" # 20:00h sábados y domingos (UTC+1)
   workflow_dispatch:
