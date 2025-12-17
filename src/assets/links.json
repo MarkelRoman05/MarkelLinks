@@ -222,6 +222,24 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
+    "title": "DAZN Baloncesto 1",
+    "url": "acestream://217e5f172d4c704c5eec739fed672a53521e8f98",
+    "tags": "dazn baloncesto liga endesa acb",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZBA.png"
+  },
+  {
+    "title": "DAZN Baloncesto 2",
+    "url": "acestream://965b249321adbf3a1459f94c17f624022889fb8d",
+    "tags": "dazn baloncesto liga endesa acb",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZB2.png"
+  },
+  {
+    "title": "DAZN Baloncesto 3",
+    "url": "acestream://f4db7197aa4b9487014ba348fca3f78121ac2cae",
+    "tags": "dazn baloncesto liga endesa acb",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZB3.png"
+  },
+  {
     "title": "Eurosport 1 (OPCIÓN 1)",
     "url": "acestream://bae98f69fbf867550b4f73b4eb176dae84d7f909",
     "tags": "eurosport 1",
@@ -667,12 +685,6 @@
   },
   {
     "title": "La 1 (OPCIÓN 2)",
-    "url": "acestream://dad5e0e0825cb3e410008f1c4252387b868e740c",
-    "tags": "la 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"
-  },
-  {
-    "title": "La 1 (OPCIÓN 3)",
     "url": "acestream://7597d4feb3195079ffa606cf23a183d626ee40ba",
     "tags": "la 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"

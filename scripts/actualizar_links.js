@@ -83,6 +83,8 @@ function cleanVariant(name) {
     .replace(/^MOVISTAR\s*ORIGINALES/i, 'M+ ORIGINALES')
     // DAZN F1
     .replace(/^DAZN\s*F1/i, 'DAZN F1')
+    // DAZN Baloncesto
+    .replace(/^DAZN\s*BALONCESTO/i, 'DAZN BALONCESTO')
     // Eurosport
     .replace(/^EUROSPORT\s+(\d+)/i, 'EUROSPORT $1')
     // Tennis Channel
