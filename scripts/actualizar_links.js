@@ -81,6 +81,9 @@ function cleanVariant(name) {
     // Movistar Originales
     .replace(/^M\+\s*ORIGINALES/i, 'M+ ORIGINALES')
     .replace(/^MOVISTAR\s*ORIGINALES/i, 'M+ ORIGINALES')
+    // Movistar Hits
+    .replace(/^M\+\s*HITS/i, 'M+ HITS')
+    .replace(/^MOVISTAR\s*HITS/i, 'M+ HITS')
     // DAZN F1
     .replace(/^DAZN\s*F1/i, 'DAZN F1')
     // DAZN Baloncesto
@@ -93,6 +96,13 @@ function cleanVariant(name) {
     .replace(/^GOL\s+PLAY/i, 'GOL')
     // Rally TV
     .replace(/^RALLY\s+TV/i, 'RALLY TV')
+    // Antena 3
+    .replace(/^ANTENA\s*3/i, 'ANTENA 3')
+    // Telecinco
+    .replace(/^TELECINCO/i, 'TELECINCO')
+    .replace(/^TELE\s*5/i, 'TELECINCO')
+    // Cuatro
+    .replace(/^CUATRO/i, 'CUATRO')
     .trim();
   
   return cleaned;
