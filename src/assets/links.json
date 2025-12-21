@@ -619,12 +619,18 @@
   },
   {
     "title": "M+ Golf (OPCIÓN 2)",
-    "url": "acestream://9ed46050217ee6ed8236a64b72d7992f7b3b37f2",
+    "url": "acestream://9be118a64eb603b5eb62be6cf27631d3891b5174",
     "tags": "movistar golf",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOLF+.png"
   },
   {
     "title": "M+ Golf (OPCIÓN 3)",
+    "url": "acestream://9ed46050217ee6ed8236a64b72d7992f7b3b37f2",
+    "tags": "movistar golf",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOLF+.png"
+  },
+  {
+    "title": "M+ Golf (OPCIÓN 4)",
     "url": "acestream://872608e734992db636eb79426802cd08f4029afb",
     "tags": "movistar golf",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/GOLF+.png"
