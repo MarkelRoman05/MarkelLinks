@@ -103,6 +103,9 @@ function cleanVariant(name) {
     .replace(/^TELE\s*5/i, 'TELECINCO')
     // Cuatro
     .replace(/^CUATRO/i, 'CUATRO')
+    // Teledeporte
+    .replace(/^TELEDEPORTE/i, 'TELEDEPORTE')
+    .replace(/^TDP/i, 'TELEDEPORTE')
     .trim();
   
   return cleaned;

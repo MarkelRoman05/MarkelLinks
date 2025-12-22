@@ -132,7 +132,13 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS.png"
   },
   {
-    "title": "Movistar Plus+ 2",
+    "title": "Movistar Plus+ 2 (OPCIÓN 1)",
+    "url": "acestream://fbc39d8a9e5d7c9ac6a1438d440104620f54e09c",
+    "tags": "movistar plus + 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS2.png"
+  },
+  {
+    "title": "Movistar Plus+ 2 (OPCIÓN 2)",
     "url": "acestream://e19c1fc5e3ada56c60d45257f7f4ed0d14bf7003",
     "tags": "movistar plus + 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MPLUS2.png"
@@ -289,42 +295,48 @@
   },
   {
     "title": "Eurosport 2 (OPCIÓN 1)",
-    "url": "acestream://2773b39926d15dd3d9495d94c4050604792d7031",
+    "url": "acestream://dc4ccb9e72550bc72be9360aa7d77e337ad11ecc",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 2)",
-    "url": "acestream://37d6f1aabcde81ee6e4873b4db6b7bb8964af8bf",
+    "url": "acestream://2773b39926d15dd3d9495d94c4050604792d7031",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 3)",
-    "url": "acestream://0585e09bb8ac9720e4c11934f1b184e309291551",
+    "url": "acestream://37d6f1aabcde81ee6e4873b4db6b7bb8964af8bf",
     "tags": "eurosport 4k",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 4)",
-    "url": "acestream://5c910d614894635153a7d42de98cc2e4a958a53f",
+    "url": "acestream://0585e09bb8ac9720e4c11934f1b184e309291551",
     "tags": "eurosport 4k",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 5)",
-    "url": "acestream://6176281b9c46a5621a0e88524f8dc621f173b8e0",
+    "url": "acestream://5c910d614894635153a7d42de98cc2e4a958a53f",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 6)",
-    "url": "acestream://7aa9cc819c6fa781dea6b4de3aa5393258b766d8",
+    "url": "acestream://6176281b9c46a5621a0e88524f8dc621f173b8e0",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 7)",
+    "url": "acestream://7aa9cc819c6fa781dea6b4de3aa5393258b766d8",
+    "tags": "eurosport 2",
+    "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
+  },
+  {
+    "title": "Eurosport 2 (OPCIÓN 8)",
     "url": "acestream://ac675c82d6dfd4a201532c18b42e48dacb7c32c6",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
@@ -680,20 +692,32 @@
   {
     "title": "La 1 (OPCIÓN 1)",
     "url": "acestream://6a54f8fb00406c88f68ac3f3aabc7d084f9573d0",
-    "tags": "la 1",
+    "tags": "la 1 tdt",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"
   },
   {
     "title": "La 1 (OPCIÓN 2)",
     "url": "acestream://7597d4feb3195079ffa606cf23a183d626ee40ba",
-    "tags": "la 1",
+    "tags": "la 1 tdt",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/TVE.png"
   },
   {
     "title": "La 2",
     "url": "acestream://9934906503661142f97a044ae1509a294057c2ed",
-    "tags": "la 2",
+    "tags": "la 2 tdt",
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/LA2.png"
+  },
+  {
+    "title": "Teledeporte (OPCIÓN 1)",
+    "url": "acestream://2d997da301573c5aba78f969d0d37eb6107941b2",
+    "tags": "teledeporte tdt",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/TDEP.png"
+  },
+  {
+    "title": "Teledeporte (OPCIÓN 2)",
+    "url": "acestream://7d910d9480e023608d1fe77eaf47c2ed34592155",
+    "tags": "teledeporte tdt",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/TDEP.png"
   },
   {
     "title": "Antena 3",
@@ -955,12 +979,6 @@
   },
   {
     "title": "Primera Federación (OPCIÓN 2)",
-    "url": "acestream://a2ed6f2ca3f804481131c41ce64d4286a5820476",
-    "tags": "primera federacion rfef",
-    "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png"
-  },
-  {
-    "title": "Primera Federación (OPCIÓN 3)",
     "url": "acestream://b40212c43e96e97542ea00f2129212a054853a57",
     "tags": "primera federacion rfef",
     "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLhKwRnBQ8fw20_UpkL-svjJygTscV6Et9Y1nyIgj2KlGbR2FqEDUVXrRGsNkr-4fU7b8-rrls6RCY7WkdBUhdHweSGY8p3G7lfcPPvsUig3c-amPBAHDGl-4O_6KS9bA8KSJOesjkPR1d2Sw1uB3_O7ROjXc_qON0UR7kIhMO2A32EQW27TDHgit_Dew/s512/Primera%20Federacion.png.png"

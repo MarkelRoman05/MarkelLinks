@@ -349,7 +349,7 @@ export class AppComponent {
       { name: 'Canales lineales DAZN', pattern: /dazn [0-9]/i },
       { name: 'Eurosport', pattern: /eurosport/i },
       { name: 'Movistar+ Cine, Documentales y Series', pattern: /movistar (cine|acción|clásicos|clasicos|comedia|documentales|drama|estrenos|originales|hits|cine español|español)/i },
-      { name: 'TDT', pattern: /la [0-9]|antena 3|telecinco|cuatro/i },
+      { name: 'TDT', pattern: /la [0-9]|antena 3|telecinco|cuatro|teledeporte/i },
       { name: 'Otros deportes', pattern: /tennis|rally|nba|ufc|bein|gol/i },
     ];
   }
