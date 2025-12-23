@@ -228,7 +228,13 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/ficha_m/MVF1.png"
   },
   {
-    "title": "DAZN Baloncesto 1",
+    "title": "DAZN Baloncesto 1 (OPCIÓN 1)",
+    "url": "acestream://a5f2161b0cabe910dc866b5abc6efe5d8f41fd7f",
+    "tags": "dazn baloncesto liga endesa acb",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZBA.png"
+  },
+  {
+    "title": "DAZN Baloncesto 1 (OPCIÓN 2)",
     "url": "acestream://217e5f172d4c704c5eec739fed672a53521e8f98",
     "tags": "dazn baloncesto liga endesa acb",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZBA.png"

@@ -86,8 +86,9 @@ function cleanVariant(name) {
     .replace(/^MOVISTAR\s*HITS/i, 'M+ HITS')
     // DAZN F1
     .replace(/^DAZN\s*F1/i, 'DAZN F1')
-    // DAZN Baloncesto
-    .replace(/^DAZN\s*BALONCESTO/i, 'DAZN BALONCESTO')
+    // DAZN Baloncesto - normalizar el que no tiene número al canal 1
+    .replace(/^DAZN\s*BALONCESTO$/i, 'DAZN BALONCESTO 1')
+    .replace(/^DAZN\s*BALONCESTO\s+(\d+)/i, 'DAZN BALONCESTO $1')
     // Eurosport
     .replace(/^EUROSPORT\s+(\d+)/i, 'EUROSPORT $1')
     // Tennis Channel
