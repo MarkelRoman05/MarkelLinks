@@ -8,7 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import emailjs from '@emailjs/browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
 import { environment } from '../environments/enviroment';
 
@@ -29,7 +29,6 @@ declare global {
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    HttpClientModule,
     AgendaEventoTextComponent,
   ],
   templateUrl: './app.component.html',

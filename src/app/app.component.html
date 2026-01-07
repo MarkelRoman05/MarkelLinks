@@ -51,9 +51,11 @@
             margin-left: 2rem;
           "
         >
-          <div class="navbar-title" *ngIf="!isMobile">
-            <h1 style="margin: 0"></h1>
-          </div>
+          @if (!isMobile) {
+            <div class="navbar-title">
+              <h1 style="margin: 0"></h1>
+            </div>
+          }
         </div>
       </div>
       <!-- Menú lateral móvil -->
@@ -78,22 +80,23 @@
         }"
       >
         <!-- Botón cerrar solo en móvil -->
-        <button
-          *ngIf="isMobile"
-          (click)="isMenuOpen = false"
-          style="
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-          "
-          aria-label="Cerrar menú"
-        >
-          <i class="bi bi-x-lg"></i>
-        </button>
+        @if (isMobile) {
+          <button
+            (click)="isMenuOpen = false"
+            style="
+              background: none;
+              border: none;
+              color: white;
+              font-size: 2rem;
+              position: absolute;
+              top: 1rem;
+              right: 1rem;
+            "
+            aria-label="Cerrar menú"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        }
         <ul
           style="
             list-style: none;
@@ -168,30 +171,35 @@
 
   <p class="last-update">
     Última actualización web:
-    <span *ngIf="lastUpdate; else loadingUpdate">
-      {{ lastUpdate | date : "dd/MM/yyyy HH:mm" }}h
-    </span>
-    <ng-template #loadingUpdate>
+    @if (lastUpdate) {
+      <span>
+        {{ lastUpdate | date : "dd/MM/yyyy HH:mm" }}h
+      </span>
+    } @else {
       <span>Cargando...</span>
-    </ng-template>
+    }
   </p>
 
-  <div class="scroll-to-links" *ngIf="isMobile">
-    <button class="scroll-to-links-button" (click)="scrollToHowToPlay()">
-      <i class="bi bi-question-circle-fill" style="font-size: x-large"></i>
-      <span>Cómo reproducir enlaces Ace Stream</span>
-      <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
-    </button>
-  </div>
+  @if (isMobile) {
+    <div class="scroll-to-links">
+      <button class="scroll-to-links-button" (click)="scrollToHowToPlay()">
+        <i class="bi bi-question-circle-fill" style="font-size: x-large"></i>
+        <span>Cómo reproducir enlaces Ace Stream</span>
+        <i class="bi bi-arrow-down-short" style="font-size: x-large"></i>
+      </button>
+    </div>
+  }
 
   <h3 class="agenda-header">AGENDA DEPORTIVA</h3>
   <div class="mini-separator"></div>
   <div class="futbol-tv-agendas">
     <div class="iframe-container">
-      <div class="spinner-container" *ngIf="loading[0]">
-        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
-        <span class="loading-text">Cargando...</span>
-      </div>
+      @if (loading[0]) {
+        <div class="spinner-container">
+          <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
+          <span class="loading-text">Cargando...</span>
+        </div>
+      }
       <iframe
         id="ftv_iframe_0"
         name="ftv_iframe_0"
@@ -205,10 +213,12 @@
       ></iframe>
     </div>
     <div class="iframe-container">
-      <div class="spinner-container" *ngIf="loading[1]">
-        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
-        <span class="loading-text">Cargando...</span>
-      </div>
+      @if (loading[1]) {
+        <div class="spinner-container">
+          <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
+          <span class="loading-text">Cargando...</span>
+        </div>
+      }
       <iframe
         id="ftv_iframe_1"
         name="ftv_iframe_1"
@@ -222,10 +232,12 @@
       ></iframe>
     </div>
     <div class="iframe-container">
-      <div class="spinner-container" *ngIf="loading[2]">
-        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
-        <span class="loading-text">Cargando...</span>
-      </div>
+      @if (loading[2]) {
+        <div class="spinner-container">
+          <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
+          <span class="loading-text">Cargando...</span>
+        </div>
+      }
       <iframe
         id="ftv_iframe_2"
         name="ftv_iframe_2"
@@ -239,10 +251,12 @@
       ></iframe>
     </div>
     <div class="iframe-container">
-      <div class="spinner-container" *ngIf="loading[3]">
-        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
-        <span class="loading-text">Cargando...</span>
-      </div>
+      @if (loading[3]) {
+        <div class="spinner-container">
+          <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
+          <span class="loading-text">Cargando...</span>
+        </div>
+      }
       <iframe
         id="ftv_iframe_3"
         name="ftv_iframe_3"
@@ -256,10 +270,12 @@
       ></iframe>
     </div>
     <div class="iframe-container">
-      <div class="spinner-container" *ngIf="loading[4]">
-        <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
-        <span class="loading-text">Cargando...</span>
-      </div>
+      @if (loading[4]) {
+        <div class="spinner-container">
+          <mat-spinner class="light-blue-spinner" diameter="78"></mat-spinner>
+          <span class="loading-text">Cargando...</span>
+        </div>
+      }
       <iframe
         id="ftv_iframe"
         name="ftv_iframe"
@@ -307,91 +323,103 @@
           (keyup)="filterLinks()"
           name="searchTerm"
         />
-        <button
-          *ngIf="searchTerm"
-          class="delete-search-button"
-          matTooltip="Borrar texto de búsqueda"
-          matTooltipPosition="below"
-          (click)="deleteSearch()"
-        >
-          <i class="bi bi-x-lg"></i>
-        </button>
+        @if (searchTerm) {
+          <button
+            class="delete-search-button"
+            matTooltip="Borrar texto de búsqueda"
+            matTooltipPosition="below"
+            (click)="deleteSearch()"
+          >
+            <i class="bi bi-x-lg"></i>
+          </button>
+        }
       </div>
     </form>
   </div>
 
-  <p
-    class="channel-counter"
-    *ngIf="filteredLinks.length > 0"
-    style="
-      text-align: center;
-      font-size: 17px;
-      color: rgba(255, 255, 255, 0.7);
-      font-weight: 500;
-    "
-  >
-    Mostrando
-    <span style="color: #3b82f6">{{ getDisplayedChannels() }}</span> de
-    <span>{{ getTotalChannels() }}</span> enlaces
-  </p>
+  @if (filteredLinks.length > 0) {
+    <p
+      class="channel-counter"
+      style="
+        text-align: center;
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 500;
+      "
+    >
+      Mostrando
+      <span style="color: #3b82f6">{{ getDisplayedChannels() }}</span> de
+      <span>{{ getTotalChannels() }}</span> enlaces
+    </p>
+  }
 
-  <p class="no-encontrado-text" *ngIf="filteredLinks.length === 0">
-    <i class="bi bi-exclamation-triangle-fill"></i>&nbsp; No se encontro ningún
-    canal.
-  </p>
+  @if (filteredLinks.length === 0) {
+    <p class="no-encontrado-text">
+      <i class="bi bi-exclamation-triangle-fill"></i>&nbsp; No se encontro ningún
+      canal.
+    </p>
+  }
 
-  <div class="links-container" *ngIf="filteredLinks.length > 0">
-    <div *ngFor="let provider of providers" class="provider-section">
-      <h4 class="provider-header">
-        <img 
-          [src]="getProviderImage(provider)" 
-          [alt]="provider"
-          class="provider-logo"
-          style="height: 35px; width: auto; margin-right: 12px; vertical-align: middle; object-fit: contain;"
-        />
-        {{ provider }}
-        <span
-          style="
-            font-size: 14px;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.6);
-            margin-left: 8px;
-          "
-          >({{ groupedLinks[provider].length }})</span
-        >
-      </h4>
-      
-      <p *ngIf="provider === 'DAZN FÓRMULA 1'" style="color: #ffc107; font-size: 17px; margin: 10px 0; font-weight: 500; text-align: center;">
-        <i class="bi bi-exclamation-triangle-fill" style="margin-right: 5px;"></i>
-        Solo funcionan los enlaces a partir de la Opción 9
-      </p>
-     
-      <ul class="provider-links">
-        <li class="links" *ngFor="let link of groupedLinks[provider]">
-          <a
-            href="{{ link.url }}"
-            class="acestream-link"
-            (click)="
-              trackClick(link.title, link.url, $event); isMenuOpen = false
-            "
-          >
-            <img [src]="link.img" class="logo-img" alt="{{ link.title }}" />
-            <span>{{ link.title }}</span>
-          </a>
-          <button
-            matTooltip="Copiar enlace"
-            class="copy-button"
-            (click)="copyLink(link.url, link.title)"
-          >
-            <i
-              class="bi bi-copy"
-              style="font-size: 17px; display: block; margin: 0"
-            ></i>
-          </button>
-        </li>
-      </ul>
+  @if (filteredLinks.length > 0) {
+    <div class="links-container">
+      @for (provider of providers; track provider) {
+        <div class="provider-section">
+          <h4 class="provider-header">
+            <img 
+              [src]="getProviderImage(provider)" 
+              [alt]="provider"
+              class="provider-logo"
+              style="height: 35px; width: auto; margin-right: 12px; vertical-align: middle; object-fit: contain;"
+            />
+            {{ provider }}
+            <span
+              style="
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.6);
+                margin-left: 8px;
+              "
+              >({{ groupedLinks[provider].length }})</span
+            >
+          </h4>
+          
+          @if (provider === 'DAZN FÓRMULA 1') {
+            <p style="color: #ffc107; font-size: 17px; margin: 10px 0; font-weight: 500; text-align: center;">
+              <i class="bi bi-exclamation-triangle-fill" style="margin-right: 5px;"></i>
+              Solo funcionan los enlaces a partir de la Opción 9
+            </p>
+          }
+         
+          <ul class="provider-links">
+            @for (link of groupedLinks[provider]; track link.url) {
+              <li class="links">
+                <a
+                  href="{{ link.url }}"
+                  class="acestream-link"
+                  (click)="
+                    trackClick(link.title, link.url, $event); isMenuOpen = false
+                  "
+                >
+                  <img [src]="link.img" class="logo-img" alt="{{ link.title }}" />
+                  <span>{{ link.title }}</span>
+                </a>
+                <button
+                  matTooltip="Copiar enlace"
+                  class="copy-button"
+                  (click)="copyLink(link.url, link.title)"
+                >
+                  <i
+                    class="bi bi-copy"
+                    style="font-size: 17px; display: block; margin: 0"
+                  ></i>
+                </button>
+              </li>
+            }
+          </ul>
+        </div>
+      }
     </div>
-  </div>
+  }
 
   <hr style="border: 0; border-top: 1px solid #444; margin: 2rem 0" />
 
@@ -578,55 +606,56 @@
       </a>
     </div>
 
-    <div
-      class="image-popup"
-      *ngIf="isImagePopupOpen"
-      (click)="closeImagePopup()"
-      style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      "
-    >
-      <img
-        [src]="popupImageUrl"
-        alt="Popup Image"
-        style="max-width: 90%; max-height: 90%"
-      />
-      <button
+    @if (isImagePopupOpen) {
+      <div
+        class="image-popup"
         (click)="closeImagePopup()"
-        title="Cerrar imagen"
         style="
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background-color: #ff4d4d;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          font-size: 18px;
-          font-weight: bold;
-          cursor: pointer;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
           display: flex;
           justify-content: center;
           align-items: center;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          z-index: 1001;
-          transition: background-color 0.3s ease, transform 0.2s ease;
+          z-index: 1000;
         "
       >
-        &times;
-      </button>
-    </div>
+        <img
+          [src]="popupImageUrl"
+          alt="Popup Image"
+          style="max-width: 90%; max-height: 90%"
+        />
+        <button
+          (click)="closeImagePopup()"
+          title="Cerrar imagen"
+          style="
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+          "
+        >
+          &times;
+        </button>
+      </div>
+    }
     <p class="how-to-play-text" style="margin-top: 1.1rem">
       Para eliminar el retraso en dispositivos móviles, haz clic en el botón
       "Live" de Ace Player.
@@ -651,14 +680,18 @@
           [(ngModel)]="contact.name"
           #name="ngModel"
         />
-        <div *ngIf="name.invalid && name.touched" class="error">
-          <span *ngIf="name.errors?.['required']"
-            >El nombre es obligatorio.</span
-          >
-          <span *ngIf="name.errors?.['pattern']">
-            El nombre solo puede contener letras.
-          </span>
-        </div>
+        @if (name.invalid && name.touched) {
+          <div class="error">
+            @if (name.errors?.['required']) {
+              <span>El nombre es obligatorio.</span>
+            }
+            @if (name.errors?.['pattern']) {
+              <span>
+                El nombre solo puede contener letras.
+              </span>
+            }
+          </div>
+        }
       </div>
       <div>
         <input
@@ -670,12 +703,16 @@
           [(ngModel)]="contact.email"
           #email="ngModel"
         />
-        <div *ngIf="email.invalid && email.touched" class="error">
-          <span *ngIf="email.errors?.['required']"
-            >El email es obligatorio.</span
-          >
-          <span *ngIf="email.errors?.['email']">El email no es válido.</span>
-        </div>
+        @if (email.invalid && email.touched) {
+          <div class="error">
+            @if (email.errors?.['required']) {
+              <span>El email es obligatorio.</span>
+            }
+            @if (email.errors?.['email']) {
+              <span>El email no es válido.</span>
+            }
+          </div>
+        }
       </div>
       <div>
         <textarea
@@ -688,14 +725,18 @@
           rows="4"
           style="resize: vertical"
         ></textarea>
-        <div *ngIf="message.invalid && message.touched" class="error">
-          <span *ngIf="message.errors?.['required']"
-            >El mensaje es obligatorio.</span
-          >
-          <span *ngIf="message.errors?.['minlength']">
-            El mensaje debe tener al menos 5 caracteres.
-          </span>
-        </div>
+        @if (message.invalid && message.touched) {
+          <div class="error">
+            @if (message.errors?.['required']) {
+              <span>El mensaje es obligatorio.</span>
+            }
+            @if (message.errors?.['minlength']) {
+              <span>
+                El mensaje debe tener al menos 5 caracteres.
+              </span>
+            }
+          </div>
+        }
       </div>
 
       <button type="submit" [disabled]="contactForm.invalid">
