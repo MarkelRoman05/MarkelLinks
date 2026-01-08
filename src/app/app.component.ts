@@ -411,6 +411,57 @@ export class AppComponent {
   }
 
   /**
+   * Agrupa los canales por nombre base y sus opciones
+   * Por ejemplo: "DAZN 1 - Opción 1", "DAZN 1 - Opción 2" se agrupan bajo "DAZN 1"
+   */
+  getGroupedChannels(provider: string): any[] {
+    const links = this.groupedLinks[provider] || [];
+    const channelsMap = new Map<string, any>();
+
+    links.forEach((link) => {
+      // Extraer el nombre base del canal (antes de "Opción" o "-")
+      let baseName = link.title;
+      let optionNumber = '1';
+
+      // Detectar patrones como "Canal (OPCIÓN X)", "Canal - Opción X" o "Canal Opción X"
+      const optionMatch = link.title.match(/(.+?)\s*[\(\-]?\s*OPCIÓN\s*(\d+)\)?/i);
+      
+      if (optionMatch) {
+        baseName = optionMatch[1].trim();
+        optionNumber = optionMatch[2];
+      } else {
+        // Si no tiene "Opción", usar el título completo como base
+        baseName = link.title;
+        optionNumber = '1';
+      }
+
+      if (!channelsMap.has(baseName)) {
+        channelsMap.set(baseName, {
+          baseName: baseName,
+          links: []
+        });
+      }
+
+      channelsMap.get(baseName)!.links.push({
+        ...link,
+        optionNumber: optionNumber
+      });
+    });
+
+    // Convertir el Map a array y ordenar las opciones dentro de cada canal
+    const result = Array.from(channelsMap.values()).map(channel => {
+      channel.links.sort((a: any, b: any) => {
+        const numA = parseInt(a.optionNumber) || 0;
+        const numB = parseInt(b.optionNumber) || 0;
+        return numA - numB;
+      });
+      return channel;
+    });
+
+    return result;
+  }
+
+  /**
    * Filtra los enlaces según el término de búsqueda ingresado.
    */
   filterLinks() {

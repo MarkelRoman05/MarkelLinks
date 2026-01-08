@@ -76,7 +76,7 @@
           padding: isMobile ? '2rem 1.5rem' : '0',
           transition: isMobile ? 'transform 0.3s ease' : 'none',
           transform:
-            isMobile && !isMenuOpen ? 'translateX(-100%)' : 'translateX(0)'
+            isMobile && !isMenuOpen ? 'translateX(-100%)' : 'translateX(0)',
         }"
       >
         <!-- Botón cerrar solo en móvil -->
@@ -111,7 +111,7 @@
           [ngStyle]="{
             flexDirection: isMobile ? 'column' : 'row',
             alignItems: isMobile ? 'flex-start' : 'center',
-            marginTop: isMobile ? '3rem' : '0'
+            marginTop: isMobile ? '3rem' : '0',
           }"
         >
           <li>
@@ -172,9 +172,7 @@
   <p class="last-update">
     Última actualización web:
     @if (lastUpdate) {
-      <span>
-        {{ lastUpdate | date : "dd/MM/yyyy HH:mm" }}h
-      </span>
+      <span> {{ lastUpdate | date: "dd/MM/yyyy HH:mm" }}h </span>
     } @else {
       <span>Cargando...</span>
     }
@@ -307,7 +305,7 @@
   <div class="mini-separator"></div>
 
   <p class="last-update">
-    <i class="bi bi-info-circle-fill" style="margin-right: 2px;"></i>
+    <i class="bi bi-info-circle-fill" style="margin-right: 2px"></i>
     Los enlaces se actualizan automáticamente todos los días.
   </p>
 
@@ -355,8 +353,8 @@
 
   @if (filteredLinks.length === 0) {
     <p class="no-encontrado-text">
-      <i class="bi bi-exclamation-triangle-fill"></i>&nbsp; No se encontro ningún
-      canal.
+      <i class="bi bi-exclamation-triangle-fill"></i>&nbsp; No se encontro
+      ningún canal.
     </p>
   }
 
@@ -365,11 +363,17 @@
       @for (provider of providers; track provider) {
         <div class="provider-section">
           <h4 class="provider-header">
-            <img 
-              [src]="getProviderImage(provider)" 
+            <img
+              [src]="getProviderImage(provider)"
               [alt]="provider"
               class="provider-logo"
-              style="height: 35px; width: auto; margin-right: 12px; vertical-align: middle; object-fit: contain;"
+              style="
+                height: 35px;
+                width: auto;
+                margin-right: 12px;
+                vertical-align: middle;
+                object-fit: contain;
+              "
             />
             {{ provider }}
             <span
@@ -382,40 +386,70 @@
               >({{ groupedLinks[provider].length }})</span
             >
           </h4>
-          
-          @if (provider === 'DAZN FÓRMULA 1') {
-            <p style="color: #ffc107; font-size: 17px; margin: 10px 0; font-weight: 500; text-align: center;">
-              <i class="bi bi-exclamation-triangle-fill" style="margin-right: 5px;"></i>
+
+          @if (provider === "DAZN FÓRMULA 1") {
+            <p
+              style="
+                color: #ffc107;
+                font-size: 17px;
+                margin: 10px 0;
+                font-weight: 500;
+                text-align: center;
+              "
+            >
+              <i
+                class="bi bi-exclamation-triangle-fill"
+                style="margin-right: 5px"
+              ></i>
               Solo funcionan los enlaces a partir de la Opción 9
             </p>
           }
-         
-          <ul class="provider-links">
-            @for (link of groupedLinks[provider]; track link.url) {
-              <li class="links">
-                <a
-                  href="{{ link.url }}"
-                  class="acestream-link"
-                  (click)="
-                    trackClick(link.title, link.url, $event); isMenuOpen = false
-                  "
-                >
-                  <img [src]="link.img" class="logo-img" alt="{{ link.title }}" />
-                  <span>{{ link.title }}</span>
-                </a>
-                <button
-                  matTooltip="Copiar enlace"
-                  class="copy-button"
-                  (click)="copyLink(link.url, link.title)"
-                >
-                  <i
-                    class="bi bi-copy"
-                    style="font-size: 17px; display: block; margin: 0"
-                  ></i>
-                </button>
-              </li>
+
+          <!-- Agrupar por canal base -->
+          <div class="channels-grid">
+            @for (
+              channel of getGroupedChannels(provider);
+              track channel.baseName
+            ) {
+              <div class="channel-card">
+                <div class="channel-header">
+                  <img
+                    [src]="channel.links[0].img"
+                    class="channel-logo"
+                    alt="{{ channel.baseName }}"
+                  />
+                  <h5 class="channel-name">{{ channel.baseName }}</h5>
+                </div>
+                <div class="options-grid">
+                  @for (link of channel.links; track link.url) {
+                    <div class="option-item">
+                      <a
+                        href="{{ link.url }}"
+                        class="option-link"
+                        (click)="
+                          trackClick(link.title, link.url, $event);
+                          isMenuOpen = false
+                        "
+                      >
+                        <i class="bi bi-play-fill" style="margin-right: 4px;"></i>
+                        <span class="option-number"
+                          >Opción {{ link.optionNumber }}</span
+                        >
+                      </a>
+                      <button
+                        matTooltip="Copiar enlace"
+                        matTooltipPosition="below"
+                        class="copy-button-small"
+                        (click)="copyLink(link.url, link.title)"
+                      >
+                        <i class="bi bi-copy"></i>
+                      </button>
+                    </div>
+                  }
+                </div>
+              </div>
             }
-          </ul>
+          </div>
         </div>
       }
     </div>
@@ -519,12 +553,16 @@
       Stream, puedes abrir el enlace haciendo clic en él directamente, y dándole
       a reproducir en Ace Player. También puedes copiar el enlace, abrir Ace
       Stream manualmente y pegar el enlace en el cuadro de texto de "Introduzca
-      aquí el enlace al contenido". <br><br />
-      Otra opción es usar la app de Wiseplay (disponible en 
-      <a href="https://play.google.com/store/apps/details?id=com.wiseplay" target="_blank">Google Play Store</a>)
-      e introducir esta URL de lista M3U allí: <code>https://bit.ly/4pcej3D</code>.
-      Una vez añadida, verás todos los canales ordenados por temáticas. Tan solo selecciona el canal que
-      quieras ver y se abrirá Ace Stream automáticamente para reproducir el enlace.
+      aquí el enlace al contenido". <br /><br />
+      Otra opción es usar la app de Wiseplay (disponible en
+      <a
+        href="https://play.google.com/store/apps/details?id=com.wiseplay"
+        target="_blank"
+        >Google Play Store</a
+      >) e introducir esta URL de lista M3U allí:
+      <code>https://bit.ly/4pcej3D</code>. Una vez añadida, verás todos los
+      canales ordenados por temáticas. Tan solo selecciona el canal que quieras
+      ver y se abrirá Ace Stream automáticamente para reproducir el enlace.
     </p>
 
     <h4 style="color: white; margin: 0 20px 20px 29px">Windows (PC)</h4>
@@ -561,11 +599,13 @@
       Stream Engine y en la parte superior derecha, haz clic en los tres
       puntitos y selecciona "Ajustes". Allí, vete a ajustes del servidor, y en
       "Jugador seleccionado" pon Ace Player.<br /><br />
-      Para reproducir los enlaces en Android TV, descarga la app de Wiseplay (disponible en Play Store en tu Android TV)
-      e introduce esta URL de lista M3U allí: <code>https://bit.ly/4pcej3D</code>.
-      Una vez añadida, verás todos los canales ordenados por temáticas. Tan solo selecciona el canal que
-      quieras ver y se abrirá Ace Stream automáticamente para reproducir el enlace.
-       <br />
+      Para reproducir los enlaces en Android TV, descarga la app de Wiseplay
+      (disponible en Play Store en tu Android TV) e introduce esta URL de lista
+      M3U allí: <code>https://bit.ly/4pcej3D</code>. Una vez añadida, verás
+      todos los canales ordenados por temáticas. Tan solo selecciona el canal
+      que quieras ver y se abrirá Ace Stream automáticamente para reproducir el
+      enlace.
+      <br />
       <a
         href="https://mega.nz/folder/AddSwK6J#E5L5EeZqvazk2eJLbtFzZg"
         target="_blank"
@@ -649,7 +689,9 @@
             align-items: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1001;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition:
+              background-color 0.3s ease,
+              transform 0.2s ease;
           "
         >
           &times;
@@ -682,13 +724,11 @@
         />
         @if (name.invalid && name.touched) {
           <div class="error">
-            @if (name.errors?.['required']) {
+            @if (name.errors?.["required"]) {
               <span>El nombre es obligatorio.</span>
             }
-            @if (name.errors?.['pattern']) {
-              <span>
-                El nombre solo puede contener letras.
-              </span>
+            @if (name.errors?.["pattern"]) {
+              <span> El nombre solo puede contener letras. </span>
             }
           </div>
         }
@@ -705,10 +745,10 @@
         />
         @if (email.invalid && email.touched) {
           <div class="error">
-            @if (email.errors?.['required']) {
+            @if (email.errors?.["required"]) {
               <span>El email es obligatorio.</span>
             }
-            @if (email.errors?.['email']) {
+            @if (email.errors?.["email"]) {
               <span>El email no es válido.</span>
             }
           </div>
@@ -727,13 +767,11 @@
         ></textarea>
         @if (message.invalid && message.touched) {
           <div class="error">
-            @if (message.errors?.['required']) {
+            @if (message.errors?.["required"]) {
               <span>El mensaje es obligatorio.</span>
             }
-            @if (message.errors?.['minlength']) {
-              <span>
-                El mensaje debe tener al menos 5 caracteres.
-              </span>
+            @if (message.errors?.["minlength"]) {
+              <span> El mensaje debe tener al menos 5 caracteres. </span>
             }
           </div>
         }

@@ -295,13 +295,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  width: 42px;
-  height: 42px;
+  font-size: 22px;
+  width: 52px;
+  height: 52px;
   margin: 0 0 0 12px;
   align-self: center;
   flex-shrink: 0;
-  min-width: 42px;
+  min-width: 52px;
   margin-left: 8px;
   will-change: transform;
 }
@@ -316,16 +316,16 @@ html {
 
 @media (max-width: 480px) {
   .copy-button {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
     margin-left: 6px;
     background: rgba(59, 130, 246, 0.2);
     align-self: center;
   }
   
   .copy-button i {
-    font-size: 16px !important;
+    font-size: 19px !important;
   }
 }
 
@@ -1350,4 +1350,178 @@ h3 {
   color: #9ca3af;
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
+}
+
+/* Estilos para el diseño en columnas de canales */
+.channels-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .channels-grid {
+    gap: 16px;
+  }
+}
+
+.channel-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  flex: 0 1 280px;
+  min-width: 280px;
+  max-width: 350px;
+}
+
+@media (max-width: 768px) {
+  .channel-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
+.channel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.channel-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.channel-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .options-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 6px;
+  }
+}
+
+.option-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: stretch;
+}
+
+.option-link {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .option-link:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .option-link:active {
+    transform: scale(0.95);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  }
+}
+
+.option-number {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .option-link {
+    padding: 8px 6px;
+    font-size: 12px;
+    min-height: 38px;
+  }
+  
+  .option-number {
+    font-size: 12px;
+  }
+}
+
+.copy-button-small {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  min-height: 28px;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .copy-button-small:hover {
+    background: rgba(59, 130, 246, 0.25);
+    transform: translateY(-1px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .copy-button-small:active {
+    background: rgba(59, 130, 246, 0.3);
+    transform: scale(0.95);
+  }
+}
+
+.copy-button-small i {
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .copy-button-small {
+    padding: 4px;
+    min-height: 24px;
+  }
+  
+  .copy-button-small i {
+    font-size: 10px;
+  }
 }
