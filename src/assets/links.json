@@ -787,66 +787,60 @@
   },
   {
     "title": "M+ L. de Campeones (OPCIÓN 2)",
-    "url": "acestream://c16b4fab1f724c94cad92081cbb7fc7c6fe8a2cc",
-    "tags": "movistar liga de campeones",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
-  },
-  {
-    "title": "M+ L. de Campeones (OPCIÓN 3)",
     "url": "acestream://778f08cbae9596ed9e8b2ae0af33ee7a6fe24c6a",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 4)",
+    "title": "M+ L. de Campeones (OPCIÓN 3)",
     "url": "acestream://afbf2a479c5a5072698139f0f556ef3e77a99bd0",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 5)",
+    "title": "M+ L. de Campeones (OPCIÓN 4)",
     "url": "acestream://afbf1ef8812e7b0a0977fa3a0a2d3a6d3cbd6c6f",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 6)",
+    "title": "M+ L. de Campeones (OPCIÓN 5)",
     "url": "acestream://0f7842f8b6c26571e5a974407b61623e56e6a052",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 7)",
+    "title": "M+ L. de Campeones (OPCIÓN 6)",
     "url": "acestream://f3eea003e23f94dc2d527306de9dd386e3ebf4ba",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 8)",
+    "title": "M+ L. de Campeones (OPCIÓN 7)",
     "url": "acestream://97df5b7824948972d041d8ca2a4d29c90b641bc9",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 9)",
+    "title": "M+ L. de Campeones (OPCIÓN 8)",
     "url": "acestream://2b51710cee513e8939785fa3e7980f32d4e0415f",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 10)",
+    "title": "M+ L. de Campeones (OPCIÓN 9)",
     "url": "acestream://9db029dff6a9c637d1f670e78dbc1a479b9b406e",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 11)",
+    "title": "M+ L. de Campeones (OPCIÓN 10)",
     "url": "acestream://b028202ff335911db3118bceac027df3e8ef6c32",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
-    "title": "M+ L. de Campeones (OPCIÓN 12)",
+    "title": "M+ L. de Campeones (OPCIÓN 11)",
     "url": "acestream://e572a5178ff72eed7d1d751a18b4b3419699f370",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
@@ -1188,13 +1182,7 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DCESP.png"
   },
   {
-    "title": "M+ Clásicos (OPCIÓN 1)",
-    "url": "acestream://cf6ffdfa3c51268c0bd216da6b275fb866160c0c",
-    "tags": "movistar clásicos",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MCLAS.png"
-  },
-  {
-    "title": "M+ Clásicos (OPCIÓN 2)",
+    "title": "M+ Clásicos",
     "url": "acestream://6462c8f65fcaa6e4fc874fef8d1e45bb7a7e6bae",
     "tags": "movistar clásicos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MCLAS.png"
