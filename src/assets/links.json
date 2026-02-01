@@ -37,6 +37,12 @@
   },
   {
     "title": "M+ LALIGA 2 (OPCIÓN 3)",
+    "url": "acestream://51b363b1c4d42724e05240ad068ad219df8042ec",
+    "tags": "movistar laliga 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png"
+  },
+  {
+    "title": "M+ LALIGA 2 (OPCIÓN 4)",
     "url": "acestream://b8eb9c9868d487402569bba2d97a8af113d033fe",
     "tags": "movistar laliga 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png"
@@ -54,7 +60,19 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG2.png"
   },
   {
-    "title": "M+ LALIGA 4",
+    "title": "M+ LALIGA 4 (OPCIÓN 1)",
+    "url": "acestream://1bcee22d5476f2eae9dc2cb24e3685152cf285cb",
+    "tags": "movistar laliga 4",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG3.png"
+  },
+  {
+    "title": "M+ LALIGA 4 (OPCIÓN 2)",
+    "url": "acestream://2a6b1fd8a24b23747db1ea534a51457708523602",
+    "tags": "movistar laliga 4",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG3.png"
+  },
+  {
+    "title": "M+ LALIGA 4 (OPCIÓN 3)",
     "url": "acestream://22178d72e0f255dedd7e56f9474fea879289a6f1",
     "tags": "movistar laliga 4",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG3.png"
@@ -300,6 +318,12 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZNL2.png"
   },
   {
+    "title": "DAZN LALIGA 2 (OPCIÓN 3)",
+    "url": "acestream://a231b2fa1f7754433efeb8bb8d69d7b9096dcba8",
+    "tags": "dazn laliga 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZNL2.png"
+  },
+  {
     "title": "DAZN LALIGA 3",
     "url": "acestream://8c71f0e0a5476e10950fc827f9d2a507340aba74",
     "tags": "dazn laliga 3",
@@ -355,6 +379,18 @@
   },
   {
     "title": "DAZN 2 (OPCIÓN 3)",
+    "url": "acestream://f12038c7fe603ed93fa9475d60692dd95bb7b17f",
+    "tags": "dazn 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/M2SD.png"
+  },
+  {
+    "title": "DAZN 2 (OPCIÓN 4)",
+    "url": "acestream://13a16a0630ae87bd97d6ba4165963c201c9a2e9c",
+    "tags": "dazn 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/M2SD.png"
+  },
+  {
+    "title": "DAZN 2 (OPCIÓN 5)",
     "url": "acestream://b0eabe0fdd02fdd165896236765a9b753a2ff516",
     "tags": "dazn 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/M2SD.png"
@@ -402,8 +438,14 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png"
   },
   {
-    "title": "LALIGA TV HYPERMOTION 3",
+    "title": "LALIGA TV HYPERMOTION 3 (OPCIÓN 1)",
     "url": "acestream://1ba18731a8e18bb4b3a5dfa5bb7b0f05762849a6",
+    "tags": "laliga hypermotion 3",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS3.png"
+  },
+  {
+    "title": "LALIGA TV HYPERMOTION 3 (OPCIÓN 2)",
+    "url": "acestream://1fdb405a6942da0941266f24cdd1c71b11552f1f",
     "tags": "laliga hypermotion 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS3.png"
   },
@@ -530,6 +572,12 @@
   {
     "title": "Rally TV (OPCIÓN 2)",
     "url": "acestream://8e96e35afd910d1a056dc7bf25139b8e2849b2ea",
+    "tags": "rally tv",
+    "img": "https://play-lh.googleusercontent.com/yGC9brvzJBdkj8D2iyr1FmtE2FOM4myhn83rWR1DsJR4jXBwpQSHa7OkS9Q1_XVqQGl-"
+  },
+  {
+    "title": "Rally TV (OPCIÓN 3)",
+    "url": "acestream://b6ca8e022947548af61d76660b6b6f799a778d31",
     "tags": "rally tv",
     "img": "https://play-lh.googleusercontent.com/yGC9brvzJBdkj8D2iyr1FmtE2FOM4myhn83rWR1DsJR4jXBwpQSHa7OkS9Q1_XVqQGl-"
   },
