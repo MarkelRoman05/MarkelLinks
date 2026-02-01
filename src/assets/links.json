@@ -37,12 +37,6 @@
   },
   {
     "title": "M+ LALIGA 2 (OPCIÓN 3)",
-    "url": "acestream://51b363b1c4d42724e05240ad068ad219df8042ec",
-    "tags": "movistar laliga 2",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png"
-  },
-  {
-    "title": "M+ LALIGA 2 (OPCIÓN 4)",
     "url": "acestream://b8eb9c9868d487402569bba2d97a8af113d033fe",
     "tags": "movistar laliga 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png"
@@ -60,19 +54,7 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG2.png"
   },
   {
-    "title": "M+ LALIGA 4 (OPCIÓN 1)",
-    "url": "acestream://1bcee22d5476f2eae9dc2cb24e3685152cf285cb",
-    "tags": "movistar laliga 4",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG3.png"
-  },
-  {
-    "title": "M+ LALIGA 4 (OPCIÓN 2)",
-    "url": "acestream://2a6b1fd8a24b23747db1ea534a51457708523602",
-    "tags": "movistar laliga 4",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG3.png"
-  },
-  {
-    "title": "M+ LALIGA 4 (OPCIÓN 3)",
+    "title": "M+ LALIGA 4",
     "url": "acestream://22178d72e0f255dedd7e56f9474fea879289a6f1",
     "tags": "movistar laliga 4",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG3.png"
@@ -199,24 +181,30 @@
   },
   {
     "title": "Eurosport 1 (OPCIÓN 2)",
-    "url": "acestream://ef2abf419586d9876370be127ad592dbb41b126a",
+    "url": "acestream://714e14e6d6e27660fd25a75b57b0ac5580fe705d",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
     "title": "Eurosport 1 (OPCIÓN 3)",
-    "url": "acestream://547ab7146a86d6119c9332c011669544720124e3",
+    "url": "acestream://ef2abf419586d9876370be127ad592dbb41b126a",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
     "title": "Eurosport 1 (OPCIÓN 4)",
-    "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
+    "url": "acestream://547ab7146a86d6119c9332c011669544720124e3",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
     "title": "Eurosport 1 (OPCIÓN 5)",
+    "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
+    "tags": "eurosport 1",
+    "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
+  },
+  {
+    "title": "Eurosport 1 (OPCIÓN 6)",
     "url": "acestream://1b0bc4d4dcd609d3c092712e721392b199f50a62",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
@@ -438,14 +426,8 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png"
   },
   {
-    "title": "LALIGA TV HYPERMOTION 3 (OPCIÓN 1)",
+    "title": "LALIGA TV HYPERMOTION 3",
     "url": "acestream://1ba18731a8e18bb4b3a5dfa5bb7b0f05762849a6",
-    "tags": "laliga hypermotion 3",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS3.png"
-  },
-  {
-    "title": "LALIGA TV HYPERMOTION 3 (OPCIÓN 2)",
-    "url": "acestream://1fdb405a6942da0941266f24cdd1c71b11552f1f",
     "tags": "laliga hypermotion 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS3.png"
   },
