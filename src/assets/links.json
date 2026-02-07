@@ -43,13 +43,13 @@
   },
   {
     "title": "M+ LALIGA 2 (OPCIÓN 2)",
-    "url": "acestream://b45cfe568e106a7df65c950805d6f123c989ce84",
+    "url": "acestream://2c01306506e268ba726f5c30222923b6168a5404",
     "tags": "movistar laliga 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png"
   },
   {
     "title": "M+ LALIGA 2 (OPCIÓN 3)",
-    "url": "acestream://2c01306506e268ba726f5c30222923b6168a5404",
+    "url": "acestream://b45cfe568e106a7df65c950805d6f123c989ce84",
     "tags": "movistar laliga 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIG1.png"
   },
@@ -139,12 +139,24 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 6)",
-    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "url": "acestream://895d08633bb22c2573281655cf3ca44de476cc73",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
     "title": "DAZN F1 (OPCIÓN 7)",
+    "url": "acestream://d719181097d256073844390b3e094fbcb1bceaa4",
+    "tags": "dazn f1 formula 1",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
+  },
+  {
+    "title": "DAZN F1 (OPCIÓN 8)",
+    "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
+    "tags": "dazn f1 formula 1",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
+  },
+  {
+    "title": "DAZN F1 (OPCIÓN 9)",
     "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
@@ -451,7 +463,7 @@
   },
   {
     "title": "M+ Golf 2",
-    "url": "acestream://96e82321c731e41768a806992ee4d3b9b7a0e7d7",
+    "url": "acestream://ac321484243571f59e077f2a2521e648dc0c7b03",
     "tags": "movistar golf 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/GOLF2.png"
   },
@@ -486,8 +498,14 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
   },
   {
-    "title": "M+ Ellas Vamos",
+    "title": "M+ Ellas Vamos (OPCIÓN 1)",
     "url": "acestream://9b84af74b2fa3690c519199326fc2f181b025cdd",
+    "tags": "movistar ellas vamos",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MELLAV.png"
+  },
+  {
+    "title": "M+ Ellas Vamos (OPCIÓN 2)",
+    "url": "acestream://80e290013709091ec93d542754bff27cc90ac996",
     "tags": "movistar ellas vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MELLAV.png"
   },
@@ -500,6 +518,12 @@
   {
     "title": "La 1 (OPCIÓN 2)",
     "url": "acestream://dad5e0e0825cb3e410008f1c4252387b868e740c",
+    "tags": "la 1 tdt",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/TVE.png"
+  },
+  {
+    "title": "La 1 (OPCIÓN 3)",
+    "url": "acestream://02622fa2fab63847d88dc14fd9fa5c2fc35de8a8",
     "tags": "la 1 tdt",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/TVE.png"
   },
@@ -770,6 +794,12 @@
   {
     "title": "M+ Deportes (OPCIÓN 4)",
     "url": "acestream://c6a824a81b36f6c3529826477caf2ad94b45776d",
+    "tags": "movistar deportes",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CPDEP.png"
+  },
+  {
+    "title": "M+ Deportes (OPCIÓN 5)",
+    "url": "acestream://b35b3eb8e22365bf3469efd6d1f3b82618a6e18a",
     "tags": "movistar deportes",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CPDEP.png"
   },
