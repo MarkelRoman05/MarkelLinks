@@ -408,8 +408,14 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS.png"
   },
   {
-    "title": "LALIGA TV HYPERMOTION 2",
-    "url": "acestream://709075831bf5c41ed0a20dfbd640aab6c28971f8",
+    "title": "LALIGA TV HYPERMOTION 2 (OPCIÓN 1)",
+    "url": "acestream://3a21e651c0bffe810cfc8537065cb81f5ed68a55",
+    "tags": "laliga hypermotion 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png"
+  },
+  {
+    "title": "LALIGA TV HYPERMOTION 2 (OPCIÓN 2)",
+    "url": "acestream://a5b9d834ad92bfb80fe01bf89cc20bd68be199fb",
     "tags": "laliga hypermotion 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png"
   },
