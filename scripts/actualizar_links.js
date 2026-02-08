@@ -24,7 +24,8 @@ if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR);
 function cleanVariant(name) {
   let cleaned = name
     .replace(/\s*-->\s*.*$/i, '') // Elimina todo después de -->
-    .replace(/\b(FHD|HD|4K|SD|NEW\s*ERA|ELCANO|SPORT\s*TV|NEW\s*LOOP)\b/gi, '') // Elimina variantes de calidad y fuente
+    .replace(/\b(FHD|HD|4K|SD)p?\b/gi, '') // Elimina variantes de calidad (con p opcional)
+    .replace(/\b(NEW\s*ERA|ELCANO|SPORT\s*TV|NEW\s*LOOP)\b/gi, '') // Elimina fuentes
     .replace(/\b(I{1,3}|VI|IV|V|II)\b/gi, '') // Elimina números romanos
     .replace(/\([^)]*\)/g, '') // Elimina contenido entre paréntesis como (DE), (TR), (RU), etc.
     .replace(/\[[^\]]*\]/g, '') // Elimina contenido entre corchetes como [UK], [US], etc.
@@ -86,9 +87,14 @@ function cleanVariant(name) {
     .replace(/^MOVISTAR\s*HITS/i, 'M+ HITS')
     // DAZN F1
     .replace(/^DAZN\s*F1/i, 'DAZN F1')
-    // DAZN Baloncesto - normalizar el que no tiene número al canal 1
-    .replace(/^DAZN\s*BALONCESTO$/i, 'DAZN BALONCESTO 1')
-    .replace(/^DAZN\s*BALONCESTO\s+(\d+)/i, 'DAZN BALONCESTO $1')
+    // ACB Evento (remoto) → DAZN LIGA ENDESA (para emparejar con DAZN Liga Endesa local)
+    .replace(/^ACB\s*EVENTO\s*0*(\d+)/i, 'DAZN LIGA ENDESA $1')
+    .replace(/^ACB\s*EVENTO$/i, 'DAZN LIGA ENDESA 1')
+    // DAZN Liga Endesa / DAZN Baloncesto (local) → DAZN LIGA ENDESA
+    .replace(/^DAZN\s*LIGA\s*ENDESA$/i, 'DAZN LIGA ENDESA 1')
+    .replace(/^DAZN\s*LIGA\s*ENDESA\s+(\d+)/i, 'DAZN LIGA ENDESA $1')
+    .replace(/^DAZN\s*BALONCESTO$/i, 'DAZN LIGA ENDESA 1')
+    .replace(/^DAZN\s*BALONCESTO\s+(\d+)/i, 'DAZN LIGA ENDESA $1')
     // Eurosport
     .replace(/^EUROSPORT\s+(\d+)/i, 'EUROSPORT $1')
     // Tennis Channel

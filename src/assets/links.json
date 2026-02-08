@@ -7,30 +7,24 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 2)",
-    "url": "acestream://5c26bf5f96ccae8937c664d924a53166d410ac5d",
-    "tags": "movistar laliga",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
-  },
-  {
-    "title": "M+ LALIGA (OPCIÓN 3)",
     "url": "acestream://3ace1463a7cad979c3a4002b245487e9982e9f1a",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 4)",
+    "title": "M+ LALIGA (OPCIÓN 3)",
     "url": "acestream://f863873de9f7b2996dde19a0657dd89835af3007",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 5)",
+    "title": "M+ LALIGA (OPCIÓN 4)",
     "url": "acestream://0febfb5cac3384f487d55c559bbfc877db2d0357",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 6)",
+    "title": "M+ LALIGA (OPCIÓN 5)",
     "url": "acestream://31c19ffb3472c289c5bbbbc174449c8ed0d19e38",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
@@ -139,44 +133,32 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 6)",
-    "url": "acestream://895d08633bb22c2573281655cf3ca44de476cc73",
-    "tags": "dazn f1 formula 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
-  },
-  {
-    "title": "DAZN F1 (OPCIÓN 7)",
-    "url": "acestream://d719181097d256073844390b3e094fbcb1bceaa4",
-    "tags": "dazn f1 formula 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
-  },
-  {
-    "title": "DAZN F1 (OPCIÓN 8)",
     "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 9)",
+    "title": "DAZN F1 (OPCIÓN 7)",
     "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
-    "title": "DAZN Baloncesto 1",
-    "url": "acestream://217e5f172d4c704c5eec739fed672a53521e8f98",
-    "tags": "dazn baloncesto liga endesa acb",
+    "title": "DAZN Liga Endesa 1",
+    "url": "acestream://8faa686a99697b99261346e479ead172b1d9d5d2",
+    "tags": "dazn baloncesto liga endesa",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZBA.png"
   },
   {
-    "title": "DAZN Baloncesto 2",
-    "url": "acestream://965b249321adbf3a1459f94c17f624022889fb8d",
-    "tags": "dazn baloncesto liga endesa acb",
+    "title": "DAZN Liga Endesa 2",
+    "url": "acestream://d7e6b6bb1666740a21099fe6ceb0178a14f58e0c",
+    "tags": "dazn baloncesto liga endesa",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZB2.png"
   },
   {
-    "title": "DAZN Baloncesto 3",
-    "url": "acestream://f4db7197aa4b9487014ba348fca3f78121ac2cae",
-    "tags": "dazn baloncesto liga endesa acb",
+    "title": "DAZN Liga Endesa 3",
+    "url": "acestream://119087e842ea8857124b9405b10bb6cfffd2900c",
+    "tags": "dazn baloncesto liga endesa",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZB3.png"
   },
   {
@@ -522,26 +504,8 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/TVE.png"
   },
   {
-    "title": "La 1 (OPCIÓN 3)",
-    "url": "acestream://02622fa2fab63847d88dc14fd9fa5c2fc35de8a8",
-    "tags": "la 1 tdt",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/TVE.png"
-  },
-  {
-    "title": "La 2 (OPCIÓN 1)",
+    "title": "La 2",
     "url": "acestream://9934906503661142f97a044ae1509a294057c2ed",
-    "tags": "la 2 tdt",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/LA2.png"
-  },
-  {
-    "title": "La 2 (OPCIÓN 2)",
-    "url": "acestream://001a809c577ef916a57340151c6112ebcb7a894f",
-    "tags": "la 2 tdt",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/LA2.png"
-  },
-  {
-    "title": "La 2 (OPCIÓN 3)",
-    "url": "acestream://9b461120d04b7651990c3b54a0821c60c3b94146",
     "tags": "la 2 tdt",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/LA2.png"
   },
