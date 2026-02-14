@@ -7,13 +7,13 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 2)",
-    "url": "acestream://3ace1463a7cad979c3a4002b245487e9982e9f1a",
+    "url": "acestream://f863873de9f7b2996dde19a0657dd89835af3007",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
   {
     "title": "M+ LALIGA (OPCIÓN 3)",
-    "url": "acestream://f863873de9f7b2996dde19a0657dd89835af3007",
+    "url": "acestream://3ace1463a7cad979c3a4002b245487e9982e9f1a",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
@@ -673,6 +673,12 @@
   },
   {
     "title": "M+ Deportes (OPCIÓN 4)",
+    "url": "acestream://b35b3eb8e22365bf3469efd6d1f3b82618a6e18a",
+    "tags": "movistar deportes",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CPDEP.png"
+  },
+  {
+    "title": "M+ Deportes (OPCIÓN 5)",
     "url": "acestream://77cf022557c56cdf8d8115f50e61f846ad72ee05",
     "tags": "movistar deportes",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CPDEP.png"
