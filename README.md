@@ -12,12 +12,12 @@ Hay dos formas de acceder a la web de Markel Links, ya que está desplegado tant
 
 ## Características
 
-- **Enlaces aactualizados**: Los enlaces se actualizan todos los días a las 14:00h (los findes también a las 16:15h y 20:00h) para garantizar la disponibilidad.
+- **Enlaces actualizados**: Los enlaces se actualizan todos los días a las 14:00h (los findes también a las 16:15h y 20:00h) para garantizar la disponibilidad.
 - **Fácil de usar**: Interfaz sencilla para encontrar y copiar o ejecutar enlaces rápidamente.
 - **Compatibilidad**: Funciona con reproductores compatibles con Ace Stream.
 
 ## Requisitos
 
-- Ace Stream Media instalado en tu dispositivo.
-- Conexión a Internet estable.
-- Opcional: VPN para mayor privacidad.
+- Última versión de Ace Stream instalada en tu dispositivo.
+- Conexión a internet estable, preferiblemente por cable.
+- Opcional: VPN.
