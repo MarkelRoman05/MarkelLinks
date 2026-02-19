@@ -10,7 +10,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import emailjs from '@emailjs/browser';
 import { HttpClient } from '@angular/common/http';
 import { AgendaEventoTextComponent } from './agenda-evento-text/agenda-evento-text.component';
-import { environment } from '../environments/enviroment';
 
 declare global {
   interface Window {
@@ -71,36 +70,21 @@ export class AppComponent {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {
     window.clarity('consent');
-    this.getLastCommitDate();
+    this.getLastLinksUpdate();
     this.loadLinks();
   }
 
-  private getLastCommitDate() {
-    const owner = 'MarkelRoman05';
-    const repo = 'AcestreamLinks';
-    const branch = 'master';
-
-    const gitHubToken = environment.gitHubToken;
-
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits/${branch}`;
-
-    // Configurar los headers para la autenticación
-    const headers = {
-      Authorization: `Bearer ${gitHubToken}`,
-      Accept: 'application/vnd.github.v3+json',
-    };
-
-    this.http.get(apiUrl, { headers }).subscribe(
-      (response: any) => {
-        if (response && response.commit && response.commit.author) {
-          this.lastUpdate = response.commit.author.date;
+  private getLastLinksUpdate() {
+    this.http.get<{ lastUpdate: string }>('/assets/links-meta.json').subscribe(
+      (meta) => {
+        if (meta && meta.lastUpdate) {
+          this.lastUpdate = meta.lastUpdate;
         } else {
-          this.lastUpdate = 'Formato de respuesta inesperado';
-          console.error('Unexpected response format:', response);
+          this.lastUpdate = 'No disponible';
         }
       },
       (error) => {
-        console.error('Error fetching last commit:', error);
+        console.error('Error fetching links-meta.json:', error);
         this.lastUpdate = 'No disponible';
       }
     );

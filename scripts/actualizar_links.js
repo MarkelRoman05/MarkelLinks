@@ -10,6 +10,7 @@ const PROJECT_ROOT = path.join(__dirname, '..');
 
 const LOG_DIR = path.join(PROJECT_ROOT, 'logs');
 const LINKS_PATH = path.join(PROJECT_ROOT, 'src/assets/links.json');
+const META_PATH = path.join(PROJECT_ROOT, 'src/assets/links-meta.json');
 const REMOTE_URLS = [
   'https://bit.ly/lista-ipfs-iptv',
   'https://bit.ly/4pcej3D',
@@ -448,6 +449,8 @@ async function main() {
     if (oldContent.trim() !== newContent.trim()) {
       fs.writeFileSync(LINKS_PATH, newContent, 'utf8');
       console.log('Archivo links.json actualizado correctamente');
+      fs.writeFileSync(META_PATH, JSON.stringify({ lastUpdate: new Date().toISOString() }, null, 2), 'utf8');
+      console.log('Archivo links-meta.json actualizado correctamente');
     } else {
       console.log('Sin cambios en el contenido del archivo');
     }
