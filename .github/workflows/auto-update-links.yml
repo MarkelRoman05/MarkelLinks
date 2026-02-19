@@ -32,10 +32,10 @@ jobs:
       - name: Ejecuta actualización y log
         run: node scripts/actualizar_links.js
 
-      - name: ¿Hubo cambios en links.json?
+      - name: ¿Hubo cambios en links.json o links-meta.json?
         id: changes
         run: |
-          if git diff --name-only src/assets/links.json | grep -q 'links.json'; then
+          if git diff --name-only src/assets/links.json src/assets/links-meta.json | grep -qE 'links\.json|links-meta\.json'; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -57,7 +57,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add src/assets/links.json
+          git add src/assets/links.json src/assets/links-meta.json
           git commit -m "Auto update links.json [GitHub Actions]"
           git pull --rebase --autostash origin master
           git push
