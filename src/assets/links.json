@@ -79,30 +79,24 @@
   },
   {
     "title": "DAZN F1 (OPCIÓN 3)",
-    "url": "acestream://895d08633bb22c2573281655cf3ca44de476cc73",
-    "tags": "dazn f1 formula 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
-  },
-  {
-    "title": "DAZN F1 (OPCIÓN 4)",
     "url": "acestream://bcf9dc38f92e90a71b87bd54b3bac91b76d09a69",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 5)",
+    "title": "DAZN F1 (OPCIÓN 4)",
     "url": "acestream://fd53cfa7055fe458d4f5c0ff59a06cd43723be55",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 6)",
+    "title": "DAZN F1 (OPCIÓN 5)",
     "url": "acestream://b04372b9543d763bd2dbd2a1842d9723fd080076",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
-    "title": "DAZN F1 (OPCIÓN 7)",
+    "title": "DAZN F1 (OPCIÓN 6)",
     "url": "acestream://d65257bb934b73647374224fd62d836815804be2",
     "tags": "dazn f1 formula 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
@@ -511,19 +505,19 @@
   },
   {
     "title": "M+ L. de Campeones (OPCIÓN 5)",
-    "url": "acestream://2b51710cee513e8939785fa3e7980f32d4e0415f",
+    "url": "acestream://97df5b7824948972d041d8ca2a4d29c90b641bc9",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
     "title": "M+ L. de Campeones (OPCIÓN 6)",
-    "url": "acestream://9db029dff6a9c637d1f670e78dbc1a479b9b406e",
+    "url": "acestream://2b51710cee513e8939785fa3e7980f32d4e0415f",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
   {
     "title": "M+ L. de Campeones (OPCIÓN 7)",
-    "url": "acestream://97df5b7824948972d041d8ca2a4d29c90b641bc9",
+    "url": "acestream://9db029dff6a9c637d1f670e78dbc1a479b9b406e",
     "tags": "movistar liga de campeones",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAPIO.png"
   },
@@ -565,13 +559,13 @@
   },
   {
     "title": "M+ L. de Campeones 2 (OPCIÓN 6)",
-    "url": "acestream://74ab4e4ec7e2da001f473ca40893b7307b8029c5",
+    "url": "acestream://bb26037a253866d341778181eff5c8637240d615",
     "tags": "movistar liga de campeones 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP1.png"
   },
   {
     "title": "M+ L. de Campeones 2 (OPCIÓN 7)",
-    "url": "acestream://bb26037a253866d341778181eff5c8637240d615",
+    "url": "acestream://74ab4e4ec7e2da001f473ca40893b7307b8029c5",
     "tags": "movistar liga de campeones 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP1.png"
   },
