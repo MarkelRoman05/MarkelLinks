@@ -19,18 +19,12 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 4)",
-    "url": "acestream://0febfb5cac3384f487d55c559bbfc877db2d0357",
-    "tags": "movistar laliga",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
-  },
-  {
-    "title": "M+ LALIGA (OPCIÓN 5)",
     "url": "acestream://c9321006921967d6258df6945f1d598a5c0cbf1e",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
   {
-    "title": "M+ LALIGA (OPCIÓN 6)",
+    "title": "M+ LALIGA (OPCIÓN 5)",
     "url": "acestream://31c19ffb3472c289c5bbbbc174449c8ed0d19e38",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
@@ -115,66 +109,54 @@
   },
   {
     "title": "Eurosport 1 (OPCIÓN 1)",
-    "url": "acestream://48a589dbeab3544662fafd79888aada7d834cfe9",
-    "tags": "eurosport 1",
-    "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
-  },
-  {
-    "title": "Eurosport 1 (OPCIÓN 2)",
     "url": "acestream://0db68ab752b50e6bb257eef22d102c1d29cd92ea",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
-    "title": "Eurosport 1 (OPCIÓN 3)",
+    "title": "Eurosport 1 (OPCIÓN 2)",
     "url": "acestream://547ab7146a86d6119c9332c011669544720124e3",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
-    "title": "Eurosport 1 (OPCIÓN 4)",
+    "title": "Eurosport 1 (OPCIÓN 3)",
     "url": "acestream://b8cad4710b1c3b2b84a82c1ece40c08517b8f766",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
-    "title": "Eurosport 1 (OPCIÓN 5)",
+    "title": "Eurosport 1 (OPCIÓN 4)",
     "url": "acestream://1b0bc4d4dcd609d3c092712e721392b199f50a62",
     "tags": "eurosport 1",
     "img": "https://e7.pngegg.com/pngimages/350/883/png-clipart-eurosport-1-eurosport-2-television-channel-1-euro-television-blue-thumbnail.png"
   },
   {
     "title": "Eurosport 2 (OPCIÓN 1)",
-    "url": "acestream://24f940fef7e270b6b3ae5d9dc713a80c8345cfba",
-    "tags": "eurosport 2",
-    "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
-  },
-  {
-    "title": "Eurosport 2 (OPCIÓN 2)",
     "url": "acestream://f5908690485ae2facecf3074446ba4315f07a193",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
-    "title": "Eurosport 2 (OPCIÓN 3)",
+    "title": "Eurosport 2 (OPCIÓN 2)",
     "url": "acestream://d01d255aaaf2fb91c0a8c98a826b4bd4769d81c1",
-    "tags": "eurosport 4k",
+    "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
-    "title": "Eurosport 2 (OPCIÓN 4)",
+    "title": "Eurosport 2 (OPCIÓN 3)",
     "url": "acestream://6176281b9c46a5621a0e88524f8dc621f173b8e0",
     "tags": "eurosport 4k",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
-    "title": "Eurosport 2 (OPCIÓN 5)",
+    "title": "Eurosport 2 (OPCIÓN 4)",
     "url": "acestream://7aa9cc819c6fa781dea6b4de3aa5393258b766d8",
-    "tags": "eurosport 2",
+    "tags": "eurosport 4k",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
   },
   {
-    "title": "Eurosport 2 (OPCIÓN 6)",
+    "title": "Eurosport 2 (OPCIÓN 5)",
     "url": "acestream://ac675c82d6dfd4a201532c18b42e48dacb7c32c6",
     "tags": "eurosport 2",
     "img": "https://w7.pngwing.com/pngs/327/493/png-transparent-eurosport-1-television-channel-logo-eurosport-2-others-miscellaneous-television-text.png"
@@ -277,12 +259,6 @@
   },
   {
     "title": "DAZN 1 (OPCIÓN 4)",
-    "url": "acestream://dddff67edfa7061f643ec5ae0be110169850363d",
-    "tags": "dazn 1",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/M1SD.png"
-  },
-  {
-    "title": "DAZN 1 (OPCIÓN 5)",
     "url": "acestream://d5b2c6b940cf3df5e8f9dc6f000f0ea23a10b151",
     "tags": "dazn 1",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/M1SD.png"
@@ -433,30 +409,24 @@
   },
   {
     "title": "M+ Vamos (OPCIÓN 5)",
-    "url": "acestream://476b6f6583517bd75c15c4663bf45fab7c8da9cf",
-    "tags": "movistar vamos",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
-  },
-  {
-    "title": "M+ Vamos (OPCIÓN 6)",
     "url": "acestream://f51674b1dd1ab5a668fa97a0f13a490632f0d7ca",
     "tags": "movistar vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
   },
   {
-    "title": "M+ Vamos (OPCIÓN 7)",
+    "title": "M+ Vamos (OPCIÓN 6)",
     "url": "acestream://4ee16a7f854219fa2974ef1468e6b2f8574189dd",
     "tags": "movistar vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
   },
   {
-    "title": "M+ Vamos (OPCIÓN 8)",
+    "title": "M+ Vamos (OPCIÓN 7)",
     "url": "acestream://5e310dbffed8c941d20ad819cb8ef43c34b07884",
     "tags": "movistar vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
   },
   {
-    "title": "M+ Vamos (OPCIÓN 9)",
+    "title": "M+ Vamos (OPCIÓN 8)",
     "url": "acestream://0cd11c1f51b84ebe9954496b3ef9b6aeccf7307c",
     "tags": "movistar vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
@@ -740,12 +710,6 @@
   {
     "title": "M+ Deportes (OPCIÓN 6)",
     "url": "acestream://b35b3eb8e22365bf3469efd6d1f3b82618a6e18a",
-    "tags": "movistar deportes",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CPDEP.png"
-  },
-  {
-    "title": "M+ Deportes (OPCIÓN 7)",
-    "url": "acestream://3b50a1dca0977e3761d016edd79314ab797f74f6",
     "tags": "movistar deportes",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CPDEP.png"
   },
