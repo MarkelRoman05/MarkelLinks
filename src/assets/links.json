@@ -246,6 +246,12 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZNL2.png"
   },
   {
+    "title": "DAZN LALIGA 2 (OPCIÓN 3)",
+    "url": "acestream://b63fcadc2390455d8a328f6c16b8b0a9adec21a3",
+    "tags": "dazn laliga 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZNL2.png"
+  },
+  {
     "title": "DAZN LALIGA 3",
     "url": "acestream://8c71f0e0a5476e10950fc827f9d2a507340aba74",
     "tags": "dazn laliga 3",
@@ -360,6 +366,12 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png"
   },
   {
+    "title": "LALIGA TV HYPERMOTION 2 (OPCIÓN 3)",
+    "url": "acestream://709075831bf5c41ed0a20dfbd640aab6c28971f8",
+    "tags": "laliga hypermotion 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGS2.png"
+  },
+  {
     "title": "LALIGA TV HYPERMOTION 3",
     "url": "acestream://1fdb405a6942da0941266f24cdd1c71b11552f1f",
     "tags": "laliga hypermotion 3",
@@ -457,18 +469,12 @@
   },
   {
     "title": "M+ Ellas Vamos (OPCIÓN 2)",
-    "url": "acestream://80e290013709091ec93d542754bff27cc90ac996",
-    "tags": "movistar ellas vamos",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MELLAV.png"
-  },
-  {
-    "title": "M+ Ellas Vamos (OPCIÓN 3)",
     "url": "acestream://a5a38bd6628ffa68459d76132c4d864999d9940b",
     "tags": "movistar ellas vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MELLAV.png"
   },
   {
-    "title": "M+ Ellas Vamos (OPCIÓN 4)",
+    "title": "M+ Ellas Vamos (OPCIÓN 3)",
     "url": "acestream://3040cfbef2d8170ff3909db6f21a6981d9ec74c8",
     "tags": "movistar ellas vamos",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MELLAV.png"
@@ -619,6 +625,12 @@
   },
   {
     "title": "M+ L. de Campeones 3 (OPCIÓN 2)",
+    "url": "acestream://07976f79d17a439d7aff46cf0d4cfdf80311caf5",
+    "tags": "movistar liga de campeones 3",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP2.png"
+  },
+  {
+    "title": "M+ L. de Campeones 3 (OPCIÓN 3)",
     "url": "acestream://90f7941c6bf7ca4b18084a1dca7bc15b9b179373",
     "tags": "movistar liga de campeones 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP2.png"
