@@ -7,13 +7,13 @@
   },
   {
     "title": "M+ LALIGA (OPCIÓN 2)",
-    "url": "acestream://f863873de9f7b2996dde19a0657dd89835af3007",
+    "url": "acestream://3ace1463a7cad979c3a4002b245487e9982e9f1a",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
   {
     "title": "M+ LALIGA (OPCIÓN 3)",
-    "url": "acestream://3ace1463a7cad979c3a4002b245487e9982e9f1a",
+    "url": "acestream://f863873de9f7b2996dde19a0657dd89835af3007",
     "tags": "movistar laliga",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MLIGA.png"
   },
@@ -553,6 +553,12 @@
   },
   {
     "title": "M+ L. de Campeones 2 (OPCIÓN 6)",
+    "url": "acestream://74ab4e4ec7e2da001f473ca40893b7307b8029c5",
+    "tags": "movistar liga de campeones 2",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP1.png"
+  },
+  {
+    "title": "M+ L. de Campeones 2 (OPCIÓN 7)",
     "url": "acestream://338b5de78b0b40a6f9ca3cc0cf9be93341b9ceea",
     "tags": "movistar liga de campeones 2",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP1.png"
@@ -577,12 +583,18 @@
   },
   {
     "title": "M+ L. de Campeones 3 (OPCIÓN 4)",
-    "url": "acestream://320bee0fbdf2a168d47810236985a7c40b4f85c9",
+    "url": "acestream://cfc371890bfb502737a26de5215e50929c52d0f9",
     "tags": "movistar liga de campeones 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP2.png"
   },
   {
     "title": "M+ L. de Campeones 3 (OPCIÓN 5)",
+    "url": "acestream://320bee0fbdf2a168d47810236985a7c40b4f85c9",
+    "tags": "movistar liga de campeones 3",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP2.png"
+  },
+  {
+    "title": "M+ L. de Campeones 3 (OPCIÓN 6)",
     "url": "acestream://90f7941c6bf7ca4b18084a1dca7bc15b9b179373",
     "tags": "movistar liga de campeones 3",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP2.png"
@@ -607,7 +619,7 @@
   },
   {
     "title": "M+ L. de Campeones 5",
-    "url": "acestream://cb6410a6355a645cfc6f6f5a7c7d71298fcbc2c5",
+    "url": "acestream://5620c0ce3dcbf14a6375cb2c2d681207f45eb97d",
     "tags": "movistar liga de campeones 5",
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/CHAP4.png"
   },
