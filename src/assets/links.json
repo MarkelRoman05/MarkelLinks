@@ -84,6 +84,24 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MVF1.png"
   },
   {
+    "title": "DAZN MotoGP (OPCIÓN 1)",
+    "url": "acestream://5548659c188e1d4d3b6e756e6c56485eb242abac",
+    "tags": "dazn motogp moto gp",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZMOT.png"
+  },
+  {
+    "title": "DAZN MotoGP (OPCIÓN 2)",
+    "url": "acestream://e18b79bce27f6ee8eef9a1fc811bb5f80e4b558c",
+    "tags": "dazn motogp moto gp",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZMOT.png"
+  },
+  {
+    "title": "DAZN MotoGP (OPCIÓN 3)",
+    "url": "acestream://20d4b3586bb822c3618cf8fb665a304869c5e1a5",
+    "tags": "dazn motogp moto gp",
+    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/DAZMOT.png"
+  },
+  {
     "title": "DAZN Liga Endesa 1",
     "url": "acestream://15fe785e2dc9d16a7b0a1c49a9ad5a7ab88ef2b7",
     "tags": "dazn baloncesto liga endesa",

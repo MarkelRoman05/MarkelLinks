@@ -88,6 +88,8 @@ function cleanVariant(name) {
     .replace(/^MOVISTAR\s*HITS/i, 'M+ HITS')
     // DAZN F1
     .replace(/^DAZN\s*F1/i, 'DAZN F1')
+    // DAZN MotoGP
+    .replace(/^DAZN\s*MOTOGP/i, 'DAZN MOTOGP')
     // ACB Evento (remoto) → DAZN LIGA ENDESA (para emparejar con DAZN Liga Endesa local)
     .replace(/^ACB\s*EVENTO\s*0*(\d+)/i, 'DAZN LIGA ENDESA $1')
     .replace(/^ACB\s*EVENTO$/i, 'DAZN LIGA ENDESA 1')
@@ -101,6 +103,7 @@ function cleanVariant(name) {
     // Tennis Channel
     .replace(/^TENNIS\s+CHANNEL/i, 'TENNIS CHANNEL')
     // GOL
+    .replace(/\s*\*+\s*/g, ' ') // Elimina asteriscos que aparecen en nombres como "FHDp *"
     .replace(/^GOL\s+PLAY/i, 'GOL')
     // Rally TV
     .replace(/^RALLY\s+TV/i, 'RALLY TV')
