@@ -57,16 +57,16 @@ export class AppComponent {
     'Movistar+ LaLiga': '/images/M++LALIGA.png',
     'DAZN LaLiga': '/images/DAZN+LALIGA.png',
     'Movistar+ Champions': 'https://mir-s3-cdn-cf.behance.net/project_modules/max_632/d6297891682131.5e3864b00f466.png',
-    'Canales lineales DAZN': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/DAZN_Logo_Chalk.svg/480px-DAZN_Logo_Chalk.svg.png',
+    'Canales lineales DAZN': 'https://www.puredome.com/hubfs/DAZN_Logo_Chalk.svg.png',
     'DAZN FÓRMULA 1': 'https://logos-world.net/wp-content/uploads/2023/12/F1-Logo.png',
     'DAZN MOTOGP': 'https://static.dorna.com/assets/logos/mgp/brand/mgp-logo-on-dark.svg?v2',
     'DAZN LIGA ENDESA': '/images/DAZN+Baloncesto.png',
     'Movistar+ Otros': 'https://comunicacion.movistarplus.es/wp-content/uploads/2020/10/MOVISTAR-logo-footer-ndp.png',
     'Eurosport': 'https://cdn-1.webcatalog.io/catalog/eurosport/eurosport-icon-filled-256.png?v=1714774288533',
-    'LaLiga Hypermotion': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LaLiga_Hypermotion_2023_Vertical_Logo.svg/2335px-LaLiga_Hypermotion_2023_Vertical_Logo.svg.png',
+    'LaLiga Hypermotion': 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LaLiga_Hypermotion_2023_Vertical_Logo.svg/960px-LaLiga_Hypermotion_2023_Vertical_Logo.svg.png',
     'Movistar+ Cine, Documentales y Series': 'https://comunicacion.movistarplus.es/wp-content/uploads/2020/10/MOVISTAR-logo-footer-ndp.png',
     'Otros deportes': '/images/balon.png',
-    'TDT': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/TDT_wordmark.svg/1344px-TDT_wordmark.svg.png'
+    'TDT': 'https://upload.wikimedia.org/wikipedia/commons/6/68/TDT_wordmark.svg'
   };
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {

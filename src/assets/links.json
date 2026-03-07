@@ -321,13 +321,13 @@
     "title": "UFC Fight Pass",
     "url": "acestream://96537527b2d5e858b2e6c863a00dec304254091d",
     "tags": "ufc figth pass",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UFC_Fight_Pass_Logo.svg/2560px-UFC_Fight_Pass_Logo.svg.png"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UFC_Fight_Pass_Logo.svg/960px-UFC_Fight_Pass_Logo.svg.png"
   },
   {
     "title": "NBA TV",
     "url": "acestream://b0f64a40f333ef5cc02c2b6d4a8c3f4b73dd8073",
     "tags": "nba tv",
-    "img": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/NBA_TV.svg/800px-NBA_TV.svg.png"
+    "img": "https://upload.wikimedia.org/wikipedia/en/d/d2/NBA_TV.svg"
   },
   {
     "title": "DAZN LALIGA (OPCIÓN 1)",
@@ -636,12 +636,6 @@
     "img": "https://www.movistarplus.es/recorte/m-NEO/canal/VAMOSD.png"
   },
   {
-    "title": "M+ Ellas Vamos",
-    "url": "acestream://9b84af74b2fa3690c519199326fc2f181b025cdd",
-    "tags": "movistar ellas vamos",
-    "img": "https://www.movistarplus.es/recorte/m-NEO/canal/MELLAV.png"
-  },
-  {
     "title": "La 1 (OPCIÓN 1)",
     "url": "acestream://6a54f8fb00406c88f68ac3f3aabc7d084f9573d0",
     "tags": "la 1 tdt",
@@ -717,13 +711,13 @@
     "title": "Tennis Channel (OPCIÓN 1)",
     "url": "acestream://71698ee415b6ba3f123aac1c8c37cc97376f20d0",
     "tags": "tennis channel",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/250px-Tennis_Channel_logo.svg.png"
   },
   {
     "title": "Tennis Channel (OPCIÓN 2)",
     "url": "acestream://8091334c82e8720fc6aa05ff0bd6d343c5bfecbf",
     "tags": "tennis channel",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/1566px-Tennis_Channel_logo.svg.png"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/250px-Tennis_Channel_logo.svg.png"
   },
   {
     "title": "M+ L. de Campeones (OPCIÓN 1)",
